@@ -1,0 +1,231 @@
+{
+  "title": "PingOne DaVinci Components",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "Title",
+      "icon": "annotation-title",
+      "toolTip": "Title annotation",
+      "action": "CLIPBOARD",
+      "resource": "flow-title-annotation.txt"
+    },
+    {
+      "name": "Annotation",
+      "icon": "annotation-native",
+      "toolTip": "Native conector annotation",
+      "action": "CLIPBOARD",
+      "resource": "node-annotation-gray.txt"
+    },
+    {
+      "name": "Paid Conn.",
+      "icon": "annotation-paid",
+      "toolTip": "Paid connector annotation",
+      "action": "CLIPBOARD",
+      "resource": "node-annotation-gold.txt"
+    },
+    {
+      "name": "Spacer",
+      "icon": "spacer",
+      "toolTip": "Spacer annotation",
+      "action": "CLIPBOARD",
+      "resource": "spacer.txt"
+    },
+    {
+      "name": "No-Op<br/>UI",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "No-Op UI component",
+      "action": "CLIPBOARD",
+      "resource": "no-op-ui.txt"
+    },
+    {
+      "name": "JSON<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Error Node",
+      "action": "CLIPBOARD",
+      "resource": "http-json-error.txt"
+    },
+    {
+      "name": "JSON<br/>Success",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Success Node",
+      "action": "CLIPBOARD",
+      "resource": "http-json-success.txt"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Sign In<br/>Form",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "Username and password node",
+      "action": "CLIPBOARD",
+      "resource": "sign-in-form.txt"
+    },
+    {
+      "name": "Reg<br/>Form",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "Basic registration form",
+      "action": "CLIPBOARD",
+      "resource": "registration-form.txt"
+    },
+
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Common<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-green",
+      "toolTip": "Teleport method for handling common error",
+      "action": "CLIPBOARD",
+      "resource": "common-error-teleport.txt"
+    },
+    {
+      "name": "PWD<br/>Reset",
+      "namePosition": "MIDDLE",
+      "icon": "box-green",
+      "toolTip": "Teleport method for resetting PingOne account password",
+      "action": "CLIPBOARD",
+      "resource": "reset-password.txt"
+    },
+    {
+      "name": "DaVinci",
+      "icon": "davinci",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "davinci-main"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Readme",
+      "icon": "readme",
+      "toolTip": "View documentation for this profile",
+      "action": "REDIRECT",
+      "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
+    }
+  ]
+}

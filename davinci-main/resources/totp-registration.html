@@ -1,0 +1,35 @@
+<div class="bg-light d-flex flex-column justify-content-center align-items-center">
+    <div class="totpDiv">
+        <div class="card shadow mb-5">
+            <div class="card-body p-5 d-flex flex-column">
+                <img class="companyLogo align-self-center mb-5" alt="__COMPANY_NAME__" />
+                <h1 class="text-center mb-4">Add Authenticator App</h1>
+                <p class="text-muted text-center">Scan the QR Code using your authenticator app, or enter the code displayed to finish.</p>
+                <p class="text-danger mdi mdi-alert-circle" data-id="feedback" data-skcomponent="skerror"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="passcode"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="nickname"></p>
+                <div id="qrImage" class="align-self-center mb-5" ></div>
+                <form id="registrationForm" data-id="registrationForm">
+                     <span style="font-size:smaller">Key {{secret}}</span>
+                     <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" placeholder="Passcode" autocomplete="off"
+                            data-id="lastName-input" id="passcode" name="passcode" />
+                        <label class="form-label" for="passcode">Passcode</label>
+                    </div>
+                    <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" placeholder="Nickname" autocomplete="off"
+                            data-id="password-input" id="nickname" name="nickname" />
+                        <label class="form-label" for="nickname">Nickname</label>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button data-id="submit-button" type="submit" class="btn btn-primary mb-3"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="registrationForm"
+                            data-skbuttonvalue="submit">
+                            Save
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

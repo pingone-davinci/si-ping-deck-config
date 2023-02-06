@@ -1,0 +1,223 @@
+{
+  "title": "Testing",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Invalid<br>Profile",
+      "icon": "",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "invalid_profile"
+    },
+    {
+      "name": "Invalid<br>Action",
+      "icon": "",
+      "toolTip": "",
+      "action": "INVALID_ACTION",
+      "resource": "testing"
+    },
+    {
+      "name": "Invalid<br>Pref",
+      "icon": "",
+      "toolTip": "",
+      "action": "PREF_CLIPBOARD",
+      "resource": "unset_clip"
+    },
+    {
+      "name": "Invalid<br>Clipboard",
+      "icon": "",
+      "toolTip": "",
+      "action": "CLIPBOARD",
+      "resource": "invalid_pref"
+    },
+    {
+      "name": "Unset<br>Pref",
+      "icon": "",
+      "toolTip": "",
+      "action": "REDIRECT",
+      "resource": "{{invalid_ref}}/myaccount/"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "title": "Javascript Snippets",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "Field<br/>Focus",
+      "namePosition": "MIDDLE",
+      "icon": "box-green",
+      "toolTip": "Javascript to add field focus",
+      "action": "CLIPBOARD",
+      "resource": "field-focus.js"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "For<br/>Each",
+      "namePosition": "MIDDLE",
+      "icon": "box-blue",
+      "toolTip": "Loop over an array of objects using for each ",
+      "action": "CLIPBOARD",
+      "resource": "array-for-each.js"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Filter<br/>Array",
+      "namePosition": "MIDDLE",
+      "icon": "box-blue",
+      "toolTip": "Filter an array of objects",
+      "action": "CLIPBOARD",
+      "resource": "filter-array.js"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Find In<br/>Array",
+      "namePosition": "MIDDLE",
+      "icon": "box-blue",
+      "toolTip": "Find an object in an array",
+      "action": "CLIPBOARD",
+      "resource": "find-in-array.js"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Readme",
+      "icon": "readme",
+      "toolTip": "TBD",
+      "action": "",
+      "resource": ""
+    }
+  ]
+}

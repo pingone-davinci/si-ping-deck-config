@@ -1,0 +1,30 @@
+.companyLogo {
+    /* Ping Logo  */
+    content: url("https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png");
+    width: 65px;
+    height: 65px;
+  }
+
+.mainDiv {
+    max-width: 400px; 
+    min-width: 400px;
+    width: 100%
+}
+
+/* Break out into individual classes as needed */
+.magicLinkDiv,
+.otpDiv,
+.signInDiv,
+.successDiv,
+.totpDiv,
+.registrationDiv{
+    max-width: 400px; 
+    min-width: 400px;
+    width: 100%
+}
+
+.deviceSelectionDiv {
+    max-width: 500px; 
+    min-width: 500px;
+    width: 100%
+}

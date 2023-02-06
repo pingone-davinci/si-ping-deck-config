@@ -1,0 +1,223 @@
+{
+  "title": "PingOne DevOps",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "DevOps",
+      "icon": "devops",
+      "toolTip": "Ping Identity DevOps",
+      "action": "REDIRECT",
+      "resource": "https://devops.pingidentity.com"
+    },
+    {
+      "name": "Docker Hub",
+      "icon": "docker",
+      "toolTip": "Ping Identity Docker Images",
+      "action": "REDIRECT",
+      "resource": "https://hub.docker.com/u/pingidentity"
+    },
+    {
+      "name": "",
+      "icon": "helm",
+      "toolTip": "Ping Identity Helm",
+      "action": "REDIRECT",
+      "resource": "https://helm.pingidentity.com/"
+    },
+    {
+      "name": "Community",
+      "icon": "ping",
+      "toolTip": "Ping Identity DevOps Community",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/topic/0TO1W000000IF30WAG/pingdevops"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    }
+  ]
+}

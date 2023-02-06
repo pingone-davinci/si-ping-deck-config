@@ -1,0 +1,43 @@
+<div class="bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto">
+    <div class="registrationDiv">
+        <div class="card shadow mb-5">
+            <div class="card-body p-5 d-flex flex-column">
+                <img class="companyLogo align-self-center mb-5" alt="COMPANY_NAME" />
+                <h1 class="text-center mb-4">Create an Account</h1>
+                <p class="text-danger mdi mdi-alert-circle" data-id="feedback" data-skcomponent="skerror"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="email"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="firstName"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="lastName"></p>
+                <form id="registrationForm" data-id="registrationForm">
+                    <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" data-id="email-input" id="email" name="email"
+                            placeholder="Email Address" autocomplete="off" />
+                        <label class="form-label" for="username">Email Address</label>
+                    </div>
+                    <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" placeholder="First Name" autocomplete="off"
+                            data-id="firstName-input" id="firstName" name="firstName" />
+                        <label class="form-label" for="username">First Name</label>
+                    </div>
+                    <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" placeholder="Last Name" autocomplete="off"
+                            data-id="lastName-input" id="lastName" name="lastName" />
+                        <label class="form-label" for="username">Last Name</label>
+                    </div>                   
+                    <div class="d-flex flex-column">
+                        <button data-id="submit-button" type="submit" class="btn btn-primary mb-3"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit" data-skform="registrationForm"
+                            data-skbuttonvalue="REGISTER" id="btnCreate">
+                            Create Account
+                        </button>
+                        <button type="submit" class="btn btn-link" data-skcomponent="skbutton"
+                            data-skbuttontype="next-event" data-skform="registrationForm"
+                            data-skbuttonvalue="CANCEL">
+                            Cancel
+                        </button>   
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="d-flex flex-column justify-content-center align-items-center">
+    <div class="deviceSelectionDiv">
+        <div class="card shadow mb-5">
+            <div class="card-body p-5 d-flex flex-column">
+                <img class="companyLogo align-self-center mb-5" alt="__COMPANY_NAME__" />
+                <h1 class="text-center mb-4">Select the authentication method to use with your account</h1>
+                <p class="text-danger mdi mdi-alert-circle" data-id="feedback" data-skcomponent="skerror"></p>
+                <form id="deviceSelectionForm" data-id="deviceSelectionForm">
+                    <div class="d-flex flex-column gap-4">
+                        <button class="btn btn-outline-primary flex-grow-1 d-flex align-items-center gap-3 btn-rich"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                            data-skform="deviceSelectionForm" data-skbuttonvalue="SMS">
+                            <i class="mdi mdi-comment-text-outline text-dark" aria-hidden="true"></i>
+                            <div class="d-flex flex-column text-start gap-1">
+                                <div class="fw-semibold text-primary">SMS</div>
+                                <div class="fs-6 text-secondary">Receive a text message with a passcode to authenticate.
+                                </div>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline-primary flex-grow-1 d-flex align-items-center gap-3 btn-rich"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                            data-skform="deviceSelectionForm" data-skbuttonvalue="EMAIL">
+                            <i class="mdi mdi-email-outline text-dark" aria-hidden="true"></i>
+                            <div class="d-flex flex-column text-start gap-1">
+                                <div class="fw-semibold text-primary">Email</div>
+                                <div class="fs-6 text-secondary">Receive an email with a passcode to authenticate.</div>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline-primary flex-grow-1 d-flex align-items-center gap-3 btn-rich"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                            data-skform="deviceSelectionForm" data-skbuttonvalue="BIOMETRICS">
+                            <i class="mdi mdi-fingerprint text-dark" aria-hidden="true"></i>
+                            <div class="d-flex flex-column text-start gap-1">
+                                <div class="fw-semibold text-primary">Device Biometrics</div>
+                                <div class="fs-6 text-secondary">Authenticate using the biometrics built into your
+                                    device.</div>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline-primary flex-grow-1 d-flex align-items-center gap-3 btn-rich"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                            data-skform="deviceSelectionForm" data-skbuttonvalue="MOBILE">
+                            <i class="mdi mdi-cellphone text-dark" aria-hidden="true"></i>
+                            <div class="d-flex flex-column text-start gap-1">
+                                <div class="fw-semibold text-primary">Push Notification</div>
+                                <div class="fs-6 text-secondary">Receive a push notification to authenticate.</div>
+                            </div>
+                        </button>
+                        <button class="btn btn-outline-primary flex-grow-1 d-flex align-items-center gap-3 btn-rich"
+                            data-skcomponent="skbutton" data-skbuttontype="form-submit"
+                            data-skform="deviceSelectionForm" data-skbuttonvalue="TOTP">
+                            <i class="mdi mdi-cellphone text-dark" aria-hidden="true"></i>
+                            <div class="d-flex flex-column text-start gap-1">
+                                <div class="fw-semibold text-primary">Authenticator App</div>
+                                <div class="fs-6 text-secondary">Use an authenticator app to authenticate.</div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="mt-5 d-flex flex-column gap-4">
+                        <button class="btn btn-outline-primary flex-grow-1" data-skcomponent="skbutton"
+                            data-skbuttontype="form-submit" data-skform="deviceSelectionForm"
+                            data-skbuttonvalue="CANCEL">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

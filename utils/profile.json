@@ -1,0 +1,223 @@
+{
+  "title": "Developer Utilities",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "JWT",
+      "icon": "jwt",
+      "toolTip": "Decode JWT",
+      "action": "REDIRECT",
+      "resource": "https://developer.pingidentity.com/en/tools/jwt-decoder.html"
+    },
+    {
+      "name": "Encode",
+      "icon": "base",
+      "toolTip": "Encode to Base64",
+      "action": "REDIRECT",
+      "resource": "https://www.base64encode.org/"
+    },
+    {
+      "name": "Decode",
+      "icon": "base",
+      "toolTip": "Decode from Base64",
+      "action": "REDIRECT",
+      "resource": "https://www.base64decode.org/"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Readme",
+      "icon": "readme",
+      "toolTip": "TBD",
+      "action": "",
+      "resource": ""
+    }
+  ]
+}

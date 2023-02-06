@@ -1,0 +1,223 @@
+{
+  "title": "Home",
+  "description": "TBD",
+  "actions": [
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "DaVinci",
+      "icon": "davinci",
+      "toolTip": "Open DaVinci main profile",
+      "action": "PROFILE",
+      "resource": "davinci-main"
+    },
+    {
+      "name": "DV Conn.",
+      "icon": "dv-connections",
+      "toolTip": "Open DaVinci components profile",
+      "action": "PROFILE",
+      "resource": "davinci-components"
+    },
+    {
+      "name": "Javascript",
+      "icon": "javascript",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "javascript"
+    },
+    {
+      "name": "Utils",
+      "icon": "utilities",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "utils"
+    },
+    {
+      "name": "Packages",
+      "icon": "solution-innovations",
+      "toolTip": "Solution Innovations Packages",
+      "action": "REDIRECT",
+      "resource": "https://packages.pingidentity.cloud"
+    },
+    {
+      "name": "PingOne",
+      "icon": "pingone",
+      "toolTip": "PingOne profile",
+      "action": "PROFILE",
+      "resource": "pingone"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Terraform",
+      "icon": "terraform",
+      "toolTip": "Terraform",
+      "action": "PROFILE",
+      "resource": "terraform"
+    },
+    {
+      "name": "DevOps",
+      "icon": "devops",
+      "toolTip": "Ping Identity DevOps",
+      "action": "PROFILE",
+      "resource": "devops"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "Flows",
+      "icon": "flows",
+      "toolTip": "Run productized DaVinci solutions",
+      "action": "PROFILE",
+      "resource": "flows"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "Testing Page",
+      "action": "PROFILE",
+      "resource": "testing"
+    }
+  ]
+}

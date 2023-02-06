@@ -1,0 +1,31 @@
+<div class="bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto">
+    <div class="otpDiv">
+        <div class="card shadow mb-5">
+            <div class="card-body p-5 d-flex flex-column">
+                <img class="companyLogo align-self-center mb-5" alt="__COMPANY_NAME__" />
+                <h1 class="text-center mb-4">Verification Code</h1>
+                <p class="text-muted text-center">Please enter the one time password <br/>sent to your
+                    <strong>__PLACEHOLDER__</strong> device.
+                </p>
+                <p class="text-danger mdi mdi-alert-circle" data-id="feedback" data-skcomponent="skerror"></p>
+                <p class="text-danger mdi mdi-alert-circle" data-skcomponent="skerrormessage" data-skerrorid="verifyCode"></p>
+                <form id="otpForm" data-id="otpForm">
+                    <div class="mb-4 form-floating">
+                        <input class="form-control" type="text" name="verifyCode" placeholder="Verification Code"
+                                    autocomplete="off" data-id="verifyCode" id="verifyCode" pattern="[0-9]*" />
+                        <label class="form-label" for="verifyCode">Verification Code</label>
+                    </div>
+                    <div class="d-flex flex-column">
+                        <button class="btn btn-primary flex-grow-1" data-skcomponent="skbutton"
+                            data-skbuttontype="form-submit" data-skform="otpForm" id="btnVerify"
+                            data-skbuttonvalue="VERIFY">Verify</button>
+    
+                        <button type="submit" class="btn btn-link" data-skcomponent="skbutton"
+                            data-skbuttontype="next-event" data-skform="otpForm" id="btnCancel"
+                            data-skbuttonvalue="CANCEL">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
