@@ -1,0 +1,308 @@
+:root {
+  --medium-gray: #383D40;
+  --darker-gray: #2D2D2D;
+  --dark-gray: #222222;
+  --lite-gray: #474747;
+  --pref-background: #191919;
+  --pref-container-background: #292929;
+  --pref-input-background: #3D3D3D;
+  --pref-input-color: #E3E3E3;
+  --pref-label-color: #969696;
+  --main-bg-color: brown;
+  --highlight-color: #3954B0;
+  --highlight-color-secondary: #b3222f;
+  --primary-font-color: #F5F5F5;
+  --alert-green: #9DC967;
+  --alert-red: #BA0029;
+  --scroll-bar-background: var(--pref-input-background);
+  --scroll-bar: var(--pref-input-color);
+  --ping-deck-width: 760px;
+  --ping-deck-height: 490px;
+  --ping-deck-preferences-width: calc(var(--ping-deck-width) - 80px);
+  --ping-deck-preferences-height: calc(var(--ping-deck-height) - 44px);
+}
+
+body {
+  background-color: var(--medium-gray);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-font-color);
+}
+
+h2 {
+  margin: 20px 0px 10px 0px;
+}
+
+div.ping-deck {
+  border: 5px solid var(--dark-gray);
+  background-color: var(--darker-gray);
+  width: var(--ping-deck-width);
+  height: var(--ping-deck-height);
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0px 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+div.ping-deck-blur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+button.action {
+  height: 80px;
+  width: 80px;
+  border: 2px solid var(--lite-gray);
+  border-radius: 10px;
+  background-color: var(--dark-gray);
+  color: var(--primary-font-color);
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 0px;
+}
+
+button.action:hover {
+  border-color: var(--highlight-color)
+}
+
+button.action:active {
+  background-color: var(--lite-gray);
+}
+
+.centered {
+  text-align: center;
+}
+
+.muted {
+  font-size: 9pt;
+  color: #cecece;
+}
+
+
+.preference-button {
+  height: 28px;
+  width: 28px;
+  content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/preferences.png?v=1675683632248");
+  float: right;
+  position: relative;
+  right: 24px;
+  top: 22px;
+}
+
+.buttonDiv {
+  width: 72px;
+  height: 72px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  position: relative;
+}
+
+.buttonText {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2px;
+  width: 100%;
+  left: 2px;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+.buttonTextMiddle {
+  position: absolute;
+  top: 32%;
+  width: 100%;
+  left: 2px;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+div.button-row {
+  margin-bottom: 14px;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+h2.main-title {
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  /* Ping Logo  */
+  content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/si-logo.png?v=1675693630957");
+  width: 22px;
+  height: 22px;
+  padding-top: 15px;
+  display: inline-block;
+}
+
+.tmpBorder {
+  border: 1px solid blue
+}
+
+div.ping-deck-preferences {
+  position: fixed;
+  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)));
+  left: calc(50% - 21px - (var(--ping-deck-preferences-width) * .5));
+  width: var(--ping-deck-preferences-width);
+  height: var(--ping-deck-preferences-height);
+  border: 3px solid #73AD21;
+  border: 5px solid var(--dark-gray);
+  background-color: var(--pref-background);
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0px 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+div.preference-bar {
+  background-color: var(--pref-background);
+  text-align: left;
+}
+
+div.preference-bar .tab-button {
+  border: none;
+  background-color: green;
+  border-radius: 5px 5px 0px 0px;
+  padding: 5px 10px 5px 10px;
+  margin: 0px 5px 0px 5px;
+  color: var(--pref-label-color);
+  background-color: var(--pref-background);
+}
+
+div.preference-bar .tab-button.selected {
+  background-color: var(--pref-container-background);
+  color: var(--pref-input-color);
+}
+
+div.preference-container {
+  background-color: var(--pref-container-background);
+  padding: 0;
+  width: var(--ping-deck-preferences-width);
+  height: calc(var(--ping-deck-preferences-height) - 120px);
+  overflow: auto;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+div.preference {
+  width: 100%;
+  padding-top: 14px;
+}
+
+div.preference label {
+  display: inline-grid;
+  width: 30%;
+  padding-right: 2%;
+  text-align: right;
+  color: var(--pref-label-color);
+  font-size: 10pt;
+}
+
+div.preference input {
+  display: inline-grid;
+  width: 65%;
+  background-color: var(--pref-input-background);
+  color: var(--pref-input-color);
+  border: none;
+  padding: 0.5em 0.5em;
+  font-size: 11pt;
+}
+
+.preference-close-button {
+  height: 20px;
+  width: 20px;
+  content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
+  position: absolute;
+  right: 10;
+  top: 10;
+}
+
+.alert {
+  background-color: green;
+  width: auto;
+  height: auto;
+  border: none;
+  color: black;
+  background-color: var(--alert-green);
+
+  margin-top: -7px;
+  margin-right: 35%;
+  margin-left: 35%;
+
+  font-weight: bold;
+  padding: 5px 10px 5px 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 8pt;
+
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.alert.green {
+  background-color: var(--alert-green);
+  color: black;
+}
+
+.alert.red {
+  background-color: var(--alert-red);
+  color: white;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+
+@-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+@-webkit-scrollbar-track {
+  background: var(--scroll-bar-background);
+}
+
+/* Handle */
+@-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+@-webkit-scrollbar-thumb: hover {
+  background: #555;
+}
