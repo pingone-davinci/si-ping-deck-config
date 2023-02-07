@@ -9,11 +9,6 @@
         "tooltip": "This is your full name"
       },
       {
-        "id": "password",
-        "label": "Password",
-        "type": "password"
-      },
-      {
         "id": "email",
         "label": "Email"
       }
