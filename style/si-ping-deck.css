@@ -32,6 +32,11 @@ h2 {
   margin: 20px 0px 10px 0px;
 }
 
+a {
+  color: var(--pref-input-color);
+  text-decoration: none;
+}
+
 div.ping-deck {
   border: 5px solid var(--dark-gray);
   background-color: var(--darker-gray);
@@ -176,6 +181,10 @@ div.preference-bar .tab-button {
   background-color: var(--pref-background);
 }
 
+div.preference-bar .about {
+  float: right;
+}
+
 div.preference-bar .tab-button.selected {
   background-color: var(--pref-container-background);
   color: var(--pref-input-color);
@@ -187,6 +196,12 @@ div.preference-container {
   width: var(--ping-deck-preferences-width);
   height: calc(var(--ping-deck-preferences-height) - 120px);
   overflow: auto;
+}
+
+div.preference-container .about {
+  margin-top: 10px;
+  color: var(--pref-label-color);
+  font-size: 11pt;
 }
 
 fieldset {
@@ -218,6 +233,19 @@ div.preference input {
   padding: 0.5em 0.5em;
   font-size: 11pt;
 }
+
+/* div.preference textarea {
+  display: inline-grid;
+  width: 65%;
+  height: 110px;
+  background-color: var(--pref-input-background);
+  color: var(--pref-input-color);
+  border: none;
+  padding: 0.5em 0.5em;
+  font-size: 11pt;
+  resize: none;
+} */
+
 
 .preference-close-button {
   height: 20px;
