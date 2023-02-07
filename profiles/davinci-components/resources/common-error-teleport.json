@@ -1,0 +1,149 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "45z37ua6jf",
+                "nodeType": "CONNECTION",
+                "connectionId": "1d80aeede675402aecd6fef6d7d6c80f",
+                "connectorId": "nodeConnector",
+                "name": "Node [2023-01-05]",
+                "label": "Node",
+                "status": "configured",
+                "capabilityName": "startNode",
+                "type": "trigger",
+                "properties": {
+                    "inputSchema": {
+                        "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorCode\"\n\t\t},\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
+                    },
+                    "nodeTitle": {
+                        "value": "Error"
+                    }
+                }
+            },
+            "position": {
+                "x": 277,
+                "y": 2010
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "r80e1t6i9x",
+                "nodeType": "EVAL",
+                "label": "Evaluator"
+            },
+            "position": {
+                "x": 367,
+                "y": 2010
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "wmlrskt0xx",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createErrorResponse",
+                "type": "action",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Error JSON"
+                    },
+                    "backgroundColor": {
+                        "value": "#ffc8c1ff"
+                    },
+                    "claimsNameValuePairs": {
+                        "value": [
+                            {
+                                "name": "errorCode",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.45z37ua6jf.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.45z37ua6jf.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "key": 0.7505189133115058,
+                                "label": "errorCode (number - flowInstance)",
+                                "type": "number",
+                                "nameDefault": "errorCode"
+                            },
+                            {
+                                "name": "errorMessage",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.45z37ua6jf.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.45z37ua6jf.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "key": 0.9809707255767062,
+                                "label": "errorMessage (string - flowInstance)",
+                                "type": "string",
+                                "nameDefault": "errorMessage"
+                            }
+                        ]
+                    }
+                }
+            },
+            "position": {
+                "x": 547,
+                "y": 2010
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": [
+        {
+            "data": {
+                "id": "82r4158byn",
+                "source": "45z37ua6jf",
+                "target": "r80e1t6i9x"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "n7yjmnyccn",
+                "source": "r80e1t6i9x",
+                "target": "wmlrskt0xx"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        }
+    ]
+}

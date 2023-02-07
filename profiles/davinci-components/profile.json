@@ -6,53 +6,53 @@
       "name": "Title",
       "icon": "annotation-title",
       "toolTip": "Title annotation",
-      "action": "CLIPBOARD",
-      "resource": "flow-title-annotation.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "flow-title-annotation.json"
     },
     {
       "name": "Annotation",
       "icon": "annotation-native",
       "toolTip": "Native conector annotation",
-      "action": "CLIPBOARD",
-      "resource": "node-annotation-gray.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "node-annotation-gray.json"
     },
     {
       "name": "Paid Conn.",
       "icon": "annotation-paid",
       "toolTip": "Paid connector annotation",
-      "action": "CLIPBOARD",
-      "resource": "node-annotation-gold.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "node-annotation-gold.json"
     },
     {
       "name": "Spacer",
       "icon": "spacer",
       "toolTip": "Spacer annotation",
-      "action": "CLIPBOARD",
-      "resource": "spacer.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "spacer.json"
     },
     {
       "name": "No-Op<br/>UI",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "No-Op UI component",
-      "action": "CLIPBOARD",
-      "resource": "no-op-ui.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "no-op-ui.json"
     },
     {
       "name": "JSON<br/>Error",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTTP JSON Error Node",
-      "action": "CLIPBOARD",
-      "resource": "http-json-error.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "http-json-error.json"
     },
     {
       "name": "JSON<br/>Success",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTTP JSON Success Node",
-      "action": "CLIPBOARD",
-      "resource": "http-json-success.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "http-json-success.json"
     },
     {
       "name": "",
@@ -101,16 +101,16 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "Username and password node",
-      "action": "CLIPBOARD",
-      "resource": "sign-in-form.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "sign-in-form.json"
     },
     {
       "name": "Reg<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "Basic registration form",
-      "action": "CLIPBOARD",
-      "resource": "registration-form.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "registration-form.json"
     },
 
     {
@@ -160,16 +160,16 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Teleport method for handling common error",
-      "action": "CLIPBOARD",
-      "resource": "common-error-teleport.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "common-error-teleport.json"
     },
     {
       "name": "PWD<br/>Reset",
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Teleport method for resetting PingOne account password",
-      "action": "CLIPBOARD",
-      "resource": "reset-password.txt"
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "reset-password.json"
     },
     {
       "name": "DaVinci",

@@ -1,0 +1,39 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "ng1cq9g6c6",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createErrorResponse",
+                "type": "action",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Error"
+                    },
+                    "backgroundColor": {
+                        "value": "#ffc8c1ff"
+                    }
+                },
+                "idUnique": "h1gsoqlhle"
+            },
+            "position": {
+                "x": 510,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}
