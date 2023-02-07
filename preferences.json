@@ -67,13 +67,13 @@
         "label": "Client Secret",
         "type": "password",
         "tooltip": "PingOne Client Secret"
-      },
-      {
-        "id": "SuperSecret",
-        "label": "SuperSecret",
-        "type": "text",
-        "tooltip": "PingOne Client Secret"
       }
     ]
+  },
+  "about": {
+    "title": "About",
+    "class": "about",
+    "html": "<h2><img class='logo'/> PING DECK</h2>Version: 0.1.0 <p>Feedback: <a href='mailto:pingdeck@pingidentity.com'>pingdeck@pingidentity.com</a>",
+    "inputs": []
   }
 }
