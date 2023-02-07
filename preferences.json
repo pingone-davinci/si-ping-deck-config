@@ -67,6 +67,12 @@
         "label": "Client Secret",
         "type": "password",
         "tooltip": "PingOne Client Secret"
+      },
+      {
+        "id": "SuperSecret",
+        "label": "SuperSecret",
+        "type": "text",
+        "tooltip": "PingOne Client Secret"
       }
     ]
   }
