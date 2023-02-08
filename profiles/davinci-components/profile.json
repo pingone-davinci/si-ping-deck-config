@@ -3,7 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "Flowz",
+      "name": "Amazeballs",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
