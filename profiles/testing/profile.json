@@ -199,11 +199,11 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "Widget",
+      "icon": "glitch",
+      "toolTip": "View a Node JS Widget integration",
+      "action": "REDIRECT",
+      "resource": "https://glitch.com/~davinci-v2-node-template"
     },
     {
       "name": "",

@@ -90,10 +90,6 @@
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-blue.png");
 }
 
-.annotation-pink {
-  background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-blue.png");
-}
-
 .annotation-gray {
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-gray.png");
 }
@@ -146,3 +142,6 @@
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/spacer.png");
 }
 
+.glitch {
+  background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/glitch.png");
+}
