@@ -4,21 +4,28 @@
   "actions": [
     {
       "name": "Title",
-      "icon": "annotation-title",
+      "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
       "resource": "flow-title-annotation.json"
     },
     {
+      "name": "Function",
+      "icon": "annotation-purple",
+      "toolTip": "Teleport function annotation",
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "function-title-annotation.json"
+    },
+    {
       "name": "Annotation",
-      "icon": "annotation-native",
+      "icon": "annotation-gray",
       "toolTip": "Native conector annotation",
       "action": "COMPONENT_CLIPBOARD",
       "resource": "node-annotation-gray.json"
     },
     {
       "name": "Paid Conn.",
-      "icon": "annotation-paid",
+      "icon": "annotation-gold",
       "toolTip": "Paid connector annotation",
       "action": "COMPONENT_CLIPBOARD",
       "resource": "node-annotation-gold.json"
@@ -31,20 +38,26 @@
       "resource": "spacer.json"
     },
     {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
       "name": "No-Op<br/>UI",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "No-Op UI component",
       "action": "COMPONENT_CLIPBOARD",
       "resource": "no-op-ui.json"
-    },
-    {
-      "name": "JSON<br/>Error",
-      "namePosition": "MIDDLE",
-      "icon": "box-red",
-      "toolTip": "HTTP JSON Error Node",
-      "action": "COMPONENT_CLIPBOARD",
-      "resource": "http-json-error.json"
     },
     {
       "name": "JSON<br/>Success",
@@ -55,25 +68,12 @@
       "resource": "http-json-success.json"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "JSON<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Error Node",
+      "action": "COMPONENT_CLIPBOARD",
+      "resource": "http-json-error.json"
     },
     {
       "name": "",

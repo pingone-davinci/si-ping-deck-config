@@ -11,16 +11,16 @@
                 "type": "action",
                 "properties": {
                     "backgroundColor": {
-                        "value": "#4462edff"
+                        "value": "5D00D6ff"
                     },
                     "annotationTextColor": {
                         "value": "#ffffffff"
                     },
                     "annotation": {
-                        "value": "__FLOW_TITLE__"
+                        "value": "__TELEPORT_SECTION_TITLE__"
                     },
                     "width": {
-                        "value": 1800
+                        "value": 1000
                     },
                     "fontStyle": {
                         "value": "bold"

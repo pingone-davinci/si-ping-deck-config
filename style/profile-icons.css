@@ -86,16 +86,20 @@
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/info.png");
 }
 
-.annotation-title {
+.annotation-blue {
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-blue.png");
 }
 
-.annotation-native {
+.annotation-gray {
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-gray.png");
 }
 
-.annotation-paid {
+.annotation-gold {
   background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-gold.png");
+}
+
+.annotation-purple {
+  background-image: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/56x56/annotation-purple.png");
 }
 
 .postman {
