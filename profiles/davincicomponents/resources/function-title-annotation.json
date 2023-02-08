@@ -11,7 +11,7 @@
                 "type": "action",
                 "properties": {
                     "backgroundColor": {
-                        "value": "5D00D6ff"
+                        "value": "#5D00D6ff"
                     },
                     "annotationTextColor": {
                         "value": "#ffffffff"
