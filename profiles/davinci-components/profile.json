@@ -3,7 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "Title",
+      "name": "Annot",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
