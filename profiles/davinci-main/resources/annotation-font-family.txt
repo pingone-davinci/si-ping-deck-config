@@ -1,1 +1,1 @@
-verdana
+sans-serif
