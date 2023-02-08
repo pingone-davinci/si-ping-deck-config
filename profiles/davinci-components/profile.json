@@ -3,7 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "SPLATz",
+      "name": "Future Terry",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
