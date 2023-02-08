@@ -11,6 +11,7 @@
     },
     {
       "name": "Invalid<br>Profile",
+      "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
       "action": "PROFILE",
@@ -18,6 +19,7 @@
     },
     {
       "name": "Invalid<br>Action",
+      "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
       "action": "INVALID_ACTION",
@@ -25,6 +27,7 @@
     },
     {
       "name": "Invalid<br>Pref",
+      "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
       "action": "PREF_CLIPBOARD",
@@ -32,6 +35,7 @@
     },
     {
       "name": "Invalid<br>Clipboard",
+      "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
       "action": "CLIPBOARD",
@@ -39,6 +43,7 @@
     },
     {
       "name": "Unset<br>Pref",
+      "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
       "action": "REDIRECT",
