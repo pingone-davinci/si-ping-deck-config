@@ -12,7 +12,7 @@
     {
       "name": "Function",
       "icon": "annotation-purple",
-      "toolTip": "Teleport function annotation",
+      "toolTip": "Flow function annotation",
       "action": "COMPONENT_CLIPBOARD",
       "resource": "function-title-annotation.json"
     },
