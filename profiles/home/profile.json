@@ -70,7 +70,7 @@
       "icon": "dv-connections",
       "toolTip": "Open DaVinci components profile",
       "action": "PROFILE",
-      "resource": "davinci-components"
+      "resource": "davincicomponents"
     },
     {
       "name": "Javascript",
