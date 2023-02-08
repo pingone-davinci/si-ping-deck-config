@@ -3,7 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "Future Problem",
+      "name": "Title",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
