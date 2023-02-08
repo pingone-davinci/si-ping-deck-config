@@ -3,7 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "foozballs",
+      "name": "SPLATz",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "COMPONENT_CLIPBOARD",
