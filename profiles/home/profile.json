@@ -59,6 +59,13 @@
       "resource": ""
     },
     {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
       "name": "DaVinci",
       "icon": "davinci",
       "toolTip": "Open DaVinci main profile",
