@@ -101,7 +101,7 @@ button.hidden {
 .preference-button {
   content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/preferences.png");
   float: right;
-  height: 28px;
+  height: 30px;
   position: relative;
   right: 24px;
   top: 22px;
