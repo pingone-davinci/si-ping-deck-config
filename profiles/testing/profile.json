@@ -120,11 +120,11 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "B64 Encode",
+      "icon": "base",
+      "toolTip": "Encode contents of your clipboard to base64",
+      "action": "UTILITY",
+      "resource": "BASE64_ENCODE"
     },
     {
       "name": "",
