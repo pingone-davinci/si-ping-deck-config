@@ -134,18 +134,18 @@
       "resource": "BASE64_DECODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "URL Encode",
+      "icon": "base",
+      "toolTip": "URL Encode contents of your clipboard",
+      "action": "UTILITY",
+      "resource": "URL_ENCODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "URL Decode",
+      "icon": "base",
+      "toolTip": "URL Decode contents of your clipboard from base64",
+      "action": "UTILITY",
+      "resource": "URL_DECODE"
     },
     {
       "name": "",
