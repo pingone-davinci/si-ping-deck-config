@@ -108,6 +108,10 @@ button.hidden {
   width: 28px;
 }
 
+.preference-button:hover {
+  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/preferences-hover.png");
+}
+
 .home-button {
   content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/home.png");
   float: left;
@@ -116,6 +120,10 @@ button.hidden {
   left: 26px;
   top: 22px;
   width: 28px;
+}
+
+.home-button:hover {
+  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/home-hover.png");
 }
 
 .buttonDiv {
