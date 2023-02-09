@@ -221,6 +221,13 @@
       "resource": ""
     },
     {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
+    },
+    {
       "name": "Readme",
       "icon": "readme",
       "toolTip": "View documentation for this profile",
