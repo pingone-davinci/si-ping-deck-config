@@ -120,32 +120,32 @@
       "resource": ""
     },
     {
-      "name": "B64 Encode",
-      "icon": "base",
-      "toolTip": "Encode contents of your clipboard to base64",
-      "action": "UTILITY",
-      "resource": "BASE64_ENCODE"
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
     },
     {
-      "name": "B64 Decode",
-      "icon": "base",
-      "toolTip": "Decode contents of your clipboard from base64",
-      "action": "UTILITY",
-      "resource": "BASE64_DECODE"
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
     },
     {
-      "name": "URL Encode",
-      "icon": "url",
-      "toolTip": "URL Encode contents of your clipboard",
-      "action": "UTILITY",
-      "resource": "URL_ENCODE"
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
     },
     {
-      "name": "URL Decode",
-      "icon": "url",
-      "toolTip": "URL Decode contents of your clipboard from base64",
-      "action": "UTILITY",
-      "resource": "URL_DECODE"
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
     },
     {
       "name": "",
