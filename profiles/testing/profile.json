@@ -162,10 +162,10 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
+      "name": "Market",
+      "icon": "integration",
       "toolTip": "",
-      "action": "",
+      "action": "REDIRECT",
       "resource": ""
     },
     {
