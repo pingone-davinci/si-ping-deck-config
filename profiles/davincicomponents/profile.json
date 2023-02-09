@@ -6,35 +6,35 @@
       "name": "Annot",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "flow-title-annotation.json"
     },
     {
       "name": "Function",
       "icon": "annotation-purple",
       "toolTip": "Flow function annotation",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "function-title-annotation.json"
     },
     {
       "name": "Annotation",
       "icon": "annotation-gray",
       "toolTip": "Native conector annotation",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "node-annotation-gray.json"
     },
     {
       "name": "Paid Conn.",
       "icon": "annotation-gold",
       "toolTip": "Paid connector annotation",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "node-annotation-gold.json"
     },
     {
       "name": "Spacer",
       "icon": "spacer",
       "toolTip": "Spacer annotation",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "spacer.json"
     },
     {
@@ -56,7 +56,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "No-Op UI component",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "no-op-ui.json"
     },
     {
@@ -64,7 +64,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTTP JSON Success Node",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "http-json-success.json"
     },
     {
@@ -72,7 +72,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTTP JSON Error Node",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "http-json-error.json"
     },
     {
@@ -101,7 +101,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "Username and password node",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "sign-in-form.json"
     },
     {
@@ -109,7 +109,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "Basic registration form",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "registration-form.json"
     },
 
@@ -160,7 +160,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Teleport method for handling common error",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "common-error-teleport.json"
     },
     {
@@ -168,7 +168,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Teleport method for resetting PingOne account password",
-      "action": "COMPONENT_CLIPBOARD",
+      "action": "GIT_DV_CLIPBOARD",
       "resource": "reset-password.json"
     },
     {

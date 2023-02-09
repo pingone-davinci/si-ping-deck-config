@@ -107,7 +107,7 @@
       "name": "*.tfvars",
       "icon": "terraform",
       "toolTip": "PingOne Terraform *.tfvars",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "pingone.terraform.tfvars"
     },
     {

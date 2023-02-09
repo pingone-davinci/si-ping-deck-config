@@ -38,7 +38,7 @@
       "namePosition": "MIDDLE",
       "icon": "",
       "toolTip": "",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "invalid_pref"
     },
     {

@@ -7,7 +7,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Javascript to add field focus",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "field-focus.js"
     },
     {
@@ -50,7 +50,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-blue",
       "toolTip": "Loop over an array of objects using for each ",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "array-for-each.js"
     },
     {
@@ -107,7 +107,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-blue",
       "toolTip": "Filter an array of objects",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "filter-array.js"
     },
     {
@@ -164,7 +164,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-blue",
       "toolTip": "Find an object in an array",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "find-in-array.js"
     },
     {

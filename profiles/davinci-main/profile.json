@@ -13,42 +13,42 @@
       "name": "Font",
       "icon": "font",
       "toolTip": "Font name for flow annotations",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "annotation-font-family.txt"
     },
     {
       "name": "Headers",
       "icon": "blue-palette",
       "toolTip": "Blue Hex value for flow and section headers",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "annotation-hex-blue.txt"
     },
     {
       "name": "Annot.",
       "icon": "gray-palette",
       "toolTip": "Gray Hex value for native component annotations",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "annotation-hex-gray.txt"
     },
     {
       "name": "Paid Conn.",
       "icon": "gold-palette",
       "toolTip": "Gold Hex value for paid component annotations",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "annotation-hex-paid-connectors.txt"
     },
     {
       "name": "Success",
       "icon": "green-palette",
       "toolTip": "Green Hex value for success nodes",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "success-node-hex.txt"
     },
     {
       "name": "Error",
       "icon": "ping-palette",
       "toolTip": "Redish Hex value for eror nodes",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "error-node-hex.txt"
     },
     {
@@ -63,7 +63,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard username/password sign in form",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "signin-form.html"
     },
     {
@@ -71,7 +71,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard registration form",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "registration-form.html"
     },
     {
@@ -79,7 +79,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard OTP form",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "otp-form.html"
     },
     {
@@ -87,7 +87,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard time-based OTP registration form",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "totp-registration.html"
     },
     {
@@ -95,7 +95,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard magic link polling",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "magic-link-polling.html"
     },
     {
@@ -103,7 +103,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "HTML for standard success screen",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "success.html"
     },
     {
@@ -111,7 +111,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-blue",
       "toolTip": "Standard card div html",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "card.html"
     },
     {
@@ -119,7 +119,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Centered paragraph",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "centered-paragraph.html"
     },
     {
@@ -127,7 +127,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Buttons div containing a reference register and cancel button",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "buttons.html"
     },
     {
@@ -135,7 +135,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Text input div input field and label",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "textinput.html"
     },
     {
@@ -143,7 +143,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Img component",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "logo.html"
     },
     {
@@ -151,7 +151,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "Standard H1 title",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "h1.html"
     },
     {
@@ -159,7 +159,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "HTML snippet to display error messages triggered by error customize connector",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "skerror.html"
     },
     {
@@ -167,7 +167,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-green",
       "toolTip": "HTML snippet to display error messages triggered by form validation",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "skerror-field.html"
     },
     {
@@ -175,7 +175,7 @@
       "namePosition": "MIDDLE",
       "icon": "box-blue",
       "toolTip": "Empty HTML form",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "form.html"
     },
      {
@@ -189,14 +189,14 @@
       "name": "Overrides",
       "icon": "css",
       "toolTip": "Create a Ping CSS overrides code block",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "ping-overrides.css"
     },
     {
       "name": "Ping CSS",
       "icon": "css",
       "toolTip": "Listing of the CSS files Ping leverages for flows",
-      "action": "CLIPBOARD",
+      "action": "GIT_CLIPBOARD",
       "resource": "ping-css.txt"
     },
     
