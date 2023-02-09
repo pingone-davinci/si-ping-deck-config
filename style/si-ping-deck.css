@@ -49,6 +49,10 @@ div.ping-deck {
   width: var(--ping-deck-width);
 }
 
+.top-margin-xl {
+  margin-top:30px;
+}
+
 div.ping-deck-blur {
   -moz-filter: blur(3px);
   -ms-filter: blur(3px);
