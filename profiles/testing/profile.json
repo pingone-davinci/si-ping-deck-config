@@ -127,11 +127,11 @@
       "resource": "BASE64_ENCODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "B64 Decode",
+      "icon": "base",
+      "toolTip": "Decode contents of your clipboard from base64",
+      "action": "UTILITY",
+      "resource": "BASE64_DECODE"
     },
     {
       "name": "",
