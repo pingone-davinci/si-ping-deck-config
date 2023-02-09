@@ -1,31 +1,31 @@
 :root {
-  --medium-gray: #383D40;
-  --darker-gray: #2D2D2D;
+  --alert-green: #9DC967;
+  --alert-red: #BA0029;
   --dark-gray: #222222;
+  --darker-gray: #2D2D2D;
+  --highlight-color-secondary: #b3222f;
+  --highlight-color: #3954B0;
   --lite-gray: #474747;
+  --main-bg-color: brown;
+  --medium-gray: #383D40;
+  --ping-deck-height: 490px;
+  --ping-deck-preferences-height: calc(var(--ping-deck-height) - 44px);
+  --ping-deck-preferences-width: calc(var(--ping-deck-width) - 80px);
+  --ping-deck-width: 760px;
   --pref-background: #191919;
   --pref-container-background: #292929;
   --pref-input-background: #3D3D3D;
   --pref-input-color: #E3E3E3;
   --pref-label-color: #969696;
-  --main-bg-color: brown;
-  --highlight-color: #3954B0;
-  --highlight-color-secondary: #b3222f;
   --primary-font-color: #F5F5F5;
-  --alert-green: #9DC967;
-  --alert-red: #BA0029;
   --scroll-bar-background: var(--pref-input-background);
   --scroll-bar: var(--pref-input-color);
-  --ping-deck-width: 760px;
-  --ping-deck-height: 490px;
-  --ping-deck-preferences-width: calc(var(--ping-deck-width) - 80px);
-  --ping-deck-preferences-height: calc(var(--ping-deck-height) - 44px);
 }
 
 body {
   background-color: var(--medium-gray);
-  font-family: 'Montserrat', sans-serif;
   color: var(--primary-font-color);
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
@@ -38,35 +38,35 @@ a {
 }
 
 div.ping-deck {
-  border: 5px solid var(--dark-gray);
   background-color: var(--darker-gray);
-  width: var(--ping-deck-width);
-  height: var(--ping-deck-height);
-  margin: 0 auto;
-  margin-top: 40px;
-  padding: 0px 16px;
   border-radius: 10px;
+  border: 5px solid var(--dark-gray);
+  height: var(--ping-deck-height);
+  margin-top: 40px;
+  margin: 0 auto;
+  padding: 0px 16px;
   text-align: center;
+  width: var(--ping-deck-width);
 }
 
 div.ping-deck-blur {
-  -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
-  -o-filter: blur(3px);
   -ms-filter: blur(3px);
+  -o-filter: blur(3px);
+  -webkit-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
 
 button.action {
-  height: 80px;
-  width: 80px;
-  border: 2px solid var(--lite-gray);
-  border-radius: 10px;
   background-color: var(--dark-gray);
+  border-radius: 10px;
+  border: 2px solid var(--lite-gray);
   color: var(--primary-font-color);
-  margin-right: 5px;
+  height: 80px;
   margin-left: 5px;
+  margin-right: 5px;
   padding: 0px;
+  width: 80px;
 }
 
 button.action:hover {
@@ -88,40 +88,40 @@ button.action:active {
 
 
 .preference-button {
-  height: 28px;
-  width: 28px;
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/preferences.png?v=1675683632248");
   float: right;
+  height: 28px;
   position: relative;
   right: 24px;
   top: 22px;
+  width: 28px;
 }
 
 .buttonDiv {
-  width: 72px;
-  height: 72px;
-  background-repeat: no-repeat;
   background-position: 10px center;
+  background-repeat: no-repeat;
+  height: 72px;
   position: relative;
+  width: 72px;
 }
 
 .buttonText {
-  position: absolute;
   bottom: 0;
-  margin-bottom: 2px;
-  width: 100%;
-  left: 2px;
-  font-weight: bold;
   font-size: 8pt;
+  font-weight: bold;
+  left: 2px;
+  margin-bottom: 2px;
+  position: absolute;
+  width: 100%;
 }
 
 .buttonTextMiddle {
+  font-size: 8pt;
+  font-weight: bold;
+  left: 2px;
   position: absolute;
   top: 32%;
   width: 100%;
-  left: 2px;
-  font-weight: bold;
-  font-size: 8pt;
 }
 
 div.button-row {
@@ -133,17 +133,17 @@ div.button-row {
 }
 
 h2.main-title {
-  padding-left: 10px;
   margin-bottom: 0px;
+  padding-left: 10px;
 }
 
 .logo {
   /* Ping Logo  */
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/si-logo.png?v=1675693630957");
-  width: 22px;
+  display: inline-block;
   height: 22px;
   padding-top: 15px;
-  display: inline-block;
+  width: 22px;
 }
 
 .tmpBorder {
@@ -152,18 +152,18 @@ h2.main-title {
 
 div.ping-deck-preferences {
   position: fixed;
-  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)));
-  left: calc(50% - 21px - (var(--ping-deck-preferences-width) * .5));
-  width: var(--ping-deck-preferences-width);
-  height: var(--ping-deck-preferences-height);
+  background-color: var(--pref-background);
+  border-radius: 10px;
   border: 3px solid #73AD21;
   border: 5px solid var(--dark-gray);
-  background-color: var(--pref-background);
-  margin: 0 auto;
+  height: var(--ping-deck-preferences-height);
+  left: calc(50% - 21px - (var(--ping-deck-preferences-width) * .5));
   margin-top: 40px;
+  margin: 0 auto;
   padding: 0px 16px;
-  border-radius: 10px;
   text-align: center;
+  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)));
+  width: var(--ping-deck-preferences-width);
 }
 
 div.preference-bar {
@@ -172,13 +172,13 @@ div.preference-bar {
 }
 
 div.preference-bar .tab-button {
-  border: none;
   background-color: green;
-  border-radius: 5px 5px 0px 0px;
-  padding: 5px 10px 5px 10px;
-  margin: 0px 5px 0px 5px;
-  color: var(--pref-label-color);
   background-color: var(--pref-background);
+  border-radius: 5px 5px 0px 0px;
+  border: none;
+  color: var(--pref-label-color);
+  margin: 0px 5px 0px 5px;
+  padding: 5px 10px 5px 10px;
 }
 
 div.preference-bar .about {
@@ -192,92 +192,76 @@ div.preference-bar .tab-button.selected {
 
 div.preference-container {
   background-color: var(--pref-container-background);
-  padding: 0;
-  width: var(--ping-deck-preferences-width);
   height: calc(var(--ping-deck-preferences-height) - 120px);
   overflow: auto;
+  padding: 0;
+  width: var(--ping-deck-preferences-width);
 }
 
 div.preference-container .about {
-  margin-top: 10px;
   color: var(--pref-label-color);
   font-size: 11pt;
+  margin-top: 10px;
 }
 
 fieldset {
+  border: none;
   margin: 0;
   padding: 0;
-  border: none;
 }
 
 div.preference {
-  width: 100%;
   padding-top: 14px;
+  width: 100%;
 }
 
 div.preference label {
+  color: var(--pref-label-color);
   display: inline-grid;
-  width: 30%;
+  font-size: 10pt;
   padding-right: 2%;
   text-align: right;
-  color: var(--pref-label-color);
-  font-size: 10pt;
+  width: 30%;
 }
 
 div.preference input {
-  display: inline-grid;
-  width: 65%;
   background-color: var(--pref-input-background);
-  color: var(--pref-input-color);
   border: none;
-  padding: 0.5em 0.5em;
+  color: var(--pref-input-color);
+  display: inline-grid;
   font-size: 11pt;
+  padding: 0.5em 0.5em;
+  width: 65%;
 }
 
-/* div.preference textarea {
-  display: inline-grid;
-  width: 65%;
-  height: 110px;
-  background-color: var(--pref-input-background);
-  color: var(--pref-input-color);
-  border: none;
-  padding: 0.5em 0.5em;
-  font-size: 11pt;
-  resize: none;
-} */
-
-
 .preference-close-button {
-  height: 20px;
-  width: 20px;
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
+  height: 20px;
   position: absolute;
   right: 10;
   top: 10;
+  width: 20px;
 }
 
 .alert {
+  -webkit-animation-duration: 8s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 8s;
+  animation-fill-mode: both;
   background-color: green;
-  width: auto;
-  height: auto;
+  background-color: var(--alert-green);
+  border-radius: 8px;
   border: none;
   color: black;
-  background-color: var(--alert-green);
-
-  margin-top: -7px;
-  margin-right: 35%;
-  margin-left: 35%;
-
-  font-weight: bold;
-  padding: 5px 10px 5px 10px;
-  border-radius: 8px;
-  text-align: center;
   font-size: 8pt;
-
-  -webkit-animation-duration: 8s;
-  animation-duration: 8s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  font-weight: bold;
+  height: auto;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: -7px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  width: auto;
 }
 
 .alert.green {
@@ -314,7 +298,6 @@ div.preference input {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
-
 
 @-webkit-scrollbar {
   width: 10px;
