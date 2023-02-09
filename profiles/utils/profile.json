@@ -3,46 +3,32 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "B64 Encode",
+      "icon": "base",
+      "toolTip": "Encode contents of your clipboard to base64",
+      "action": "UTILITY",
+      "resource": "BASE64_ENCODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "B64 Decode",
+      "icon": "base",
+      "toolTip": "Decode contents of your clipboard from base64",
+      "action": "UTILITY",
+      "resource": "BASE64_DECODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "URL Encode",
+      "icon": "base",
+      "toolTip": "URL Encode contents of your clipboard",
+      "action": "UTILITY",
+      "resource": "URL_ENCODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "URL Decode",
+      "icon": "base",
+      "toolTip": "URL Decode contents of your clipboard from base64",
+      "action": "UTILITY",
+      "resource": "URL_DECODE"
     },
     {
       "name": "",
@@ -71,153 +57,6 @@
       "toolTip": "Decode JWT",
       "action": "REDIRECT",
       "resource": "https://developer.pingidentity.com/en/tools/jwt-decoder.html"
-    },
-    {
-      "name": "Encode",
-      "icon": "base",
-      "toolTip": "Encode to Base64",
-      "action": "REDIRECT",
-      "resource": "https://www.base64encode.org/"
-    },
-    {
-      "name": "Decode",
-      "icon": "base",
-      "toolTip": "Decode from Base64",
-      "action": "REDIRECT",
-      "resource": "https://www.base64decode.org/"
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "Readme",
-      "icon": "readme",
-      "toolTip": "TBD",
-      "action": "",
-      "resource": ""
     }
   ]
 }
