@@ -115,18 +115,18 @@
       "resource": ""
     },
     {
-      "name": "Terraform",
-      "icon": "terraform",
-      "toolTip": "Terraform",
-      "action": "PROFILE",
-      "resource": "terraform"
-    },
-    {
       "name": "DevOps",
       "icon": "devops",
       "toolTip": "Ping Identity DevOps",
       "action": "PROFILE",
       "resource": "devops"
+    },
+    {
+      "name": "",
+      "icon": "",
+      "toolTip": "",
+      "action": "",
+      "resource": ""
     },
     {
       "name": "",
