@@ -113,11 +113,11 @@
       "resource": "https://www.google.com"
     },
     {
-      "name": "",
-      "icon": "",
+      "name": "Test 3",
+      "icon": "json",
       "toolTip": "",
-      "action": "",
-      "resource": ""
+      "action": "REDIRECT",
+      "resource": "http://www.github.com"
     },
     {
       "name": "",
