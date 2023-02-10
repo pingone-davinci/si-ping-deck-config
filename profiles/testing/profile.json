@@ -67,8 +67,8 @@
       "name": "DaVinci<br/>Login",
       "icon": "davinci",
       "toolTip": "DaVinci Login",
-      "action": "DV_LOGIN",
-      "resource": ""
+      "action": "UTILITY",
+      "resource": "DV_LOGIN"
     },
     {
       "name": "",
