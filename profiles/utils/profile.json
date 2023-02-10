@@ -3,6 +3,7 @@
   "description": "TBD",
   "actions": [
     {
+      "position": { "row": 1, "col": 1 },
       "name": "B64 Encode",
       "icon": "base",
       "toolTip": "Encode contents of your clipboard to base64",
@@ -10,6 +11,7 @@
       "resource": "BASE64_ENCODE"
     },
     {
+      "position": { "row": 1, "col": 2 },
       "name": "B64 Decode",
       "icon": "base",
       "toolTip": "Decode contents of your clipboard from base64",
@@ -17,6 +19,7 @@
       "resource": "BASE64_DECODE"
     },
     {
+      "position": { "row": 1, "col": 4 },
       "name": "URL Encode",
       "icon": "url",
       "toolTip": "URL Encode contents of your clipboard",
@@ -24,6 +27,7 @@
       "resource": "URL_ENCODE"
     },
     {
+      "position": { "row": 1, "col": 5 },
       "name": "URL Decode",
       "icon": "url",
       "toolTip": "URL Decode contents of your clipboard from base64",
@@ -31,27 +35,7 @@
       "resource": "URL_DECODE"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 8 },
       "name": "JWT",
       "icon": "jwt",
       "toolTip": "Decode JWT",

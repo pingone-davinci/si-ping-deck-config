@@ -3,6 +3,7 @@
   "description": "TBD",
   "actions": [
     {
+      "position": { "row": 1, "col": 1 },
       "name": "OnePing",
       "icon": "pingone",
       "toolTip": "OnePing Login",
@@ -10,13 +11,7 @@
       "resource": "https://signon.pingidentity.com/davinci/policy/5447db4173e2cd3139ba8e633817677e/authorize?client_id=b91b7752f23e20d56c8623aca138ead8&response_type=code&scope=openid&redirect_uri=https://www.pingidentity.com"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 3 },
       "name": "Collection",
       "icon": "postman",
       "toolTip": "PingOne Postman Collection",
@@ -24,6 +19,7 @@
       "resource": "https://www.postman.com/ping-identity/workspace/pingone/overview"
     },
     {
+      "position": { "row": 1, "col": 4 },
       "name": "Platform API",
       "icon": "pingone",
       "toolTip": "PingOne Platform API",
@@ -31,27 +27,7 @@
       "resource": "https://apidocs.pingidentity.com/pingone/platform/v1/api/"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 8 },
       "name": "Console",
       "icon": "pingone",
       "toolTip": "PingOne Console Login",
@@ -59,6 +35,7 @@
       "resource": "{{pingone_consoleUrl}}/?env={{pingone_envId}}"
     },
     {
+      "position": { "row": 2, "col": 1 },
       "name": "MyAccount",
       "icon": "pingone",
       "toolTip": "PingOne Self-Service (MyAccount)",
@@ -66,6 +43,7 @@
       "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myaccount/"
     },
     {
+      "position": { "row": 2, "col": 2 },
       "name": "Portal",
       "icon": "pingone",
       "toolTip": "PingOne Application Portal",
@@ -73,6 +51,7 @@
       "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myapps/"
     },
     {
+      "position": { "row": 2, "col": 3 },
       "name": "Logout",
       "icon": "pingone",
       "toolTip": "PingOne Sign-Off",
@@ -80,6 +59,7 @@
       "resource": "{{pingone_consoleUrl}}/logout.html"
     },
     {
+      "position": { "row": 2, "col": 4 },
       "name": "Env<br>ID",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -88,6 +68,7 @@
       "resource": "pingone_envId"
     },
     {
+      "position": { "row": 2, "col": 5 },
       "name": "Client<br>ID",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -96,6 +77,7 @@
       "resource": "pingone_clientId"
     },
     {
+      "position": { "row": 2, "col": 6 },
       "name": "Client<br>Secret",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -104,6 +86,7 @@
       "resource": "pingone_clientSecret"
     },
     {
+      "position": { "row": 2, "col": 7 },
       "name": "*.tfvars",
       "icon": "terraform",
       "toolTip": "PingOne Terraform *.tfvars",
@@ -111,111 +94,7 @@
       "resource": "pingone.terraform.tfvars"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 5, "col": 8 },
       "name": "Readme",
       "icon": "readme",
       "toolTip": "TBD",

@@ -3,6 +3,7 @@
   "description": "TBD",
   "actions": [
     {
+      "position": { "row": 1, "col": 1 },
       "name": "Standards",
       "icon": "standards",
       "toolTip": "View Ping's flow standards documentation",
@@ -10,6 +11,7 @@
       "resource": "https://docs.pingidentity.com/r/en-us/davinci/rxo1664233464532"
     },
     {
+      "position": { "row": 1, "col": 2 },
       "name": "Font",
       "icon": "font",
       "toolTip": "Font name for flow annotations",
@@ -17,6 +19,7 @@
       "resource": "annotation-font-family.txt"
     },
     {
+      "position": { "row": 1, "col": 3 },
       "name": "Headers",
       "icon": "blue-palette",
       "toolTip": "Blue Hex value for flow and section headers",
@@ -24,6 +27,7 @@
       "resource": "annotation-hex-blue.txt"
     },
     {
+      "position": { "row": 1, "col": 4 },
       "name": "Annot.",
       "icon": "gray-palette",
       "toolTip": "Gray Hex value for native component annotations",
@@ -31,6 +35,7 @@
       "resource": "annotation-hex-gray.txt"
     },
     {
+      "position": { "row": 1, "col": 5 },
       "name": "Paid Conn.",
       "icon": "gold-palette",
       "toolTip": "Gold Hex value for paid component annotations",
@@ -38,6 +43,7 @@
       "resource": "annotation-hex-paid-connectors.txt"
     },
     {
+      "position": { "row": 1, "col": 6 },
       "name": "Success",
       "icon": "green-palette",
       "toolTip": "Green Hex value for success nodes",
@@ -45,6 +51,7 @@
       "resource": "success-node-hex.txt"
     },
     {
+      "position": { "row": 1, "col": 7 },
       "name": "Error",
       "icon": "ping-palette",
       "toolTip": "Redish Hex value for eror nodes",
@@ -52,6 +59,7 @@
       "resource": "error-node-hex.txt"
     },
     {
+      "position": { "row": 1, "col": 8 },
       "name": "Confluence",
       "icon": "ux-team",
       "toolTip": "UX confluence page for the latest DaVinci html/css",
@@ -59,6 +67,7 @@
       "resource": "https://confluence.pingidentity.com/pages/viewpage.action?spaceKey=UX&title=DaVinci+Templates"
     },
     {
+      "position": { "row": 2, "col": 1 },
       "name": "Sign In<br/>HTML",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -67,6 +76,7 @@
       "resource": "signin-form.html"
     },
     {
+      "position": { "row": 2, "col": 2 },
       "name": "Register<br/>HTML",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -75,6 +85,7 @@
       "resource": "registration-form.html"
     },
     {
+      "position": { "row": 2, "col": 3 },
       "name": "OTP<br/>HTML",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -83,6 +94,7 @@
       "resource": "otp-form.html"
     },
     {
+      "position": { "row": 2, "col": 4 },
       "name": "TOTP<br/>HTML",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -91,6 +103,7 @@
       "resource": "totp-registration.html"
     },
     {
+      "position": { "row": 2, "col": 5 },
       "name": "Magic<br/>Polling",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -99,6 +112,7 @@
       "resource": "magic-link-polling.html"
     },
     {
+      "position": { "row": 2, "col": 6 },
       "name": "Success<br/>HTML",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -107,6 +121,7 @@
       "resource": "success.html"
     },
     {
+      "position": { "row": 2, "col": 7 },
       "name": "Card<br/>DIV",
       "namePosition": "MIDDLE",
       "icon": "box-blue",
@@ -115,6 +130,7 @@
       "resource": "card.html"
     },
     {
+      "position": { "row": 2, "col": 8 },
       "name": "Para.<br/>Center",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -123,6 +139,7 @@
       "resource": "centered-paragraph.html"
     },
     {
+      "position": { "row": 3, "col": 1 },
       "name": "Buttons<br/>Div",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -131,6 +148,7 @@
       "resource": "buttons.html"
     },
     {
+      "position": { "row": 3, "col": 2 },
       "name": "Text<br/>Input",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -139,6 +157,7 @@
       "resource": "textinput.html"
     },
     {
+      "position": { "row": 3, "col": 3 },
       "name": "Logo<br/>Image",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -147,6 +166,7 @@
       "resource": "logo.html"
     },
     {
+      "position": { "row": 3, "col": 4 },
       "name": "H1<br/>Title",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -155,6 +175,7 @@
       "resource": "h1.html"
     },
     {
+      "position": { "row": 3, "col": 5 },
       "name": "SK<br/>Error",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -163,6 +184,7 @@
       "resource": "skerror.html"
     },
     {
+      "position": { "row": 3, "col": 6 },
       "name": "SKError<br/>Field",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -171,6 +193,7 @@
       "resource": "skerror-field.html"
     },
     {
+      "position": { "row": 3, "col": 7 },
       "name": "Empty<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-blue",
@@ -179,6 +202,7 @@
       "resource": "form.html"
     },
      {
+      "position": { "row": 3, "col": 8 },
       "name": "Nodes",
       "icon": "dv-connections",
       "toolTip": "Open DaVinci components profile",
@@ -186,6 +210,7 @@
       "resource": "davincicomponents"
     },
     {
+      "position": { "row": 4, "col": 1 },
       "name": "Overrides",
       "icon": "css",
       "toolTip": "Create a Ping CSS overrides code block",
@@ -193,6 +218,7 @@
       "resource": "ping-overrides.css"
     },
     {
+      "position": { "row": 4, "col": 2 },
       "name": "Ping CSS",
       "icon": "css",
       "toolTip": "Listing of the CSS files Ping leverages for flows",
@@ -201,6 +227,7 @@
     },
     
     {
+      "position": { "row": 4, "col": 3 },
       "name": "Staging",
       "icon": "jira",
       "toolTip": "View DaVinci Jira staging queue",
@@ -208,6 +235,7 @@
       "resource": "https://jira.pingidentity.com/issues/?filter=42701"
     },
     {
+      "position": { "row": 4, "col": 4 },
       "name": "Defects",
       "icon": "jira",
       "toolTip": "View DaVinci Jira defects dashboard",
@@ -215,27 +243,7 @@
       "resource": "https://jira.pingidentity.com/secure/Dashboard.jspa?selectPageId=31311"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 4, "col": 8 },
       "name": "Readme",
       "icon": "readme",
       "toolTip": "Profile readme",

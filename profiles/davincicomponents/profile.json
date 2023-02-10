@@ -3,6 +3,7 @@
   "description": "TBD",
   "actions": [
     {
+      "position": { "row": 1, "col": 1 },
       "name": "Annot",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
@@ -10,6 +11,7 @@
       "resource": "flow-title-annotation.json"
     },
     {
+      "position": { "row": 1, "col": 2 },
       "name": "Function",
       "icon": "annotation-purple",
       "toolTip": "Flow function annotation",
@@ -17,6 +19,7 @@
       "resource": "function-title-annotation.json"
     },
     {
+      "position": { "row": 1, "col": 3 },
       "name": "Annotation",
       "icon": "annotation-gray",
       "toolTip": "Native conector annotation",
@@ -24,6 +27,7 @@
       "resource": "node-annotation-gray.json"
     },
     {
+      "position": { "row": 1, "col": 4 },
       "name": "Paid Conn.",
       "icon": "annotation-gold",
       "toolTip": "Paid connector annotation",
@@ -31,6 +35,7 @@
       "resource": "node-annotation-gold.json"
     },
     {
+      "position": { "row": 1, "col": 5 },
       "name": "Spacer",
       "icon": "spacer",
       "toolTip": "Spacer annotation",
@@ -38,20 +43,7 @@
       "resource": "spacer.json"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 8 },
       "name": "No-Op<br/>UI",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -60,6 +52,7 @@
       "resource": "no-op-ui.json"
     },
     {
+      "position": { "row": 2, "col": 1 },
       "name": "JSON<br/>Success",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -68,6 +61,7 @@
       "resource": "http-json-success.json"
     },
     {
+      "position": { "row": 2, "col": 2 },
       "name": "JSON<br/>Error",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -76,27 +70,7 @@
       "resource": "http-json-error.json"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 2, "col": 7 },
       "name": "Sign In<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -105,6 +79,7 @@
       "resource": "sign-in-form.json"
     },
     {
+      "position": { "row": 2, "col": 8 },
       "name": "Reg<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -112,50 +87,8 @@
       "action": "GIT_DV_CLIPBOARD",
       "resource": "registration-form.json"
     },
-
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 3, "col": 6 },
       "name": "Common<br/>Error",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -164,6 +97,7 @@
       "resource": "common-error-teleport.json"
     },
     {
+      "position": { "row": 3, "col": 7 },
       "name": "PWD<br/>Reset",
       "namePosition": "MIDDLE",
       "icon": "box-green",
@@ -172,6 +106,7 @@
       "resource": "reset-password.json"
     },
     {
+      "position": { "row": 3, "col": 8 },
       "name": "DaVinci",
       "icon": "davinci",
       "toolTip": "",
@@ -179,55 +114,7 @@
       "resource": "davinci-main"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 4, "col": 8 },
       "name": "Readme",
       "icon": "readme",
       "toolTip": "View documentation for this profile",
