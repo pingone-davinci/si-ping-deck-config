@@ -59,7 +59,7 @@
       "resource": "devops"
     },
     {
-      "position": { "row": 2, "col": 7 },
+      "position": { "row": 3, "col": 6 },
       "name": "Flows",
       "icon": "flows",
       "toolTip": "Run productized DaVinci solutions",
