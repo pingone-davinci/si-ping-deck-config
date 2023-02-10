@@ -3,69 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 2, "col": 2 },
       "name": "DaVinci",
       "icon": "davinci",
       "toolTip": "Open DaVinci main profile",
@@ -73,6 +11,7 @@
       "resource": "davinci-main"
     },
     {
+      "position": { "row": 2, "col": 3 },
       "name": "DV Conn.",
       "icon": "dv-connections",
       "toolTip": "Open DaVinci components profile",
@@ -80,6 +19,7 @@
       "resource": "davincicomponents"
     },
     {
+      "position": { "row": 2, "col": 4 },
       "name": "Javascript",
       "icon": "javascript",
       "toolTip": "",
@@ -87,6 +27,7 @@
       "resource": "javascript"
     },
     {
+      "position": { "row": 2, "col": 5 },
       "name": "Utils",
       "icon": "utilities",
       "toolTip": "",
@@ -94,6 +35,7 @@
       "resource": "utils"
     },
     {
+      "position": { "row": 2, "col": 6 },
       "name": "Packages",
       "icon": "solution-innovations",
       "toolTip": "Solution Innovations Packages",
@@ -101,6 +43,7 @@
       "resource": "https://packages.pingidentity.cloud"
     },
     {
+      "position": { "row": 2, "col": 7 },
       "name": "PingOne",
       "icon": "pingone",
       "toolTip": "PingOne profile",
@@ -108,20 +51,7 @@
       "resource": "pingone"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 3, "col": 2 },
       "name": "DevOps",
       "icon": "devops",
       "toolTip": "Ping Identity DevOps",
@@ -129,34 +59,7 @@
       "resource": "devops"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 2, "col": 7 },
       "name": "Flows",
       "icon": "flows",
       "toolTip": "Run productized DaVinci solutions",
@@ -164,62 +67,7 @@
       "resource": "flows"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 8, "col": 8 },
       "name": "",
       "icon": "",
       "toolTip": "Testing Page",

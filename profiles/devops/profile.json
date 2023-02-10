@@ -3,20 +3,7 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 1 },
       "name": "DevOps",
       "icon": "devops",
       "toolTip": "Ping Identity DevOps",
@@ -24,6 +11,7 @@
       "resource": "https://devops.pingidentity.com"
     },
     {
+      "position": { "row": 1, "col": 2 },
       "name": "Docker Hub",
       "icon": "docker",
       "toolTip": "Ping Identity Docker Images",
@@ -31,6 +19,7 @@
       "resource": "https://hub.docker.com/u/pingidentity"
     },
     {
+      "position": { "row": 1, "col": 3 },
       "name": "",
       "icon": "helm",
       "toolTip": "Ping Identity Helm",
@@ -38,6 +27,7 @@
       "resource": "https://helm.pingidentity.com/"
     },
     {
+      "position": { "row": 1, "col": 4},
       "name": "Community",
       "icon": "ping",
       "toolTip": "Ping Identity DevOps Community",
@@ -45,34 +35,7 @@
       "resource": "https://support.pingidentity.com/s/topic/0TO1W000000IF30WAG/pingdevops"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": { "row": 1, "col": 7 },
       "name": "PingOne",
       "icon": "terraform",
       "toolTip": "PingOne Terraform Provider",
@@ -80,6 +43,7 @@
       "resource": "https://registry.terraform.io/providers/pingidentity/pingone/latest"
     },
     {
+      "position": { "row": 1, "col": 8 },
       "name": "DaVinci",
       "icon": "terraform",
       "toolTip": "PingOne DaVinci Terraform Provider",
