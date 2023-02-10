@@ -110,6 +110,6 @@
       "toolTip": "View a Node JS Widget integration",
       "action": "REDIRECT",
       "resource": "https://glitch.com/~davinci-v2-node-template"
-    },
+    }
   ]
 }
