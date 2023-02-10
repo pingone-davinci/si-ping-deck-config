@@ -71,7 +71,7 @@
       "icon": "davinci",
       "toolTip": "Import Passwordless Registration (FIDO) Solution",
       "action": "DV_IMPORT",
-      "resource": "ic-passwordless-registration-fido"
+      "resource": "ic-passwordless-registration-fido.json"
     }
   ]
 }
