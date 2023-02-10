@@ -64,10 +64,10 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
+      "name": "DaVinci<br/>Login",
+      "icon": "davinci",
+      "toolTip": "DaVinci Login",
+      "action": "DV_LOGIN",
       "resource": ""
     },
     {
