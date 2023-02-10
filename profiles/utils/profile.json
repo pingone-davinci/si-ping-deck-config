@@ -25,7 +25,7 @@
     },
     {
       "name": "URL Decode",
-      "icon": "url",
+      "icon": "flow",
       "toolTip": "URL Decode contents of your clipboard from base64",
       "action": "UTILITY",
       "resource": "URL_DECODE"
