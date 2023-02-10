@@ -15,7 +15,7 @@
 .devops { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/devops.png");}
 .docker { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/docker.png");}
 .dv-connections { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/components.png");}
-.flows { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/flows.png");}
+.flows, .flow { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/flows.png");}
 .font { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-font.png");}
 .github { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/github.png");}
 .glitch { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/glitch.png");}

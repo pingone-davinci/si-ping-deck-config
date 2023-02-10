@@ -107,7 +107,7 @@
     },
     {
       "name": "Test 2",
-      "icon": "github",
+      "icon": "flow",
       "toolTip": "",
       "action": "REDIRECT",
       "resource": "https://www.google.com"
