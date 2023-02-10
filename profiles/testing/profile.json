@@ -64,18 +64,18 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
+      "name": "DaVinci<br/>Login",
+      "icon": "davinci",
+      "toolTip": "DaVinci Login",
+      "action": "DV_LOGIN",
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "DaVinci<br/>Import",
+      "icon": "davinci",
+      "toolTip": "DaVinci Import",
+      "action": "DV_IMPORT",
+      "resource": "sample-main-sub.json"
     },
     {
       "name": "",

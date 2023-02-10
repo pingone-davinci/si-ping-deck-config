@@ -65,6 +65,35 @@
       }
     ]
   },
+  "davinci": {
+    "title": "DaVinci",
+    "inputs": [
+      {
+        "id": "envId",
+        "label": "PingOne Environment ID",
+        "type": "text",
+        "tooltip": "PingOne Environment ID"
+      },
+      {
+        "id": "username",
+        "label": "PingOne Username",
+        "type": "text",
+        "tooltip": "PingOne Username"
+      },
+      {
+        "id": "password",
+        "label": "PingOne Password",
+        "type": "password",
+        "tooltip": "PingOne Password"
+      },
+      {
+        "id": "companyId",
+        "label": "DaVinci Company ID",
+        "type": "text",
+        "tooltip": "PingOne DaVinci Company ID"
+      }
+    ]
+  },
   "about": {
     "title": "About",
     "class": "about",
