@@ -67,7 +67,7 @@
       "resource": "flows"
     },
     {
-      "position": { "row": 8, "col": 8 },
+      "position": { "row": 4, "col": 8 },
       "name": "",
       "icon": "",
       "toolTip": "Testing Page",
