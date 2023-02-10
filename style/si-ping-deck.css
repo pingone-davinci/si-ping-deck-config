@@ -20,6 +20,7 @@
   --primary-font-color: #F5F5F5;
   --scroll-bar-background: var(--pref-input-background);
   --scroll-bar: var(--pref-input-color);
+  --deck-top-padding: 30px;
 }
 
 body {
@@ -50,7 +51,7 @@ div.ping-deck {
 }
 
 .top-margin-xl {
-  margin-top:30px;
+  margin-top: calc(var(--deck-top-padding));
 }
 
 div.ping-deck-blur {
@@ -109,11 +110,11 @@ button.hidden {
 }
 
 .preference-button:hover {
-  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/preferences-hover.png");
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/preferences-hover.png");
 }
 
 .home-button {
-  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/home.png");
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home.png");
   float: left;
   height: 28px;
   position: relative;
@@ -123,7 +124,7 @@ button.hidden {
 }
 
 .home-button:hover {
-  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/home-hover.png");
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home-hover.png");
 }
 
 .buttonDiv {
@@ -191,7 +192,7 @@ div.ping-deck-preferences {
   margin: 0 auto;
   padding: 0px 16px;
   text-align: center;
-  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)));
+  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)) + var(--deck-top-padding));
   width: var(--ping-deck-preferences-width);
 }
 
