@@ -72,6 +72,27 @@
       "toolTip": "Import Passwordless Registration (FIDO) Solution",
       "action": "DV_IMPORT",
       "resource": "ic-passwordless-registration-fido.json"
+    },
+    {
+      "name": "Import",
+      "icon": "davinci",
+      "toolTip": "Import Passwordless Authentication (FIDO)",
+      "action": "DV_IMPORT",
+      "resource": "ic-passwordless-authentication-fido.json"
+    },
+    {
+      "name": "Import",
+      "icon": "davinci",
+      "toolTip": "Import Extended User Session: Remember Me Login DaVinci Flow Solution",
+      "action": "DV_IMPORT",
+      "resource": "ic-extended-user-session-remember-me.json"
+    },
+    {
+      "name": "Import",
+      "icon": "davinci",
+      "toolTip": "Import RADIUS Gateway - Authentication Solution",
+      "action": "DV_IMPORT",
+      "resource": "ic-radius-gateway-authentication.json"
     }
   ]
 }

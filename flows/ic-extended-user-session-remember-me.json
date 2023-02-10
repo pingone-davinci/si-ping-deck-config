@@ -1,0 +1,2834 @@
+{
+  "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f",
+  "authTokenExpireIds": [],
+  "connectorIds": [
+    "pingOneSSOConnector",
+    "httpConnector",
+    "cookieConnector",
+    "errorConnector",
+    "userPolicyConnector",
+    "functionsConnector",
+    "skOpenIdConnector",
+    "annotationConnector",
+    "nodeConnector",
+    "variablesConnector"
+  ],
+  "createdDate": 1671578987507,
+  "currentVersion": 4,
+  "customerId": "cbedb487563e86ddb94c04fb3d3dae61",
+  "deployedDate": 1671578989349,
+  "description": "Imported on Mon Dec 05 2022 20:42:53 GMT+0000 (Coordinated Universal Time)",
+  "flowStatus": "enabled",
+  "name": "Extended User Session: Remember Me Login",
+  "orx": "{\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_1\",\"inside_0\",\"inside_1_1_allTriggersTrue\",\"inside_2_1_allTriggersTrue\",\"end_0_2_anyTriggersFalse\",\"end_1_1_allTriggersTrue\",\"end_2_2_anyTriggersFalse\",\"start_0\",\"inside_3\",\"inside_4_1_anyTriggersFalse\",\"end_3_2_allTriggersTrue\",\"inside_5\",\"end_4_1_anyTriggersFalse\",\"inside_6_2_allTriggersTrue\",\"inside_7\",\"end_5_1_allTriggersTrue\",\"end_6_2_anyTriggersFalse\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"5cpmf6jb8i\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"logoUrl\",\"value\":\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\",\"key\":0.5081127637273157,\"label\":\"logoUrl (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"cookieName\",\"value\":\"extended_session_cookie\",\"key\":0.8199177943303333,\"type\":\"string\",\"label\":\"cookieName (string - flowInstance)\"},{\"name\":\"sessionTimeout\",\"value\":\"7776000\",\"key\":0.4315163729893683,\"label\":\"sessionTimeout (number - flowInstance)\",\"type\":\"number\"},{\"name\":\"companyName\",\"value\":\"Ping Identity\",\"key\":0.4125394624303311,\"label\":\"companyName (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"logoStyle\",\"value\":\"width: 65px; height: 65px\",\"key\":0.8908894858725374,\"label\":\"logoStyle (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Initialize variables\"},\"nodeDescription\":{\"value\":\"Initialize any common values that will be used in the flow so that they're easier to update in one place.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":0,\"signalId\":0}],\"transitionId\":0},{\"from\":[\"start_1\"],\"to\":\"inside_0\",\"conditions\":{\"$and\":[{\"id\":\"hfceyxaxa3\",\"connectionId\":\"0ac0cbbe6b3ebb07fbfe91e69e0f7e34\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"transitionId\":16,\"signalId\":0}]},\"signals\":[{\"name\":\"User Policy\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"y9xe3u9i5b\",\"connectionId\":\"4cb5e3465d718a84087ec9b6a6251e52\",\"connectorId\":\"userPolicyConnector\",\"capabilityName\":\"createUser\",\"properties\":{\"formFieldsList\":{\"value\":[{\"propertyName\":\"buttonValue\",\"preferredDataType\":\"boolean\"},{\"propertyName\":\"email\",\"preferredDataType\":\"string\"}]},\"connectionId\":{\"value\":\"defaultUserPool\"},\"username\":{\"value\":\"{{global.variables.username}}\"},\"errorIfUserExists\":{\"value\":false},\"nodeDescription\":{\"value\":\"Create or verify this account exists in DaVinci.\"},\"nodeTitle\":{\"value\":\"Create user account\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"oeRewindSkip\":true,\"transitionId\":1,\"signalId\":0}],\"evalNodeId\":\"w8yuhrfqnl\",\"transitionId\":1},{\"from\":[\"inside_0\"],\"to\":\"inside_1_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"y9xe3u9i5b\",\"connectionId\":\"4cb5e3465d718a84087ec9b6a6251e52\",\"connectorId\":\"userPolicyConnector\",\"capabilityName\":\"createUser\",\"success\":true}]},\"signals\":[{\"name\":\"Token Management\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"7wkz24t48x\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"createTokensOnly\",\"properties\":{\"createSessionTokenFlag\":{\"value\":true},\"nodeTitle\":{\"value\":\"Mint session token\"},\"sessionTokenExpiry\":{\"value\":\"{{global.variables.sessionTimeout}}\"},\"nodeDescription\":{\"value\":\"Create a session token for this user.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.userInfo\",\"global.skOpenId\",\"global.domainPublicHost\"],\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"eg4qv7obmp\",\"transitionId\":2},{\"from\":[\"inside_1_1_allTriggersTrue\"],\"to\":\"inside_2_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"7wkz24t48x\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"createTokensOnly\",\"success\":true}]},\"signals\":[{\"name\":\"Cookie [2022-12-05]\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"9jcm1foigb\",\"connectionId\":\"11332a5d757c92cf5d4e6ecd65bbaf49\",\"connectorId\":\"cookieConnector\",\"capabilityName\":\"setCookie\",\"properties\":{\"claimsNameValuePairsSessionCookie\":{\"value\":[]},\"useSessionTokenFlag\":{\"value\":true},\"signCookie\":{\"value\":false},\"cookieName\":{\"value\":\"{{global.variables.cookieName}}\"},\"sessionToken\":{\"value\":\"{{local.7wkz24t48x.payload.output.session_token}}\"},\"cookieExpiresInSeconds\":{\"value\":\"{{global.variables.sessionTimeout}}\"},\"nodeTitle\":{\"value\":\"Mint session cookie\"},\"nodeDescription\":{\"value\":\"Create a session cookie that contains the session token.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.userInfo\",\"global.ip\",\"global.userAgent\",\"global.skOpenId\",\"global.origin\",\"global.originCookies\"],\"respondToUser\":true,\"transitionId\":3,\"signalId\":0}],\"evalNodeId\":\"t0izfw3v7u\",\"transitionId\":3},{\"from\":[\"inside_1_1_allTriggersTrue\"],\"to\":\"end_0_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"7wkz24t48x\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"createTokensOnly\",\"success\":false}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"bm4p4lf0qc\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHtmlMessage\",\"properties\":{\"messageTitle\":{\"value\":\"Error\"},\"message\":{\"value\":\"An unexpected error occured during session creation.\"},\"nodeTitle\":{\"value\":\"Error creating session token\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"},\"nodeDescription\":{\"value\":\"There was a problem creating the session token.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.7wkz24t48x.payload.error\"],\"transitionId\":4,\"signalId\":0}],\"evalNodeId\":\"t0izfw3v7u\",\"transitionId\":4},{\"from\":[\"inside_2_1_allTriggersTrue\"],\"to\":\"end_1_1_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"9jcm1foigb\",\"connectionId\":\"11332a5d757c92cf5d4e6ecd65bbaf49\",\"connectorId\":\"cookieConnector\",\"capabilityName\":\"setCookie\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"zump2j99vg\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"messageTitle\":{\"value\":\"Success\"},\"message\":{\"value\":\"Your account information has been saved.\"},\"nodeTitle\":{\"value\":\"Login completed\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"},\"nodeDescription\":{\"value\":\"Displayed a successful login message.\"},\"customHTML\":{\"value\":\"<div\\n      class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\\\"\\n    >\\n      <div style=\\\"max-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n          <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n            <img\\n                class=\\\"align-self-center mb-5\\\"\\n                src=\\\"{{global.variables.logoUrl}}\\\"\\n                alt=\\\"{{global.variables.companyName}}\\\"\\n                style=\\\"{{global.variables.logoStyle}}\\\"\\n            />\\n            <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n            <p class=\\\"text-muted text-center\\\">\\n              Your account information has been saved.\\n            </p>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":5,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"jkodxcv3dc\",\"transitionId\":5},{\"from\":[\"inside_2_1_allTriggersTrue\"],\"to\":\"end_2_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"9jcm1foigb\",\"connectionId\":\"11332a5d757c92cf5d4e6ecd65bbaf49\",\"connectorId\":\"cookieConnector\",\"capabilityName\":\"setCookie\",\"success\":false}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"nwq381knbm\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHtmlMessage\",\"properties\":{\"messageTitle\":{\"value\":\"Error\"},\"message\":{\"value\":\"An unexpected error occured during session creation.\"},\"nodeTitle\":{\"value\":\"Error creating session cookie\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"},\"nodeDescription\":{\"value\":\"There was a problem creating the session cookie.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.error\"],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.9jcm1foigb.payload.error\"],\"transitionId\":6,\"signalId\":0}],\"evalNodeId\":\"jkodxcv3dc\",\"transitionId\":6},{\"from\":[\"start_0\"],\"to\":\"inside_3\",\"conditions\":{\"$and\":[{\"id\":\"5cpmf6jb8i\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Token Management\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"jo0ieujxmq\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"getSessionTokenDetails\",\"properties\":{\"sessionTokenName\":{\"value\":\"{{global.variables.cookieName}}\"},\"sessionTokenLocation\":{\"value\":\"cookie\"},\"nodeTitle\":{\"value\":\"Check for active session token\"},\"nodeDescription\":{\"value\":\"Check the validity of the session token if one is available.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"global.cookies\"],\"transitionId\":7,\"signalId\":0}],\"evalNodeId\":\"pv6tfx26n0\",\"transitionId\":7},{\"from\":[\"inside_3\"],\"to\":\"inside_4_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"jo0ieujxmq\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"getSessionTokenDetails\",\"success\":false}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"pqerhwm09u\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"title\":{\"value\":\"Login Form\"},\"backgroundColor\":{\"value\":\"#afd5ffff\"},\"nodeTitle\":{\"value\":\"Collect username and password\"},\"formFieldsList\":{\"value\":[{\"propertyName\":\"username\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":false,\"displayName\":\"Username\"},{\"propertyName\":\"password\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"\",\"hashedVisibility\":true,\"displayName\":\"Password\"},{\"propertyName\":\"rememberMe\",\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"value\":\"true\",\"hashedVisibility\":false,\"displayName\":\"Remember Me\"},{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]},\"nextButtonText\":{\"value\":\"Submit\"},\"nodeDescription\":{\"value\":\"Collect username and password to verify the account.\"},\"customHTML\":{\"value\":\"<div\\r\\n  class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\\\"\\r\\n>\\r\\n  <div style=\\\"max-width: 400px; width: 100%\\\">\\r\\n    <div class=\\\"card shadow mb-5\\\">\\r\\n      <div class=\\\"card-body p-5 d-flex flex-column\\\">\\r\\n        <img\\r\\n            class=\\\"align-self-center mb-5\\\"\\r\\n            src=\\\"{{global.variables.logoUrl}}\\\"\\r\\n            alt=\\\"{{global.variables.companyName}}\\\"\\r\\n            style=\\\"{{global.variables.logoStyle}}\\\"\\r\\n        />\\r\\n        <h1 class=\\\"text-center mb-4\\\">Sign On</h1>\\r\\n        <p\\r\\n          class=\\\"text-danger mdi mdi-alert-circle\\\"\\r\\n          data-id=\\\"feedback\\\"\\r\\n          data-skcomponent=\\\"skerror\\\"\\r\\n        ></p>\\r\\n        <form id=\\\"loginForm\\\" data-id=\\\"loginForm\\\">\\r\\n          <div class=\\\"mb-4 form-floating\\\">\\r\\n            <input\\r\\n              class=\\\"form-control\\\"\\r\\n              type=\\\"text\\\"\\r\\n              name=\\\"username\\\"\\r\\n              autocomplete=\\\"off\\\"\\r\\n              data-id=\\\"username-input\\\"\\r\\n              id=\\\"username\\\"\\r\\n              placeholder=\\\"Username\\\"\\r\\n            /><label class=\\\"form-label\\\" for=\\\"username\\\">Username</label>\\r\\n          </div>\\r\\n          <div class=\\\"mb-4 form-floating\\\">\\r\\n            <input\\r\\n              class=\\\"form-control\\\"\\r\\n              type=\\\"password\\\"\\r\\n              name=\\\"password\\\"\\r\\n              autocomplete=\\\"off\\\"\\r\\n              data-id=\\\"password-input\\\"\\r\\n              id=\\\"password\\\"\\r\\n              placeholder=\\\"Password\\\"\\r\\n            /><label class=\\\"form-label\\\" for=\\\"password\\\">Password</label>\\r\\n          </div>\\r\\n          <div class=\\\"mb-4 form-check\\\">\\r\\n            <input\\r\\n              class=\\\"form-check-input\\\"\\r\\n              type=\\\"checkbox\\\"\\r\\n              name=\\\"rememberMe\\\"\\r\\n              autocomplete=\\\"off\\\"\\r\\n              data-id=\\\"rememberMe-input\\\"\\r\\n              id=\\\"rememberMe\\\"\\r\\n              checked\\r\\n            /><label class=\\\"form-check-label\\\" for=\\\"rememberMe\\\">Remember Me?</label>\\r\\n          </div>\\r\\n          <div class=\\\"d-flex flex-column\\\">\\r\\n            <button\\r\\n              data-id=\\\"submit-button\\\"\\r\\n              type=\\\"submit\\\"\\r\\n              class=\\\"btn btn-primary mb-3\\\"\\r\\n              data-skcomponent=\\\"skbutton\\\"\\r\\n              data-skbuttontype=\\\"form-submit\\\"\\r\\n              data-skform=\\\"loginForm\\\"\\r\\n              data-skbuttonvalue=\\\"submit\\\"\\r\\n            >\\r\\n              Sign On\\r\\n            </button>\\r\\n          </div>\\r\\n        </form>\\r\\n      </div>\\r\\n    </div>\\r\\n  </div>\\r\\n</div>\\r\\n\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.jo0ieujxmq.payload.error\"],\"transitionId\":8,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"71nn58zmpv\",\"transitionId\":8},{\"from\":[\"inside_3\"],\"to\":\"end_3_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"jo0ieujxmq\",\"connectionId\":\"3b55f2ca6689560c64cb5bed5afbe40f\",\"connectorId\":\"skOpenIdConnector\",\"capabilityName\":\"getSessionTokenDetails\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"hdaexwjeim\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"messageTitle\":{\"value\":\"Success\"},\"message\":{\"value\":\"Welcome back!\"},\"nodeTitle\":{\"value\":\"Login completed\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"},\"nodeDescription\":{\"value\":\"Displayed a successful login message.\"},\"customHTML\":{\"value\":\"<div\\n      class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\\\"\\n    >\\n      <div style=\\\"max-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n          <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n            <img\\n                class=\\\"align-self-center mb-5\\\"\\n                src=\\\"{{global.variables.logoUrl}}\\\"\\n                alt=\\\"{{global.variables.companyName}}\\\"\\n                style=\\\"{{global.variables.logoStyle}}\\\"\\n            />\\n            <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n            <p class=\\\"text-muted text-center\\\">\\n              Welcome back.\\n            </p>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":9,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"71nn58zmpv\",\"transitionId\":9},{\"from\":[\"inside_4_1_anyTriggersFalse\"],\"to\":\"inside_5\",\"conditions\":{\"$and\":[{\"id\":\"pqerhwm09u\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"success\":true}]},\"signals\":[{\"name\":\"PingOne\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"5t4iald4ve\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"properties\":{\"matchAttribute\":{\"value\":\"username\"},\"identifier\":{\"value\":\"{{local.pqerhwm09u.payload.output.username}}\"},\"password\":{\"value\":\"{{local.pqerhwm09u.payload.output.password}}\"},\"nodeTitle\":{\"value\":\"Validate the user's credentials\"},\"nodeDescription\":{\"value\":\"Check the provided password against PingOne.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":10,\"signalId\":0}],\"evalNodeId\":\"uhrxuf6e4y\",\"transitionId\":10},{\"from\":[\"inside_5\"],\"to\":\"end_4_1_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"5t4iald4ve\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":false}]},\"signals\":[{\"name\":\"Error Customize\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"ly6dz2xjwo\",\"connectionId\":\"6d8f6f706c45fd459a86b3f092602544\",\"connectorId\":\"errorConnector\",\"capabilityName\":\"customErrorMessage\",\"properties\":{\"errorMessage\":{\"value\":\"Your username or password is invalid.\"},\"nodeTitle\":{\"value\":\"Error validating user credentials\"},\"nodeDescription\":{\"value\":\"The provided credentials did not match any account in PingOne.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.5t4iald4ve.payload.error\"],\"transitionId\":11,\"signalId\":0}],\"evalNodeId\":\"62sonpp08e\",\"transitionId\":11},{\"from\":[\"inside_5\"],\"to\":\"inside_6_2_allTriggersTrue\",\"conditions\":{\"$and\":[{\"id\":\"5t4iald4ve\",\"connectionId\":\"94141bf2f1b9b59a5f5365ff135e02bb\",\"connectorId\":\"pingOneSSOConnector\",\"capabilityName\":\"checkPassword\",\"success\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"2okz7c1js4\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"username\",\"value\":\"{{local.pqerhwm09u.payload.output.username}}\",\"key\":0.9012611489118709,\"type\":\"string\",\"label\":\"username (string - flowInstance)\",\"nameDefault\":\"username\"}]},\"nodeTitle\":{\"value\":\"Save username\"},\"nodeDescription\":{\"value\":\"The username is stored as a flow variable\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":12,\"signalId\":0}],\"evalNodeId\":\"62sonpp08e\",\"transitionId\":12},{\"from\":[\"inside_6_2_allTriggersTrue\"],\"to\":\"inside_7\",\"conditions\":{\"$and\":[{\"id\":\"2okz7c1js4\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Functions\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"df42k4grb6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"properties\":{\"leftValueA\":{\"value\":\"{{local.pqerhwm09u.payload.output.rememberMe}}\"},\"rightValueB\":{\"value\":\"true\"},\"type\":{\"value\":\"boolean\"},\"nodeTitle\":{\"value\":\"Remember this session?\"},\"nodeDescription\":{\"value\":\"Determine if a new session needs to be created based on the user's selection.\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"transitionId\":13,\"signalId\":0}],\"evalNodeId\":\"r9vhyk9342\",\"transitionId\":13},{\"from\":[\"inside_7\"],\"to\":[\"end_5_1_allTriggersTrue\"],\"conditions\":{\"$and\":[{\"id\":\"df42k4grb6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"where\",\"expr\":\"{{local.pqerhwm09u.payload.output.rememberMe}} == true\"}}]},\"signals\":[{\"name\":\"Node [2022-11-09]\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"bt4l6oqgwu\",\"connectionId\":\"0ac0cbbe6b3ebb07fbfe91e69e0f7e34\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\",\"properties\":{\"nodeInstanceId\":{\"value\":\"hfceyxaxa3\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"to\":\"oe\",\"inputs\":[],\"transitionId\":14,\"signalId\":0}],\"evalNodeId\":\"ovwv4vu53v\",\"transitionId\":14},{\"from\":[\"inside_7\"],\"to\":\"end_6_2_anyTriggersFalse\",\"conditions\":{\"$or\":[{\"id\":\"df42k4grb6\",\"connectionId\":\"de650ca45593b82c49064ead10b9fe17\",\"connectorId\":\"functionsConnector\",\"capabilityName\":\"AEqualsB\",\"logic\":{\"type\":\"whereNot\",\"expr\":\"{{local.pqerhwm09u.payload.output.rememberMe}} == true\"}}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"id\":\"n6ebk46kl7\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"messageTitle\":{\"value\":\"Success\"},\"message\":{\"value\":\"You are logged in!\"},\"nodeTitle\":{\"value\":\"Login completed\"},\"backgroundColor\":{\"value\":\"#9dc967ff\"},\"nodeDescription\":{\"value\":\"Displayed a successful login message.\"},\"customHTML\":{\"value\":\"<div\\n      class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\\\"\\n    >\\n      <div style=\\\"max-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n          <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n            <img\\n                class=\\\"align-self-center mb-5\\\"\\n                src=\\\"{{global.variables.logoUrl}}\\\"\\n                alt=\\\"{{global.variables.companyName}}\\\"\\n                style=\\\"{{global.variables.logoStyle}}\\\"\\n            />\\n            <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n            <p class=\\\"text-muted text-center\\\">\\n              You are signed on.\\n            </p>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"errorConnectionInstances\":[\"local.df42k4grb6.payload.error\"],\"transitionId\":15,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"ovwv4vu53v\",\"transitionId\":15},{\"from\":[\"end_5_1_allTriggersTrue\"],\"to\":[\"start_1\"],\"conditions\":{\"$and\":[{\"id\":\"bt4l6oqgwu\",\"connectionId\":\"0ac0cbbe6b3ebb07fbfe91e69e0f7e34\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"goToNode\"}]},\"signals\":[{\"id\":\"hfceyxaxa3\",\"connectionId\":\"0ac0cbbe6b3ebb07fbfe91e69e0f7e34\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\",\"to\":\"oe\",\"companyId\":\"ab783461-5572-4c0b-8a1f-afd6389cac3f\",\"flowId\":\"f625cf8cc4ab026c9fea2754707b7f87\",\"flowVersionId\":4,\"transitionId\":16,\"signalId\":0}],\"transitionId\":16}],\"history\":[],\"outputs\":{\"userPolicyConnector_createUser\":{\"globalOutputs\":[\"userInfo\",\"skOpenId\",\"saml\"]},\"skOpenIdConnector_createTokensOnly\":{\"localOutputs\":[\"output\"]},\"variablesConnector_saveValue\":{\"localOutputs\":[\"output\"]},\"skOpenIdConnector_getSessionTokenDetails\":{\"globalOutputs\":[\"userInfo\",\"skOpenId\",\"saml\"],\"localOutputs\":[\"output\"]},\"httpConnector_customHTMLTemplate\":{\"localOutputs\":[\"output\"]},\"pingOneSSOConnector_checkPassword\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"local.pqerhwm09u.payload.output.username\",\"local.pqerhwm09u.payload.output.password\",\"global.variables.logoUrl\",\"global.variables.companyName\",\"global.variables.logoStyle\",\"global.variables.cookieName\",\"local.7wkz24t48x.payload.output.session_token\",\"global.variables.sessionTimeout\",\"global.variables.username\",\"local.pqerhwm09u.payload.output.rememberMe\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"y9xe3u9i5b\":\"pqerhwm09u\",\"y9xe3u9i5b_createUser\":\"initialize\",\"9jcm1foigb\":\"y9xe3u9i5b\",\"9jcm1foigb_setCookie\":\"y9xe3u9i5b_createUser\",\"bm4p4lf0qc\":\"y9xe3u9i5b\",\"bm4p4lf0qc_customHtmlMessage\":\"y9xe3u9i5b_createUser\",\"zump2j99vg\":\"9jcm1foigb\",\"zump2j99vg_customHTMLTemplate\":\"9jcm1foigb_setCookie\",\"nwq381knbm\":\"9jcm1foigb\",\"nwq381knbm_customHtmlMessage\":\"9jcm1foigb_setCookie\",\"pqerhwm09u\":\"initialize\",\"pqerhwm09u_customHTMLTemplate\":\"initialize\",\"hdaexwjeim\":\"initialize\",\"hdaexwjeim_customHTMLTemplate\":\"initialize\",\"ly6dz2xjwo\":\"pqerhwm09u\",\"ly6dz2xjwo_customErrorMessage\":\"pqerhwm09u_customHTMLTemplate\",\"n6ebk46kl7\":\"pqerhwm09u\",\"n6ebk46kl7_customHTMLTemplate\":\"pqerhwm09u_customHTMLTemplate\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"local.pqerhwm09u.payload.output.username\":\"\",\"local.pqerhwm09u.payload.output.password\":\"\",\"global.variables.logoUrl\":\"\",\"global.variables.companyName\":\"\",\"global.variables.logoStyle\":\"\",\"global.variables.cookieName\":\"\",\"local.7wkz24t48x.payload.output.session_token\":\"\",\"global.variables.sessionTimeout\":\"\",\"global.variables.username\":\"\",\"local.pqerhwm09u.payload.output.rememberMe\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":94,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"y9xe3u9i5b\":[\"initialize\",\"pqerhwm09u\"],\"9jcm1foigb\":[\"initialize\",\"pqerhwm09u\",\"y9xe3u9i5b\"],\"bm4p4lf0qc\":[\"initialize\",\"pqerhwm09u\",\"y9xe3u9i5b\"],\"zump2j99vg\":[\"initialize\",\"pqerhwm09u\",\"y9xe3u9i5b\",\"9jcm1foigb\"],\"nwq381knbm\":[\"initialize\",\"pqerhwm09u\",\"y9xe3u9i5b\",\"9jcm1foigb\"],\"pqerhwm09u\":\"initialize\",\"hdaexwjeim\":\"initialize\",\"ly6dz2xjwo\":[\"initialize\",\"pqerhwm09u\"],\"n6ebk46kl7\":[\"initialize\",\"pqerhwm09u\"]},\"nodeStates\":{\"hfceyxaxa3\":\"start_1\",\"5cpmf6jb8i\":\"start_0\",\"y9xe3u9i5b\":\"inside_0\",\"7wkz24t48x\":\"inside_1_1_allTriggersTrue\",\"9jcm1foigb\":\"inside_2_1_allTriggersTrue\",\"bm4p4lf0qc\":\"end_0_2_anyTriggersFalse\",\"zump2j99vg\":\"end_1_1_allTriggersTrue\",\"nwq381knbm\":\"end_2_2_anyTriggersFalse\",\"jo0ieujxmq\":\"inside_3\",\"pqerhwm09u\":\"inside_4_1_anyTriggersFalse\",\"hdaexwjeim\":\"end_3_2_allTriggersTrue\",\"5t4iald4ve\":\"inside_5\",\"ly6dz2xjwo\":\"end_4_1_anyTriggersFalse\",\"2okz7c1js4\":\"inside_6_2_allTriggersTrue\",\"df42k4grb6\":\"inside_7\",\"bt4l6oqgwu\":\"end_5_1_allTriggersTrue\",\"n6ebk46kl7\":\"end_6_2_anyTriggersFalse\"}}",
+  "publishedVersion": 4,
+  "settings": {
+    "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+    "intermediateLoadingScreenCSS": {},
+    "intermediateLoadingScreenHTML": {},
+    "logLevel": 3,
+    "useCustomCSS": true,
+    "cssLinks": [
+      "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.0/end-user-nano.css",
+      "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.3/icons.css"
+    ]
+  },
+  "updatedDate": 1671578989350,
+  "flowId": "f625cf8cc4ab026c9fea2754707b7f87",
+  "versionId": 4,
+  "graphData": {
+    "elements": {
+      "nodes": [
+        {
+          "data": {
+            "id": "5t4iald4ve",
+            "nodeType": "CONNECTION",
+            "connectionId": "94141bf2f1b9b59a5f5365ff135e02bb",
+            "connectorId": "pingOneSSOConnector",
+            "name": "PingOne",
+            "label": "PingOne",
+            "status": "configured",
+            "capabilityName": "checkPassword",
+            "type": "action",
+            "properties": {
+              "matchAttribute": {
+                "value": "username"
+              },
+              "identifier": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.pqerhwm09u.payload.output.username}}\",\n        \"tooltip\": \"{{local.pqerhwm09u.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "password": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"password\",\n        \"data\": \"{{local.pqerhwm09u.payload.output.password}}\",\n        \"tooltip\": \"{{local.pqerhwm09u.payload.output.password}}\",\n        \"children\": [\n          {\n            \"text\": \"password\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Validate the user's credentials"
+              },
+              "nodeDescription": {
+                "value": "Check the provided password against PingOne."
+              }
+            },
+            "isDisabled": false
+          },
+          "position": {
+            "x": 1241.9581038764713,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jkodxcv3dc",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {
+              "5pc47c5afg": {
+                "value": "anyTriggersFalse"
+              },
+              "nwq381knbm": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1380,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zump2j99vg",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "idUnique": "ps5u0x052m",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Success\"\n      }\n    ]\n  }\n]"
+              },
+              "message": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your account information has been saved.\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Login completed"
+              },
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "nodeDescription": {
+                "value": "Displayed a successful login message."
+              },
+              "customHTML": {
+                "value": "<div\n      class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\"\n    >\n      <div style=\"max-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img\n                class=\"align-self-center mb-5\"\n                src=\"{{global.variables.logoUrl}}\"\n                alt=\"{{global.variables.companyName}}\"\n                style=\"{{global.variables.logoStyle}}\"\n            />\n            <h1 class=\"text-center mb-4\">Success</h1>\n            <p class=\"text-muted text-center\">\n              Your account information has been saved.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>"
+              }
+            }
+          },
+          "position": {
+            "x": 1530,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9jcm1foigb",
+            "nodeType": "CONNECTION",
+            "connectionId": "11332a5d757c92cf5d4e6ecd65bbaf49",
+            "connectorId": "cookieConnector",
+            "name": "Cookie [2022-12-05]",
+            "label": "Cookie",
+            "status": "configured",
+            "capabilityName": "setCookie",
+            "type": "action",
+            "properties": {
+              "claimsNameValuePairsSessionCookie": {
+                "value": []
+              },
+              "useSessionTokenFlag": {
+                "value": true
+              },
+              "signCookie": {
+                "value": false
+              },
+              "cookieName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"cookieName\",\n        \"data\": \"{{global.variables.cookieName}}\",\n        \"tooltip\": \"{{global.variables.cookieName}}\",\n        \"children\": [\n          {\n            \"text\": \"cookieName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "sessionToken": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"open-id.svg\",\n        \"url\": \"session_token\",\n        \"data\": \"{{local.7wkz24t48x.payload.output.session_token}}\",\n        \"tooltip\": \"{{local.7wkz24t48x.payload.output.session_token}}\",\n        \"children\": [\n          {\n            \"text\": \"session_token\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "cookieExpiresInSeconds": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"sessionTimeout\",\n        \"data\": \"{{global.variables.sessionTimeout}}\",\n        \"tooltip\": \"{{global.variables.sessionTimeout}}\",\n        \"children\": [\n          {\n            \"text\": \"sessionTimeout\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Mint session cookie"
+              },
+              "nodeDescription": {
+                "value": "Create a session cookie that contains the session token."
+              }
+            }
+          },
+          "position": {
+            "x": 1260,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nwq381knbm",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHtmlMessage",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Error\"\n      }\n    ]\n  }\n]"
+              },
+              "message": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error occured during session creation.\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Error creating session cookie"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "nodeDescription": {
+                "value": "There was a problem creating the session cookie."
+              }
+            },
+            "idUnique": "fxburusd3r"
+          },
+          "position": {
+            "x": 1530,
+            "y": 1200
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ly6dz2xjwo",
+            "nodeType": "CONNECTION",
+            "connectionId": "6d8f6f706c45fd459a86b3f092602544",
+            "connectorId": "errorConnector",
+            "name": "Error Customize",
+            "label": "Error Customize",
+            "status": "configured",
+            "capabilityName": "customErrorMessage",
+            "type": "action",
+            "properties": {
+              "errorMessage": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Your username or password is invalid.\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Error validating user credentials"
+              },
+              "nodeDescription": {
+                "value": "The provided credentials did not match any account in PingOne."
+              }
+            },
+            "idUnique": "od886c2mh0"
+          },
+          "position": {
+            "x": 1556.9802397149333,
+            "y": 668.7586653709103
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "62sonpp08e",
+            "nodeType": "EVAL",
+            "label": "Evaluator",
+            "properties": {
+              "ly6dz2xjwo": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1385.149983803045,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pqerhwm09u",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "title": {
+                "value": "Login Form"
+              },
+              "backgroundColor": {
+                "value": "#afd5ffff"
+              },
+              "nodeTitle": {
+                "value": "Collect username and password"
+              },
+              "formFieldsList": {
+                "value": [
+                  {
+                    "propertyName": "username",
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "value": "",
+                    "hashedVisibility": false,
+                    "displayName": "Username"
+                  },
+                  {
+                    "propertyName": "password",
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "value": "",
+                    "hashedVisibility": true,
+                    "displayName": "Password"
+                  },
+                  {
+                    "propertyName": "rememberMe",
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]",
+                    "hashedVisibility": false,
+                    "displayName": "Remember Me"
+                  },
+                  {
+                    "preferredControlType": "textField",
+                    "preferredDataType": "string",
+                    "propertyName": "buttonValue"
+                  }
+                ]
+              },
+              "nextButtonText": {
+                "value": "Submit"
+              },
+              "nodeDescription": {
+                "value": "Collect username and password to verify the account."
+              },
+              "customHTML": {
+                "value": "<div\r\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\"\r\n>\r\n  <div style=\"max-width: 400px; width: 100%\">\r\n    <div class=\"card shadow mb-5\">\r\n      <div class=\"card-body p-5 d-flex flex-column\">\r\n        <img\r\n            class=\"align-self-center mb-5\"\r\n            src=\"{{global.variables.logoUrl}}\"\r\n            alt=\"{{global.variables.companyName}}\"\r\n            style=\"{{global.variables.logoStyle}}\"\r\n        />\r\n        <h1 class=\"text-center mb-4\">Sign On</h1>\r\n        <p\r\n          class=\"text-danger mdi mdi-alert-circle\"\r\n          data-id=\"feedback\"\r\n          data-skcomponent=\"skerror\"\r\n        ></p>\r\n        <form id=\"loginForm\" data-id=\"loginForm\">\r\n          <div class=\"mb-4 form-floating\">\r\n            <input\r\n              class=\"form-control\"\r\n              type=\"text\"\r\n              name=\"username\"\r\n              autocomplete=\"off\"\r\n              data-id=\"username-input\"\r\n              id=\"username\"\r\n              placeholder=\"Username\"\r\n            /><label class=\"form-label\" for=\"username\">Username</label>\r\n          </div>\r\n          <div class=\"mb-4 form-floating\">\r\n            <input\r\n              class=\"form-control\"\r\n              type=\"password\"\r\n              name=\"password\"\r\n              autocomplete=\"off\"\r\n              data-id=\"password-input\"\r\n              id=\"password\"\r\n              placeholder=\"Password\"\r\n            /><label class=\"form-label\" for=\"password\">Password</label>\r\n          </div>\r\n          <div class=\"mb-4 form-check\">\r\n            <input\r\n              class=\"form-check-input\"\r\n              type=\"checkbox\"\r\n              name=\"rememberMe\"\r\n              autocomplete=\"off\"\r\n              data-id=\"rememberMe-input\"\r\n              id=\"rememberMe\"\r\n              checked\r\n            /><label class=\"form-check-label\" for=\"rememberMe\">Remember Me?</label>\r\n          </div>\r\n          <div class=\"d-flex flex-column\">\r\n            <button\r\n              data-id=\"submit-button\"\r\n              type=\"submit\"\r\n              class=\"btn btn-primary mb-3\"\r\n              data-skcomponent=\"skbutton\"\r\n              data-skbuttontype=\"form-submit\"\r\n              data-skform=\"loginForm\"\r\n              data-skbuttonvalue=\"submit\"\r\n            >\r\n              Sign On\r\n            </button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+              }
+            },
+            "idUnique": "tlum7uoim8"
+          },
+          "position": {
+            "x": 955.5743440233235,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "y9xe3u9i5b",
+            "nodeType": "CONNECTION",
+            "connectionId": "4cb5e3465d718a84087ec9b6a6251e52",
+            "connectorId": "userPolicyConnector",
+            "name": "User Policy",
+            "label": "User Policy",
+            "status": "configured",
+            "capabilityName": "createUser",
+            "type": "action",
+            "properties": {
+              "formFieldsList": {
+                "value": [
+                  {
+                    "propertyName": "buttonValue",
+                    "preferredDataType": "boolean"
+                  },
+                  {
+                    "propertyName": "email",
+                    "preferredDataType": "string"
+                  }
+                ]
+              },
+              "connectionId": {
+                "value": "defaultUserPool"
+              },
+              "username": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{global.variables.username}}\",\n        \"tooltip\": \"{{global.variables.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "errorIfUserExists": {
+                "value": false
+              },
+              "nodeDescription": {
+                "value": "Create or verify this account exists in DaVinci."
+              },
+              "nodeTitle": {
+                "value": "Create user account"
+              }
+            },
+            "isDisabled": false
+          },
+          "position": {
+            "x": 660,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "eg4qv7obmp",
+            "nodeType": "EVAL",
+            "properties": {
+              "m4y56w986k": {
+                "value": "anyTriggersFalse"
+              },
+              "9jcm1foigb": {
+                "value": "allTriggersComplete"
+              }
+            }
+          },
+          "position": {
+            "x": 810,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "71nn58zmpv",
+            "nodeType": "EVAL",
+            "properties": {
+              "pqerhwm09u": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 783.744088111435,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hdaexwjeim",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "idUnique": "poxx8bp50l",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Success\"\n      }\n    ]\n  }\n]"
+              },
+              "message": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Welcome back!\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Login completed"
+              },
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "nodeDescription": {
+                "value": "Displayed a successful login message."
+              },
+              "customHTML": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div\\n      class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\\\"\\n    >\\n      <div style=\\\"max-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n          <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n            <img\\n                class=\\\"align-self-center mb-5\\\"\\n                src=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"logoUrl\",\n        \"data\": \"{{global.variables.logoUrl}}\",\n        \"tooltip\": \"{{global.variables.logoUrl}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.logoUrl}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\"\\n                alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\"\\n                style=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"logoStyle\",\n        \"data\": \"{{global.variables.logoStyle}}\",\n        \"tooltip\": \"{{global.variables.logoStyle}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.logoStyle}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\"\\n            />\\n            <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n            <p class=\\\"text-muted text-center\\\">\\n              Welcome back.\\n            </p>\\n          </div>\\n        </div>\\n      </div>\\n    </div>\"\n      }\n    ]\n  }\n]"
+              }
+            }
+          },
+          "position": {
+            "x": 955.5743440233235,
+            "y": 668.7586653709103
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "df42k4grb6",
+            "nodeType": "CONNECTION",
+            "connectionId": "de650ca45593b82c49064ead10b9fe17",
+            "connectorId": "functionsConnector",
+            "name": "Functions",
+            "label": "Functions",
+            "status": "configured",
+            "capabilityName": "AEqualsB",
+            "type": "trigger",
+            "properties": {
+              "leftValueA": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"rememberMe\",\n        \"data\": \"{{local.pqerhwm09u.payload.output.rememberMe}}\",\n        \"tooltip\": \"{{local.pqerhwm09u.payload.output.rememberMe}}\",\n        \"children\": [\n          {\n            \"text\": \"rememberMe\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "rightValueB": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"true\"\n      }\n    ]\n  }\n]"
+              },
+              "type": {
+                "value": "boolean"
+              },
+              "nodeTitle": {
+                "value": "Remember this session?"
+              },
+              "nodeDescription": {
+                "value": "Determine if a new session needs to be created based on the user's selection."
+              }
+            }
+          },
+          "position": {
+            "x": 1843.363999568081,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ovwv4vu53v",
+            "nodeType": "EVAL",
+            "properties": {
+              "n6ebk46kl7": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1986.555879494655,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "n6ebk46kl7",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "idUnique": "3b23gzybbc",
+            "capabilityName": "customHTMLTemplate",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Success\"\n      }\n    ]\n  }\n]"
+              },
+              "message": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"You are logged in!\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Login completed"
+              },
+              "backgroundColor": {
+                "value": "#9dc967ff"
+              },
+              "nodeDescription": {
+                "value": "Displayed a successful login message."
+              },
+              "customHTML": {
+                "value": "<div\n      class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0\"\n    >\n      <div style=\"max-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n          <div class=\"card-body p-5 d-flex flex-column\">\n            <img\n                class=\"align-self-center mb-5\"\n                src=\"{{global.variables.logoUrl}}\"\n                alt=\"{{global.variables.companyName}}\"\n                style=\"{{global.variables.logoStyle}}\"\n            />\n            <h1 class=\"text-center mb-4\">Success</h1>\n            <p class=\"text-muted text-center\">\n              You are signed on.\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>"
+              }
+            }
+          },
+          "position": {
+            "x": 2129.7477594212287,
+            "y": 668.7586653709103
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7wkz24t48x",
+            "nodeType": "CONNECTION",
+            "connectionId": "3b55f2ca6689560c64cb5bed5afbe40f",
+            "connectorId": "skOpenIdConnector",
+            "name": "Token Management",
+            "label": "Token Management",
+            "status": "configured",
+            "capabilityName": "createTokensOnly",
+            "type": "action",
+            "properties": {
+              "createSessionTokenFlag": {
+                "value": true
+              },
+              "nodeTitle": {
+                "value": "Mint session token"
+              },
+              "sessionTokenExpiry": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"sessionTimeout\",\n        \"data\": \"{{global.variables.sessionTimeout}}\",\n        \"tooltip\": \"{{global.variables.sessionTimeout}}\",\n        \"children\": [\n          {\n            \"text\": \"sessionTimeout\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeDescription": {
+                "value": "Create a session token for this user."
+              }
+            }
+          },
+          "position": {
+            "x": 960,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "t0izfw3v7u",
+            "nodeType": "EVAL",
+            "properties": {
+              "bm4p4lf0qc": {
+                "value": "anyTriggersFalse"
+              }
+            }
+          },
+          "position": {
+            "x": 1110,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "bm4p4lf0qc",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "customHtmlMessage",
+            "type": "trigger",
+            "properties": {
+              "messageTitle": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Error\"\n      }\n    ]\n  }\n]"
+              },
+              "message": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"An unexpected error occured during session creation.\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "nodeTitle": {
+                "value": "Error creating session token"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "nodeDescription": {
+                "value": "There was a problem creating the session token."
+              }
+            },
+            "idUnique": "7bkkk80fls"
+          },
+          "position": {
+            "x": 1260,
+            "y": 1200
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jo0ieujxmq",
+            "nodeType": "CONNECTION",
+            "connectionId": "3b55f2ca6689560c64cb5bed5afbe40f",
+            "connectorId": "skOpenIdConnector",
+            "name": "Token Management",
+            "label": "Token Management",
+            "status": "configured",
+            "capabilityName": "getSessionTokenDetails",
+            "type": "action",
+            "properties": {
+              "sessionTokenName": {
+                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"cookieName\",\n        \"data\": \"{{global.variables.cookieName}}\",\n        \"tooltip\": \"{{global.variables.cookieName}}\",\n        \"children\": [\n          {\n            \"text\": \"cookieName\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+              },
+              "sessionTokenLocation": {
+                "value": "cookie"
+              },
+              "nodeTitle": {
+                "value": "Check for active session token"
+              },
+              "nodeDescription": {
+                "value": "Check the validity of the session token if one is available."
+              }
+            }
+          },
+          "position": {
+            "x": 640.5522081848612,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "eoz9gxbwq2",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Check for active session"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 554.637080228917,
+            "y": 267.8214015765036
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "e49qagey5j",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#4462edff"
+              },
+              "annotation": {
+                "value": "Start Login Flow with PingOne as an IdP"
+              },
+              "width": {
+                "value": 2100
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#f9f9f9ff"
+              },
+              "strokeEnabled": {
+                "value": false
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "cornerRadius": {
+                "value": 20
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 214,
+            "y": 214
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gtw4bv94lk",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Display success message"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "uaeidtkde2"
+          },
+          "position": {
+            "x": 869.6592160673792,
+            "y": 554.2051614296512
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r7rhhuk628",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Display success message"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "qpavi4pqpo"
+          },
+          "position": {
+            "x": 2042.707330019041,
+            "y": 558.1428750170478
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "n6ypiv9p6",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Display success message"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "fdslcdd59f"
+          },
+          "position": {
+            "x": 1440,
+            "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "gs2lsz39yh",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Invalid username or password"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "mvwt4rshw9"
+          },
+          "position": {
+            "x": 1470,
+            "y": 570
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ziivmlsw5u",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#4462edff"
+              },
+              "annotation": {
+                "value": "Create Authentication Session"
+              },
+              "width": {
+                "value": 1500
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#f9f9f9ff"
+              },
+              "strokeEnabled": {
+                "value": false
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "cornerRadius": {
+                "value": 20
+              }
+            },
+            "status": "configured",
+            "idUnique": "qfc3f3zjrn"
+          },
+          "position": {
+            "x": 240,
+            "y": 780
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hfceyxaxa3",
+            "nodeType": "CONNECTION",
+            "connectionId": "0ac0cbbe6b3ebb07fbfe91e69e0f7e34",
+            "connectorId": "nodeConnector",
+            "name": "Node [2022-11-09]",
+            "label": "Teleport",
+            "status": "configured",
+            "capabilityName": "startNode",
+            "type": "trigger",
+            "properties": {
+              "inputSchema": {
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"success\": {\n\t\t\t\"type\": \"boolean\",\n\t\t\t\"displayName\": \"success\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"success\"\n\t\t}\n\t}\n}"
+              },
+              "nodeTitle": {
+                "value": "Create new session"
+              }
+            }
+          },
+          "position": {
+            "x": 330,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "w8yuhrfqnl",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 510,
+            "y": 960
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "bt4l6oqgwu",
+            "nodeType": "CONNECTION",
+            "connectionId": "0ac0cbbe6b3ebb07fbfe91e69e0f7e34",
+            "connectorId": "nodeConnector",
+            "name": "Node [2022-11-09]",
+            "label": "Teleport",
+            "status": "configured",
+            "capabilityName": "goToNode",
+            "type": "action",
+            "properties": {
+              "nodeInstanceId": {
+                "value": "hfceyxaxa3"
+              }
+            }
+          },
+          "position": {
+            "x": 2129.7477594212287,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "a7w1h122ih",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Ask for credentials"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "xq0bocnpqq"
+          },
+          "position": {
+            "x": 869.6592160673792,
+            "y": 267.8214015765036
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zhaxx53xr8",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#ffb91cff"
+              },
+              "annotation": {
+                "value": "Verify credentials"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "xa4dcbqy81"
+          },
+          "position": {
+            "x": 1156.0429759205267,
+            "y": 267.8214015765036
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "l44qq3jk7j",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Remember session?"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 240
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "jcqwv0mgdb"
+          },
+          "position": {
+            "x": 1740,
+            "y": 270
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "8a3mn31ro4",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Create session"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "r6maa4x59"
+          },
+          "position": {
+            "x": 2043.8326314652845,
+            "y": 267.8214015765036
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r4k4t1r19v",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Create new session"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "w44xg7bjet"
+          },
+          "position": {
+            "x": 270,
+            "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "lrbqpxq0lt",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Verify user account"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 0
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "1v6qj8ip2k"
+          },
+          "position": {
+            "x": 570,
+            "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "w8x5mbfxui",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Create session token"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "uhnsti50hl"
+          },
+          "position": {
+            "x": 870,
+            "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "p234lukc9z",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Create session cookie"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "z03kv6w1r8"
+          },
+          "position": {
+            "x": 1170,
+            "y": 840
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4zlopnnikp",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Problem creating session token"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "2j14lnwvo5"
+          },
+          "position": {
+            "x": 1170,
+            "y": 1080
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ggcpoha5nq",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Problem creating session cookie"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "mdgpawjil1"
+          },
+          "position": {
+            "x": 1440,
+            "y": 1080
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "5cpmf6jb8i",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "logoUrl",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\"\n      }\n    ]\n  }\n]",
+                    "key": 0.5081127637273157,
+                    "label": "logoUrl (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "cookieName",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"extended_session_cookie\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8199177943303333,
+                    "type": "string",
+                    "label": "cookieName (string - flowInstance)"
+                  },
+                  {
+                    "name": "sessionTimeout",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"7776000\"\n      }\n    ]\n  }\n]",
+                    "key": 0.4315163729893683,
+                    "label": "sessionTimeout (number - flowInstance)",
+                    "type": "number"
+                  },
+                  {
+                    "name": "companyName",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ping Identity\"\n      }\n    ]\n  }\n]",
+                    "key": 0.4125394624303311,
+                    "label": "companyName (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "logoStyle",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"width: 65px; height: 65px\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8908894858725374,
+                    "label": "logoStyle (string - flowInstance)",
+                    "type": "string"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Initialize variables"
+              },
+              "nodeDescription": {
+                "value": "Initialize any common values that will be used in the flow so that they're easier to update in one place."
+              }
+            }
+          },
+          "position": {
+            "x": 354.16844833171365,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pv6tfx26n0",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 511.6795162509448,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "uhrxuf6e4y",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1098.7662239498973,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2okz7c1js4",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "username",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.pqerhwm09u.payload.output.username}}\",\n        \"tooltip\": \"{{local.pqerhwm09u.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.9012611489118709,
+                    "type": "string",
+                    "label": "username (string - flowInstance)",
+                    "nameDefault": "username"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Save username"
+              },
+              "nodeDescription": {
+                "value": "The username is stored as a flow variable"
+              }
+            }
+          },
+          "position": {
+            "x": 1556.9802397149333,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "r9vhyk9342",
+            "nodeType": "EVAL"
+          },
+          "position": {
+            "x": 1700.1721196415074,
+            "y": 382.37490551776267
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "62e7y5p3ch",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Sets username variable"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "9w0dn54ot6"
+          },
+          "position": {
+            "x": 1471.0651117589891,
+            "y": 267.8214015765036
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nzagkiw8eh",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "6021f6c1516cb239f4edd7066e005e05",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#f2f3f4ff"
+              },
+              "annotation": {
+                "value": "Initialize flow variables"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "fontStyle": {
+                "value": "normal"
+              },
+              "fontSize": {
+                "value": 0
+              },
+              "width": {
+                "value": 180
+              },
+              "height": {
+                "value": 50
+              },
+              "strokeWidth": {
+                "value": 0
+              },
+              "strokeColor": {
+                "value": "#4462edff"
+              },
+              "annotationTextColor": {
+                "value": "#000000ff"
+              },
+              "cornerRadius": {
+                "value": 5
+              }
+            },
+            "status": "configured",
+            "idUnique": "315zs9ygw0"
+          },
+          "position": {
+            "x": 270,
+            "y": 270
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "wgyzibuylz",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#ffffffff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Extended User Session: Remember Me Login Flow                                                                                                                                                                                                  Created by: Ping Identity                                                           Version: 1.0                                                                           Release Date: December 20, 2022                                          Documentation: https://support.pingidentity.com/s/marketplace-integration/a7i8Z000000M3aSQAS/extended-user-session-remember-me-login"
+              },
+              "width": {
+                "value": 600
+              },
+              "height": {
+                "value": 240
+              },
+              "strokeEnabled": {
+                "value": true
+              },
+              "strokeWidth": {
+                "value": 3
+              },
+              "strokeColor": {
+                "value": "#d0021bff"
+              },
+              "cornerRadius": {
+                "value": 5
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 270,
+            "y": 1350
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
+        {
+          "data": {
+            "id": "zk2haymfwn",
+            "source": "2okz7c1js4",
+            "target": "r9vhyk9342"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "jb6vbk9642",
+            "source": "r9vhyk9342",
+            "target": "df42k4grb6"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "2a1mjjhub0",
+            "source": "jkodxcv3dc",
+            "target": "zump2j99vg"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xrrm1syte4",
+            "source": "jkodxcv3dc",
+            "target": "nwq381knbm"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "sq8ong2z1h",
+            "source": "y9xe3u9i5b",
+            "target": "eg4qv7obmp"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4dbn9usqif",
+            "source": "uhrxuf6e4y",
+            "target": "5t4iald4ve"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "i2r2xadcu5",
+            "source": "df42k4grb6",
+            "target": "ovwv4vu53v"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "4etfyluvmu",
+            "source": "7wkz24t48x",
+            "target": "t0izfw3v7u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0idkzeexbj",
+            "source": "w8yuhrfqnl",
+            "target": "y9xe3u9i5b"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "nmt7u6qu72",
+            "source": "ovwv4vu53v",
+            "target": "bt4l6oqgwu"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "hi3qfuxxl6",
+            "source": "hfceyxaxa3",
+            "target": "w8yuhrfqnl"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "7ol4p7yn49",
+            "source": "eg4qv7obmp",
+            "target": "7wkz24t48x"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "dob5raahk",
+            "source": "jo0ieujxmq",
+            "target": "71nn58zmpv"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "qrmrnm190e",
+            "source": "t0izfw3v7u",
+            "target": "9jcm1foigb"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zpu4hk11xa",
+            "source": "pv6tfx26n0",
+            "target": "jo0ieujxmq"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "88h8h3mao6",
+            "source": "t0izfw3v7u",
+            "target": "bm4p4lf0qc"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mhwu6sw3zp",
+            "source": "71nn58zmpv",
+            "target": "pqerhwm09u"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "0ds5cmzlpo",
+            "source": "5t4iald4ve",
+            "target": "62sonpp08e"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "g5lcj03dh2",
+            "source": "62sonpp08e",
+            "target": "ly6dz2xjwo"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "9i1vbtu80v",
+            "source": "ovwv4vu53v",
+            "target": "n6ebk46kl7"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "mocbjb2j0p",
+            "source": "9jcm1foigb",
+            "target": "jkodxcv3dc"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "y90w3il6pm",
+            "source": "71nn58zmpv",
+            "target": "hdaexwjeim"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "zoi4d4bjco",
+            "source": "5cpmf6jb8i",
+            "target": "pv6tfx26n0"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "ao85vbrvfs",
+            "source": "pqerhwm09u",
+            "target": "uhrxuf6e4y"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "xlym9p86qx",
+            "source": "62sonpp08e",
+            "target": "2okz7c1js4"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        }
+      ]
+    },
+    "data": {},
+    "zoomingEnabled": true,
+    "userZoomingEnabled": true,
+    "zoom": 1,
+    "minZoom": 1e-50,
+    "maxZoom": 1e+50,
+    "panningEnabled": true,
+    "userPanningEnabled": true,
+    "pan": {
+      "x": 0,
+      "y": 0
+    },
+    "boxSelectionEnabled": true,
+    "renderer": {
+      "name": "null"
+    }
+  },
+  "flowColor": "#ff661c",
+  "savedDate": 1671578987325,
+  "variables": [
+    {
+      "context": "flowInstance",
+      "createdDate": 1668773621843,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "companyName##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670272973792,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "cookieName##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670272973791,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000,
+        "value": "width: 65px; height: 65px;"
+      },
+      "type": "property",
+      "updatedDate": 1667950646585,
+      "visibility": "private",
+      "name": "logoStyle##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670272973791,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000,
+        "value": "https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png"
+      },
+      "type": "property",
+      "updatedDate": 1667950505469,
+      "visibility": "private",
+      "name": "logoUrl##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670272973789,
+      "fields": {
+        "type": "number",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "sessionTimeout##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1670272973792,
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "username##SK##flowInstance",
+      "companyId": "ab783461-5572-4c0b-8a1f-afd6389cac3f"
+    }
+  ]
+}
