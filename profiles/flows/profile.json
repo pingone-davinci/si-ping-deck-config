@@ -3,39 +3,39 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "Int Dir",
+      "icon": "ping",
+      "toolTip": "Ping Identity Integration Directory",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/marketplace-integration-home-page#sort=relevancy"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "Pwdless<br/>Reg (FIDO)",
+      "icon": "integration",
+      "toolTip": "Passwordless Registration (FIDO)",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "Pwdless<br/>Auth (FIDO)",
+      "icon": "integration",
+      "toolTip": "Passwordless Authentication (FIDO)",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x9dIAA/passwordless-authentication-fido"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "Ext User<br/>Session",
+      "icon": "integration",
+      "toolTip": "Extended User Session: Remember Me Login DaVinci Flow",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/marketplace-integration/a7i8Z000000M3aSQAS/extended-user-session-remember-me-login-davinci-flow"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
+      "name": "RADIUS<br/>Gtwy Auth",
+      "icon": "integration",
+      "toolTip": "RADIUS Gateway - Authentication",
+      "action": "REDIRECT",
+      "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010xIcIAI/radius-gateway-authentication"
     },
     {
       "name": "",
