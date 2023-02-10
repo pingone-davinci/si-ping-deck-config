@@ -106,11 +106,11 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
+      "name": "Test 1",
+      "icon": "docker",
       "toolTip": "",
-      "action": "",
-      "resource": ""
+      "action": "REDIRECT",
+      "resource": "https://www.google.com"
     },
     {
       "name": "",
