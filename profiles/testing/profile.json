@@ -106,7 +106,7 @@
       "resource": ""
     },
     {
-      "name": "Test 1",
+      "name": "Test 2",
       "icon": "docker",
       "toolTip": "",
       "action": "REDIRECT",
