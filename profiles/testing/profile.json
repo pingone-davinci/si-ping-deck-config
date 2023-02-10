@@ -99,11 +99,11 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
+      "name": "Test 1",
+      "icon": "ping",
       "toolTip": "",
-      "action": "",
-      "resource": ""
+      "action": "REDIRECT",
+      "resource": "https://www.pingidentity.com"
     },
     {
       "name": "Test 2",
