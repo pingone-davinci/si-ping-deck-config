@@ -3,13 +3,10 @@
   "description": "TBD",
   "actions": [
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": {
+        "row": 1,
+        "col": 1
+      },
       "name": "Invalid<br>Profile",
       "namePosition": "MIDDLE",
       "icon": "",
@@ -18,6 +15,10 @@
       "resource": "invalid_profile"
     },
     {
+      "position": {
+        "row": 1,
+        "col": 2
+      },
       "name": "Invalid<br>Action",
       "namePosition": "MIDDLE",
       "icon": "",
@@ -26,6 +27,10 @@
       "resource": "testing"
     },
     {
+      "position": {
+        "row": 1,
+        "col": 3
+      },
       "name": "Invalid<br>Pref",
       "namePosition": "MIDDLE",
       "icon": "",
@@ -34,6 +39,10 @@
       "resource": "unset_clip"
     },
     {
+      "position": {
+        "row": 1,
+        "col": 4
+      },
       "name": "Invalid<br>Clipboard",
       "namePosition": "MIDDLE",
       "icon": "",
@@ -42,6 +51,10 @@
       "resource": "invalid_pref"
     },
     {
+      "position": {
+        "row": 1,
+        "col": 5
+      },
       "name": "Unset<br>Pref",
       "namePosition": "MIDDLE",
       "icon": "",
@@ -50,20 +63,10 @@
       "resource": "{{invalid_ref}}/myaccount/"
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": {
+        "row": 2,
+        "col": 1
+      },
       "name": "DaVinci<br/>Login",
       "icon": "davinci",
       "toolTip": "DaVinci Login",
@@ -71,97 +74,26 @@
       "resource": ""
     },
     {
+      "position": {
+        "row": 2,
+        "col": 2
+      },
       "name": "DaVinci<br/>Import",
       "icon": "davinci",
       "toolTip": "DaVinci Import",
       "action": "DV_IMPORT",
-      "resource": "sample-main-sub.json"
+      "resource": "sample-main-sub.json",
+      "dependency": {
+        "type": "LOCAL_STORAGE",
+        "condition": "EXISTS",
+        "resource": "davinci_access_token"
+      }
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "Test 1",
-      "icon": "ping",
-      "toolTip": "",
-      "action": "REDIRECT",
-      "resource": "https://www.pingidentity.com"
-    },
-    {
-      "name": "Test 2",
-      "icon": "flow",
-      "toolTip": "",
-      "action": "REDIRECT",
-      "resource": "https://www.google.com"
-    },
-    {
-      "name": "Test 3",
-      "icon": "json",
-      "toolTip": "",
-      "action": "REDIRECT",
-      "resource": "http://www.github.com"
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": {
+        "row": 2,
+        "col": 8
+      },
       "name": "Flow<br/>Templates",
       "icon": "integration",
       "toolTip": "",
@@ -169,60 +101,15 @@
       "resource": ""
     },
     {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
+      "position": {
+        "row": 4,
+        "col": 8
+      },
       "name": "Widget",
       "icon": "glitch",
       "toolTip": "View a Node JS Widget integration",
       "action": "REDIRECT",
       "resource": "https://glitch.com/~davinci-v2-node-template"
     },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    },
-    {
-      "name": "",
-      "icon": "",
-      "toolTip": "",
-      "action": "",
-      "resource": ""
-    }
   ]
 }
