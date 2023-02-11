@@ -89,6 +89,12 @@
       {
         "id": "companyId",
         "label": "DaVinci Company ID",
+        "type": "text",
+        "tooltip": "PingOne DaVinci Company ID"
+      },
+      {
+        "id": "companyId2",
+        "label": "DaVinci Company",
         "type": "dropdown",
         "dropdown": {
           "options": {
