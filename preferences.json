@@ -98,9 +98,9 @@
         "type": "dropdown",
         "dropdown": {
           "options": {
-            "": "Select Company",
-            "1": "Company 1",
-            "2": "Company 2"
+            "Select Company": "",
+            "Company 1": "11114793-003f-4e12-b23b-94ae9f8d1111",
+            "Company 2": "22222d68-56ce-4857-879a-4603fa482222"
           }
         },
         "tooltip": "PingOne DaVinci Company ID"
