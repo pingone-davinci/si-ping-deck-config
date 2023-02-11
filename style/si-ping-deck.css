@@ -264,6 +264,16 @@ div.preference input {
   width: 65%;
 }
 
+div.preference select {
+  background-color: var(--pref-input-background);
+  border: none;
+  color: var(--pref-input-color);
+  display: inline-grid;
+  font-size: 11pt;
+  padding: 0.5em 0.5em;
+  width: 65%;
+}
+
 .preference-close-button {
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
   height: 20px;
