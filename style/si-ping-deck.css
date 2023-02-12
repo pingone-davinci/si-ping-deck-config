@@ -274,6 +274,21 @@ div.preference select {
   width: 65%;
 }
 
+div.preference button {
+  color: var(--pref-label-color);
+  background-color: var(--pref-container-background);
+  color: var(--pref-input-color);
+  border: 1;
+  border-radius: 0px 0px 0px 0px;
+  border-color: var(--pref-label-color);
+  display: inline-grid;
+  font-size: 10pt;
+  text-align: center;
+  width: auto;
+  padding: 0.5em 0.5em;
+  box-shadow: none;
+}
+
 .preference-close-button {
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
   height: 20px;
