@@ -89,7 +89,8 @@
       {
         "id": "loginButton",
         "label": "Login/Refresh Companies",
-        "type": "button"
+        "type": "button",
+        "onclick": "dvLogin();"
       },
       {
         "id": "companyId",
