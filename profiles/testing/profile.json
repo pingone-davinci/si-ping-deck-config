@@ -110,6 +110,17 @@
       "toolTip": "View a Node JS Widget integration",
       "action": "REDIRECT",
       "resource": "https://glitch.com/~davinci-v2-node-template"
+    },
+    {
+      "position": {
+        "row": 4,
+        "col": 7
+      },
+      "name": "Zero Trust",
+      "icon": "comming-soon",
+      "toolTip": "Zero trust solution coming soon",
+      "action": "",
+      "resource": ""
     }
   ]
 }
