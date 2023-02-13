@@ -7,8 +7,8 @@
         "row": 1,
         "col": 1
       },
-      "name": "Packages",
-      "icon": "davinci-packages",
+      "name": "Pkg Builder",
+      "icon": "solution-innovations",
       "toolTip": "PingOne Packages",
       "action": "REDIRECT",
       "resource": "https://packages.pingidentity.cloud"
