@@ -3,31 +3,76 @@
   "description": "TBD",
   "actions": [
     {
-      "position": { "row": 2, "col": 2 },
-      "name": "DaVinci",
+      "position": {
+        "row": 2,
+        "col": 2
+      },
+      "name": "Packages",
       "icon": "davinci",
-      "toolTip": "Open DaVinci main profile",
-      "action": "PROFILE",
-      "resource": "davinci-main"
+      "toolTip": "PingOne Packages",
+      "action": "REDIRECT",
+      "resource": "https://packages.pingidentity.cloud"
     },
     {
-      "position": { "row": 2, "col": 3 },
-      "name": "DV Conn.",
-      "icon": "dv-connections",
-      "toolTip": "Open DaVinci components profile",
+      "position": {
+        "row": 2,
+        "col": 3
+      },
+      "name": "Solutions",
+      "icon": "",
+      "toolTip": "DaVinci Solutions",
       "action": "PROFILE",
-      "resource": "davincicomponents"
+      "resource": "davinci-solutions"
     },
     {
-      "position": { "row": 2, "col": 4 },
-      "name": "Javascript",
+      "position": {
+        "row": 2,
+        "col": 4
+      },
+      "name": "Workflows",
+      "icon": "",
+      "toolTip": "DaVinci Workflows",
+      "action": "PROFILE",
+      "resource": "davinci-components"
+    },
+    {
+      "position": {
+        "row": 2,
+        "col": 5
+      },
+      "name": "Components",
+      "icon": "",
+      "toolTip": "DaVinci Components",
+      "action": "PROFILE",
+      "resource": "davinci-components"
+    },
+    {
+      "position": {
+        "row": 2,
+        "col": 6
+      },
+      "name": "Snippets",
+      "icon": "davinci",
+      "toolTip": "DaVinci Snippets",
+      "action": "PROFILE",
+      "resource": "davinci-snippets"
+    },
+    {
+      "position": {
+        "row": 2,
+        "col": 7
+      },
+      "name": "Code",
       "icon": "javascript",
       "toolTip": "",
       "action": "PROFILE",
       "resource": "javascript"
     },
     {
-      "position": { "row": 2, "col": 5 },
+      "position": {
+        "row": 3,
+        "col": 6
+      },
       "name": "Utils",
       "icon": "utilities",
       "toolTip": "",
@@ -35,15 +80,10 @@
       "resource": "utils"
     },
     {
-      "position": { "row": 2, "col": 6 },
-      "name": "Packages",
-      "icon": "solution-innovations",
-      "toolTip": "Solution Innovations Packages",
-      "action": "REDIRECT",
-      "resource": "https://packages.pingidentity.cloud"
-    },
-    {
-      "position": { "row": 2, "col": 7 },
+      "position": {
+        "row": 3,
+        "col": 3
+      },
       "name": "PingOne",
       "icon": "pingone",
       "toolTip": "PingOne profile",
@@ -51,20 +91,14 @@
       "resource": "pingone"
     },
     {
-      "position": { "row": 3, "col": 2 },
+      "position": {
+        "row": 3,
+        "col": 7
+      },
       "name": "DevOps",
       "icon": "devops",
       "toolTip": "Ping Identity DevOps",
       "action": "PROFILE",
       "resource": "devops"
-    },
-    {
-      "position": { "row": 3, "col": 7 },
-      "name": "Flows",
-      "icon": "flows",
-      "toolTip": "Run productized DaVinci solutions",
-      "action": "PROFILE",
-      "resource": "flows"
-    }
-  ]
-}
+    ]
+  }
