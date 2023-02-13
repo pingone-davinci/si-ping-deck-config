@@ -10,8 +10,8 @@
       "name": "Packages",
       "icon": "davinci-packages",
       "toolTip": "PingOne Packages",
-      "action": "REDIRECT",
-      "resource": "https://packages.pingidentity.cloud"
+      "action": "PROFILE",
+      "resource": "davinci-packages"
     },
     {
       "position": {
@@ -111,6 +111,6 @@
       "toolTip": "Contribute to PingDeck",
       "action": "REDIRECT",
       "resource": "https://forms.gle/x2N12g84bxCvLEAn8"
-    } 
+    }
   ]
 }
