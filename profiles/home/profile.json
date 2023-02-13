@@ -100,5 +100,6 @@
       "toolTip": "Ping Identity DevOps",
       "action": "PROFILE",
       "resource": "devops"
-    ]
-  }
+    }
+  ]
+}
