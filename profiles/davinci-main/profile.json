@@ -22,12 +22,20 @@
       "position": { "row": 1, "col": 3 },
       "name": "Headers",
       "icon": "blue-palette",
-      "toolTip": "Blue Hex value for flow and section headers",
+      "toolTip": "Blue Hex value for flow title header",
       "action": "GIT_CLIPBOARD",
       "resource": "annotation-hex-blue.txt"
     },
     {
       "position": { "row": 1, "col": 4 },
+      "name": "Functions",
+      "icon": "purple-palette",
+      "toolTip": "Purple Hex value for section headers",
+      "action": "GIT_CLIPBOARD",
+      "resource": "annotation-hex-purple.txt"
+    },
+    {
+      "position": { "row": 1, "col": 5 },
       "name": "Annot.",
       "icon": "gray-palette",
       "toolTip": "Gray Hex value for native component annotations",
@@ -35,7 +43,7 @@
       "resource": "annotation-hex-gray.txt"
     },
     {
-      "position": { "row": 1, "col": 5 },
+      "position": { "row": 1, "col": 6 },
       "name": "Paid Conn.",
       "icon": "gold-palette",
       "toolTip": "Gold Hex value for paid component annotations",
@@ -43,7 +51,7 @@
       "resource": "annotation-hex-paid-connectors.txt"
     },
     {
-      "position": { "row": 1, "col": 6 },
+      "position": { "row": 1, "col": 7 },
       "name": "Success",
       "icon": "green-palette",
       "toolTip": "Green Hex value for success nodes",
@@ -51,20 +59,12 @@
       "resource": "success-node-hex.txt"
     },
     {
-      "position": { "row": 1, "col": 7 },
+      "position": { "row": 1, "col": 8 },
       "name": "Error",
-      "icon": "ping-palette",
+      "icon": "pink-palette",
       "toolTip": "Redish Hex value for eror nodes",
       "action": "GIT_CLIPBOARD",
       "resource": "error-node-hex.txt"
-    },
-    {
-      "position": { "row": 1, "col": 8 },
-      "name": "Confluence",
-      "icon": "ux-team",
-      "toolTip": "UX confluence page for the latest DaVinci html/css",
-      "action": "REDIRECT",
-      "resource": "https://confluence.pingidentity.com/pages/viewpage.action?spaceKey=UX&title=DaVinci+Templates"
     },
     {
       "position": { "row": 2, "col": 1 },
