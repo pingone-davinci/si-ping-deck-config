@@ -65,14 +65,6 @@
       "toolTip": "Run productized DaVinci solutions",
       "action": "PROFILE",
       "resource": "flows"
-    },
-    {
-      "position": { "row": 4, "col": 8 },
-      "name": "",
-      "icon": "",
-      "toolTip": "Testing Page",
-      "action": "PROFILE",
-      "resource": "testing"
     }
   ]
 }
