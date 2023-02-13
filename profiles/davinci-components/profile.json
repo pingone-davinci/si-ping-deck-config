@@ -43,34 +43,7 @@
       "resource": "spacer.json"
     },
     {
-      "position": { "row": 1, "col": 8 },
-      "name": "No-Op<br/>UI",
-      "namePosition": "MIDDLE",
-      "icon": "box-red",
-      "toolTip": "No-Op UI component",
-      "action": "GIT_DV_CLIPBOARD",
-      "resource": "no-op-ui.json"
-    },
-    {
       "position": { "row": 2, "col": 1 },
-      "name": "JSON<br/>Success",
-      "namePosition": "MIDDLE",
-      "icon": "box-red",
-      "toolTip": "HTTP JSON Success Node",
-      "action": "GIT_DV_CLIPBOARD",
-      "resource": "http-json-success.json"
-    },
-    {
-      "position": { "row": 2, "col": 2 },
-      "name": "JSON<br/>Error",
-      "namePosition": "MIDDLE",
-      "icon": "box-red",
-      "toolTip": "HTTP JSON Error Node",
-      "action": "GIT_DV_CLIPBOARD",
-      "resource": "http-json-error.json"
-    },
-    {
-      "position": { "row": 2, "col": 7 },
       "name": "Sign In<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-red",
@@ -79,13 +52,40 @@
       "resource": "sign-in-form.json"
     },
     {
-      "position": { "row": 2, "col": 8 },
+      "position": { "row": 2, "col": 2 },
       "name": "Reg<br/>Form",
       "namePosition": "MIDDLE",
       "icon": "box-red",
       "toolTip": "Basic registration form",
       "action": "GIT_DV_CLIPBOARD",
       "resource": "registration-form.json"
+    },
+    {
+      "position": { "row": 2, "col": 6 },
+      "name": "No-Op<br/>UI",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "No-Op UI component",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "no-op-ui.json"
+    },
+    {
+      "position": { "row": 2, "col": 7 },
+      "name": "JSON<br/>Success",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Success Node",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "http-json-success.json"
+    },
+    {
+      "position": { "row": 2, "col": 8 },
+      "name": "JSON<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Error Node",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "http-json-error.json"
     },
     {
       "position": { "row": 4, "col": 8 },
