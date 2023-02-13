@@ -4,7 +4,7 @@
   "actions": [
     {
       "position": { "row": 1, "col": 1 },
-      "name": "Annot",
+      "name": "Title",
       "icon": "annotation-blue",
       "toolTip": "Title annotation",
       "action": "GIT_DV_CLIPBOARD",

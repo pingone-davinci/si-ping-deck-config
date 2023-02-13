@@ -11,7 +11,7 @@
       "resource": "https://signon.pingidentity.com/davinci/policy/5447db4173e2cd3139ba8e633817677e/authorize?client_id=b91b7752f23e20d56c8623aca138ead8&response_type=code&scope=openid&redirect_uri=https://www.pingidentity.com"
     },
     {
-      "position": { "row": 1, "col": 3 },
+      "position": { "row": 1, "col": 4 },
       "name": "Collection",
       "icon": "postman",
       "toolTip": "PingOne Postman Collection",
@@ -19,7 +19,7 @@
       "resource": "https://www.postman.com/ping-identity/workspace/pingone/overview"
     },
     {
-      "position": { "row": 1, "col": 4 },
+      "position": { "row": 1, "col": 5 },
       "name": "Platform API",
       "icon": "pingone",
       "toolTip": "PingOne Platform API",
@@ -86,7 +86,7 @@
       "resource": "pingone_clientSecret"
     },
     {
-      "position": { "row": 2, "col": 7 },
+      "position": { "row": 2, "col": 8 },
       "name": "*.tfvars",
       "icon": "terraform",
       "toolTip": "PingOne Terraform *.tfvars",
@@ -94,7 +94,7 @@
       "resource": "pingone.terraform.tfvars"
     },
     {
-      "position": { "row": 5, "col": 8 },
+      "position": { "row": 4, "col": 8 },
       "name": "Readme",
       "icon": "readme",
       "toolTip": "TBD",
