@@ -88,24 +88,6 @@
       "resource": "registration-form.json"
     },
     {
-      "position": { "row": 3, "col": 6 },
-      "name": "Common<br/>Error",
-      "namePosition": "MIDDLE",
-      "icon": "box-green",
-      "toolTip": "Teleport method for handling common error",
-      "action": "GIT_DV_CLIPBOARD",
-      "resource": "common-error-teleport.json"
-    },
-    {
-      "position": { "row": 3, "col": 7 },
-      "name": "PWD<br/>Reset",
-      "namePosition": "MIDDLE",
-      "icon": "box-green",
-      "toolTip": "Teleport method for resetting PingOne account password",
-      "action": "GIT_DV_CLIPBOARD",
-      "resource": "reset-password.json"
-    },
-    {
       "position": { "row": 4, "col": 8 },
       "name": "Readme",
       "icon": "readme",

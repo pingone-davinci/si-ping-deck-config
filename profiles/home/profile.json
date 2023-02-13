@@ -20,7 +20,7 @@
       },
       "name": "Solutions",
       "icon": "davinci-solutions",
-      "toolTip": "DaVinci Solutions",
+      "toolTip": "PingOne DaVinci Solutions",
       "action": "PROFILE",
       "resource": "davinci-solutions"
     },
@@ -31,7 +31,7 @@
       },
       "name": "Workflows",
       "icon": "davinci-workflows",
-      "toolTip": "DaVinci Workflows",
+      "toolTip": "PingOne DaVinci Workflows",
       "action": "PROFILE",
       "resource": "davinci-workflows"
     },
@@ -42,7 +42,7 @@
       },
       "name": "Components",
       "icon": "davinci-components",
-      "toolTip": "DaVinci Components",
+      "toolTip": "PingOne DaVinci Components",
       "action": "PROFILE",
       "resource": "davinci-components"
     },
@@ -53,7 +53,7 @@
       },
       "name": "Snippets",
       "icon": "davinci-snippets",
-      "toolTip": "DaVinci Snippets",
+      "toolTip": "PingOne DaVinci Snippets",
       "action": "PROFILE",
       "resource": "davinci-snippets"
     },
@@ -64,7 +64,7 @@
       },
       "name": "Code",
       "icon": "code-snippets",
-      "toolTip": "",
+      "toolTip": "Code snippets",
       "action": "PROFILE",
       "resource": "code-snippets"
     },
