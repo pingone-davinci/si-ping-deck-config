@@ -64,7 +64,7 @@
       },
       "name": "Code",
       "icon": "code-snippets",
-      "toolTip": "Code snippets",
+      "toolTip": "Code Snippets",
       "action": "PROFILE",
       "resource": "code-snippets"
     },

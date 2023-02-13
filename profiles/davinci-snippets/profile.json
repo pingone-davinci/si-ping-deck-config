@@ -217,23 +217,6 @@
       "action": "GIT_CLIPBOARD",
       "resource": "ping-css.txt"
     },
-    
-    {
-      "position": { "row": 4, "col": 3 },
-      "name": "Staging",
-      "icon": "jira",
-      "toolTip": "View DaVinci Jira staging queue",
-      "action": "REDIRECT",
-      "resource": "https://jira.pingidentity.com/issues/?filter=42701"
-    },
-    {
-      "position": { "row": 4, "col": 4 },
-      "name": "Defects",
-      "icon": "jira",
-      "toolTip": "View DaVinci Jira defects dashboard",
-      "action": "REDIRECT",
-      "resource": "https://jira.pingidentity.com/secure/Dashboard.jspa?selectPageId=31311"
-    },
     {
       "position": { "row": 4, "col": 8 },
       "name": "Readme",
