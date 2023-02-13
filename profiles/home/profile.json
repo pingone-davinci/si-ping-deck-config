@@ -8,7 +8,7 @@
         "col": 2
       },
       "name": "Packages",
-      "icon": "davinci",
+      "icon": "davinci-packages",
       "toolTip": "PingOne Packages",
       "action": "REDIRECT",
       "resource": "https://packages.pingidentity.cloud"
@@ -19,7 +19,7 @@
         "col": 3
       },
       "name": "Solutions",
-      "icon": "",
+      "icon": "davinci-solutions",
       "toolTip": "DaVinci Solutions",
       "action": "PROFILE",
       "resource": "davinci-solutions"
@@ -30,7 +30,7 @@
         "col": 4
       },
       "name": "Workflows",
-      "icon": "",
+      "icon": "davinci-workflows",
       "toolTip": "DaVinci Workflows",
       "action": "PROFILE",
       "resource": "davinci-components"
@@ -41,7 +41,7 @@
         "col": 5
       },
       "name": "Components",
-      "icon": "",
+      "icon": "davinci-components",
       "toolTip": "DaVinci Components",
       "action": "PROFILE",
       "resource": "davinci-components"
@@ -52,7 +52,7 @@
         "col": 6
       },
       "name": "Snippets",
-      "icon": "davinci",
+      "icon": "davinci-snippets",
       "toolTip": "DaVinci Snippets",
       "action": "PROFILE",
       "resource": "davinci-snippets"
@@ -63,7 +63,7 @@
         "col": 7
       },
       "name": "Code",
-      "icon": "javascript",
+      "icon": "code-snippets",
       "toolTip": "",
       "action": "PROFILE",
       "resource": "javascript"
