@@ -33,7 +33,7 @@
       "icon": "davinci-workflows",
       "toolTip": "DaVinci Workflows",
       "action": "PROFILE",
-      "resource": "davinci-components"
+      "resource": "davinci-workflows"
     },
     {
       "position": {

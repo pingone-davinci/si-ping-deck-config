@@ -106,14 +106,6 @@
       "resource": "reset-password.json"
     },
     {
-      "position": { "row": 3, "col": 8 },
-      "name": "DaVinci",
-      "icon": "davinci",
-      "toolTip": "",
-      "action": "PROFILE",
-      "resource": "davinci-main"
-    },
-    {
       "position": { "row": 4, "col": 8 },
       "name": "Readme",
       "icon": "readme",

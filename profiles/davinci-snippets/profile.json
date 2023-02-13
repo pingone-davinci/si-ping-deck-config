@@ -201,14 +201,6 @@
       "action": "GIT_CLIPBOARD",
       "resource": "form.html"
     },
-     {
-      "position": { "row": 3, "col": 8 },
-      "name": "Nodes",
-      "icon": "dv-connections",
-      "toolTip": "Open DaVinci components profile",
-      "action": "PROFILE",
-      "resource": "davincicomponents"
-    },
     {
       "position": { "row": 4, "col": 1 },
       "name": "Overrides",
