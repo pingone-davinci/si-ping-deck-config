@@ -1,0 +1,125 @@
+{
+  "title": "PingOne DaVinci Components",
+  "description": "TBD",
+  "actions": [
+    {
+      "position": { "row": 1, "col": 1 },
+      "name": "Title",
+      "icon": "annotation-blue",
+      "toolTip": "Title annotation",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "flow-title-annotation.json"
+    },
+    {
+      "position": { "row": 1, "col": 2 },
+      "name": "Function",
+      "icon": "annotation-purple",
+      "toolTip": "Flow function annotation",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "function-title-annotation.json"
+    },
+    {
+      "position": { "row": 1, "col": 3 },
+      "name": "Annotation",
+      "icon": "annotation-gray",
+      "toolTip": "Native conector annotation",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "node-annotation-gray.json"
+    },
+    {
+      "position": { "row": 1, "col": 4 },
+      "name": "Paid Conn.",
+      "icon": "annotation-gold",
+      "toolTip": "Paid connector annotation",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "node-annotation-gold.json"
+    },
+    {
+      "position": { "row": 1, "col": 5 },
+      "name": "Spacer",
+      "icon": "spacer",
+      "toolTip": "Spacer annotation",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "spacer.json"
+    },
+    {
+      "position": { "row": 1, "col": 8 },
+      "name": "No-Op<br/>UI",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "No-Op UI component",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "no-op-ui.json"
+    },
+    {
+      "position": { "row": 2, "col": 1 },
+      "name": "JSON<br/>Success",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Success Node",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "http-json-success.json"
+    },
+    {
+      "position": { "row": 2, "col": 2 },
+      "name": "JSON<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "HTTP JSON Error Node",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "http-json-error.json"
+    },
+    {
+      "position": { "row": 2, "col": 7 },
+      "name": "Sign In<br/>Form",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "Username and password node",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "sign-in-form.json"
+    },
+    {
+      "position": { "row": 2, "col": 8 },
+      "name": "Reg<br/>Form",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "Basic registration form",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "registration-form.json"
+    },
+    {
+      "position": { "row": 3, "col": 6 },
+      "name": "Common<br/>Error",
+      "namePosition": "MIDDLE",
+      "icon": "box-green",
+      "toolTip": "Teleport method for handling common error",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "common-error-teleport.json"
+    },
+    {
+      "position": { "row": 3, "col": 7 },
+      "name": "PWD<br/>Reset",
+      "namePosition": "MIDDLE",
+      "icon": "box-green",
+      "toolTip": "Teleport method for resetting PingOne account password",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "reset-password.json"
+    },
+    {
+      "position": { "row": 3, "col": 8 },
+      "name": "DaVinci",
+      "icon": "davinci",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "davinci-main"
+    },
+    {
+      "position": { "row": 4, "col": 8 },
+      "name": "Readme",
+      "icon": "readme",
+      "toolTip": "View documentation for this profile",
+      "action": "REDIRECT",
+      "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
+    }
+  ]
+}

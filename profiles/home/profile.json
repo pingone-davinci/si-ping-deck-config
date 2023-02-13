@@ -70,19 +70,8 @@
     },
     {
       "position": {
-        "row": 3,
-        "col": 6
-      },
-      "name": "Utils",
-      "icon": "utilities",
-      "toolTip": "",
-      "action": "PROFILE",
-      "resource": "utils"
-    },
-    {
-      "position": {
-        "row": 3,
-        "col": 3
+        "row": 4,
+        "col": 2
       },
       "name": "PingOne",
       "icon": "pingone",
@@ -92,8 +81,19 @@
     },
     {
       "position": {
-        "row": 3,
-        "col": 7
+        "row": 4,
+        "col": 5
+      },
+      "name": "Utils",
+      "icon": "utilities",
+      "toolTip": "",
+      "action": "PROFILE",
+      "resource": "utils"
+    },
+    {
+      "position": {
+        "row": 4,
+        "col": 6
       },
       "name": "DevOps",
       "icon": "devops",
