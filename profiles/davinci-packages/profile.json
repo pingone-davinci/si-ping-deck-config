@@ -28,17 +28,6 @@
     {
       "position": {
         "row": 2,
-        "col": 1
-      },
-      "name": "*.tfvars",
-      "icon": "terraform",
-      "toolTip": "PingOne Terraform *.tfvars",
-      "action": "GIT_CLIPBOARD",
-      "resource": "pingone.terraform.tfvars"
-    },
-    {
-      "position": {
-        "row": 2,
         "col": 2
       },
       "name": "Download",
@@ -58,6 +47,17 @@
       "toolTip": "Zero trust solution coming soon",
       "action": "",
       "resource": ""
+    },
+    {
+      "position": {
+        "row": 2,
+        "col": 8
+      },
+      "name": "*.tfvars",
+      "icon": "terraform",
+      "toolTip": "PingOne Terraform *.tfvars",
+      "action": "GIT_CLIPBOARD",
+      "resource": "pingone.terraform.tfvars"
     }
   ]
 }
