@@ -28,6 +28,17 @@
     {
       "position": {
         "row": 2,
+        "col": 1
+      },
+      "name": "*.tfvars",
+      "icon": "terraform",
+      "toolTip": "PingOne Terraform *.tfvars",
+      "action": "GIT_CLIPBOARD",
+      "resource": "pingone.terraform.tfvars"
+    },
+    {
+      "position": {
+        "row": 2,
         "col": 2
       },
       "name": "Download",
