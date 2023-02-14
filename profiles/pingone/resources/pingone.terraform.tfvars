@@ -17,14 +17,14 @@
 #    terraform destroy                // Destroy what has been previously built
 #
 
-target_environment_name        = "gsa-129-1"
-admin_password                 = "{{home_password}}"
+# target_environment_name        = ""
+# admin_password                 = ""
 admin_client_id                = "{{pingone_clientId}}"
 admin_client_secret            = "{{pingone_clientSecret}}"
 admin_environment_id           = "{{pingone_envId}}"
 license_name                   = "INTERNAL"
 region                         = "NorthAmerica"
-admin_username                 = "{{home_email}}
+admin_username                 = "{{home_email}}"
 target_environment_description = "SKO Environment - Built by Terraform CLI"
 target_environment_type        = "SANDBOX"
 target_population_name         = "SKO Population"
