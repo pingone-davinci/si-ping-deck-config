@@ -27,6 +27,17 @@
     },
     {
       "position": {
+        "row": 2,
+        "col": 2
+      },
+      "name": "Download",
+      "icon": "terraform",
+      "toolTip": "CIAM Passwordless Terraform Package",
+      "action": "URL_DOWNLOAD",
+      "resource": "https://pingone-davinci.github.io/si-ping-deck-config/davinci-packages/resources/ciam-passwordless.zip"
+    },
+    {
+      "position": {
         "row": 1,
         "col": 3
       },
