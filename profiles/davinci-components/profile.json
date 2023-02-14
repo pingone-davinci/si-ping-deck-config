@@ -1,6 +1,5 @@
 {
   "title": "PingOne DaVinci Components",
-  "description": "TBD",
   "actions": [
     {
       "position": { "row": 1, "col": 1 },
@@ -86,6 +85,15 @@
       "toolTip": "HTTP JSON Error Node",
       "action": "GIT_DV_CLIPBOARD",
       "resource": "http-json-error.json"
+    },
+    {
+      "position": { "row": 2, "col": 8 },
+      "name": "Password<br/>Status",
+      "namePosition": "MIDDLE",
+      "icon": "box-yellow",
+      "toolTip": "Many conditions function connector with prepopulated password status",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "password-status-function.json"
     },
     {
       "position": { "row": 4, "col": 8 },
