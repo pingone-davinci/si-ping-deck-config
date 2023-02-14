@@ -87,7 +87,7 @@
       "resource": "http-json-error.json"
     },
     {
-      "position": { "row": 2, "col": 8 },
+      "position": { "row": 4, "col": 1 },
       "name": "Password<br/>Status",
       "namePosition": "MIDDLE",
       "icon": "box-yellow",
