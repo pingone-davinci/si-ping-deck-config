@@ -88,10 +88,10 @@
     },
     {
       "position": { "row": 4, "col": 1 },
-      "name": "Password<br/>Status",
+      "name": "Pwd<br/>Status",
       "namePosition": "MIDDLE",
       "icon": "box-yellow",
-      "toolTip": "Many conditions function connector with prepopulated password status",
+      "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
       "action": "GIT_DV_CLIPBOARD",
       "resource": "password-status-function.json"
     },
