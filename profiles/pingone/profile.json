@@ -117,17 +117,6 @@
     },
     {
       "position": {
-        "row": 2,
-        "col": 8
-      },
-      "name": "*.tfvars",
-      "icon": "terraform",
-      "toolTip": "PingOne Terraform *.tfvars",
-      "action": "GIT_CLIPBOARD",
-      "resource": "pingone.terraform.tfvars"
-    },
-    {
-      "position": {
         "row": 4,
         "col": 8
       },
