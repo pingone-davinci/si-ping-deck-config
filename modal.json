@@ -35,7 +35,6 @@
   "preferences": {
     "title": "Preferences",
     "subtitle": "Saved to browser local storage",
-    "onchange": "savePreferenceValues",
     "tabs": {
       "home": {
         "title": "Home",
