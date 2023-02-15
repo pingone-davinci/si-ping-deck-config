@@ -1,2 +1,0 @@
-# DaVinci Components Profile 
-TBD
