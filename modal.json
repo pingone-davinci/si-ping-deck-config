@@ -155,7 +155,7 @@
             "id": "loginButton",
             "label": "Login/Refresh Companies",
             "type": "button",
-            "onclick": "dvLogin();openModal('preferences');"
+            "onclick": "dvLogin();"
           },
           {
             "id": "companyId",
