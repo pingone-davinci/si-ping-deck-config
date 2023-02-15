@@ -5,7 +5,8 @@
     "saveButton": {
       "id": "save",
       "label": "Save Button Details",
-      "type": "button"
+      "type": "button",
+      "onclick": "saveButton();"
     },
     "tabs": {
       "__NOTAB__": {
