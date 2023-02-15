@@ -7,30 +7,34 @@
       "label": "Save Button Details",
       "type": "button"
     },
-    "inputs": [
-      {
-        "id": "row",
-        "label": "Row",
-        "default": 2
-      },
-      {
-        "id": "col",
-        "label": "Column",
-        "default": 5
-      },
-      {
-        "id": "title",
-        "label": "Title"
-      },
-      {
-        "id": "icon",
-        "label": "Icon"
-      },
-      {
-        "id": "tooltip",
-        "label": "Tooltip"
+    "tabs": {
+      "__NOTAB__": {
+        "inputs": [
+          {
+            "id": "row",
+            "label": "Row",
+            "default": 2
+          },
+          {
+            "id": "col",
+            "label": "Column",
+            "default": 5
+          },
+          {
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "id": "tooltip",
+            "label": "Tooltip"
+          }
+        ]
       }
-    ]
+    }
   },
   "preferences": {
     "title": "Preferences",
