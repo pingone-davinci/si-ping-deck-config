@@ -92,6 +92,65 @@
     {
       "position": {
         "row": 2,
+        "col": 4
+      },
+      "name": "Test Flow",
+      "icon": "integration",
+      "toolTip": "Testing Multiactions Folder",
+      "action": "FOLDER",
+      "resource": {
+        "title": "Testing Multiactions Folder ",
+        "actions": [
+          {
+            "position": {
+              "row": 2,
+              "col": 3
+            },
+            "name": "Overview",
+            "icon": "ping",
+            "toolTip": "View flow overview",
+            "action": "REDIRECT",
+            "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 4
+            },
+            "name": "Try",
+            "icon": "ping",
+            "toolTip": "Try the demo solution",
+            "action": "REDIRECT",
+            "resource": "https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/policy/d66ca9f021032ee46cbcbb5ee587d3b6/authorize?client_id=4a8614cc1f59281b30876903a911f3eb&response_type=code&scope=openid&redirect_uri=https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/testrp"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 5
+            },
+            "name": "Import",
+            "icon": "davinci-import",
+            "toolTip": "Import Passwordless Registration (FIDO) Solution",
+            "action": "DV_IMPORT",
+            "resource": "ic-passwordless-registration-fido.json"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 6
+            },
+            "name": "Download",
+            "icon": "davinci-import",
+            "toolTip": "Download the DaVinci flows",
+            "action": "DV_IMPORT",
+            "resource": "ic-passwordless-registration-fido.json"
+          }
+        ]
+      }
+    },
+    {
+      "position": {
+        "row": 2,
         "col": 8
       },
       "name": "Flow<br/>Templates",
