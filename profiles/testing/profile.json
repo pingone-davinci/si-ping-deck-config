@@ -166,10 +166,10 @@
       },
       "name": "Annotations",
       "icon": "annotations",
-      "toolTip": "Annotation examples",
+      "toolTip": "Flow Annotation examples",
       "action": "FOLDER",
       "resource": {
-        "title": "Annotation Examples",
+        "title": "Flow Annotation Examples",
         "actions": [
           {
             "position": {
