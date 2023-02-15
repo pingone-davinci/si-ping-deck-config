@@ -99,7 +99,7 @@
       "toolTip": "Testing Multiactions Folder",
       "action": "FOLDER",
       "resource": {
-        "title": "Testing Multiactions Folder ",
+        "title": "",
         "actions": [
           {
             "position": {
@@ -158,6 +158,65 @@
       "toolTip": "",
       "action": "REDIRECT",
       "resource": ""
+    },
+    {
+      "position": {
+        "row": 2,
+        "col": 5
+      },
+      "name": "Annotations",
+      "icon": "annotations",
+      "toolTip": "Annotation examples",
+      "action": "FOLDER",
+      "resource": {
+        "title": "Annotation Examples",
+        "actions": [
+          {
+            "position": {
+              "row": 2,
+              "col": 3
+            },
+            "name": "Title",
+            "icon": "annotation-blue",
+            "toolTip": "Title annotation",
+            "action": "GIT_DV_CLIPBOARD",
+            "resource": "flow-title-annotation.json"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 4
+            },
+            "name": "Function",
+            "icon": "annotation-purple",
+            "toolTip": "Flow function annotation",
+            "action": "GIT_DV_CLIPBOARD",
+            "resource": "function-title-annotation.json"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 5
+            },
+            "name": "Annotation",
+            "icon": "annotation-gray",
+            "toolTip": "Native conector annotation",
+            "action": "GIT_DV_CLIPBOARD",
+            "resource": "node-annotation-gray.json"
+          },
+          {
+            "position": {
+              "row": 2,
+              "col": 6
+            },
+            "name": "Paid Conn.",
+            "icon": "annotation-gold",
+            "toolTip": "Paid connector annotation",
+            "action": "GIT_DV_CLIPBOARD",
+            "resource": "node-annotation-gold.json"
+          }
+        ]
+      }
     },
     {
       "position": {
