@@ -2,12 +2,6 @@
   "editButton": {
     "title": "Edit Button",
     "subtitle": "Enter details for button",
-    "saveButton": {
-      "id": "save",
-      "label": "Save Button Details",
-      "type": "button",
-      "onclick": "saveButton();"
-    },
     "tabs": {
       "__NOTAB__": {
         "inputs": [
@@ -32,6 +26,12 @@
           {
             "id": "tooltip",
             "label": "Tooltip"
+          },
+          {
+            "id": "save",
+            "label": "Save Button Details",
+            "type": "button",
+            "onclick": "saveButton();"
           }
         ]
       }
