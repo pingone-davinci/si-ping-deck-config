@@ -16,8 +16,12 @@
             "default": 5
           },
           {
-            "id": "title",
-            "label": "Title"
+            "id": "action",
+            "label": "Action"
+          },
+          {
+            "id": "name",
+            "label": "Name"
           },
           {
             "id": "icon",
