@@ -15,15 +15,15 @@
       },
       {
         "id": "title",
-        "label": "Title",
+        "label": "Title"
       },
       {
         "id": "icon",
-        "label": "Icon",
+        "label": "Icon"
       },
       {
         "id": "tooltip",
-        "label": "Tooltip",
+        "label": "Tooltip"
       },
       {
         "id": "save",
