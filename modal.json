@@ -1,0 +1,157 @@
+{
+  "editButton": {
+    "title": "Edit Button",
+    "subtitle": "Enter details for button",
+    "inputs": [
+      {
+        "id": "row",
+        "label": "Row",
+        "default": 2
+      },
+      {
+        "id": "col",
+        "label": "Column",
+        "default": 5
+      },
+      {
+        "id": "title",
+        "label": "Title",
+      },
+      {
+        "id": "icon",
+        "label": "Icon",
+      },
+      {
+        "id": "tooltip",
+        "label": "Tooltip",
+      },
+      {
+        "id": "save",
+        "label": "Save",
+        "type": "button"
+      }
+    ]
+  },
+  "preferences": {
+    "title": "Preferences",
+    "subtitle": "Saved to browser local storage",
+    "tabs": {
+      "home": {
+        "title": "Home",
+        "inputs": [
+          {
+            "id": "name",
+            "label": "Full Name",
+            "type": "text",
+            "tooltip": "This is your full name"
+          },
+          {
+            "id": "email",
+            "label": "Email"
+          }
+        ]
+      },
+      "pingone": {
+        "title": "PingOne",
+        "inputs": [
+          {
+            "id": "consoleUrl",
+            "label": "Console URL",
+            "type": "text",
+            "tooltip": "PingOne Console URL",
+            "default": "https://console.pingone.com"
+          },
+          {
+            "id": "authUrl",
+            "label": "AuthN/AuthZ API URL",
+            "type": "text",
+            "tooltip": "PingOne Authorization and authentication APIs URL",
+            "default": "https://auth.pingone.com"
+          },
+          {
+            "id": "appsUrl",
+            "label": "Applications URL",
+            "type": "text",
+            "tooltip": "PingOne Applications URL",
+            "default": "https://apps.pingone.com"
+          },
+          {
+            "id": "apiUrl",
+            "label": "Management API URL",
+            "type": "text",
+            "tooltip": "PingOne APIs URL",
+            "default": "https://api.pingone.com"
+          },
+          {
+            "id": "envId",
+            "label": "Environment ID",
+            "type": "text",
+            "tooltip": "PingOne Environment ID"
+          },
+          {
+            "id": "clientId",
+            "label": "Client ID",
+            "type": "text",
+            "tooltip": "PingOne Client ID"
+          },
+          {
+            "id": "clientSecret",
+            "label": "Client Secret",
+            "type": "password",
+            "tooltip": "PingOne Client Secret"
+          }
+        ]
+      },
+      "davinci": {
+        "title": "DaVinci",
+        "inputs": [
+          {
+            "id": "envId",
+            "label": "PingOne Environment ID",
+            "type": "text",
+            "tooltip": "PingOne Environment ID"
+          },
+          {
+            "id": "username",
+            "label": "PingOne Username",
+            "type": "text",
+            "tooltip": "PingOne Username"
+          },
+          {
+            "id": "password",
+            "label": "PingOne Password",
+            "type": "password",
+            "tooltip": "PingOne Password"
+          },
+          {
+            "id": "loginButton",
+            "label": "Login/Refresh Companies",
+            "type": "button",
+            "onclick": "dvLogin();"
+          },
+          {
+            "id": "companyId",
+            "label": "DaVinci Company",
+            "type": "dropdown",
+            "dropdown": {
+              "optionsLocalStorage": "davinci_companies",
+              "optionsList": {
+                "": "",
+                "Company 1": "11114793-003f-4e12-b23b-94ae9f8d1111",
+                "Company 2": "22222d68-56ce-4857-879a-4603fa482222"
+              }
+            },
+            "tooltip": "PingOne DaVinci Company ID"
+          }
+        ]
+      },
+      "about": {
+        "default": true,
+        "title": "About",
+        "class": "about",
+        "html": "<h2><img class='logo'/> PING DECK</h2>Version: 0.1.0 <p>Feedback: <a href='mailto:pingdeck@pingidentity.com'>pingdeck@pingidentity.com</a>",
+        "inputs": []
+      }
+    }
+  }
+}
