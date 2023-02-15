@@ -2,6 +2,11 @@
   "editButton": {
     "title": "Edit Button",
     "subtitle": "Enter details for button",
+    "saveButton": {
+      "id": "save",
+      "label": "Save Button Details",
+      "type": "button"
+    },
     "inputs": [
       {
         "id": "row",
@@ -24,17 +29,13 @@
       {
         "id": "tooltip",
         "label": "Tooltip"
-      },
-      {
-        "id": "save",
-        "label": "Save",
-        "type": "button"
       }
     ]
   },
   "preferences": {
     "title": "Preferences",
     "subtitle": "Saved to browser local storage",
+    "onchange": "savePreferenceValues",
     "tabs": {
       "home": {
         "title": "Home",
