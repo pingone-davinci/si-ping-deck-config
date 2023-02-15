@@ -17,7 +17,26 @@
           },
           {
             "id": "action",
-            "label": "Action"
+            "label": "Action",
+            "type": "dropdown",
+            "dropdown": {
+              "optionsList": {
+                "PROFILE": "PROFILE",
+                "GIT_CLIPBOARD": "GIT_CLIPBOARD",
+                "GIT_DV_CLIPBOARD": "GIT_DV_CLIPBOARD",
+                "PREF_CLIPBOARD": "PREF_CLIPBOARD",
+                "REDIRECT": "REDIRECT",
+                "URL_DOWNLOAD": "URL_DOWNLOAD",
+                "UTILITY": "UTILITY",
+                "PREFERENCES": "PREFERENCES",
+                "DV_LOGIN": "DV_LOGIN",
+                "DV_IMPORT": "DV_IMPORT"
+              }
+            }
+          },
+          {
+            "id": "resource",
+            "label": "Resource"
           },
           {
             "id": "name",
