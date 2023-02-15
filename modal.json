@@ -3,7 +3,7 @@
     "title": "Edit Button",
     "subtitle": "Enter details for button",
     "tabs": {
-      "__NOTAB__": {
+      "button": {
         "inputs": [
           {
             "id": "row",
