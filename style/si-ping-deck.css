@@ -200,12 +200,12 @@ div.ping-deck-preferences, div.ping-deck-modal {
   width: var(--ping-deck-modal-width);
 }
 
-div.preference-bar {
+div.preference-bar, div.tab-bar {
   background-color: var(--pref-background);
   text-align: left;
 }
 
-div.preference-bar .tab-button {
+div.preference-bar .tab-button, div.tab-bar .tab-button {
   background-color: green;
   background-color: var(--pref-background);
   border-radius: 5px 5px 0px 0px;
@@ -215,16 +215,16 @@ div.preference-bar .tab-button {
   padding: 5px 10px 5px 10px;
 }
 
-div.preference-bar .about {
+div.preference-bar .about, div.tab-bar .about {
   float: right;
 }
 
-div.preference-bar .tab-button.selected {
+div.preference-bar .tab-button.selected, div.tab-bar .tab-button.selected {
   background-color: var(--pref-container-background);
   color: var(--pref-input-color);
 }
 
-div.preference-container {
+div.preference-container, div.modal-container {
   background-color: var(--pref-container-background);
   height: calc(var(--ping-deck-modal-height) - 120px);
   overflow: auto;
@@ -232,7 +232,7 @@ div.preference-container {
   width: var(--ping-deck-modal-width);
 }
 
-div.preference-container .about {
+div.preference-container .about, div.modal-container .about {
   color: var(--pref-label-color);
   font-size: 11pt;
   margin-top: 10px;
@@ -244,12 +244,12 @@ fieldset {
   padding: 0;
 }
 
-div.preference {
+div.preference, div.modal-row {
   padding-top: 14px;
   width: 100%;
 }
 
-div.preference label {
+div.preference label, div.modal-row label {
   color: var(--pref-label-color);
   display: inline-grid;
   font-size: 10pt;
@@ -258,7 +258,7 @@ div.preference label {
   width: 30%;
 }
 
-div.preference input {
+div.preference input, div.modal-row input {
   background-color: var(--pref-input-background);
   border: none;
   color: var(--pref-input-color);
@@ -268,7 +268,7 @@ div.preference input {
   width: 65%;
 }
 
-div.preference select {
+div.preference select, div.modal-row select {
   background-color: var(--pref-input-background);
   border: none;
   color: var(--pref-input-color);
@@ -278,7 +278,7 @@ div.preference select {
   width: 65%;
 }
 
-div.preference button {
+div.preference button, div.modal-row button {
   color: var(--pref-label-color);
   background-color: var(--pref-container-background);
   color: var(--pref-input-color);
@@ -293,7 +293,7 @@ div.preference button {
   box-shadow: none;
 }
 
-.preference-close-button {
+.preference-close-button, .modal-close-button {
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
   height: 20px;
   position: absolute;
