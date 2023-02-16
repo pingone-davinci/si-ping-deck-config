@@ -19,14 +19,14 @@
                     "annotation": {
                         "value": "Annotation Text"
                     },
-                    "height": {
-                        "value": 50
-                    },
                     "width": {
                         "value": 240
                     },
                     "fontFamily": {
                         "value": "sans-serif"
+                    },
+                    "cornerRadius": {
+                        "value": 5
                     }
                 },
                 "status": "configured"
