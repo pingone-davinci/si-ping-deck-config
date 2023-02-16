@@ -1,6 +1,6 @@
 {
   "devMode": {
-    "title": "Development",
+    "title": "Entering Dev Mode",
     "subtitle": "Enter password for dev access",
     "tabs": {
       "dev": {
@@ -48,7 +48,6 @@
                 "GIT_CLIPBOARD": "GIT_CLIPBOARD",
                 "GIT_DV_CLIPBOARD": "GIT_DV_CLIPBOARD",
                 "PREF_CLIPBOARD": "PREF_CLIPBOARD",
-                "PREFERENCES": "PREFERENCES",
                 "PROFILE": "PROFILE",
                 "REDIRECT": "REDIRECT",
                 "TEXT_CLIPBOARD": "TEXT_CLIPBOARD",
