@@ -1239,65 +1239,6 @@
             {
                 "position": {
                     "row": 2,
-                    "col": 4
-                },
-                "title": "Test Flow",
-                "icon": "integration",
-                "toolTip": "Testing Multiactions Folder",
-                "action": "FOLDER",
-                "resource": {
-                    "title": "",
-                    "actions": [
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 3
-                            },
-                            "title": "Overview",
-                            "icon": "ping",
-                            "toolTip": "View flow overview",
-                            "action": "REDIRECT",
-                            "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 4
-                            },
-                            "title": "Try",
-                            "icon": "ping",
-                            "toolTip": "Try the demo solution",
-                            "action": "REDIRECT",
-                            "resource": "https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/policy/d66ca9f021032ee46cbcbb5ee587d3b6/authorize?client_id=4a8614cc1f59281b30876903a911f3eb&response_type=code&scope=openid&redirect_uri=https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/testrp"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 5
-                            },
-                            "title": "Import",
-                            "icon": "davinci-import",
-                            "toolTip": "Import Passwordless Registration (FIDO) Solution",
-                            "action": "DV_IMPORT",
-                            "resource": "ic-passwordless-registration-fido.json"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 6
-                            },
-                            "title": "Download",
-                            "icon": "davinci-import",
-                            "toolTip": "Download the DaVinci flows",
-                            "action": "DV_IMPORT",
-                            "resource": "ic-passwordless-registration-fido.json"
-                        }
-                    ]
-                }
-            },
-            {
-                "position": {
-                    "row": 2,
                     "col": 8
                 },
                 "title": "Flow<br/>Templates",
@@ -1305,65 +1246,6 @@
                 "toolTip": "",
                 "action": "REDIRECT",
                 "resource": ""
-            },
-            {
-                "position": {
-                    "row": 2,
-                    "col": 5
-                },
-                "title": "Annotations",
-                "icon": "annotations",
-                "toolTip": "Flow Annotation examples",
-                "action": "FOLDER",
-                "resource": {
-                    "title": "Flow Annotation Examples",
-                    "actions": [
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 3
-                            },
-                            "title": "Title",
-                            "icon": "annotation-blue",
-                            "toolTip": "Title annotation",
-                            "action": "GIT_DV_CLIPBOARD",
-                            "resource": "flow-title-annotation.json"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 4
-                            },
-                            "title": "Function",
-                            "icon": "annotation-purple",
-                            "toolTip": "Flow function annotation",
-                            "action": "GIT_DV_CLIPBOARD",
-                            "resource": "function-title-annotation.json"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 5
-                            },
-                            "title": "Annotation",
-                            "icon": "annotation-gray",
-                            "toolTip": "Native conector annotation",
-                            "action": "GIT_DV_CLIPBOARD",
-                            "resource": "node-annotation-gray.json"
-                        },
-                        {
-                            "position": {
-                                "row": 2,
-                                "col": 6
-                            },
-                            "title": "Paid Conn.",
-                            "icon": "annotation-gold",
-                            "toolTip": "Paid connector annotation",
-                            "action": "GIT_DV_CLIPBOARD",
-                            "resource": "node-annotation-gold.json"
-                        }
-                    ]
-                }
             },
             {
                 "position": {
