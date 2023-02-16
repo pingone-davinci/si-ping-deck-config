@@ -282,7 +282,7 @@
         ]
     },
     "davinciWorkflows": {
-        "title": "PingOne DaVinci Workflows",
+        "title": "PingOne DaVinci Workflow Snippets",
         "actions": [
             {
                 "position": {
@@ -307,6 +307,18 @@
                 "toolTip": "Teleport method for resetting PingOne account password",
                 "action": "GIT_DV_CLIPBOARD",
                 "resource": "davinciWorkflows/reset-password.json"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "name": "Flow<br/>Success",
+                "namePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Success message HTML with Success JSON",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciWorkflows/success-html-with-json.json"
             },
             {
                 "position": {
@@ -417,6 +429,18 @@
                 "toolTip": "Basic registration form",
                 "action": "GIT_DV_CLIPBOARD",
                 "resource": "davinciComponents/registration-form.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "name": "Success<br/>Msg",
+                "namePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Success message with next-event button",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/success-message.json"
             },
             {
                 "position": {

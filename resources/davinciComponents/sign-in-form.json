@@ -1,0 +1,89 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "3tsajfr0i5",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"Ping Identity\" />\n                <h1 class=\"text-center mb-4\">Sign In</h1>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"username\" data-skcomponent=\"skerrormessage\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skerrorid=\"password\" data-skcomponent=\"skerrormessage\"></p>\n                <form id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"Username\"\n                            autocomplete=\"on\" value=\"\" data-id=\"username-input\" />\n                        <label class=\"form-label\" for=\"username\">Username</label>\n                    </div>\n\t\t\t\t\t<div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                            autocomplete=\"on\" value=\"\" data-id=\"password-input\" />\n                        <label class=\"form-label\" for=\"password\">Password</label>\n                    </div>\n                    \n                    <div class=\"d-flex flex-column\">\n                        <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\" \n                            data-skbuttonvalue=\"SIGN_IN\">\n                            Sign In\n                        </button>\n                        <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"usernamePasswordForm\" id=\"btnForgotPassword\" \n                            data-skbuttonvalue=\"FORGOT_PASSWORD\">\n                            Forgot Password\n                        </button>\n                        <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"usernamePasswordForm\" id=\"btnCreateAccount\" \n                            data-skbuttonvalue=\"CREATE_ACCOUNT\">\n                            Create Account\n                        </button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>\n"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "username",
+                                "displayName": "Username",
+                                "hashedVisibility": false,
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"username\",\n        \"data\": \"{{local.yyrs2x4kbt.payload.output.username}}\",\n        \"tooltip\": \"{{local.yyrs2x4kbt.payload.output.username}}\",\n        \"children\": [\n          {\n            \"text\": \"username\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                            },
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "password",
+                                "displayName": "Password",
+                                "hashedVisibility": true
+                            },
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Username/Password Form"
+                    },
+                    "customCSS": {},
+                    "validationRules": {
+                        "value": [
+                            {
+                                "propertyName": "username",
+                                "rules": [
+                                    {
+                                        "ruleName": "presence",
+                                        "message": "Please enter your username"
+                                    }
+                                ]
+                            },
+                            {
+                                "propertyName": "password",
+                                "rules": [
+                                    {
+                                        "ruleName": "presence",
+                                        "message": "Please enter your password"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "customScript": {
+                        "value": "document.getElementById(\"username\").focus()"
+                    }
+                },
+                "idUnique": "aerbod6513"
+            },
+            "position": {
+                "x": 1572,
+                "y": 1453
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

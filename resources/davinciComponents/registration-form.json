@@ -1,0 +1,124 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "lcoa7pclzj",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http (Use this for form + custom messages)",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Registration Form"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "propertyName": "firstName",
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "value": "",
+                                "hashedVisibility": false,
+                                "displayName": "First Name"
+                            },
+                            {
+                                "propertyName": "lastName",
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "value": "",
+                                "hashedVisibility": false,
+                                "displayName": "Last Name"
+                            },
+                            {
+                                "propertyName": "email",
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "value": "",
+                                "hashedVisibility": false,
+                                "displayName": "Email"
+                            },
+                            {
+                                "propertyName": "password",
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "value": "",
+                                "hashedVisibility": true,
+                                "displayName": "Password"
+                            },
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"Ping Identity\" />\n                <h1 class=\"text-center mb-4\">Create Your Profile</h1>\n                <p class=\"text-muted text-center\">Enter the required information below.</p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"email\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"firstName\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"lastName\"></p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerrormessage\" data-skerrorid=\"password\"></p>\n                <form id=\"registrationForm\" data-id=\"registrationForm\">\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" data-id=\"email-input\" id=\"email\" name=\"email\"\n                            placeholder=\"Email Address\" autocomplete=\"off\" />\n                        <label class=\"form-label\" for=\"username\">Email Address</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" placeholder=\"First Name\" autocomplete=\"off\"\n                            data-id=\"firstName-input\" id=\"firstName\" name=\"firstName\" />\n                        <label class=\"form-label\" for=\"username\">First Name</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" placeholder=\"Last Name\" autocomplete=\"off\"\n                            data-id=\"lastName-input\" id=\"lastName\" name=\"lastName\" />\n                        <label class=\"form-label\" for=\"username\">Last Name</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"password\" placeholder=\"Password\" autocomplete=\"off\"\n                            data-id=\"password-input\" id=\"password\" name=\"password\" />\n                        <label class=\"form-label\" for=\"password\">Password</label>\n                    </div>                    \n                    <div class=\"d-flex flex-column\">\n                        <button data-id=\"submit-button\" type=\"submit\" class=\"btn btn-primary mb-3\"\n                            data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"registrationForm\"\n                            data-skbuttonvalue=\"REGISTER\" id=\"btnCreate\">\n                            Save\n                        </button>\n                        <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\" data-skform=\"registrationForm\"\n                            data-skbuttonvalue=\"CANCEL\">\n                            Already have an account? Sign in\n                        </button>   \n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>\n"
+                    },
+                    "customCSS": {},
+                    "customScript": {
+                        "value": "document.getElementById(\"email\").focus()"
+                    },
+                    "validationRules": {
+                        "value": [
+                            {
+                                "propertyName": "firstName",
+                                "rules": [
+                                    {
+                                        "ruleName": "presence",
+                                        "message": "Please enter your first name"
+                                    }
+                                ]
+                            },
+                            {
+                                "propertyName": "lastName",
+                                "rules": [
+                                    {
+                                        "ruleName": "presence",
+                                        "message": "Please enter your last name"
+                                    }
+                                ]
+                            },
+                            {
+                                "propertyName": "email",
+                                "rules": [
+                                    {
+                                        "ruleName": "email",
+                                        "message": "Please enter a valid email address"
+                                    }
+                                ]
+                            },
+                            {
+                                "propertyName": "password",
+                                "rules": [
+                                    {
+                                        "ruleName": "presence",
+                                        "message": "Please enter a password"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "idUnique": "kr1qhipp92"
+            },
+            "position": {
+                "x": 540,
+                "y": 1260
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

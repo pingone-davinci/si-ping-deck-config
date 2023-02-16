@@ -1,0 +1,39 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "143wkdcjcn",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createSuccessResponse",
+                "type": "action",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Success"
+                    },
+                    "backgroundColor": {
+                        "value": "#9dc967ff"
+                    }
+                },
+                "idUnique": "00surhcg33"
+            },
+            "position": {
+                "x": 510,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

@@ -1,0 +1,51 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "7oiqqcdz6n",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div class=\"successDiv\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"__COMPANY_NAME__\" />\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Success Message"
+                    },
+                    "nodeDescription": {
+                        "value": "Display success message"
+                    }
+                },
+                "idUnique": "a0yf1wqul8"
+            },
+            "position": {
+                "x": 360,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

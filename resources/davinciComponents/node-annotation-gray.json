@@ -1,0 +1,49 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "smk3yzygm6",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#f2f3f4ff"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Annotation Text"
+                    },
+                    "height": {
+                        "value": 50
+                    },
+                    "width": {
+                        "value": 240
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    }
+                },
+                "status": "configured"
+            },
+            "position": {
+                "x": 400,
+                "y": 400
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}
