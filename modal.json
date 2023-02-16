@@ -1,4 +1,25 @@
 {
+  "devMode": {
+    "title": "Development",
+    "subtitle": "Enter password for dev access",
+    "tabs": {
+      "dev": {
+        "inputs": [
+          {
+            "id": "password",
+            "label": "Password",
+            "type": "password"
+          },
+          {
+            "id": "submit",
+            "label": "Submit",
+            "type": "button",
+            "onclick": "devMode('dev_password');"
+          }
+        ]
+      }
+    }
+  },
   "editButton": {
     "title": "Edit Button",
     "subtitle": "Enter details for button",
