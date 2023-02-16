@@ -9,8 +9,8 @@
   --main-bg-color: brown;
   --medium-gray: #383D40;
   --ping-deck-height: 490px;
-  --ping-deck-preferences-height: calc(var(--ping-deck-height) - 44px);
-  --ping-deck-preferences-width: calc(var(--ping-deck-width) - 80px);
+  --ping-deck-modal-height: calc(var(--ping-deck-height) - 44px);
+  --ping-deck-modal-width: calc(var(--ping-deck-width) - 80px);
   --ping-deck-width: 760px;
   --pref-background: #191919;
   --pref-container-background: #292929;
@@ -48,6 +48,10 @@ div.ping-deck {
   padding: 0px 16px;
   text-align: center;
   width: var(--ping-deck-width);
+}
+
+div.ping-deck-dev-mode {
+  background-color: #762e2e;
 }
 
 .top-margin-xl {
@@ -180,20 +184,20 @@ h2.main-title {
   border: 1px solid blue
 }
 
-div.ping-deck-preferences {
+div.ping-deck-preferences, div.ping-deck-modal {
   position: fixed;
   background-color: var(--pref-background);
   border-radius: 10px;
   border: 3px solid #73AD21;
   border: 5px solid var(--dark-gray);
-  height: var(--ping-deck-preferences-height);
-  left: calc(50% - 21px - (var(--ping-deck-preferences-width) * .5));
+  height: var(--ping-deck-modal-height);
+  left: calc(50% - 21px - (var(--ping-deck-modal-width) * .5));
   margin-top: 40px;
   margin: 0 auto;
   padding: 0px 16px;
   text-align: center;
-  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)) + var(--deck-top-padding));
-  width: var(--ping-deck-preferences-width);
+  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-modal-height)) + var(--deck-top-padding));
+  width: var(--ping-deck-modal-width);
 }
 
 div.preference-bar {
@@ -222,10 +226,10 @@ div.preference-bar .tab-button.selected {
 
 div.preference-container {
   background-color: var(--pref-container-background);
-  height: calc(var(--ping-deck-preferences-height) - 120px);
+  height: calc(var(--ping-deck-modal-height) - 120px);
   overflow: auto;
   padding: 0;
-  width: var(--ping-deck-preferences-width);
+  width: var(--ping-deck-modal-width);
 }
 
 div.preference-container .about {
