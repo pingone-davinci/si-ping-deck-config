@@ -98,6 +98,18 @@
     {
       "position": {
         "row": 2,
+        "col": 3
+      },
+      "name": "Success<br/>Msg",
+      "namePosition": "MIDDLE",
+      "icon": "box-red",
+      "toolTip": "Success message with next-event button",
+      "action": "GIT_DV_CLIPBOARD",
+      "resource": "success-message.json"
+    },
+    {
+      "position": {
+        "row": 2,
         "col": 6
       },
       "name": "No-Op<br/>UI",

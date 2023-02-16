@@ -1,0 +1,141 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "hwtekd4p02",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div class=\"successDiv\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"__COMPANY_NAME__\" />\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Success Message"
+                    },
+                    "nodeDescription": {
+                        "value": "Display success message"
+                    }
+                }
+            },
+            "position": {
+                "x": 360,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "zj3bp19bv6",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createSuccessResponse",
+                "type": "action",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Success"
+                    },
+                    "backgroundColor": {
+                        "value": "#9dc967ff"
+                    }
+                },
+                "idUnique": "00surhcg33"
+            },
+            "position": {
+                "x": 690,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "8ohbwkpxo1",
+                "nodeType": "EVAL"
+            },
+            "position": {
+                "x": 480,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": [
+        {
+            "data": {
+                "id": "ruzj2i01el",
+                "source": "hwtekd4p02",
+                "target": "8ohbwkpxo1"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "aawbw40th8",
+                "source": "8ohbwkpxo1",
+                "target": "zj3bp19bv6"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        }
+    ]
+}
