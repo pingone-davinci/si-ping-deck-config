@@ -9,8 +9,8 @@
   --main-bg-color: brown;
   --medium-gray: #383D40;
   --ping-deck-height: 490px;
-  --ping-deck-preferences-height: calc(var(--ping-deck-height) - 44px);
-  --ping-deck-preferences-width: calc(var(--ping-deck-width) - 80px);
+  --ping-deck-modal-height: calc(var(--ping-deck-height) - 44px);
+  --ping-deck-modal-width: calc(var(--ping-deck-width) - 80px);
   --ping-deck-width: 760px;
   --pref-background: #191919;
   --pref-container-background: #292929;
@@ -48,6 +48,10 @@ div.ping-deck {
   padding: 0px 16px;
   text-align: center;
   width: var(--ping-deck-width);
+}
+
+div.ping-deck-dev-mode {
+  background-color: #762e2e;
 }
 
 .top-margin-xl {
@@ -89,6 +93,7 @@ button.hidden {
   background-color: var(--darker-gray);
   border: none;
 }
+
 .centered {
   text-align: center;
 }
@@ -180,28 +185,28 @@ h2.main-title {
   border: 1px solid blue
 }
 
-div.ping-deck-preferences {
+div.ping-deck-preferences, div.ping-deck-modal {
   position: fixed;
   background-color: var(--pref-background);
   border-radius: 10px;
   border: 3px solid #73AD21;
   border: 5px solid var(--dark-gray);
-  height: var(--ping-deck-preferences-height);
-  left: calc(50% - 21px - (var(--ping-deck-preferences-width) * .5));
+  height: var(--ping-deck-modal-height);
+  left: calc(50% - 21px - (var(--ping-deck-modal-width) * .5));
   margin-top: 40px;
   margin: 0 auto;
   padding: 0px 16px;
   text-align: center;
-  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-preferences-height)) + var(--deck-top-padding));
-  width: var(--ping-deck-preferences-width);
+  top: calc(.5 * (var(--ping-deck-height) - var(--ping-deck-modal-height)) + var(--deck-top-padding));
+  width: var(--ping-deck-modal-width);
 }
 
-div.preference-bar {
+div.preference-bar, div.tab-bar {
   background-color: var(--pref-background);
   text-align: left;
 }
 
-div.preference-bar .tab-button {
+div.preference-bar .tab-button, div.tab-bar .tab-button {
   background-color: green;
   background-color: var(--pref-background);
   border-radius: 5px 5px 0px 0px;
@@ -211,24 +216,24 @@ div.preference-bar .tab-button {
   padding: 5px 10px 5px 10px;
 }
 
-div.preference-bar .about {
+div.preference-bar .about, div.tab-bar .about {
   float: right;
 }
 
-div.preference-bar .tab-button.selected {
+div.preference-bar .tab-button.selected, div.tab-bar .tab-button.selected {
   background-color: var(--pref-container-background);
   color: var(--pref-input-color);
 }
 
-div.preference-container {
+div.preference-container, div.modal-container {
   background-color: var(--pref-container-background);
-  height: calc(var(--ping-deck-preferences-height) - 120px);
+  height: calc(var(--ping-deck-modal-height) - 120px);
   overflow: auto;
   padding: 0;
-  width: var(--ping-deck-preferences-width);
+  width: var(--ping-deck-modal-width);
 }
 
-div.preference-container .about {
+div.preference-container .about, div.modal-container .about {
   color: var(--pref-label-color);
   font-size: 11pt;
   margin-top: 10px;
@@ -240,12 +245,12 @@ fieldset {
   padding: 0;
 }
 
-div.preference {
+div.preference, div.modal-row {
   padding-top: 14px;
   width: 100%;
 }
 
-div.preference label {
+div.preference label, div.modal-row label {
   color: var(--pref-label-color);
   display: inline-grid;
   font-size: 10pt;
@@ -254,7 +259,7 @@ div.preference label {
   width: 30%;
 }
 
-div.preference input {
+div.preference input, div.modal-row input {
   background-color: var(--pref-input-background);
   border: none;
   color: var(--pref-input-color);
@@ -264,7 +269,7 @@ div.preference input {
   width: 65%;
 }
 
-div.preference select {
+div.preference select, div.modal-row select {
   background-color: var(--pref-input-background);
   border: none;
   color: var(--pref-input-color);
@@ -274,7 +279,7 @@ div.preference select {
   width: 65%;
 }
 
-div.preference button {
+div.preference button, div.modal-row button {
   color: var(--pref-label-color);
   background-color: var(--pref-container-background);
   color: var(--pref-input-color);
@@ -289,7 +294,7 @@ div.preference button {
   box-shadow: none;
 }
 
-.preference-close-button {
+.preference-close-button, .modal-close-button {
   content: url("https://cdn.glitch.global/90c2a317-76e7-4632-9e8c-f78184d43e80/close.png?v=1675605067868");
   height: 20px;
   position: absolute;
