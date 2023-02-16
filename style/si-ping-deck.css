@@ -93,6 +93,7 @@ button.hidden {
   background-color: var(--darker-gray);
   border: none;
 }
+
 .centered {
   text-align: center;
 }

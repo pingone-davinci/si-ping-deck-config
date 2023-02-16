@@ -1,25 +1,4 @@
 {
-  "devMode": {
-    "title": "Entering Dev Mode",
-    "subtitle": "Enter password for dev access",
-    "tabs": {
-      "dev": {
-        "inputs": [
-          {
-            "id": "password",
-            "label": "Password",
-            "type": "password"
-          },
-          {
-            "id": "submit",
-            "label": "Submit",
-            "type": "button",
-            "onclick": "devMode('dev_password');"
-          }
-        ]
-      }
-    }
-  },
   "editButton": {
     "title": "Edit Button",
     "subtitle": "Enter details for button",
@@ -48,6 +27,7 @@
                 "GIT_CLIPBOARD": "GIT_CLIPBOARD",
                 "GIT_DV_CLIPBOARD": "GIT_DV_CLIPBOARD",
                 "PREF_CLIPBOARD": "PREF_CLIPBOARD",
+                "PREFERENCES": "PREFERENCES",
                 "PROFILE": "PROFILE",
                 "REDIRECT": "REDIRECT",
                 "TEXT_CLIPBOARD": "TEXT_CLIPBOARD",

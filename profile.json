@@ -1,0 +1,1274 @@
+{
+    "initialProfile": "home",
+    "home": {
+        "title": "Home",
+        "actions": [
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "Packages",
+                "icon": "davinci-packages",
+                "toolTip": "PingOne Packages",
+                "action": "PROFILE",
+                "resource": "davinciPackages"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "Solutions",
+                "icon": "davinci-solutions",
+                "toolTip": "PingOne DaVinci Solutions",
+                "action": "PROFILE",
+                "resource": "davinciSolutions"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 4
+                },
+                "title": "Workflows",
+                "icon": "davinci-workflows",
+                "toolTip": "PingOne DaVinci Workflows",
+                "action": "PROFILE",
+                "resource": "davinciWorkflows"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 5
+                },
+                "title": "Components",
+                "icon": "davinci-components",
+                "toolTip": "PingOne DaVinci Components",
+                "action": "PROFILE",
+                "resource": "davinciComponents"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 6
+                },
+                "title": "Snippets",
+                "icon": "davinci-snippets",
+                "toolTip": "PingOne DaVinci Snippets",
+                "action": "PROFILE",
+                "resource": "davinciSnippets"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 7
+                },
+                "title": "Code",
+                "icon": "code-snippets",
+                "toolTip": "Code Snippets",
+                "action": "PROFILE",
+                "resource": "codeSnippets"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 2
+                },
+                "title": "PingOne",
+                "icon": "pingone",
+                "toolTip": "PingOne profile",
+                "action": "PROFILE",
+                "resource": "pingone"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 5
+                },
+                "title": "Utils",
+                "icon": "utilities",
+                "toolTip": "",
+                "action": "PROFILE",
+                "resource": "utilities"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 6
+                },
+                "title": "DevOps",
+                "icon": "devops",
+                "toolTip": "Ping Identity DevOps",
+                "action": "PROFILE",
+                "resource": "devops"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 7
+                },
+                "title": "Contribute",
+                "icon": "contribute",
+                "toolTip": "Contribute to PingDeck",
+                "action": "REDIRECT",
+                "resource": "https://forms.gle/x2N12g84bxCvLEAn8"
+            }
+        ]
+    },
+    "davinciPackages": {
+        "title": "PingOne Packages",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Pkg Builder",
+                "icon": "solution-innovations",
+                "toolTip": "PingOne Packages",
+                "action": "REDIRECT",
+                "resource": "https://packages.pingidentity.cloud"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "CIAM<br/>Pwdless</br>Demo",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "CIAM Passwordless",
+                "action": "REDIRECT",
+                "resource": "https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/policy/d66ca9f021032ee46cbcbb5ee587d3b6/authorize?client_id=4a8614cc1f59281b30876903a911f3eb&response_type=code&scope=openid&redirect_uri=https://auth.pingone.com/e96fc8d1-793e-48ed-98a1-2f4356adeaad/davinci/testrp"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "Download",
+                "icon": "terraform",
+                "toolTip": "CIAM Passwordless Terraform Package",
+                "action": "URL_DOWNLOAD",
+                "fileName": "ciam-passwordless.zip",
+                "resource": "https://pingone-davinci.github.io/si-ping-deck-config/resources/davinciPackages/resources/ciam-passwordless.zip"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "Zero Trust",
+                "icon": "comming-soon",
+                "toolTip": "Zero trust solution coming soon",
+                "action": "",
+                "resource": ""
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 8
+                },
+                "title": "*.tfvars",
+                "icon": "terraform",
+                "toolTip": "PingOne Terraform *.tfvars",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciPackages/pingone.terraform.tfvars"
+            }
+        ]
+    },
+    "davinciSolutions": {
+        "title": "PingOne DaVinci Solutions",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Int Dir",
+                "icon": "ping",
+                "toolTip": "Ping Identity Integration Directory",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/marketplace-integration-home-page#sort=relevancy"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "Pwdless<br/>Reg (FIDO)",
+                "icon": "integration",
+                "toolTip": "Passwordless Registration (FIDO)",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "Pwdless<br/>Auth (FIDO)",
+                "icon": "integration",
+                "toolTip": "Passwordless Authentication (FIDO)",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x9dIAA/passwordless-authentication-fido"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "Ext User<br/>Session",
+                "icon": "integration",
+                "toolTip": "Extended User Session: Remember Me Login DaVinci Flow",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/marketplace-integration/a7i8Z000000M3aSQAS/extended-user-session-remember-me-login-davinci-flow"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 5
+                },
+                "title": "RADIUS<br/>Gtwy Auth",
+                "icon": "integration",
+                "toolTip": "RADIUS Gateway - Authentication",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010xIcIAI/radius-gateway-authentication"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "Import",
+                "icon": "davinci-import",
+                "toolTip": "Import Passwordless Registration (FIDO) Solution",
+                "action": "DV_IMPORT",
+                "resource": "ic-passwordless-registration-fido.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "Import",
+                "icon": "davinci-import",
+                "toolTip": "Import Passwordless Authentication (FIDO)",
+                "action": "DV_IMPORT",
+                "resource": "ic-passwordless-authentication-fido.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 4
+                },
+                "title": "Import",
+                "icon": "davinci-import",
+                "toolTip": "Import Extended User Session: Remember Me Login DaVinci Flow Solution",
+                "action": "DV_IMPORT",
+                "resource": "ic-extended-user-session-remember-me.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 5
+                },
+                "title": "Import",
+                "icon": "davinci-import",
+                "toolTip": "Import RADIUS Gateway - Authentication Solution",
+                "action": "DV_IMPORT",
+                "resource": "ic-radius-gateway-authentication.json"
+            }
+        ]
+    },
+    "davinciWorkflows": {
+        "title": "PingOne DaVinci Workflow Snippets",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Common<br/>Error",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Teleport method for handling common error",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciWorkflows/common-error-teleport.json"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "PWD<br/>Reset",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Teleport method for resetting PingOne account password",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciWorkflows/reset-password.json"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "Flow<br/>Success",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Success message HTML with Success JSON",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciWorkflows/success-html-with-json.json"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Readme",
+                "icon": "readme",
+                "toolTip": "Coming Soon!",
+                "action": "",
+                "resource": ""
+            }
+        ]
+    },
+    "davinciComponents": {
+        "title": "PingOne DaVinci Components",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Annotations",
+                "icon": "annotations",
+                "toolTip": "Flow Annotation examples",
+                "action": "FOLDER",
+                "resource": "annotationComponents"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "Spacer",
+                "icon": "spacer",
+                "toolTip": "Spacer annotation",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/spacer.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 1
+                },
+                "title": "Sign In<br/>Form",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Username and password node",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/sign-in-form.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "Reg<br/>Form",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Basic registration form",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/registration-form.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "Success<br/>Msg",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Success message with next-event button",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/success-message.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 6
+                },
+                "title": "No-Op<br/>UI",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "No-Op UI component",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/no-op-ui.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 7
+                },
+                "title": "JSON<br/>Success",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTTP JSON Success Node",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/http-json-success.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 8
+                },
+                "title": "JSON<br/>Error",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTTP JSON Error Node",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/http-json-error.json"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 1
+                },
+                "title": "Pwd<br/>Status",
+                "titlePosition": "MIDDLE",
+                "icon": "box-yellow",
+                "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/password-status-function.json"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Readme",
+                "icon": "readme",
+                "toolTip": "View documentation for this profile",
+                "action": "REDIRECT",
+                "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
+            }
+        ]
+    },
+    "annotationComponents": {
+        "title": "Flow Annotation Examples",
+        "actions": [
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "Title",
+                "icon": "annotation-blue",
+                "toolTip": "Title annotation",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/flow-title-annotation.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 4
+                },
+                "title": "Function",
+                "icon": "annotation-purple",
+                "toolTip": "Flow function annotation",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/function-title-annotation.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 5
+                },
+                "title": "Annotation",
+                "icon": "annotation-gray",
+                "toolTip": "Native conector annotation",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/node-annotation-gray.json"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 6
+                },
+                "title": "Paid Conn.",
+                "icon": "annotation-gold",
+                "toolTip": "Paid connector annotation",
+                "action": "GIT_DV_CLIPBOARD",
+                "resource": "davinciComponents/node-annotation-gold.json"
+            }
+        ]
+    },
+    "davinciSnippets": {
+        "title": "PingOne DaVinci Snippets",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Standards",
+                "icon": "standards",
+                "toolTip": "View Ping's flow standards documentation",
+                "action": "REDIRECT",
+                "resource": "https://docs.pingidentity.com/r/en-us/davinci/rxo1664233464532"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "Font",
+                "icon": "font",
+                "toolTip": "Font name for flow annotations",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/annotation-font-family.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "Headers",
+                "icon": "blue-palette",
+                "toolTip": "Blue Hex value for flow title header",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/annotation-hex-blue.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "Functions",
+                "icon": "purple-palette",
+                "toolTip": "Purple Hex value for section headers",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/annotation-hex-purple.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 5
+                },
+                "title": "Annot.",
+                "icon": "gray-palette",
+                "toolTip": "Gray Hex value for native component annotations",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/annotation-hex-gray.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 6
+                },
+                "title": "Paid Conn.",
+                "icon": "gold-palette",
+                "toolTip": "Gold Hex value for paid component annotations",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/annotation-hex-paid-connectors.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 7
+                },
+                "title": "Success",
+                "icon": "green-palette",
+                "toolTip": "Green Hex value for success nodes",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/success-node-hex.txt"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 8
+                },
+                "title": "Error",
+                "icon": "pink-palette",
+                "toolTip": "Redish Hex value for eror nodes",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/error-node-hex.txt"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 1
+                },
+                "title": "Sign In<br/>HTML",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard username/password sign in form",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/signin-form.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "Register<br/>HTML",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard registration form",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/registration-form.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "OTP<br/>HTML",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard OTP form",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/otp-form.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 4
+                },
+                "title": "TOTP<br/>HTML",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard time-based OTP registration form",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/totp-registration.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 5
+                },
+                "title": "Magic<br/>Polling",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard magic link polling",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/magic-link-polling.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 6
+                },
+                "title": "Success<br/>HTML",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "HTML for standard success screen",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/success.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 7
+                },
+                "title": "Card<br/>DIV",
+                "titlePosition": "MIDDLE",
+                "icon": "box-blue",
+                "toolTip": "Standard card div html",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/card.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 8
+                },
+                "title": "Para.<br/>Center",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Centered paragraph",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/centered-paragraph.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 1
+                },
+                "title": "Buttons<br/>Div",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Buttons div containing a reference register and cancel button",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/buttons.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 2
+                },
+                "title": "Text<br/>Input",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Text input div input field and label",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/textinput.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 3
+                },
+                "title": "Logo<br/>Image",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Img component",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/logo.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 4
+                },
+                "title": "H1<br/>Title",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Standard H1 title",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/h1.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 5
+                },
+                "title": "SK<br/>Error",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "HTML snippet to display error messages triggered by error customize connector",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/skerror.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 6
+                },
+                "title": "SKError<br/>Field",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "HTML snippet to display error messages triggered by form validation",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/skerror-field.html"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 7
+                },
+                "title": "Empty<br/>Form",
+                "titlePosition": "MIDDLE",
+                "icon": "box-blue",
+                "toolTip": "Empty HTML form",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/form.html"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 1
+                },
+                "title": "Overrides",
+                "icon": "css",
+                "toolTip": "Create a Ping CSS overrides code block",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/ping-overrides.css"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 2
+                },
+                "title": "Ping CSS",
+                "icon": "css",
+                "toolTip": "Listing of the CSS files Ping leverages for flows",
+                "action": "GIT_CLIPBOARD",
+                "resource": "davinciSnippets/ping-css.txt"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Readme",
+                "icon": "readme",
+                "toolTip": "Profile readme",
+                "action": "REDIRECT",
+                "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
+            }
+        ]
+    },
+    "codeSnippets": {
+        "title": "Code Snippets",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Field<br/>Focus",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Javascript to add field focus",
+                "action": "GIT_CLIPBOARD",
+                "resource": "codeSnippets/field-focus.js"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 7
+                },
+                "title": "Switch<br/>Case",
+                "titlePosition": "MIDDLE",
+                "icon": "box-green",
+                "toolTip": "Javascript Switch/Case Example",
+                "action": "GIT_CLIPBOARD",
+                "resource": "codeSnippets/switch-case.js"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 8
+                },
+                "title": "For<br/>Each",
+                "titlePosition": "MIDDLE",
+                "icon": "box-blue",
+                "toolTip": "Loop over an array of objects using for each ",
+                "action": "GIT_CLIPBOARD",
+                "resource": "codeSnippets/array-for-each.js"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 8
+                },
+                "title": "Filter<br/>Array",
+                "titlePosition": "MIDDLE",
+                "icon": "box-blue",
+                "toolTip": "Filter an array of objects",
+                "action": "GIT_CLIPBOARD",
+                "resource": "codeSnippets/filter-array.js"
+            },
+            {
+                "position": {
+                    "row": 3,
+                    "col": 8
+                },
+                "title": "Find In<br/>Array",
+                "titlePosition": "MIDDLE",
+                "icon": "box-blue",
+                "toolTip": "Find an object in an array",
+                "action": "GIT_CLIPBOARD",
+                "resource": "codeSnippets/find-in-array.js"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Readme",
+                "icon": "readme",
+                "toolTip": "TBD",
+                "action": "",
+                "resource": ""
+            }
+        ]
+    },
+    "pingone": {
+        "title": "PingOne",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "OnePing",
+                "icon": "pingone",
+                "toolTip": "OnePing Login",
+                "action": "REDIRECT",
+                "resource": "https://signon.pingidentity.com/davinci/policy/5447db4173e2cd3139ba8e633817677e/authorize?client_id=b91b7752f23e20d56c8623aca138ead8&response_type=code&scope=openid&redirect_uri=https://www.pingidentity.com"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "Collection",
+                "icon": "postman",
+                "toolTip": "PingOne Postman Collection",
+                "action": "REDIRECT",
+                "resource": "https://www.postman.com/ping-identity/workspace/pingone/overview"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 5
+                },
+                "title": "Platform API",
+                "icon": "pingone",
+                "toolTip": "PingOne Platform API",
+                "action": "REDIRECT",
+                "resource": "https://apidocs.pingidentity.com/pingone/platform/v1/api/"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 1
+                },
+                "title": "Console",
+                "icon": "pingone",
+                "toolTip": "PingOne Console Login",
+                "action": "REDIRECT",
+                "resource": "{{pingone_consoleUrl}}/?env={{pingone_envId}}"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "MyAccount",
+                "icon": "pingone",
+                "toolTip": "PingOne Self-Service (MyAccount)",
+                "action": "REDIRECT",
+                "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myaccount/"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 3
+                },
+                "title": "Portal",
+                "icon": "pingone",
+                "toolTip": "PingOne Application Portal",
+                "action": "REDIRECT",
+                "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myapps/"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 4
+                },
+                "title": "Logout",
+                "icon": "pingone",
+                "toolTip": "PingOne Sign-Off",
+                "action": "REDIRECT",
+                "resource": "{{pingone_consoleUrl}}/logout.html"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 5
+                },
+                "title": "Env<br>ID",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Copy Environment ID Preference",
+                "action": "PREF_CLIPBOARD",
+                "resource": "pingone_envId"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 6
+                },
+                "title": "Client<br>ID",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Copy Client ID Preference",
+                "action": "PREF_CLIPBOARD",
+                "resource": "pingone_clientId"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 7
+                },
+                "title": "Client<br>Secret",
+                "titlePosition": "MIDDLE",
+                "icon": "box-red",
+                "toolTip": "Copy Client Secret Preference",
+                "action": "PREF_CLIPBOARD",
+                "resource": "pingone_clientSecret"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Readme",
+                "icon": "readme",
+                "toolTip": "TBD",
+                "action": "",
+                "resource": ""
+            }
+        ]
+    },
+    "devops": {
+        "title": "PingOne DevOps",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "DevOps",
+                "icon": "devops",
+                "toolTip": "Ping Identity DevOps",
+                "action": "REDIRECT",
+                "resource": "https://devops.pingidentity.com"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "Docker Hub",
+                "icon": "docker",
+                "toolTip": "Ping Identity Docker Images",
+                "action": "REDIRECT",
+                "resource": "https://hub.docker.com/u/pingidentity"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "",
+                "icon": "helm",
+                "toolTip": "Ping Identity Helm",
+                "action": "REDIRECT",
+                "resource": "https://helm.pingidentity.com/"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "Community",
+                "icon": "ping",
+                "toolTip": "Ping Identity DevOps Community",
+                "action": "REDIRECT",
+                "resource": "https://support.pingidentity.com/s/topic/0TO1W000000IF30WAG/pingdevops"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 7
+                },
+                "title": "PingOne",
+                "icon": "terraform",
+                "toolTip": "PingOne Terraform Provider",
+                "action": "REDIRECT",
+                "resource": "https://registry.terraform.io/providers/pingidentity/pingone/latest"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 8
+                },
+                "title": "DaVinci",
+                "icon": "terraform",
+                "toolTip": "PingOne DaVinci Terraform Provider",
+                "action": "REDIRECT",
+                "resource": "https://registry.terraform.io/providers/pingidentity/davinci/latest"
+            }
+        ]
+    },
+    "utilities": {
+        "title": "Developer Utilities",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "B64 Encode",
+                "icon": "base",
+                "toolTip": "Encode contents of your clipboard to base64",
+                "action": "UTILITY",
+                "resource": "BASE64_ENCODE"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "B64 Decode",
+                "icon": "base",
+                "toolTip": "Decode contents of your clipboard from base64",
+                "action": "UTILITY",
+                "resource": "BASE64_DECODE"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "URL Encode",
+                "icon": "url",
+                "toolTip": "URL Encode contents of your clipboard",
+                "action": "UTILITY",
+                "resource": "URL_ENCODE"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 5
+                },
+                "title": "URL Decode",
+                "icon": "url",
+                "toolTip": "URL Decode contents of your clipboard from base64",
+                "action": "UTILITY",
+                "resource": "URL_DECODE"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 8
+                },
+                "title": "JWT",
+                "icon": "jwt",
+                "toolTip": "Decode JWT",
+                "action": "REDIRECT",
+                "resource": "https://developer.pingidentity.com/en/tools/jwt-decoder.html"
+            }
+        ]
+    },
+    "testing": {
+        "title": "Testing - Danger Zone",
+        "actions": [
+            {
+                "position": {
+                    "row": 1,
+                    "col": 1
+                },
+                "title": "Invalid<br>Profile",
+                "titlePosition": "MIDDLE",
+                "icon": "",
+                "toolTip": "",
+                "action": "PROFILE",
+                "resource": "invalid_profile"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 2
+                },
+                "title": "Invalid<br>Action",
+                "titlePosition": "MIDDLE",
+                "icon": "",
+                "toolTip": "",
+                "action": "INVALID_ACTION",
+                "resource": "testing"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 3
+                },
+                "title": "Invalid<br>Pref",
+                "titlePosition": "MIDDLE",
+                "icon": "",
+                "toolTip": "",
+                "action": "PREF_CLIPBOARD",
+                "resource": "unset_clip"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 4
+                },
+                "title": "Invalid<br>Clipboard",
+                "titlePosition": "MIDDLE",
+                "icon": "",
+                "toolTip": "",
+                "action": "GIT_CLIPBOARD",
+                "resource": "invalid_pref"
+            },
+            {
+                "position": {
+                    "row": 1,
+                    "col": 5
+                },
+                "title": "Unset<br>Pref",
+                "titlePosition": "MIDDLE",
+                "icon": "",
+                "toolTip": "",
+                "action": "REDIRECT",
+                "resource": "{{invalid_ref}}/myaccount/"
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 1
+                },
+                "title": "DaVinci<br/>Login",
+                "icon": "davinci",
+                "toolTip": "DaVinci Login",
+                "action": "DV_LOGIN",
+                "resource": ""
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 2
+                },
+                "title": "DaVinci<br/>Import",
+                "icon": "davinci",
+                "toolTip": "DaVinci Import",
+                "action": "DV_IMPORT",
+                "resource": "sample-main-sub.json",
+                "dependency": {
+                    "type": "LOCAL_STORAGE",
+                    "condition": "EXISTS",
+                    "resource": "davinci_access_token"
+                }
+            },
+            {
+                "position": {
+                    "row": 2,
+                    "col": 8
+                },
+                "title": "Flow<br/>Templates",
+                "icon": "integration",
+                "toolTip": "",
+                "action": "REDIRECT",
+                "resource": ""
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 8
+                },
+                "title": "Widget",
+                "icon": "glitch",
+                "toolTip": "View a Node JS Widget integration",
+                "action": "REDIRECT",
+                "resource": "https://glitch.com/~davinci-v2-node-template"
+            },
+            {
+                "position": {
+                    "row": 4,
+                    "col": 7
+                },
+                "title": "Zero Trust",
+                "icon": "comming-soon",
+                "toolTip": "Zero trust solution coming soon",
+                "action": "",
+                "resource": ""
+            }
+        ]
+    }
+}
