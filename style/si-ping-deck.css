@@ -30,7 +30,7 @@ body {
 }
 
 .pingdeck-logo {
-  background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/pingdeck-logo.png");
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/pingdeck-logo.png");
 }
 
 h2 {
