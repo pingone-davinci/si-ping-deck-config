@@ -24,6 +24,12 @@
                     },
                     "height": {
                         "value": 150
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "fontSize": {
+                        "value": "12px"
                     }
                 },
                 "status": "configured"
