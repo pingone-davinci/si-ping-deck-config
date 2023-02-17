@@ -62,16 +62,16 @@
             "label": "Resource"
           },
           {
-            "id": "name",
-            "label": "Name"
+            "id": "title",
+            "label": "Title"
           },
           {
             "id": "icon",
             "label": "Icon"
           },
           {
-            "id": "tooltip",
-            "label": "Tooltip"
+            "id": "toolTip",
+            "label": "Tool Tip"
           },
           {
             "id": "save",
