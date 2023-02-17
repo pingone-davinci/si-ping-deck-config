@@ -490,17 +490,6 @@
                 "toolTip": "Native conector annotation",
                 "action": "GIT_DV_CLIPBOARD",
                 "resource": "davinciComponents/node-annotation-gray.json"
-            },
-            {
-                "position": {
-                    "row": 2,
-                    "col": 6
-                },
-                "title": "Paid Conn.",
-                "icon": "annotation-gold",
-                "toolTip": "Paid connector annotation",
-                "action": "GIT_DV_CLIPBOARD",
-                "resource": "davinciComponents/node-annotation-gold.json"
             }
         ]
     },
@@ -561,17 +550,6 @@
                 "toolTip": "Gray Hex value for native component annotations",
                 "action": "GIT_CLIPBOARD",
                 "resource": "davinciSnippets/annotation-hex-gray.txt"
-            },
-            {
-                "position": {
-                    "row": 1,
-                    "col": 6
-                },
-                "title": "Paid Conn.",
-                "icon": "gold-palette",
-                "toolTip": "Gold Hex value for paid component annotations",
-                "action": "GIT_CLIPBOARD",
-                "resource": "davinciSnippets/annotation-hex-paid-connectors.txt"
             },
             {
                 "position": {
