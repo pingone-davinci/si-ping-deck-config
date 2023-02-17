@@ -31,6 +31,9 @@ body {
 
 .pingdeck-logo {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/pingdeck-logo.png");
+  margin-top: 20px;
+  height: 41px;
+  width: 200px;
 }
 
 h2 {
