@@ -29,7 +29,7 @@
                         "value": "sans-serif"
                     },
                     "fontSize": {
-                        "value": "12px"
+                        "value": "12"
                     }
                 },
                 "status": "configured"
