@@ -6,7 +6,7 @@
                 "nodeType": "CONNECTION",
                 "connectionId": "1d80aeede675402aecd6fef6d7d6c80f",
                 "connectorId": "nodeConnector",
-                "name": "Node [2023-01-05]",
+                "name": "Node",
                 "label": "Node",
                 "status": "configured",
                 "capabilityName": "startNode",
