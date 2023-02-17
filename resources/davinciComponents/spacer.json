@@ -17,13 +17,13 @@
                         "value": "#000000"
                     },
                     "annotation": {
-                        "value": "<--SPACER-->"
+                        "value": "<--150px-SPACER-->"
                     },
                     "width": {
-                        "value": 180
+                        "value": 150
                     },
                     "height": {
-                        "value": 180
+                        "value": 150
                     }
                 },
                 "status": "configured"
