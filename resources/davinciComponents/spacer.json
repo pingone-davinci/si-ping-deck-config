@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "4ek9xk78mv",
+                "id": "hxhj3q5ovl",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -25,18 +25,27 @@
                     "height": {
                         "value": 150
                     },
+                    "fontSize": {
+                        "value": 12
+                    },
                     "fontFamily": {
                         "value": "sans-serif"
                     },
-                    "fontSize": {
-                        "value": "12"
+                    "strokeColor": {
+                        "value": "#4a4a4aff"
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
                     }
                 },
                 "status": "configured"
             },
             "position": {
-                "x": 200,
-                "y": 200
+                "x": 210,
+                "y": 210
             },
             "group": "nodes",
             "removed": false,
