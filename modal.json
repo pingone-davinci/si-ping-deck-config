@@ -47,6 +47,7 @@
                 "DV_LOGIN": "DV_LOGIN",
                 "GIT_CLIPBOARD": "GIT_CLIPBOARD",
                 "GIT_DV_CLIPBOARD": "GIT_DV_CLIPBOARD",
+                "NAVIGATE_UP": "NAVIGATE_UP",
                 "PREF_CLIPBOARD": "PREF_CLIPBOARD",
                 "PREFERENCES": "PREFERENCES",
                 "PROFILE": "PROFILE",

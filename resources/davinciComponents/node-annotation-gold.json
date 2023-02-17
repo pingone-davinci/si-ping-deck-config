@@ -26,7 +26,7 @@
                         "value": "sans-serif"
                     },
                     "cornerRadius": {
-                        "value": 5
+                        "value": 8
                     }
                 },
                 "status": "configured"
