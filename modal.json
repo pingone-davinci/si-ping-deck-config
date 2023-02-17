@@ -66,6 +66,18 @@
             "label": "Title"
           },
           {
+            "id": "titlePosition",
+            "label": "Title Position",
+            "type": "dropdown",
+            "dropdown": {
+              "optionsList": {
+                "": "",
+                "MIDDLE": "MIDDLE",
+                "BOTTOM": "BOTTOM"
+              }
+            }
+          },
+          {
             "id": "icon",
             "label": "Icon"
           },
