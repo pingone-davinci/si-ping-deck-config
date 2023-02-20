@@ -147,7 +147,7 @@
             "label": "PingOne Environments (w/ DaVinci)",
             "type": "dropdown",
             "dropdown": {
-              "optionsLocalStorage": "pingonedavinci_companies",
+              "optionsLocalStorage": "davinci_companies",
             },
             "tooltip": "PingOne Env/DaVinci Company ID"
           }
