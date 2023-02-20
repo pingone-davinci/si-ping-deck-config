@@ -691,7 +691,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Console Login",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_consoleUrl}}/?env={{pingone_envId}}"
+                    "resource": "https://console.pingone.{{pingone_region}}/?env={{pingone_envId}}"
                 },
                 {
                     "pos": "2,2",
@@ -725,24 +725,6 @@
                     "toolTip": "Copy Environment ID Preference",
                     "action": "PREF_CLIPBOARD",
                     "resource": "pingone_envId"
-                },
-                {
-                    "pos": "2,6",
-                    "title": "Client<br>ID",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "Copy Client ID Preference",
-                    "action": "PREF_CLIPBOARD",
-                    "resource": "pingone_clientId"
-                },
-                {
-                    "pos": "2,7",
-                    "title": "Client<br>Secret",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "Copy Client Secret Preference",
-                    "action": "PREF_CLIPBOARD",
-                    "resource": "pingone_clientSecret"
                 },
                 {
                     "pos": "4,8",
