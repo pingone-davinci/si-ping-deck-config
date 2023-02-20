@@ -124,10 +124,10 @@
             "type": "dropdown",
             "dropdown": {
               "optionsList": {
-                "NorthAmerica (US)": "NA",
-                "NorthAmerica (Canada)": "CA",
-                "Europe": "EU",
-                "Asia Pacific": "AP"
+                "NorthAmerica (US)": "com",
+                "NorthAmerica (Canada)": "ca",
+                "Europe": "eu",
+                "Asia Pacific": "asia"
               }
             }
           },
