@@ -28,13 +28,11 @@
         "inputs": [
           {
             "id": "row",
-            "label": "Row",
-            "default": 2
+            "label": "Row"
           },
           {
             "id": "col",
-            "label": "Column",
-            "default": 5
+            "label": "Column"
           },
           {
             "id": "action",
@@ -170,7 +168,7 @@
         "title": "DaVinci",
         "inputs": [
           {
-            "id": "action",
+            "id": "region",
             "label": "PingOne Region",
             "type": "dropdown",
             "dropdown": {
@@ -180,7 +178,8 @@
                 "Europe": "CA",
                 "Asia Pacific": "AP"
               }
-            }
+            },
+            "default": "NA"
           },
           {
             "id": "envId",
