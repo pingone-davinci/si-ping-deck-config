@@ -116,58 +116,7 @@
         ]
       },
       "pingone": {
-        "title": "PingOne",
-        "inputs": [
-          {
-            "id": "consoleUrl",
-            "label": "Console URL",
-            "type": "text",
-            "tooltip": "PingOne Console URL",
-            "default": "https://console.pingone.com"
-          },
-          {
-            "id": "authUrl",
-            "label": "AuthN/AuthZ API URL",
-            "type": "text",
-            "tooltip": "PingOne Authorization and authentication APIs URL",
-            "default": "https://auth.pingone.com"
-          },
-          {
-            "id": "appsUrl",
-            "label": "Applications URL",
-            "type": "text",
-            "tooltip": "PingOne Applications URL",
-            "default": "https://apps.pingone.com"
-          },
-          {
-            "id": "apiUrl",
-            "label": "Management API URL",
-            "type": "text",
-            "tooltip": "PingOne APIs URL",
-            "default": "https://api.pingone.com"
-          },
-          {
-            "id": "envId",
-            "label": "Environment ID",
-            "type": "text",
-            "tooltip": "PingOne Environment ID"
-          },
-          {
-            "id": "clientId",
-            "label": "Client ID",
-            "type": "text",
-            "tooltip": "PingOne Client ID"
-          },
-          {
-            "id": "clientSecret",
-            "label": "Client Secret",
-            "type": "password",
-            "tooltip": "PingOne Client Secret"
-          }
-        ]
-      },
-      "davinci": {
-        "title": "DaVinci",
+        "title": "PingOne/DaVinci",
         "inputs": [
           {
             "id": "envId",
@@ -195,17 +144,12 @@
           },
           {
             "id": "companyId",
-            "label": "DaVinci Company",
+            "label": "PingOne Environments (w/ DaVinci)",
             "type": "dropdown",
             "dropdown": {
-              "optionsLocalStorage": "davinci_companies",
-              "optionsList": {
-                "": "",
-                "Company 1": "11114793-003f-4e12-b23b-94ae9f8d1111",
-                "Company 2": "22222d68-56ce-4857-879a-4603fa482222"
-              }
+              "optionsLocalStorage": "pingonedavinci_companies",
             },
-            "tooltip": "PingOne DaVinci Company ID"
+            "tooltip": "PingOne Env/DaVinci Company ID"
           }
         ]
       },
