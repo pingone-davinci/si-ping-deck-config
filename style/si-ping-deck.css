@@ -286,6 +286,15 @@ div.preference input, div.modal-row input {
   width: 65%;
 }
 
+.searchTextInput {
+  background-color: var(--pref-input-background);
+  border: none;
+  color: var(--pref-input-color);
+  /* display: inline-grid; */
+  font-size: 11pt;
+  padding: 0.5em 0.5em;
+}
+
 div.preference select, div.modal-row select {
   background-color: var(--pref-input-background);
   border: none;
