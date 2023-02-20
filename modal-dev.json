@@ -119,6 +119,19 @@
         "title": "PingOne/DaVinci",
         "inputs": [
           {
+            "id": "region",
+            "label": "PingOne Region",
+            "type": "dropdown",
+            "dropdown": {
+              "optionsList": {
+                "NorthAmerica (US)": "NA",
+                "NorthAmerica (Canada)": "CA",
+                "Europe": "EU",
+                "Asia Pacific": "AP"
+              }
+            }
+          },
+          {
             "id": "envId",
             "label": "PingOne Environment ID",
             "type": "text",
