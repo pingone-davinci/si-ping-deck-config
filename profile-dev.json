@@ -699,7 +699,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Self-Service (MyAccount)",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myaccount/"
+                    "resource": "https://apps.pingone.{{pingone_region}}/{{pingone_envId}}/myaccount/"
                 },
                 {
                     "pos": "2,3",
@@ -707,7 +707,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Application Portal",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myapps/"
+                    "resource": "https://apps.pingone.{{pingone_region}}/{{pingone_envId}}/myapps/"
                 },
                 {
                     "pos": "2,4",
