@@ -288,7 +288,7 @@
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
-                    "toolTip": "Sign In form components with username and password fields",
+                    "toolTip": "Sign In form components with username/password fields and button pressed function",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/sign-in-with-password.json"
                 },
