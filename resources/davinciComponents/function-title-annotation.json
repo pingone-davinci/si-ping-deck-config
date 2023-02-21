@@ -25,11 +25,14 @@
                     "fontStyle": {
                         "value": "bold"
                     },
+                    "fontSize": {
+                        "value": 13
+                    },
                     "fontFamily": {
                         "value": "sans-serif"
                     },
                     "cornerRadius": {
-                        "value": 20
+                        "value": 10
                     }
                 },
                 "status": "configured"

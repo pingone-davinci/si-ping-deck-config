@@ -22,11 +22,14 @@
                     "width": {
                         "value": 240
                     },
+                    "fontSize": {
+                        "value": 13
+                    },
                     "fontFamily": {
                         "value": "sans-serif"
                     },
                     "cornerRadius": {
-                        "value": 8
+                        "value": 10
                     }
                 },
                 "status": "configured"
