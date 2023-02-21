@@ -162,7 +162,7 @@ button.hidden {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/preferences-hover.png");
 }
 
-button:before {
+.home-button:before {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home-hover.png");
   width: 0;
   height: 0;
