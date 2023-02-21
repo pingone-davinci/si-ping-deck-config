@@ -1,0 +1,6 @@
+.companyLogo {
+    /* Ping Logo  */
+    content: url("https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png");
+    width: 65px;
+    height: 65px;
+}

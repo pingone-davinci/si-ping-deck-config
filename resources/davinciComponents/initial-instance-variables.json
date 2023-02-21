@@ -1,0 +1,85 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "wt5rk493qq",
+                "nodeType": "CONNECTION",
+                "connectionId": "06922a684039827499bdbdd97f49827b",
+                "connectorId": "variablesConnector",
+                "name": "Variables",
+                "label": "Variables",
+                "status": "configured",
+                "capabilityName": "saveValue",
+                "type": "trigger",
+                "properties": {
+                    "saveVariables": {
+                        "value": [
+                            {
+                                "name": "populationId",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "key": 0.9673372774789002,
+                                "type": "string",
+                                "label": "populationId (string - flowInstance)"
+                            },
+                            {
+                                "name": "companyName",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ping Identity\"\n      }\n    ]\n  }\n]",
+                                "key": 0.8558926100565449,
+                                "label": "companyName (string - flowInstance)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "origin",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                                "key": 0.38383064124643007,
+                                "label": "origin (string - flowInstance)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "originURL",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                                "key": 0.3895964400152929,
+                                "label": "originURL (string - flowInstance)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "relyingParty",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne\"\n      }\n    ]\n  }\n]",
+                                "key": 0.8294031869442895,
+                                "label": "relyingParty (string - flowInstance)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "relyingPartyID",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                                "key": 0.33706413004714153,
+                                "label": "relyingPartyID (string - flowInstance)",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Set flow instance variables"
+                    },
+                    "nodeDescription": {
+                        "value": "Initialize common values used in the flow so that they're easier to update in a single location"
+                    }
+                },
+                "idUnique": "xffn1pfvaz"
+            },
+            "position": {
+                "x": 397,
+                "y": 243
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

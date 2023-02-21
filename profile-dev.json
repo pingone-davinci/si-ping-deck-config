@@ -306,6 +306,14 @@
                     "resource": "davinciComponents/spacer.json"
                 },
                 {
+                    "pos": "1,8",
+                    "title": "Instance Vars",
+                    "icon": "spacer",
+                    "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/initial-instnace-variables.json"
+                },
+                {
                     "pos": "2,1",
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
@@ -363,7 +371,7 @@
                     "pos": "4,1",
                     "title": "Pwd<br/>Status",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-yellow",
+                    "icon": "box-red",
                     "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/password-status-function.json"
@@ -605,11 +613,11 @@
                 },
                 {
                     "pos": "4,1",
-                    "title": "Overrides",
+                    "title": "Logo CSS",
                     "icon": "css",
-                    "toolTip": "Create a Ping CSS overrides code block",
+                    "toolTip": "CSS class for form logo",
                     "action": "GIT_CLIPBOARD",
-                    "resource": "davinciSnippets/ping-overrides.css"
+                    "resource": "davinciSnippets/company-logo.css"
                 },
                 {
                     "pos": "4,2",
