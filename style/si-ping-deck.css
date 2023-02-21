@@ -124,9 +124,9 @@ button.hidden {
 
 .search-button {
   content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/search.png");
-  bottom: 5px;
-  height: 26px;
-  width: 26px;
+  bottom: 3px;
+  height: 30px;
+  width: 30px;
   position: absolute;
 }
 
