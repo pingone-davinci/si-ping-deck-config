@@ -124,7 +124,7 @@ button.hidden {
 
 .search-button {
   content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/search.png");
-  bottom: 6px;
+  bottom: 5px;
   height: 26px;
   width: 26px;
   position: absolute;
@@ -140,7 +140,7 @@ button.hidden {
 .searchTextInput {
   background-color: var(--pref-input-background);
   border-radius: 5px;
-  border: 3px solid #222222;
+  border: 3px solid var(--dark-gray);
   color: var(--pref-input-color);
   font-size: 11pt;
   margin-right: 10px;
