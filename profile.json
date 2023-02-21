@@ -276,7 +276,8 @@
                 },
                 {
                     "pos": "1,8",
-                    "title": "Instance Vars",
+                    "title": "Instance<br/>Vars",
+                    "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
                     "action": "GIT_DV_CLIPBOARD",
