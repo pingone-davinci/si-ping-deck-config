@@ -31,8 +31,10 @@ body {
 
 .pingdeck-logo {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/pingdeck-logo.png");
-  margin-top: 20px;
   height: 30px;
+  left: 266px;
+  margin-top: 20px;
+  position: absolute;
   width: 200px;
 }
 
@@ -112,23 +114,39 @@ button.hidden {
 
 
 .preference-button {
-  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/preferences.png");
-  float: right;
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/preferences.png");
   height: 30px;
-  position: relative;
-  right: 24px;
-  top: 22px;
   width: 28px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 
 .search-button {
   content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/search.png");
-  /* float: right; */
-  height: 30px;
-  /* position: relative; */
-  /* right: 50px; */
-  /* top: 22px; */
-  width: 28px;
+  bottom: 6px;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+}
+
+.searchDiv {
+  position: absolute;
+  top: 16px;
+  right: 66px;
+  width: 240px;
+}
+
+.searchTextInput {
+  background-color: var(--pref-input-background);
+  border-radius: 5px;
+  border: 3px solid #222222;
+  color: var(--pref-input-color);
+  font-size: 11pt;
+  margin-right: 10px;
+  padding: 0.5em 0.5em;
+  visibility: hidden;
+  width: 180px;
 }
 
 .preference-button:hover {
@@ -284,15 +302,6 @@ div.preference input, div.modal-row input {
   font-size: 11pt;
   padding: 0.5em 0.5em;
   width: 65%;
-}
-
-.searchTextInput {
-  background-color: var(--pref-input-background);
-  border: none;
-  color: var(--pref-input-color);
-  /* display: inline-grid; */
-  font-size: 11pt;
-  padding: 0.5em 0.5em;
 }
 
 div.preference select, div.modal-row select {
