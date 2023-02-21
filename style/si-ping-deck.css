@@ -144,7 +144,7 @@ button.hidden {
 .searchTextInput {
   background-color: var(--pref-input-background);
   border-radius: 5px;
-  border: 3px solid var(--dark-gray);
+  border: 2px solid var(--dark-gray);
   color: var(--pref-input-color);
   font-size: 11pt;
   margin-right: 10px;
@@ -162,9 +162,14 @@ button.hidden {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/preferences-hover.png");
 }
 
-.home-button {
-  /* Doubling up the icons to preload both, which prevents the flicker on intial rollover */
+button:before {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home-hover.png");
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.home-button {
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home.png");
   float: left;
   height: 28px;
