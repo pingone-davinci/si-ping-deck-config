@@ -638,7 +638,7 @@
                     "title": "Field<br/>Focus",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Set focus to HTML element\u000dLanguage:Javascript",
+                    "toolTip": "Set focus to HTML element\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/field-focus.js"
                 },
@@ -647,7 +647,7 @@
                     "title": "Switch<br/>Case",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Javascript Switch/Case Example",
+                    "toolTip": "Switch/Case Example\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/switch-case.js"
                 },
@@ -656,7 +656,7 @@
                     "title": "For<br/>Each",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Loop over an array of objects using for each ",
+                    "toolTip": "Loop over an array of objects using for each\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/array-for-each.js"
                 },
@@ -665,7 +665,7 @@
                     "title": "Filter<br/>Array",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Filter an array of objects",
+                    "toolTip": "Filter an array of objects\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/filter-array.js"
                 },
@@ -674,17 +674,9 @@
                     "title": "Find In<br/>Array",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Find an object in an array",
+                    "toolTip": "Find an object in an array\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/find-in-array.js"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "TBD",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         },
