@@ -210,20 +210,6 @@
                     "toolTip": "Import RADIUS Gateway - Authentication Solution",
                     "action": "DV_IMPORT",
                     "resource": "ic-radius-gateway-authentication.json"
-                },
-                {
-                    "pos": "3,3",
-                    "title": "Pwdless<br/>Reg (FIDO)",
-                    "icon": "integration",
-                    "toolTip": "Passwordless Authentication (FIDO)",
-                    "action": "FOLDER",
-                    "resource": "davinciSolutionsFolder",
-                    "args": {
-                        "title": "Passwordless Registration (FIDO)",
-                        "dvimport": "ic-passwordless-authentication-fido.json",
-                        "docsUrl": "https://...",
-                        "download": ""
-                    }
                 }
             ]
         },
@@ -958,6 +944,20 @@
                     "toolTip": "",
                     "action": "REDIRECT",
                     "resource": ""
+                },
+                {
+                    "pos": "3,3",
+                    "title": "Pwdless<br/>Reg (FIDO)",
+                    "icon": "integration",
+                    "toolTip": "Passwordless Authentication (FIDO)",
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Passwordless Registration (FIDO)",
+                        "dvimport": "ic-passwordless-authentication-fido.json",
+                        "docsUrl": "https://...",
+                        "download": ""
+                    }
                 },
                 {
                     "pos": "4,8",
