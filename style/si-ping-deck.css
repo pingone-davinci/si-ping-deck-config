@@ -154,6 +154,7 @@ button.hidden {
 }
 
 .searchTextInput:focus {
+  outline: none !important;
   border-color: var(--highlight-color);
 }
 
