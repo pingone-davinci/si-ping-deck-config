@@ -215,7 +215,7 @@
         },
         {
             "id": "davinciSolutionsFolder",
-            "title": "DaVinci Solution - {{args_title}}",
+            "title": "DaVinci Solution - {{args.title}}",
             "search": true,
             "actions": [
                 {
