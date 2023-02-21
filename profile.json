@@ -277,7 +277,7 @@
                 {
                     "pos": "1,8",
                     "title": "Instance Vars",
-                    "icon": "spacer",
+                    "icon": "box-red",
                     "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/initial-instnace-variables.json"
