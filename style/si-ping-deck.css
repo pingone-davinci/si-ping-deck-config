@@ -163,6 +163,8 @@ button.hidden {
 }
 
 .home-button {
+  /* Doubling up the icons to preload both, which prevents the flicker on intial rollover */
+  content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home-hover.png");
   content: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/home.png");
   float: left;
   height: 28px;
