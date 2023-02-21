@@ -275,6 +275,14 @@
                     "resource": "davinciComponents/spacer.json"
                 },
                 {
+                    "pos": "1,8",
+                    "title": "Instance Vars",
+                    "icon": "spacer",
+                    "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/initial-instnace-variables.json"
+                },
+                {
                     "pos": "2,1",
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
@@ -332,18 +340,10 @@
                     "pos": "4,1",
                     "title": "Pwd<br/>Status",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-yellow",
+                    "icon": "box-red",
                     "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/password-status-function.json"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "View documentation for this profile",
-                    "action": "REDIRECT",
-                    "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
                 }
             ]
         },
@@ -441,7 +441,7 @@
                     "pos": "2,1",
                     "title": "Sign In<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard username/password sign in form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/signin-form.html"
@@ -450,7 +450,7 @@
                     "pos": "2,2",
                     "title": "Register<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard registration form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/registration-form.html"
@@ -459,7 +459,7 @@
                     "pos": "2,3",
                     "title": "OTP<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard OTP form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/otp-form.html"
@@ -468,7 +468,7 @@
                     "pos": "2,4",
                     "title": "TOTP<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard time-based OTP registration form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/totp-registration.html"
@@ -477,7 +477,7 @@
                     "pos": "2,5",
                     "title": "Magic<br/>Polling",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard magic link polling",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/magic-link-polling.html"
@@ -486,7 +486,7 @@
                     "pos": "2,6",
                     "title": "Success<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard success screen",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/success.html"
@@ -495,7 +495,7 @@
                     "pos": "2,7",
                     "title": "Card<br/>DIV",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-green",
                     "toolTip": "Standard card div html",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/card.html"
@@ -567,18 +567,18 @@
                     "pos": "3,7",
                     "title": "Empty<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-green",
                     "toolTip": "Empty HTML form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/form.html"
                 },
                 {
                     "pos": "4,1",
-                    "title": "Overrides",
+                    "title": "Logo CSS",
                     "icon": "css",
-                    "toolTip": "Create a Ping CSS overrides code block",
+                    "toolTip": "CSS class for form logo",
                     "action": "GIT_CLIPBOARD",
-                    "resource": "davinciSnippets/ping-overrides.css"
+                    "resource": "davinciSnippets/company-logo.css"
                 },
                 {
                     "pos": "4,2",
@@ -587,14 +587,6 @@
                     "toolTip": "Listing of the CSS files Ping leverages for flows",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/ping-css.txt"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "Profile readme",
-                    "action": "REDIRECT",
-                    "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
                 }
             ]
         },
@@ -606,8 +598,8 @@
                     "pos": "1,1",
                     "title": "Field<br/>Focus",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
-                    "toolTip": "Javascript to add field focus",
+                    "icon": "box-blue",
+                    "toolTip": "Set focus to HTML element\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/field-focus.js"
                 },
@@ -615,8 +607,8 @@
                     "pos": "1,7",
                     "title": "Switch<br/>Case",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
-                    "toolTip": "Javascript Switch/Case Example",
+                    "icon": "box-blue",
+                    "toolTip": "Switch/Case Example\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/switch-case.js"
                 },
@@ -625,7 +617,7 @@
                     "title": "For<br/>Each",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Loop over an array of objects using for each ",
+                    "toolTip": "Loop over an array of objects using for each\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/array-for-each.js"
                 },
@@ -634,7 +626,7 @@
                     "title": "Filter<br/>Array",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Filter an array of objects",
+                    "toolTip": "Filter an array of objects\u000dLanguage: Javascrip",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/filter-array.js"
                 },
@@ -643,17 +635,9 @@
                     "title": "Find In<br/>Array",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Find an object in an array",
+                    "toolTip": "Find an object in an array\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/find-in-array.js"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "TBD",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         },

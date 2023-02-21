@@ -480,7 +480,7 @@
                     "pos": "2,1",
                     "title": "Sign In<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard username/password sign in form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/signin-form.html"
@@ -489,7 +489,7 @@
                     "pos": "2,2",
                     "title": "Register<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard registration form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/registration-form.html"
@@ -498,7 +498,7 @@
                     "pos": "2,3",
                     "title": "OTP<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard OTP form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/otp-form.html"
@@ -507,7 +507,7 @@
                     "pos": "2,4",
                     "title": "TOTP<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard time-based OTP registration form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/totp-registration.html"
@@ -516,7 +516,7 @@
                     "pos": "2,5",
                     "title": "Magic<br/>Polling",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard magic link polling",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/magic-link-polling.html"
@@ -525,7 +525,7 @@
                     "pos": "2,6",
                     "title": "Success<br/>HTML",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
+                    "icon": "box-green",
                     "toolTip": "HTML for standard success screen",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/success.html"
@@ -534,7 +534,7 @@
                     "pos": "2,7",
                     "title": "Card<br/>DIV",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-green",
                     "toolTip": "Standard card div html",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/card.html"
@@ -626,14 +626,6 @@
                     "toolTip": "Listing of the CSS files Ping leverages for flows",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/ping-css.txt"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "Profile readme",
-                    "action": "REDIRECT",
-                    "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
                 }
             ]
         },
