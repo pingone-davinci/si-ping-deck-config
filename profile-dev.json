@@ -217,7 +217,7 @@
                     "icon": "integration",
                     "toolTip": "Passwordless Authentication (FIDO)",
                     "action": "FOLDER",
-                    "resource": "solution_folder",
+                    "resource": "davinciSolutionsFolder",
                     "args": {
                         "title": "Passwordless Registration (FIDO)",
                         "dvimport": "ic-passwordless-authentication-fido.json",
