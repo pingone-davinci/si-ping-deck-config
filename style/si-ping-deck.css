@@ -153,8 +153,8 @@ button.hidden {
   width: 180px;
 }
 
-.searchTextInput:active {
-  background-color: var(--highlight-color);
+.searchTextInput:focus {
+  border-color: var(--highlight-color);
 }
 
 .preference-button:hover {
