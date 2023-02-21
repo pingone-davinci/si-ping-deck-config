@@ -651,7 +651,7 @@
                     "pos": "1,1",
                     "title": "Field<br/>Focus",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-blue",
                     "toolTip": "Javascript to add field focus",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/field-focus.js"
@@ -660,7 +660,7 @@
                     "pos": "1,7",
                     "title": "Switch<br/>Case",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-blue",
                     "toolTip": "Javascript Switch/Case Example",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/switch-case.js"
