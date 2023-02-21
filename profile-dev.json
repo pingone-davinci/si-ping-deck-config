@@ -319,9 +319,9 @@
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
-                    "toolTip": "Username and password node",
+                    "toolTip": "Sign In form components with username and password fields",
                     "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/sign-in-form.json"
+                    "resource": "davinciComponents/sign-in-with-password.json"
                 },
                 {
                     "pos": "2,2",
