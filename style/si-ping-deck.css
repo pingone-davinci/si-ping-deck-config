@@ -130,6 +130,10 @@ button.hidden {
   position: absolute;
 }
 
+.search-button:hover {
+  content: url("https://github.com/pingone-davinci/si-ping-deck-config/raw/main/icons/search-hover.png");
+}
+
 .searchDiv {
   position: absolute;
   top: 16px;
