@@ -119,7 +119,7 @@ button.hidden {
   width: 28px;
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 25px;
 }
 
 .search-button {
@@ -151,6 +151,10 @@ button.hidden {
   padding: 0.5em 0.5em;
   visibility: hidden;
   width: 180px;
+}
+
+.searchTextInput:active {
+  background-color: var(--highlight-color);
 }
 
 .preference-button:hover {
