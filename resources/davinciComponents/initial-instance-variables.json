@@ -62,7 +62,7 @@
                         "value": "Set flow instance variables"
                     },
                     "nodeDescription": {
-                        "value": "Initialize common values used in the flow so that they're easier to update in a single location"
+                        "value": "Initialize common values used in the flow so that they're easier to update in one place"
                     }
                 },
                 "idUnique": "xffn1pfvaz"
