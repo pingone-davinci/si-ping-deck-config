@@ -23,13 +23,13 @@
                         "value": 240
                     },
                     "fontSize": {
-                        "value": 13
+                        "value": 12
                     },
                     "fontFamily": {
                         "value": "sans-serif"
                     },
                     "cornerRadius": {
-                        "value": 10
+                        "value": 8
                     }
                 },
                 "status": "configured"

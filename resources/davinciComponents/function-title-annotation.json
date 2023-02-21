@@ -26,13 +26,13 @@
                         "value": "bold"
                     },
                     "fontSize": {
-                        "value": 13
+                        "value": 14
                     },
                     "fontFamily": {
                         "value": "sans-serif"
                     },
                     "cornerRadius": {
-                        "value": 10
+                        "value": 8
                     }
                 },
                 "status": "configured"
