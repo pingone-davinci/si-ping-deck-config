@@ -50,10 +50,10 @@
                                 "type": "string"
                             },
                             {
-                                "name": "relyingPartyID",
+                                "name": "relyingPartyId",
                                 "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
                                 "key": 0.33706413004714153,
-                                "label": "relyingPartyID (string - flowInstance)",
+                                "label": "relyingPartyId (string - flowInstance)",
                                 "type": "string"
                             }
                         ]
