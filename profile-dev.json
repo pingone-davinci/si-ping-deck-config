@@ -23,7 +23,7 @@
                 },
                 {
                     "pos": "2,4",
-                    "title": "Workflows",
+                    "title": "Flow Snippets",
                     "icon": "davinci-workflows",
                     "toolTip": "PingOne DaVinci Workflows",
                     "action": "PROFILE",
@@ -966,14 +966,6 @@
                     "toolTip": "View a Node JS Widget integration",
                     "action": "REDIRECT",
                     "resource": "https://glitch.com/~davinci-v2-node-template"
-                },
-                {
-                    "pos": "4,7",
-                    "title": "Zero Trust",
-                    "icon": "comming-soon",
-                    "toolTip": "Zero trust solution coming soon",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         }
