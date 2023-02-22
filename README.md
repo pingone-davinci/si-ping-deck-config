@@ -2,7 +2,7 @@
 
 ## Content Change Log
 
-View the content change log here [here](CHANGELOG.md)
+View the content [change log](CHANGELOG.md)
 
 ## preferences.json
 The `preferences.json` defines the preferencs usedn when the preference button/cog is clicked.  At the top level, the json is broken up by the different tabs that are used in the Preferences.
