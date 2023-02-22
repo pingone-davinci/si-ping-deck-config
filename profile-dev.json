@@ -215,14 +215,14 @@
         },
         {
             "id": "davinciSolutionsFolder",
-            "title": "DaVinci Solution - {{args.title}}",
+            "title": "DaVinci Solution - {{title}}",
             "search": true,
             "actions": [
                 {
                     "pos": "2,2",
                     "title": "Docs",
                     "icon": "",
-                    "toolTip": "Import {{args.title}}",
+                    "toolTip": "Documenation for {{title}}",
                     "action": "REDIRECT",
                     "resource": "{{docs}}"
                 },
@@ -230,7 +230,7 @@
                     "pos": "2.3",
                     "title": "Import",
                     "icon": "davinci-import",
-                    "toolTip": "Import {{arg_title}}",
+                    "toolTip": "Import {{title}}",
                     "action": "DV_IMPORT",
                     "resource": "import {{args_dvimport}} {{davinci_companyId}}"
                 },
@@ -238,7 +238,7 @@
                     "pos": "2,4",
                     "title": "Download",
                     "icon": "",
-                    "toolTip": "Import {{args.title}}",
+                    "toolTip": "Download {{title}}",
                     "action": "REDIRECT",
                     "resource": "{{docs}}"
                 }
