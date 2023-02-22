@@ -23,7 +23,7 @@
                 },
                 {
                     "pos": "2,4",
-                    "title": "Workflows",
+                    "title": "Flow Snippets",
                     "icon": "davinci-workflows",
                     "toolTip": "PingOne DaVinci Workflows",
                     "action": "PROFILE",
@@ -114,8 +114,8 @@
                     "icon": "terraform",
                     "toolTip": "CIAM Passwordless Terraform Package",
                     "action": "URL_DOWNLOAD",
-                    "fileName": "ciam-passwordless.zip",
-                    "resource": "https://pingone-davinci.github.io/si-ping-deck-config/resources/davinciPackages/resources/ciam-passwordless.zip"
+                    "filename": "ciam-passwordless.zip",
+                    "resource": "https://pingone-davinci.github.io/si-ping-deck-config/resources/davinciPackages/ciam-passwordless.zip"
                 },
                 {
                     "pos": "1,3",
@@ -214,43 +214,81 @@
             ]
         },
         {
+            "id": "davinciSolutionsFolder",
+            "title": "DaVinci Solution - {{title}}",
+            "search": true,
+            "actions": [
+                {
+                    "pos": "2,2",
+                    "title": "Docs",
+                    "icon": "standards",
+                    "toolTip": "Documenation for {{title}}",
+                    "action": "REDIRECT",
+                    "resource": "{{docsUrl}}"
+                },
+                {
+                    "pos": "2.3",
+                    "title": "Import",
+                    "icon": "davinci-import",
+                    "toolTip": "Import {{title}}",
+                    "action": "DV_IMPORT",
+                    "resource": "import {{args_dvimport}} {{davinci_companyId}}"
+                },
+                {
+                    "pos": "2,4",
+                    "title": "Download",
+                    "icon": "davinci",
+                    "toolTip": "Download {{title}}",
+                    "action": "URL_DOWNLOAD",
+                    "filename": "{{downloadFilename}}",
+                    "resource": "{{downloadUrl}}"
+                }
+            ]
+        },
+        {
             "id": "davinciWorkflows",
             "title": "PingOne DaVinci Workflow Snippets",
             "actions": [
                 {
                     "pos": "1,1",
+                    "title": "Starter<br/>Flow",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-yellow",
+                    "toolTip": "Starter flow that includes Ping CSS, instance variables, error handler",
+                    "action": "DV_IMPORT",
+                    "resource": "ping-starter-flow.json",
+                    "dependency": {
+                        "type": "LOCAL_STORAGE",
+                        "condition": "EXISTS",
+                        "resource": "davinci_access_token"
+                    }
+                },
+                {
+                    "pos": "1,2",
                     "title": "Common<br/>Error",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Teleport method for handling common error",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/common-error-teleport.json"
                 },
                 {
-                    "pos": "1,2",
+                    "pos": "1,3",
                     "title": "PWD<br/>Reset",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Teleport method for resetting PingOne account password",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/reset-password.json"
                 },
                 {
-                    "pos": "1,3",
+                    "pos": "1,4",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Success message HTML with Success JSON",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/success-html-with-json.json"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "Coming Soon!",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         },
@@ -345,6 +383,14 @@
                     "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/password-status-function.json"
+                },
+                {
+                    "pos": "4,8",
+                    "title": "Readme",
+                    "icon": "readme",
+                    "toolTip": "View documentation for this profile",
+                    "action": "REDIRECT",
+                    "resource": "https://github.com/pingone-davinci/streamdeck/blob/main/snippets/README.md"
                 }
             ]
         },
@@ -568,7 +614,7 @@
                     "pos": "3,7",
                     "title": "Empty<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-blue",
                     "toolTip": "Empty HTML form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/form.html"
@@ -627,7 +673,7 @@
                     "title": "Filter<br/>Array",
                     "titlePosition": "MIDDLE",
                     "icon": "box-blue",
-                    "toolTip": "Filter an array of objects\u000dLanguage: Javascrip",
+                    "toolTip": "Filter an array of objects\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/filter-array.js"
                 },
@@ -676,7 +722,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Console Login",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_consoleUrl}}/?env={{pingone_envId}}"
+                    "resource": "https://console.pingone.{{pingone_region}}/?env={{pingone_envId}}"
                 },
                 {
                     "pos": "2,2",
@@ -684,7 +730,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Self-Service (MyAccount)",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myaccount/"
+                    "resource": "https://apps.pingone.{{pingone_region}}/{{pingone_envId}}/myaccount/"
                 },
                 {
                     "pos": "2,3",
@@ -692,7 +738,7 @@
                     "icon": "pingone",
                     "toolTip": "PingOne Application Portal",
                     "action": "REDIRECT",
-                    "resource": "{{pingone_appsUrl}}/{{pingone_envId}}/myapps/"
+                    "resource": "https://apps.pingone.{{pingone_region}}/{{pingone_envId}}/myapps/"
                 },
                 {
                     "pos": "2,4",
@@ -710,24 +756,6 @@
                     "toolTip": "Copy Environment ID Preference",
                     "action": "PREF_CLIPBOARD",
                     "resource": "pingone_envId"
-                },
-                {
-                    "pos": "2,6",
-                    "title": "Client<br>ID",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "Copy Client ID Preference",
-                    "action": "PREF_CLIPBOARD",
-                    "resource": "pingone_clientId"
-                },
-                {
-                    "pos": "2,7",
-                    "title": "Client<br>Secret",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "Copy Client Secret Preference",
-                    "action": "PREF_CLIPBOARD",
-                    "resource": "pingone_clientSecret"
                 },
                 {
                     "pos": "4,8",
@@ -918,20 +946,27 @@
                     "resource": ""
                 },
                 {
+                    "pos": "3,3",
+                    "title": "Pwdless<br/>Reg (FIDO)",
+                    "icon": "integration",
+                    "toolTip": "Passwordless Authentication (FIDO)",
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Passwordless Registration (FIDO)",
+                        "dvimport": "ic-passwordless-authentication-fido.json",
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-passwordless-authentication-fido.json",
+                        "downloadFilename": "passwordless-authentication-fido.json"
+                    }
+                },
+                {
                     "pos": "4,8",
                     "title": "Widget",
                     "icon": "glitch",
                     "toolTip": "View a Node JS Widget integration",
                     "action": "REDIRECT",
                     "resource": "https://glitch.com/~davinci-v2-node-template"
-                },
-                {
-                    "pos": "4,7",
-                    "title": "Zero Trust",
-                    "icon": "comming-soon",
-                    "toolTip": "Zero trust solution coming soon",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         }
