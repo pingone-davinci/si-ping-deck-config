@@ -1,61 +1,243 @@
-.annotation-blue { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-blue.png"); }
-.annotation-gold { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-gold.png");}
-.annotation-gray { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-gray.png");}
-.annotation-purple { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-purple.png");}
-.base { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/base64.png");}
-.blue-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-blue.png");}
-.box-blue { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-blue.png");}
-.box-green { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-green.png");}
-.box-purple { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-purple.png");}
-.box-red { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-red.png");}
-.box-yellow { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-yellow.png");}
-.clipboard { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/clipboard.png");}
-.css { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/css.png");}
-.davinci { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci.png");}
-.davinci-import { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-import.png");}
-.davinci-small { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-small.png");}
-.devops { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/devops.png");}
-.docker { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/docker.png");}
-.dv-connections { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/components.png");}
-.flows, .flow { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/flows.png");}
-.font { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-font.png");}
-.github { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/github.png");}
-.glitch { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/glitch.png");}
-.gold-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-gold.png");}
-.gray-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-gray.png");}
-.green-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-green.png");}
-.helm { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/helm.png");}
-.home { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/home.png");}
-.html { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/html.png");}
-.integration { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/integration.png");}
-.javascript { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/javascript.png");}
-.jira { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jira.png");}
-.json { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/json.png");}
-.jwt { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jwt.png");}
-.ping { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ping.png");}
-.ping-lite { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ping-lite.png");}
-.pingone { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/pingone.png");}
-.pink-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-red.png");}
-.postman { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/postman.png");}
-.preferences { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/preferences-2.png");}
-.purple-palette { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-purple.png");}
-.readme { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/info.png");}
-.regex { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/regex.png");}
-.solution-innovations { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/solution-innovations.png");}
-.spacer { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/spacer.png");}
-.standards { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-doc.png");}
-.terraform { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/terraform.png");}
-.url { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/url.png");}
-.utilities { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/utils.png");}
-.ux-team { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ux.png");}
+.annotation-blue {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-blue.png");
+}
 
-.davinci-packages { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-packages.png");}
-.davinci-solutions { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-solutions.png");}
-.davinci-workflows { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-workflows.png");}
-.davinci-components { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-components.png");}
-.davinci-snippets { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-snippets.png");}
-.code-snippets { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/code.png");}
-.contribute { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/contribute.png");}
-.comming-soon { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/comming-soon.png");}
-.folder-up { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/folder-up.png");}
-.annotations { background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotations.png");}
+.annotation-gold {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-gold.png");
+}
+
+.annotation-gray {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-gray.png");
+}
+
+.annotation-purple {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-purple.png");
+}
+
+.base {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/base64.png");
+}
+
+.blue-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-blue.png");
+}
+
+.box-blue {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-blue.png");
+}
+
+.box-green {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-green.png");
+}
+
+.box-purple {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-purple.png");
+}
+
+.box-red {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-red.png");
+}
+
+.box-yellow {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-yellow.png");
+}
+
+.clipboard {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/clipboard.png");
+}
+
+.css {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/css.png");
+}
+
+.davinci {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci.png");
+}
+
+.davinci-import {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-import.png");
+}
+
+.davinci-download {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-download.png");
+}
+
+.davinci-small {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-small.png");
+}
+
+.devops {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/devops.png");
+}
+
+.docker {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/docker.png");
+}
+
+.dv-connections {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/components.png");
+}
+
+.flows, .flow {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/flows.png");
+}
+
+.font {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-font.png");
+}
+
+.github {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/github.png");
+}
+
+.glitch {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/glitch.png");
+}
+
+.gold-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-gold.png");
+}
+
+.gray-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-gray.png");
+}
+
+.green-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-green.png");
+}
+
+.helm {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/helm.png");
+}
+
+.home {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/home.png");
+}
+
+.html {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/html.png");
+}
+
+.integration {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/integration.png");
+}
+
+.javascript {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/javascript.png");
+}
+
+.jira {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jira.png");
+}
+
+.json {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/json.png");
+}
+
+.jwt {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jwt.png");
+}
+
+.ping {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ping.png");
+}
+
+.ping-lite {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ping-lite.png");
+}
+
+.pingone {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/pingone.png");
+}
+
+.pink-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-red.png");
+}
+
+.postman {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/postman.png");
+}
+
+.preferences {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/preferences-2.png");
+}
+
+.purple-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-purple.png");
+}
+
+.readme {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/info.png");
+}
+
+.regex {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/regex.png");
+}
+
+.solution-innovations {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/solution-innovations.png");
+}
+
+.spacer {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/spacer.png");
+}
+
+.standards {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-doc.png");
+}
+
+.terraform {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/terraform.png");
+}
+
+.url {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/url.png");
+}
+
+.utilities {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/utils.png");
+}
+
+.ux-team {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ux.png");
+}
+
+.davinci-packages {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-packages.png");
+}
+
+.davinci-solutions {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-solutions.png");
+}
+
+.davinci-workflows {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-workflows.png");
+}
+
+.davinci-components {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-components.png");
+}
+
+.davinci-snippets {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-snippets.png");
+}
+
+.code-snippets {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/code.png");
+}
+
+.contribute {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/contribute.png");
+}
+
+.comming-soon {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/comming-soon.png");
+}
+
+.folder-up {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/folder-up.png");
+}
+
+.annotations {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotations.png");
+}

@@ -232,7 +232,7 @@
                     "icon": "davinci-import",
                     "toolTip": "Import {{title}}",
                     "action": "DV_IMPORT",
-                    "resource": "{{dvimport}}"
+                    "resource": "import {{args_dvimport}} {{davinci_companyId}}"
                 },
                 {
                     "pos": "2,4",
@@ -264,6 +264,14 @@
                 },
                 {
                     "pos": "1,2",
+                    "title": "Starter<br/>Flow",
+                    "icon": "davinci-download",
+                    "toolTip": "Starter flow that includes Ping CSS, instance variables, error handler",
+                    "action": "URL_DOWNLOAD",
+                    "resource": "flows/ping-starter-flow.json"
+                },
+                {
+                    "pos": "1,3",
                     "title": "Common<br/>Error",
                     "titlePosition": "MIDDLE",
                     "icon": "box-yellow",
@@ -272,7 +280,7 @@
                     "resource": "davinciWorkflows/common-error-teleport.json"
                 },
                 {
-                    "pos": "1,3",
+                    "pos": "1,4",
                     "title": "PWD<br/>Reset",
                     "titlePosition": "MIDDLE",
                     "icon": "box-yellow",
@@ -281,7 +289,7 @@
                     "resource": "davinciWorkflows/reset-password.json"
                 },
                 {
-                    "pos": "1,4",
+                    "pos": "1,5",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
                     "icon": "box-yellow",
