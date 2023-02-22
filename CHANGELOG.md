@@ -3,6 +3,7 @@
 
 | Date  | Status | Type | Name | Description  |
 |---|:---:|---|---|---|
+| 2023-02-23 | Updated | DV Component | Annotation | Added 1px outline |
 | 2023-02-23 | Updated | Flow Snippet | Success HTML | Updated to align with standard UX |
 | 2023-02-23 | Updated | DV Component | Success Form | Updated to align with standard UX |
 | 2023-02-23 | Updated | Flow Snippet | Registration HTML | Updated to align with standard UX |

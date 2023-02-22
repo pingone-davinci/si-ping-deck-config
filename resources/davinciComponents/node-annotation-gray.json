@@ -30,6 +30,15 @@
                     },
                     "cornerRadius": {
                         "value": 8
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    },
+                    "strokeColor": {
+                        "value": "#181818ff"
                     }
                 },
                 "status": "configured"
