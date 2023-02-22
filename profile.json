@@ -253,7 +253,7 @@
                     "pos": "1,1",
                     "title": "Starter<br/>Flow",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-yellow",
+                    "icon": "davinci-import",
                     "toolTip": "Starter flow that includes Ping CSS, instance variables, error handler",
                     "action": "DV_IMPORT",
                     "resource": "ping-starter-flow.json",
