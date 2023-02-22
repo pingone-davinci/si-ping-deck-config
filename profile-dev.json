@@ -221,10 +221,10 @@
                 {
                     "pos": "2,2",
                     "title": "Docs",
-                    "icon": "",
+                    "icon": "standards",
                     "toolTip": "Documenation for {{title}}",
                     "action": "REDIRECT",
-                    "resource": "{{docs}}"
+                    "resource": "{{docsUrl}}"
                 },
                 {
                     "pos": "2.3",
@@ -237,10 +237,11 @@
                 {
                     "pos": "2,4",
                     "title": "Download",
-                    "icon": "",
+                    "icon": "davinci",
                     "toolTip": "Download {{title}}",
-                    "action": "REDIRECT",
-                    "resource": "{{docs}}"
+                    "action": "URL_DOWNLOAD",
+                    "fileName": "{{downloadFilename}}",
+                    "resource": "{{downloadUrl}}"
                 }
             ]
         },
@@ -948,8 +949,9 @@
                     "args": {
                         "title": "Passwordless Registration (FIDO)",
                         "dvimport": "ic-passwordless-authentication-fido.json",
-                        "docsUrl": "https://...",
-                        "download": ""
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-passwordless-authentication-fido.json",
+                        "downloadFilename": "passwordless-authentication-fido.json"
                     }
                 },
                 {
