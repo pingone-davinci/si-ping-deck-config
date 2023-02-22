@@ -614,7 +614,7 @@
                     "pos": "3,7",
                     "title": "Empty<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-green",
                     "toolTip": "Empty HTML form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/form.html"
