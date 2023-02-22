@@ -3,6 +3,9 @@
 
 | Date  | Status | Type | Name | Description  |
 |---|:---:|---|---|---|
+| 2023-02-23 | Updated | Flow Snippet | Success HTML | Updated to align with standard UX |
+| 2023-02-23 | Updated | DV Component | Success Form | Updated to align with standard UX |
+| 2023-02-23 | Updated | Flow Snippet | Registration HTML | Updated to align with standard UX |
 | 2023-02-23 | Updated | DV Component | Registration Form | Updated to align with standard UX |
 | 2023-02-23 | Updated | Flow Snippet | Common Error | Added function title to snippet |
 | 2023-02-23 | Updated | HTML Template | Sign In HTML | Updated HTML to align with standard UX |
