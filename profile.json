@@ -152,64 +152,56 @@
                     "title": "Pwdless<br/>Reg (FIDO)",
                     "icon": "integration",
                     "toolTip": "Passwordless Registration (FIDO)",
-                    "action": "REDIRECT",
-                    "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido"
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Passwordless Registration (FIDO)",
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-passwordless-registration-fido.json",
+                        "downloadFilename": "passwordless-registration-fido.json"
+                    }
                 },
                 {
                     "pos": "1,3",
                     "title": "Pwdless<br/>Auth (FIDO)",
                     "icon": "integration",
                     "toolTip": "Passwordless Authentication (FIDO)",
-                    "action": "REDIRECT",
-                    "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x9dIAA/passwordless-authentication-fido"
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Passwordless Authentication (FIDO)",
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x9dIAA/passwordless-authentication-fido",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-passwordless-authentication-fido.json",
+                        "downloadFilename": "passwordless-authentication-fido.json"
+                    }
                 },
                 {
                     "pos": "1,4",
                     "title": "Ext User<br/>Session",
                     "icon": "integration",
                     "toolTip": "Extended User Session: Remember Me Login DaVinci Flow",
-                    "action": "REDIRECT",
-                    "resource": "https://support.pingidentity.com/s/marketplace-integration/a7i8Z000000M3aSQAS/extended-user-session-remember-me-login-davinci-flow"
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Extended User Session: Remember Me Login DaVinci Flow",
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7i8Z000000M3aSQAS/extended-user-session-remember-me-login-davinci-flow",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-extended-user-session-remember-me.json",
+                        "downloadFilename": "ic-extended-user-session-remember-me.json"
+                    }
                 },
                 {
                     "pos": "1,5",
                     "title": "RADIUS<br/>Gtwy Auth",
                     "icon": "integration",
                     "toolTip": "RADIUS Gateway - Authentication",
-                    "action": "REDIRECT",
-                    "resource": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010xIcIAI/radius-gateway-authentication"
-                },
-                {
-                    "pos": "2,2",
-                    "title": "Import",
-                    "icon": "davinci-import",
-                    "toolTip": "Import Passwordless Registration (FIDO) Solution",
-                    "action": "DV_IMPORT",
-                    "resource": "ic-passwordless-registration-fido.json"
-                },
-                {
-                    "pos": "2,3",
-                    "title": "Import",
-                    "icon": "davinci-import",
-                    "toolTip": "Import Passwordless Authentication (FIDO)",
-                    "action": "DV_IMPORT",
-                    "resource": "ic-passwordless-authentication-fido.json"
-                },
-                {
-                    "pos": "2,4",
-                    "title": "Import",
-                    "icon": "davinci-import",
-                    "toolTip": "Import Extended User Session: Remember Me Login DaVinci Flow Solution",
-                    "action": "DV_IMPORT",
-                    "resource": "ic-extended-user-session-remember-me.json"
-                },
-                {
-                    "pos": "2,5",
-                    "title": "Import",
-                    "icon": "davinci-import",
-                    "toolTip": "Import RADIUS Gateway - Authentication Solution",
-                    "action": "DV_IMPORT",
-                    "resource": "ic-radius-gateway-authentication.json"
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "RADIUS Gateway - Authentication",
+                        "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010xIcIAI/radius-gateway-authentication",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-radius-gateway-authentication.json",
+                        "downloadFilename": "ic-radius-gateway-authentication.json"
+                    }
                 }
             ]
         },
@@ -222,7 +214,7 @@
                     "pos": "2,2",
                     "title": "Docs",
                     "icon": "standards",
-                    "toolTip": "Documenation for {{title}}",
+                    "toolTip": "Documentation for {{title}}",
                     "action": "REDIRECT",
                     "resource": "{{docsUrl}}"
                 },
@@ -232,7 +224,7 @@
                     "icon": "davinci-import",
                     "toolTip": "Import {{title}}",
                     "action": "DV_IMPORT",
-                    "resource": "import {{args_dvimport}} {{davinci_companyId}}"
+                    "resource": "{{downloadFilename}}"
                 },
                 {
                     "pos": "2,4",
@@ -961,7 +953,6 @@
                     "resource": "davinciSolutionsFolder",
                     "args": {
                         "title": "Passwordless Registration (FIDO)",
-                        "dvimport": "ic-passwordless-authentication-fido.json",
                         "docsUrl": "https://support.pingidentity.com/s/marketplace-integration/a7iDo0000010x22IAA/passwordless-registration-fido",
                         "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ic-passwordless-authentication-fido.json",
                         "downloadFilename": "passwordless-authentication-fido.json"
