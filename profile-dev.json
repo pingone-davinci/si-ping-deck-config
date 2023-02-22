@@ -254,7 +254,7 @@
                     "title": "Starter<br/>Flow",
                     "titlePosition": "MIDDLE",
                     "icon": "box-yellow",
-                    "toolTip": "Stubbed flow that includes Ping CSS, instance variables, error handler",
+                    "toolTip": "Starter flow that includes Ping CSS, instance variables, error handler",
                     "action": "DV_IMPORT",
                     "resource": "ping-starter-flow.json",
                     "dependency": {
