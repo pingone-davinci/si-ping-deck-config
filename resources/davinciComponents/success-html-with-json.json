@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "hwtekd4p02",
+                "id": "0zjgfobu69",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -13,7 +13,7 @@
                 "type": "trigger",
                 "properties": {
                     "customHTML": {
-                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div class=\"successDiv\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"__COMPANY_NAME__\" />\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n   <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
                     },
                     "formFieldsList": {
                         "value": [
@@ -33,8 +33,8 @@
                 }
             },
             "position": {
-                "x": 360,
-                "y": 270
+                "x": 990,
+                "y": 720
             },
             "group": "nodes",
             "removed": false,
@@ -47,7 +47,7 @@
         },
         {
             "data": {
-                "id": "zj3bp19bv6",
+                "id": "6edkg95st2",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -67,8 +67,8 @@
                 "idUnique": "00surhcg33"
             },
             "position": {
-                "x": 690,
-                "y": 270
+                "x": 1320,
+                "y": 720
             },
             "group": "nodes",
             "removed": false,
@@ -81,12 +81,12 @@
         },
         {
             "data": {
-                "id": "8ohbwkpxo1",
+                "id": "czp0jabrau",
                 "nodeType": "EVAL"
             },
             "position": {
-                "x": 480,
-                "y": 270
+                "x": 1110,
+                "y": 720
             },
             "group": "nodes",
             "removed": false,
@@ -101,9 +101,9 @@
     "clonedEdges": [
         {
             "data": {
-                "id": "ruzj2i01el",
-                "source": "hwtekd4p02",
-                "target": "8ohbwkpxo1"
+                "id": "yt4uuivpq7",
+                "source": "0zjgfobu69",
+                "target": "czp0jabrau"
             },
             "position": {
                 "x": 0,
@@ -120,9 +120,9 @@
         },
         {
             "data": {
-                "id": "aawbw40th8",
-                "source": "8ohbwkpxo1",
-                "target": "zj3bp19bv6"
+                "id": "tvrzhoanvs",
+                "source": "czp0jabrau",
+                "target": "6edkg95st2"
             },
             "position": {
                 "x": 0,
