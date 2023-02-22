@@ -232,7 +232,7 @@
                     "icon": "davinci-import",
                     "toolTip": "Import {{title}}",
                     "action": "DV_IMPORT",
-                    "resource": "import {{args_dvimport}} {{davinci_companyId}}"
+                    "resource": "{{dvimport}}"
                 },
                 {
                     "pos": "2,4",
