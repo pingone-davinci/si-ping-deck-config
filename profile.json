@@ -287,15 +287,6 @@
                     "toolTip": "Teleport method for PingOne account password reset",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/reset-password.json"
-                },
-                {
-                    "pos": "1,5",
-                    "title": "Flow<br/>Success",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-yellow",
-                    "toolTip": "Success message HTML with Success JSON",
-                    "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciWorkflows/success-html-with-json.json"
                 }
             ]
         },
@@ -318,6 +309,15 @@
                     "toolTip": "Spacer annotation",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/spacer.json"
+                },
+                {
+                    "pos": "1,7",
+                    "title": "No-Op<br/>UI",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "No-Op UI component",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/no-op-ui.json"
                 },
                 {
                     "pos": "1,8",
@@ -357,12 +357,12 @@
                 },
                 {
                     "pos": "2,6",
-                    "title": "No-Op<br/>UI",
+                    "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "No-Op UI component",
+                    "icon": "box-yellow",
+                    "toolTip": "Success message HTML with Success JSON",
                     "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/no-op-ui.json"
+                    "resource": "davinciComponents/success-html-with-json.json"
                 },
                 {
                     "pos": "2,7",
