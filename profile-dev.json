@@ -251,38 +251,44 @@
             "actions": [
                 {
                     "pos": "1,1",
+                    "title": "Starter<br/>Flow",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-yellow",
+                    "toolTip": "Stubbed flow that includes Ping CSS, instance variables, error handler",
+                    "action": "DV_IMPORT",
+                    "resource": "ping-starter-flow.json",
+                    "dependency": {
+                        "type": "LOCAL_STORAGE",
+                        "condition": "EXISTS",
+                        "resource": "davinci_access_token"
+                    }
+                },
+                {
+                    "pos": "1,2",
                     "title": "Common<br/>Error",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Teleport method for handling common error",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/common-error-teleport.json"
                 },
                 {
-                    "pos": "1,2",
+                    "pos": "1,3",
                     "title": "PWD<br/>Reset",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Teleport method for resetting PingOne account password",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/reset-password.json"
                 },
                 {
-                    "pos": "1,3",
+                    "pos": "1,4",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-green",
+                    "icon": "box-yellow",
                     "toolTip": "Success message HTML with Success JSON",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/success-html-with-json.json"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "Coming Soon!",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         },
