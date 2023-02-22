@@ -359,7 +359,7 @@
                     "pos": "2,6",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-yellow",
+                    "icon": "box-red",
                     "toolTip": "Success message HTML with Success JSON",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/success-html-with-json.json"
