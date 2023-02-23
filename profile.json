@@ -649,7 +649,7 @@
                     "pos": "1,1",
                     "title": "Field<br/>Focus",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Set focus to HTML element\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/field-focus.js"
@@ -658,7 +658,7 @@
                     "pos": "1,7",
                     "title": "Switch<br/>Case",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Switch/Case Example\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/switch-case.js"
@@ -667,7 +667,7 @@
                     "pos": "1,8",
                     "title": "For<br/>Each",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Loop over an array of objects using for each\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/array-for-each.js"
@@ -676,7 +676,7 @@
                     "pos": "2,1",
                     "title": "Mask<br/>Email",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Function to mask email address\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/mask-email-address.js"
@@ -685,7 +685,7 @@
                     "pos": "2,8",
                     "title": "Filter<br/>Array",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Filter an array of objects\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/filter-array.js"
@@ -694,7 +694,7 @@
                     "pos": "3,8",
                     "title": "Find In<br/>Array",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-blue",
+                    "icon": "box-javascript-snippet",
                     "toolTip": "Find an object in an array\u000dLanguage: Javascript",
                     "action": "GIT_CLIPBOARD",
                     "resource": "codeSnippets/find-in-array.js"
