@@ -1,0 +1,1973 @@
+{
+  "flows": [
+    {
+      "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+      "authTokenExpireIds": [],
+      "connectorIds": [
+        "annotationConnector",
+        "functionsConnector",
+        "httpConnector",
+        "flowConnector"
+      ],
+      "createdDate": 1677097180733,
+      "currentVersion": 1,
+      "customerId": "f3e47d945ae971a4b4142ec75012d155",
+      "description": "Imported on Wed Feb 22 2023 20:19:40 GMT+0000 (Coordinated Universal Time)",
+      "flowStatus": "enabled",
+      "name": "Browser Local Storage Demo",
+      "publishedVersion": 1,
+      "settings": {
+        "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+        "intermediateLoadingScreenCSS": "",
+        "intermediateLoadingScreenHTML": "",
+        "logLevel": 3,
+        "useCustomCSS": true,
+        "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}",
+        "cssLinks": [
+          "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
+          "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.4/icons.css"
+        ]
+      },
+      "updatedDate": 1677097180814,
+      "flowId": "cdbaef812daf7c1e1fa352c2976fc6ae",
+      "versionId": 1,
+      "graphData": {
+        "elements": {
+          "nodes": [
+            {
+              "data": {
+                "id": "gluzt7rc07",
+                "nodeType": "EVAL",
+                "properties": {
+                  "z347f8ttdu": {
+                    "value": "allTriggersComplete"
+                  }
+                }
+              },
+              "position": {
+                "x": 450,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "rgkm5qt0jh",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#f2f3f4ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#000000"
+                  },
+                  "annotation": {
+                    "value": "--> {\"name\":..., \"address\",....}"
+                  },
+                  "width": {
+                    "value": 240
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  },
+                  "strokeEnabled": {
+                    "value": true
+                  },
+                  "strokeWidth": {
+                    "value": 1
+                  },
+                  "strokeColor": {
+                    "value": "#181818ff"
+                  }
+                },
+                "status": "configured",
+                "idUnique": "kqni5en8a7"
+              },
+              "position": {
+                "x": 540,
+                "y": 300
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "is1x7ojmio",
+                "nodeType": "EVAL",
+                "properties": {
+                  "juxv8bpic3": {
+                    "value": "allTriggersFalse"
+                  },
+                  "j96s08pjfz": {
+                    "value": "allTriggersComplete"
+                  }
+                }
+              },
+              "position": {
+                "x": 810,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "z347f8ttdu",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "customFunction",
+                "type": "trigger",
+                "properties": {
+                  "variableInputList": {
+                    "value": [
+                      {
+                        "name": "browserLocalStorage",
+                        "preferredDataType": "object",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"flow-connector.svg\",\n        \"url\": \"browserLocalStorage\",\n        \"data\": \"{{local.2xq2ou2n60.payload.output.browserLocalStorage}}\",\n        \"tooltip\": \"{{local.2xq2ou2n60.payload.output.browserLocalStorage}}\",\n        \"children\": [\n          {\n            \"text\": \"browserLocalStorage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                      }
+                    ]
+                  },
+                  "outputSchema": {
+                    "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"name\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t},\n\t\t\t\"address\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t},\n\t\t\t\"city\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t}\n\t}\n}"
+                  },
+                  "code": {
+                    "value": "module.exports = a = async ({params}) => {\n\t// This doesn't do anything other than work in conjunction with Output Schema\n\treturn params.browserLocalStorage\n}"
+                  },
+                  "nodeTitle": {
+                    "value": "Obj -> OutputSchema"
+                  }
+                }
+              },
+              "position": {
+                "x": 660,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "2dl9opf53v",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                  "customHTML": {
+                    "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n                <h1 class=\"text-center mb-4\">Values Updated!</h1>\n                <p class=\"text-muted text-center\">Your settings are saved to your Browsers Local Storage.</p>\n                <p class=\"text-muted text-center\">Look in browser storage (inspect-->applications), or verify by re-running flow.</p>\n                <!-- <div class=\"d-flex flex-column\">\n                    \n                </div> -->\n            </div>\n        </div>\n    </div>\n</div>"
+                  },
+                  "formFieldsList": {
+                    "value": [
+                      {
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "propertyName": "buttonValue"
+                      }
+                    ]
+                  },
+                  "nodeTitle": {
+                    "value": "Success Message"
+                  },
+                  "nodeDescription": {
+                    "value": "Display success message"
+                  }
+                }
+              },
+              "position": {
+                "x": 1650,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "10yeiiu30j",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#f2f3f4ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#000000"
+                  },
+                  "annotation": {
+                    "value": "View/Update (name, address, city)"
+                  },
+                  "width": {
+                    "value": 240
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  },
+                  "strokeEnabled": {
+                    "value": true
+                  },
+                  "strokeWidth": {
+                    "value": 1
+                  },
+                  "strokeColor": {
+                    "value": "#181818ff"
+                  }
+                },
+                "status": "configured",
+                "idUnique": "iz141hy6yb"
+              },
+              "position": {
+                "x": 870,
+                "y": 300
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "jfogg9113b",
+                "nodeType": "EVAL",
+                "properties": {
+                  "1t4u85gn3y": {
+                    "value": "allTriggersComplete"
+                  },
+                  "2dl9opf53v": {
+                    "value": "allTriggersComplete"
+                  }
+                }
+              },
+              "position": {
+                "x": 1470,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "baz3xfkakv",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#4462edff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#ffffffff"
+                  },
+                  "annotation": {
+                    "value": "BROWSER LOCAL STORAGE DEMO"
+                  },
+                  "width": {
+                    "value": 1800
+                  },
+                  "fontStyle": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 16
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  }
+                },
+                "status": "configured"
+              },
+              "position": {
+                "x": 214,
+                "y": 214
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "2xq2ou2n60",
+                "nodeType": "CONNECTION",
+                "connectionId": "3d5df400637b7e569c767642c13e7386",
+                "connectorId": "flowConnector",
+                "name": "Flow [2023-02-13]",
+                "label": "Flow",
+                "status": "configured",
+                "capabilityName": "startUiSubFlow",
+                "type": "trigger",
+                "properties": {
+                  "subFlowId": {
+                    "value": {
+                      "label": "[SubFlow] Browser Local Storage",
+                      "value": "e4aa049f0fc4d543f63ff210c5e82454"
+                    }
+                  },
+                  "subFlowVersionId": {
+                    "value": -1
+                  },
+                  "action": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"GET\"\n      }\n    ]\n  }\n]"
+                  },
+                  "items": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"{\\\"name\\\":\\\"string\\\",\\\"address\\\":\\\"string\\\", \\\"city\\\":\\\"string\\\"}\"\n      }\n    ]\n  }\n]"
+                  },
+                  "nodeTitle": {
+                    "value": "Get Local Storage"
+                  }
+                }
+              },
+              "position": {
+                "x": 330,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "7dzpzw79pb",
+                "nodeType": "CONNECTION",
+                "connectionId": "3d5df400637b7e569c767642c13e7386",
+                "connectorId": "flowConnector",
+                "name": "Flow [2023-02-13]",
+                "label": "Flow",
+                "status": "configured",
+                "capabilityName": "startUiSubFlow",
+                "type": "trigger",
+                "properties": {
+                  "subFlowId": {
+                    "value": {
+                      "label": "[SubFlow] Browser Local Storage",
+                      "value": "e4aa049f0fc4d543f63ff210c5e82454"
+                    }
+                  },
+                  "subFlowVersionId": {
+                    "value": -1
+                  },
+                  "action": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SET\"\n      }\n    ]\n  }\n]"
+                  },
+                  "items": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"output\",\n        \"data\": \"{{local.j96s08pjfz.payload.output}}\",\n        \"tooltip\": \"{{local.j96s08pjfz.payload.output}}\",\n        \"children\": [\n          {\n            \"text\": \"output\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  "nodeTitle": {
+                    "value": "Set Local Storage"
+                  }
+                }
+              },
+              "position": {
+                "x": 1320,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ym4ufzihmw",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#f2f3f4ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#000000"
+                  },
+                  "annotation": {
+                    "value": "SET (name, address, city)"
+                  },
+                  "width": {
+                    "value": 240
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  },
+                  "strokeEnabled": {
+                    "value": true
+                  },
+                  "strokeWidth": {
+                    "value": 1
+                  },
+                  "strokeColor": {
+                    "value": "#181818ff"
+                  }
+                },
+                "status": "configured",
+                "idUnique": "9sxnfxv7h5"
+              },
+              "position": {
+                "x": 1200,
+                "y": 300
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "j96s08pjfz",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http (Use this for form + custom messages)",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Edit Values"
+                  },
+                  "formFieldsList": {
+                    "value": [
+                      {
+                        "propertyName": "name",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"name\",\n        \"data\": \"{{local.z347f8ttdu.payload.output.name}}\",\n        \"tooltip\": \"{{local.z347f8ttdu.payload.output.name}}\",\n        \"children\": [\n          {\n            \"text\": \"name\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false,
+                        "displayName": ""
+                      },
+                      {
+                        "propertyName": "address",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"address\",\n        \"data\": \"{{local.z347f8ttdu.payload.output.address}}\",\n        \"tooltip\": \"{{local.z347f8ttdu.payload.output.address}}\",\n        \"children\": [\n          {\n            \"text\": \"address\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false,
+                        "displayName": ""
+                      },
+                      {
+                        "propertyName": "city",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"city\",\n        \"data\": \"{{local.z347f8ttdu.payload.output.city}}\",\n        \"tooltip\": \"{{local.z347f8ttdu.payload.output.city}}\",\n        \"children\": [\n          {\n            \"text\": \"city\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false,
+                        "displayName": ""
+                      },
+                      {
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "propertyName": "buttonValue"
+                      }
+                    ]
+                  },
+                  "customHTML": {
+                    "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"Ping Identity\" />\n                <h1 class=\"text-center mb-4\">Browser Local Storage Demo</h1>\n                <p class=\"text-muted text-center\">Values from Browser Local Storage</p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                <form id=\"localStorageForm\" data-id=\"localStorageForm\">\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"name\" name=\"name\"\n                            placeholder=\"Name\" autocomplete=\"off\" />\n                        <label class=\"form-label\" for=\"name\">Name</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"address\" name=\"address\"\n                            placeholder=\"Address\" autocomplete=\"off\" />\n                        <label class=\"form-label\" for=\"address\">address</label>\n                    </div>\n                   <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"city\" name=\"city\"\n                            placeholder=\"City\" autocomplete=\"off\" />\n                        <label class=\"form-label\" for=\"city\">city</label>\n                    </div>            \n                    <div class=\"d-flex flex-column\">\n                        <button data-id=\"submit-button\" type=\"submit\" class=\"btn btn-primary mb-3\"\n                            data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"localStorageForm\"\n                            data-skbuttonvalue=\"SAVE\" id=\"btnSave\">\n                            Save\n                        </button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>"
+                  },
+                  "customCSS": {},
+                  "customScript": {},
+                  "validationRules": {
+                    "value": []
+                  }
+                },
+                "idUnique": "i750r1wtru"
+              },
+              "position": {
+                "x": 990,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "wl1nq24gkg",
+                "nodeType": "EVAL",
+                "properties": {
+                  "7dzpzw79pb": {
+                    "value": "allTriggersComplete"
+                  }
+                }
+              },
+              "position": {
+                "x": 1140,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "rlrhq5a8jh",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#f2f3f4ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#000000"
+                  },
+                  "annotation": {
+                    "value": "Pass in items to retrieve"
+                  },
+                  "width": {
+                    "value": 240
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  },
+                  "strokeEnabled": {
+                    "value": true
+                  },
+                  "strokeWidth": {
+                    "value": 1
+                  },
+                  "strokeColor": {
+                    "value": "#181818ff"
+                  }
+                },
+                "status": "configured",
+                "idUnique": "pxzibdjs66"
+              },
+              "position": {
+                "x": 210,
+                "y": 300
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            }
+          ],
+          "edges": [
+            {
+              "data": {
+                "id": "pf9jfhpi9o",
+                "source": "j96s08pjfz",
+                "target": "wl1nq24gkg"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "l4e4bhikfy",
+                "source": "is1x7ojmio",
+                "target": "j96s08pjfz"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "05gugf6a4c",
+                "source": "2xq2ou2n60",
+                "target": "gluzt7rc07"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "6uo57vu8rr",
+                "source": "7dzpzw79pb",
+                "target": "jfogg9113b"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "jy2z8kchnz",
+                "source": "gluzt7rc07",
+                "target": "z347f8ttdu"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ru3slhp8bp",
+                "source": "jfogg9113b",
+                "target": "2dl9opf53v"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "vhcpkb84ma",
+                "source": "wl1nq24gkg",
+                "target": "7dzpzw79pb"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "2k9hpkodzu",
+                "source": "z347f8ttdu",
+                "target": "is1x7ojmio"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            }
+          ]
+        },
+        "data": {},
+        "zoomingEnabled": true,
+        "userZoomingEnabled": true,
+        "zoom": 1,
+        "minZoom": 1e-50,
+        "maxZoom": 1e+50,
+        "panningEnabled": true,
+        "userPanningEnabled": true,
+        "pan": {
+          "x": 0,
+          "y": 0
+        },
+        "boxSelectionEnabled": true,
+        "renderer": {
+          "name": "null"
+        }
+      },
+      "flowColor": "#ff661c",
+      "savedDate": 1677097180683,
+      "variables": [
+        {
+          "context": "flowInstance",
+          "createdDate": 1676296600642,
+          "fields": {
+            "type": "string",
+            "displayName": "",
+            "mutable": true,
+            "min": 0,
+            "max": 2000
+          },
+          "type": "property",
+          "visibility": "private",
+          "name": "companyName##SK##flowInstance",
+          "companyId": "ee43f700-c751-494d-9dbf-70946a85b328"
+        }
+      ],
+      "connections": [],
+      "parentFlowId": "cdbaef812daf7c1e1fa352c2976fc6ae"
+    },
+    {
+      "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+      "authTokenExpireIds": [],
+      "connectorIds": [
+        "httpConnector",
+        "functionsConnector",
+        "annotationConnector"
+      ],
+      "createdDate": 1677097180424,
+      "currentVersion": 1,
+      "customerId": "f3e47d945ae971a4b4142ec75012d155",
+      "description": "Imported on Wed Feb 22 2023 20:19:40 GMT+0000 (Coordinated Universal Time)",
+      "flowStatus": "enabled",
+      "inputSchemaCompiled": {
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "description": "Action of \"GET\" or \"SET\"",
+              "preferredDataType": "string",
+              "isExpanded": true,
+              "type": "string",
+              "name": "action"
+            },
+            "items": {
+              "description": "For Get = {\"varName\": \"type\"} Set = (\"varName\": \"value\")",
+              "preferredDataType": "object",
+              "isExpanded": true,
+              "type": "object",
+              "name": "items"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "action",
+            "items"
+          ]
+        }
+      },
+      "isInputSchemaSaved": true,
+      "name": "[SubFlow] Browser Local Storage",
+      "publishedVersion": 1,
+      "settings": {
+        "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
+        "intermediateLoadingScreenCSS": "",
+        "intermediateLoadingScreenHTML": "",
+        "logLevel": 3,
+        "useCustomCSS": true,
+        "css": ".companyLogo {\n    /* Ping Logo  */\n    content: url(\"https://assets.pingone.com/ux/ui-library/5.0.2/images/logo-pingidentity.png\");\n    width: 65px;\n    height: 65px;\n}",
+        "cssLinks": [
+          "https://assets.pingone.com/ux/end-user-nano/0.1.0-alpha.1/end-user-nano.css",
+          "https://assets.pingone.com/ux/astro-nano/0.1.0-alpha.4/icons.css"
+        ]
+      },
+      "updatedDate": 1677097180545,
+      "flowId": "e4aa049f0fc4d543f63ff210c5e82454",
+      "versionId": 1,
+      "graphData": {
+        "elements": {
+          "nodes": [
+            {
+              "data": {
+                "id": "2ri1he3c7o",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                  "customHTML": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div style=\\\"display: none\\\">\\n    <form id=\\\"autoSubmitForm\\\" data-id=\\\"autoSubmitForm\\\">\\n        <input type=\\\"text\\\" id=\\\"browserLocalStorage\\\"  data-id=\\\"browserLocalStorage-input\\\" />\\n\\n        <button data-id=\\\"auto-button\\\" type=\\\"submit\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"autoSubmitForm\\\" id=\\\"auto-button\\\" data-skbuttonvalue=\\\"auto-button\\\">\\n            Auto Submit\\n        </button>\\n    </form>\\n</div>\"\n      }\n    ]\n  }\n]"
+                  },
+                  "customCSS": {},
+                  "customScript": {
+                    "value": "\nsetTimeout(() => {\n    const browserLocalStorage = document.getElementById(\"browserLocalStorage\").value;\n    const inputLocalStorage = JSON.parse(browserLocalStorage);\n\n    for (const item in inputLocalStorage) {\n        localStorage.setItem(item, inputLocalStorage[item]);\n    }\n\n    document.getElementById(\"auto-button\").click();\n}, \"500\")\n\n"
+                  },
+                  "nodeTitle": {
+                    "value": "Set Local Storage"
+                  },
+                  "formFieldsList": {
+                    "value": [
+                      {
+                        "propertyName": "browserLocalStorage",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "Object",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"items\",\n        \"data\": \"{{global.parameters.items}}\",\n        \"tooltip\": \"{{global.parameters.items}}\",\n        \"children\": [\n          {\n            \"text\": \"items\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false
+                      },
+                      {
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "propertyName": "buttonValue"
+                      }
+                    ]
+                  }
+                },
+                "idUnique": "kubxunga6s"
+              },
+              "position": {
+                "x": 754,
+                "y": 934
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "uw5sg0vl7z",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                  "customHTML": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div style=\\\"display: none\\\">\\n    <form id=\\\"localStorageForm\\\" data-id=\\\"getLocalStorage\\\">\\n            <input type=\\\"text\\\" id=\\\"vars\\\" />\\n            <input type=\\\"text\\\" id=\\\"browserLocalStorage\\\" />\\n\\n            <button data-id=\\\"auto-button\\\" type=\\\"submit\\\" data-skcomponent=\\\"skbutton\\\" data-skbuttontype=\\\"form-submit\\\" data-skform=\\\"localStorageForm\\\" id=\\\"auto-button\\\"  data-skbuttonvalue=\\\"auto\\\">\\n                Auto Button\\n            </button>\\n        </div>\\n    </form>\\n</div>\"\n      }\n    ]\n  }\n]"
+                  },
+                  "customCSS": {},
+                  "customScript": {
+                    "value": "\nfunction getLocalStorage() {\n  const localStorageItems = JSON.parse(document.getElementById(\"vars\").value);\n\n  let browserLocalStorage = {};\n\n  for (const item of Object.keys(localStorageItems)) {\n    browserLocalStorage[item] = localStorage.getItem(item) || \"\";\n  }\n\n  document.getElementById(\"browserLocalStorage\").value = JSON.stringify(browserLocalStorage);\n  \n  document.getElementById(\"auto-button\").click();\n}\n\nsetTimeout(() => {\n  getLocalStorage()\n}, \"500\")\n"
+                  },
+                  "nodeTitle": {
+                    "value": "Get LocalStorage"
+                  },
+                  "formFieldsList": {
+                    "value": [
+                      {
+                        "propertyName": "browserLocalStorage",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "Object",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false
+                      },
+                      {
+                        "propertyName": "vars",
+                        "preferredControlType": "textField",
+                        "preferredDataType": "Array",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"items\",\n        \"data\": \"{{global.parameters.items}}\",\n        \"tooltip\": \"{{global.parameters.items}}\",\n        \"children\": [\n          {\n            \"text\": \"items\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "hashedVisibility": false
+                      },
+                      {
+                        "preferredControlType": "textField",
+                        "preferredDataType": "string",
+                        "propertyName": "buttonValue"
+                      }
+                    ]
+                  }
+                },
+                "idUnique": "egbrct8gf2"
+              },
+              "position": {
+                "x": 750,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "2b01zys8a4",
+                "nodeType": "EVAL",
+                "label": "Evaluator",
+                "properties": {
+                  "idxbirzn4g": {
+                    "value": "anyTriggersFalse"
+                  }
+                }
+              },
+              "position": {
+                "x": 1200,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "hos410tolt",
+                "nodeType": "EVAL",
+                "label": "Evaluator",
+                "properties": {
+                  "84dhcy3m81": {
+                    "value": "anyTriggersFalse"
+                  }
+                }
+              },
+              "position": {
+                "x": 934,
+                "y": 934
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "av8aoumvx1",
+                "nodeType": "EVAL",
+                "properties": {
+                  "idxbirzn4g": {
+                    "value": "anyTriggersFalse"
+                  }
+                }
+              },
+              "position": {
+                "x": 870,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "umb7p1brst",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "customFunction",
+                "type": "trigger",
+                "properties": {
+                  "variableInputList": {
+                    "value": [
+                      {
+                        "name": "browserLocalStorage",
+                        "preferredDataType": "string",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"browserLocalStorage\",\n        \"data\": \"{{local.uw5sg0vl7z.payload.output.browserLocalStorage}}\",\n        \"tooltip\": \"{{local.uw5sg0vl7z.payload.output.browserLocalStorage}}\",\n        \"children\": [\n          {\n            \"text\": \"browserLocalStorage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                      }
+                    ]
+                  },
+                  "outputSchema": {
+                    "value": "{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"browserLocalStorage\": {\n\t\t\t\t\"type\": \"object\"\n\t\t\t}\n\t\t}\n\t}\n}"
+                  },
+                  "code": {
+                    "value": "// Write your code here\n// Supported language: Javascript \nmodule.exports = a = async ({params}) => {\n\t// const browserLocalStorage = params.browserLocalStorage;\n\t// console.log('params: ', params)\n\treturn {browserLocalStorage: JSON.parse(params.browserLocalStorage)}\n}"
+                  },
+                  "nodeTitle": {
+                    "value": "String --> Object"
+                  }
+                },
+                "idUnique": "s5ql8ghcw9"
+              },
+              "position": {
+                "x": 1050,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "vmzyt0feul",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#5D00D6ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#ffffffff"
+                  },
+                  "annotation": {
+                    "value": "GET LOCAL STORAGE (Map of { varname: type } --> Map of {var: value...} "
+                  },
+                  "width": {
+                    "value": 1000
+                  },
+                  "fontStyle": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  }
+                },
+                "status": "configured"
+              },
+              "position": {
+                "x": 630,
+                "y": 390
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "rdidey8r3z",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#5D00D6ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#ffffffff"
+                  },
+                  "annotation": {
+                    "value": "SET LOCAL STORAGE (Map of { var: value, ...)"
+                  },
+                  "width": {
+                    "value": 1000
+                  },
+                  "fontStyle": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  }
+                },
+                "status": "configured",
+                "idUnique": "gyc0jkmn9e"
+              },
+              "position": {
+                "x": 634,
+                "y": 814
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "hfoub5e8z9",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "AEqualsMultipleB",
+                "type": "trigger",
+                "properties": {
+                  "leftValueA": {
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"auth.svg\",\n        \"url\": \"action\",\n        \"data\": \"{{global.parameters.action}}\",\n        \"tooltip\": \"{{global.parameters.action}}\",\n        \"children\": [\n          {\n            \"text\": \"action\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                  },
+                  "rightValueMultiple": {
+                    "value": [
+                      {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"GET\"\n      }\n    ]\n  }\n]",
+                        "id": "mejllnfpac"
+                      },
+                      {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SET\"\n      }\n    ]\n  }\n]",
+                        "id": "otd67iz4a9"
+                      }
+                    ]
+                  },
+                  "nodeTitle": {
+                    "value": "GET or SET"
+                  }
+                }
+              },
+              "position": {
+                "x": 360,
+                "y": 480
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ja3kb0zs17",
+                "nodeType": "EVAL",
+                "label": "Evaluator"
+              },
+              "position": {
+                "x": 570,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "0kfpf3fnfu",
+                "nodeType": "EVAL"
+              },
+              "position": {
+                "x": 574,
+                "y": 934
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "167zcai1qr",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#4462edff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#ffffffff"
+                  },
+                  "annotation": {
+                    "value": "BROWSER LOCAL STORAGE"
+                  },
+                  "width": {
+                    "value": 1800
+                  },
+                  "fontStyle": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 16
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  }
+                },
+                "status": "configured"
+              },
+              "position": {
+                "x": 214,
+                "y": 214
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "4uxbd8yq87",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createSuccessResponse",
+                "type": "action",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Success"
+                  },
+                  "backgroundColor": {
+                    "value": "#9dc967ff"
+                  },
+                  "claimsNameValuePairs": {
+                    "value": [
+                      {
+                        "name": "browserLocalStorage",
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"functions.svg\",\n        \"url\": \"browserLocalStorage\",\n        \"data\": \"{{local.umb7p1brst.payload.output.browserLocalStorage}}\",\n        \"tooltip\": \"{{local.umb7p1brst.payload.output.browserLocalStorage}}\",\n        \"children\": [\n          {\n            \"text\": \"browserLocalStorage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                        "key": 0.49585084143593416,
+                        "label": "browserLocalStorage (string - flowInstance)",
+                        "type": "string",
+                        "nameDefault": "browserLocalStorage"
+                      }
+                    ]
+                  }
+                },
+                "idUnique": "00surhcg33"
+              },
+              "position": {
+                "x": 1500,
+                "y": 540
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "idxbirzn4g",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createErrorResponse",
+                "type": "action",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Error"
+                  },
+                  "backgroundColor": {
+                    "value": "#ffc8c1ff"
+                  }
+                },
+                "idUnique": "h1gsoqlhle"
+              },
+              "position": {
+                "x": 1500,
+                "y": 690
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "uopnb08jdp",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createSuccessResponse",
+                "type": "action",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Success"
+                  },
+                  "backgroundColor": {
+                    "value": "#9dc967ff"
+                  },
+                  "claimsNameValuePairs": {
+                    "value": []
+                  }
+                },
+                "idUnique": "xpetm0qtuh"
+              },
+              "position": {
+                "x": 1144,
+                "y": 934
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "84dhcy3m81",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createErrorResponse",
+                "type": "action",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Error"
+                  },
+                  "backgroundColor": {
+                    "value": "#ffc8c1ff"
+                  }
+                },
+                "idUnique": "rczn5ytoo3"
+              },
+              "position": {
+                "x": 1144,
+                "y": 1114
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "kb2r2j3mn8",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "createErrorResponse",
+                "type": "action",
+                "properties": {
+                  "nodeTitle": {
+                    "value": "Error"
+                  },
+                  "backgroundColor": {
+                    "value": "#ffc8c1ff"
+                  }
+                },
+                "idUnique": "ptuknudelv"
+              },
+              "position": {
+                "x": 754,
+                "y": 1324
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "o5ozq4ink2",
+                "nodeType": "EVAL"
+              },
+              "position": {
+                "x": 559,
+                "y": 1324
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "zortz8cujk",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                  "backgroundColor": {
+                    "value": "#5D00D6ff"
+                  },
+                  "annotationTextColor": {
+                    "value": "#ffffffff"
+                  },
+                  "annotation": {
+                    "value": "NO MATCH (ERROR)"
+                  },
+                  "width": {
+                    "value": 1000
+                  },
+                  "fontStyle": {
+                    "value": "bold"
+                  },
+                  "fontSize": {
+                    "value": 14
+                  },
+                  "fontFamily": {
+                    "value": "sans-serif"
+                  },
+                  "cornerRadius": {
+                    "value": 8
+                  }
+                },
+                "status": "configured",
+                "idUnique": "bs609iaowy"
+              },
+              "position": {
+                "x": 634,
+                "y": 1234
+              },
+              "group": "nodes",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": false,
+              "classes": ""
+            }
+          ],
+          "edges": [
+            {
+              "data": {
+                "id": "4pyd94sjjz",
+                "source": "0kfpf3fnfu",
+                "target": "2ri1he3c7o"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ig40gyyuen",
+                "source": "2b01zys8a4",
+                "target": "idxbirzn4g"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ntrn9qf1kg",
+                "source": "av8aoumvx1",
+                "target": "idxbirzn4g"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "5xyuulnhvz",
+                "source": "2b01zys8a4",
+                "target": "4uxbd8yq87"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "eneci57uw7",
+                "source": "av8aoumvx1",
+                "target": "umb7p1brst"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "ypodt75qyp",
+                "source": "ja3kb0zs17",
+                "target": "uw5sg0vl7z"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "9qw0xw4e1i",
+                "source": "hfoub5e8z9",
+                "target": "ja3kb0zs17",
+                "multiValueSourceId": "mejllnfpac"
+              },
+              "position": {
+                "x": 64,
+                "y": 52
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "u6881rwffm",
+                "source": "uw5sg0vl7z",
+                "target": "av8aoumvx1"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "3ojcvwjwsy",
+                "source": "umb7p1brst",
+                "target": "2b01zys8a4"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "cb74e1z5h0",
+                "source": "2ri1he3c7o",
+                "target": "hos410tolt"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "0ouvurn0kn",
+                "source": "hfoub5e8z9",
+                "target": "0kfpf3fnfu",
+                "multiValueSourceId": "otd67iz4a9"
+              },
+              "position": {
+                "x": 64,
+                "y": 92
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "4nfaandc5t",
+                "source": "hos410tolt",
+                "target": "uopnb08jdp"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "liph35b3e2",
+                "source": "hos410tolt",
+                "target": "84dhcy3m81"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "2j4qv6gtq9",
+                "source": "hfoub5e8z9",
+                "target": "o5ozq4ink2",
+                "multiValueSourceId": "-1"
+              },
+              "position": {
+                "x": 64,
+                "y": 132
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            },
+            {
+              "data": {
+                "id": "xx5mnm4qp",
+                "source": "o5ozq4ink2",
+                "target": "kb2r2j3mn8"
+              },
+              "position": {
+                "x": 0,
+                "y": 0
+              },
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbable": true,
+              "pannable": true,
+              "classes": ""
+            }
+          ]
+        },
+        "data": {},
+        "zoomingEnabled": true,
+        "userZoomingEnabled": true,
+        "zoom": 1,
+        "minZoom": 1e-50,
+        "maxZoom": 1e+50,
+        "panningEnabled": true,
+        "userPanningEnabled": true,
+        "pan": {
+          "x": 0,
+          "y": 0
+        },
+        "boxSelectionEnabled": true,
+        "renderer": {
+          "name": "null"
+        }
+      },
+      "inputSchema": [
+        {
+          "propertyName": "action",
+          "description": "Action of \"GET\" or \"SET\"",
+          "preferredDataType": "string",
+          "preferredControlType": "textField",
+          "isExpanded": true,
+          "required": true
+        },
+        {
+          "propertyName": "items",
+          "description": "For Get = {\"varName\": \"type\"} Set = (\"varName\": \"value\")",
+          "preferredDataType": "object",
+          "preferredControlType": "textField",
+          "isExpanded": true,
+          "required": true
+        }
+      ],
+      "flowColor": "#ff661c",
+      "savedDate": 1677097180363,
+      "variables": []
+    }
+  ],
+  "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+  "customerId": "f3e47d945ae971a4b4142ec75012d155"
+}
