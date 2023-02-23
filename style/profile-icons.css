@@ -142,7 +142,7 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jwt.png");
 }
 
-.packages-folder {
+.davinci-packages-folder {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/packages-folder.png");
 }
 
@@ -236,6 +236,10 @@
 
 .davinci-snippets {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-snippets.png");
+}
+
+.davinci-snippets-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-snippets-folder.png");
 }
 
 .code-snippets {
