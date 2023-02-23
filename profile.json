@@ -673,6 +673,15 @@
                     "resource": "codeSnippets/array-for-each.js"
                 },
                 {
+                    "pos": "2,1",
+                    "title": "Mask<br/>Email",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-blue",
+                    "toolTip": "Function to mask email address\u000dLanguage: Javascript",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "codeSnippets/mask-email-address.js"
+                },
+                {
                     "pos": "2,8",
                     "title": "Filter<br/>Array",
                     "titlePosition": "MIDDLE",
