@@ -150,6 +150,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/pingone.png");
 }
 
+.pingone-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/pingone-folder.png");
+}
+
 .pink-palette {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-red.png");
 }
@@ -198,6 +202,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/utils.png");
 }
 
+.utilities-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/utils-folder.png");
+}
+
 .ux-team {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ux.png");
 }
@@ -224,6 +232,10 @@
 
 .code-snippets {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/code.png");
+}
+
+.code-snippets-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/code-folder.png");
 }
 
 .contribute {
