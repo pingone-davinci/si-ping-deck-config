@@ -3,6 +3,7 @@
 
 | Date  | Status | Type | Name | Description  |
 |---|:---:|---|---|---|
+| 2023-02-24 | Updated | Code Snippet  | Mask Email  | Javascript code to mask an email address |
 | 2023-02-24 | Updated | Flow Import  | Starter Flow  | Add spacer node to initial flow |
 | 2023-02-23 | Updated | DV Workflow Snippet  | Password Reset | Update PingOne password reset function to standard UX |
 | 2023-02-23 | New | Flow Download  | Starter Flow | Flow includes Ping CSS, instance variables, error handler |
