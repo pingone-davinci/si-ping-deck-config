@@ -72,7 +72,7 @@
                 {
                     "pos": "4,6",
                     "title": "DevOps",
-                    "icon": "devops",
+                    "icon": "devops-folder",
                     "toolTip": "Ping Identity DevOps",
                     "action": "PROFILE",
                     "resource": "devops"
