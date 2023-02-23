@@ -277,3 +277,10 @@
 .annotations {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotations.png");
 }
+
+
+/* EXPERIMENTAL */
+
+.box-component {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/box-component.png");
+}

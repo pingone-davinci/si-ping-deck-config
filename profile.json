@@ -951,6 +951,15 @@
                     }
                 },
                 {
+                    "pos": "4,5",
+                    "title": "Sign In<br/>Form",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-component",
+                    "toolTip": "",
+                    "action": "REDIRECT",
+                    "resource": ""
+                },
+                {
                     "pos": "2,8",
                     "title": "Flow<br/>Templates",
                     "icon": "integration",
