@@ -960,6 +960,15 @@
                     "resource": ""
                 },
                 {
+                    "pos": "4,6",
+                    "title": "Sign In<br/>Form",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-code-snippet",
+                    "toolTip": "",
+                    "action": "REDIRECT",
+                    "resource": ""
+                },
+                {
                     "pos": "2,8",
                     "title": "Flow<br/>Templates",
                     "icon": "integration",
