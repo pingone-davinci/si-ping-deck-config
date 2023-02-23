@@ -27,14 +27,8 @@
       "button": {
         "inputs": [
           {
-            "id": "row",
-            "label": "Row",
-            "default": 2
-          },
-          {
-            "id": "col",
-            "label": "Column",
-            "default": 5
+            "id": "pos",
+            "label": "Position (row,col)"
           },
           {
             "id": "action",
