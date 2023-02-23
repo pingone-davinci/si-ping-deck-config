@@ -184,7 +184,7 @@ button.hidden {
 }
 
 .buttonDiv {
-  background-position: 10px center;
+  background-position: 10px 5px;
   background-repeat: no-repeat;
   height: 72px;
   position: relative;
