@@ -70,6 +70,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/devops.png");
 }
 
+.devops-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/devops-folder.png");
+}
+
 .docker {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/docker.png");
 }
