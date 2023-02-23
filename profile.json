@@ -284,6 +284,20 @@
                     "toolTip": "Teleport method for PingOne account password reset",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciWorkflows/reset-password.json"
+                },
+                {
+                    "pos": "2,1",
+                    "title": "Browser<br/>Storage",
+                    "icon": "integration",
+                    "toolTip": "Browser Local Storage",
+                    "action": "FOLDER",
+                    "resource": "davinciSolutionsFolder",
+                    "args": {
+                        "title": "Browser Local Storage",
+                        "docsUrl": "",
+                        "downloadUrl": "https://pingone-davinci.github.io/si-ping-deck-config/flows/si-browser-local-storage-demo.json",
+                        "downloadFilename": "si-browser-local-storage-demo.json"
+                    }
                 }
             ]
         },
