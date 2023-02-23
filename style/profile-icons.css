@@ -242,6 +242,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-components.png");
 }
 
+.davinci-components-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-components-folder.png");
+}
+
 .davinci-snippets {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/davinci-snippets.png");
 }
