@@ -142,6 +142,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/jwt.png");
 }
 
+.packages-folder {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/packages-folder.png");
+}
+
 .ping {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/ping.png");
 }
