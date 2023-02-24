@@ -292,3 +292,9 @@
 .box-javascript-snippet {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/box-javascript-snippet.png");
 }
+
+/* Mirco Icons */
+
+.micro-davinci-component {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/davinci-component.png");
+}
