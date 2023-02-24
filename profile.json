@@ -675,7 +675,7 @@
                     "toolTip": "Redish Hex value for eror nodes",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/error-node-hex.txt"
-                },
+                }
             ]
         },
         {
