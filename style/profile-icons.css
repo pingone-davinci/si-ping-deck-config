@@ -314,3 +314,7 @@
 .micro-preferences {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/preference-settings.png");
 }
+
+.micro-download {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/resource-download.png");
+}
