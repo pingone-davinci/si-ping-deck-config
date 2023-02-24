@@ -318,3 +318,7 @@
 .micro-download {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/resource-download.png");
 }
+
+.micro-import {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/flow-import.png");
+}
