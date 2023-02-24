@@ -325,7 +325,7 @@
                     "pos": "1,7",
                     "title": "No-Op<br/>UI",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "No-Op UI component",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/no-op-ui.json"
@@ -334,7 +334,7 @@
                     "pos": "1,8",
                     "title": "Instance<br/>Vars",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/initial-instance-variables.json"
@@ -343,7 +343,7 @@
                     "pos": "2,1",
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Sign In form components with username/password fields and button pressed function",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/sign-in-with-password.json"
@@ -352,7 +352,7 @@
                     "pos": "2,2",
                     "title": "Reg<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Basic registration form",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/registration-form.json"
@@ -361,7 +361,7 @@
                     "pos": "2,3",
                     "title": "Success<br/>Msg",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Success message with next-event button",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/success-message.json"
@@ -370,7 +370,7 @@
                     "pos": "2,6",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Success message HTML with Success JSON",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/success-html-with-json.json"
@@ -379,7 +379,7 @@
                     "pos": "2,7",
                     "title": "JSON<br/>Success",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "HTTP JSON Success Node",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/http-json-success.json"
@@ -388,7 +388,7 @@
                     "pos": "2,8",
                     "title": "JSON<br/>Error",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "HTTP JSON Error Node",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/http-json-error.json"
@@ -397,7 +397,7 @@
                     "pos": "4,1",
                     "title": "Pwd<br/>Status",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Password status function connector (Many conditions) with prepopulated password status",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/password-status-function.json"
@@ -779,7 +779,7 @@
                     "pos": "2,5",
                     "title": "Env<br>ID",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "Copy Environment ID Preference",
                     "action": "PREF_CLIPBOARD",
                     "resource": "pingone_envId"
@@ -968,7 +968,7 @@
                     "pos": "4,5",
                     "title": "Sign In<br/>Form",
                     "titlePosition": "MIDDLE",
-                    "icon": "box-component",
+                    "icon": "box-red",
                     "toolTip": "",
                     "action": "REDIRECT",
                     "resource": ""
