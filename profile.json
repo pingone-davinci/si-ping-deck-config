@@ -914,6 +914,20 @@
                     "toolTip": "Decode JWT",
                     "action": "REDIRECT",
                     "resource": "https://developer.pingidentity.com/en/tools/jwt-decoder.html"
+                },
+                {
+                    "pos": "4,1",
+                    "title": "W3Schools",
+                    "toolTip": "W3Schools - Learn to Code",
+                    "action": "REDIRECT",
+                    "resource": "https://www.w3schools.com"
+                },
+                {
+                    "pos": "4,2",
+                    "title": "Bootstap",
+                    "toolTip": "Get started with Bootstrap",
+                    "action": "REDIRECT",
+                    "resource": "https://getbootstrap.com/docs"
                 }
             ]
         },
