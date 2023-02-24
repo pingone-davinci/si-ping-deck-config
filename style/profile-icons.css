@@ -310,3 +310,7 @@
 .micro-url-link {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/url-link.png");
 }
+
+.micro-preferences {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/preference-settings.png");
+}
