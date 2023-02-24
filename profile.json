@@ -597,22 +597,6 @@
                     "toolTip": "Empty HTML form",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/form.html"
-                },
-                {
-                    "pos": "4,1",
-                    "title": "Logo CSS",
-                    "icon": "css",
-                    "toolTip": "CSS class for form logo",
-                    "action": "GIT_CLIPBOARD",
-                    "resource": "davinciSnippets/company-logo.css"
-                },
-                {
-                    "pos": "4,2",
-                    "title": "Ping CSS",
-                    "icon": "css",
-                    "toolTip": "Listing of the CSS files Ping leverages for flows",
-                    "action": "GIT_CLIPBOARD",
-                    "resource": "davinciSnippets/ping-css.txt"
                 }
             ]
         },
@@ -621,7 +605,31 @@
             "title": "Ping Flow Standards Snippets",
             "actions": [
                 {
-                    "pos": "2,1",
+                    "pos": "1,6",
+                    "title": "Logo CSS",
+                    "icon": "css",
+                    "toolTip": "CSS class for form logo",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/company-logo.css"
+                },
+                {
+                    "pos": "1,7",
+                    "title": "Ping CSS",
+                    "icon": "css",
+                    "toolTip": "Listing of the CSS files Ping leverages for flows",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/ping-css.txt"
+                },
+                {
+                    "pos": "1,8",
+                    "title": "Icon CSS",
+                    "icon": "css",
+                    "toolTip": "Ping CSS for standard icons",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/ping-icons-css.txt"
+                },
+                {
+                    "pos": "2,2",
                     "title": "Standards",
                     "icon": "standards",
                     "toolTip": "View Ping's flow standards documentation",
@@ -629,7 +637,7 @@
                     "resource": "https://docs.pingidentity.com/r/en-us/davinci/rxo1664233464532"
                 },
                 {
-                    "pos": "2,2",
+                    "pos": "2,3",
                     "title": "Font",
                     "icon": "font",
                     "toolTip": "Font name for flow annotations",
@@ -637,15 +645,15 @@
                     "resource": "davinciSnippets/annotation-font-family.txt"
                 },
                 {
-                    "pos": "2,3",
-                    "title": "Headers",
+                    "pos": "2,4",
+                    "title": "Title",
                     "icon": "blue-palette",
                     "toolTip": "Blue Hex value for flow title header",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/annotation-hex-blue.txt"
                 },
                 {
-                    "pos": "2,4",
+                    "pos": "2,5",
                     "title": "Functions",
                     "icon": "purple-palette",
                     "toolTip": "Purple Hex value for section headers",
@@ -653,10 +661,10 @@
                     "resource": "davinciSnippets/annotation-hex-purple.txt"
                 },
                 {
-                    "pos": "2,5",
+                    "pos": "2,6",
                     "title": "Annot.",
                     "icon": "gray-palette",
-                    "toolTip": "Gray Hex value for native component annotations",
+                    "toolTip": "Gray Hex value for component annotations",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/annotation-hex-gray.txt"
                 },
