@@ -395,6 +395,15 @@
                     "resource": "davinciComponents/password-status-function.json"
                 },
                 {
+                    "pos": "4,2",
+                    "title": "Risk<br/>Score",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "Risk score function connector (Many conditions) with prepopulated scores (HIGH, MEDIUM, LOW)",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/risk-score-function.json"
+                },
+                {
                     "pos": "4,8",
                     "title": "Readme",
                     "icon": "readme",

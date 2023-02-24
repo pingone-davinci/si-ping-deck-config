@@ -1,0 +1,55 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "cryfhjoev3",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "functionsConnector",
+                "status": "configured",
+                "capabilityName": "AEqualsMultipleB",
+                "type": "trigger",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Risk Score"
+                    },
+                    "leftValueA": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    },
+                    "rightValueMultiple": {
+                        "value": [
+                            {
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"LOW\"\n      }\n    ]\n  }\n]",
+                                "id": "7smt5dpufe"
+                            },
+                            {
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"MEDIUM\"\n      }\n    ]\n  }\n]",
+                                "id": "9y4ehc5dlm"
+                            },
+                            {
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"HIGH\"\n      }\n    ]\n  }\n]",
+                                "id": "hfp94chsr4"
+                            }
+                        ]
+                    }
+                },
+                "idUnique": "85x21u57w3"
+            },
+            "position": {
+                "x": 1062,
+                "y": 1147.607732580946
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}
