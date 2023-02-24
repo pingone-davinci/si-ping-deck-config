@@ -783,14 +783,6 @@
                     "toolTip": "Copy Environment ID Preference",
                     "action": "PREF_CLIPBOARD",
                     "resource": "pingone_envId"
-                },
-                {
-                    "pos": "4,8",
-                    "title": "Readme",
-                    "icon": "readme",
-                    "toolTip": "TBD",
-                    "action": "",
-                    "resource": ""
                 }
             ]
         },
