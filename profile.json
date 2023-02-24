@@ -605,7 +605,7 @@
             "title": "Ping Flow Standards Snippets",
             "actions": [
                 {
-                    "pos": "1,6",
+                    "pos": "1,5",
                     "title": "Logo CSS",
                     "icon": "css",
                     "toolTip": "CSS class for form logo",
@@ -613,7 +613,7 @@
                     "resource": "davinciSnippets/company-logo.css"
                 },
                 {
-                    "pos": "1,7",
+                    "pos": "1,6",
                     "title": "Ping CSS",
                     "icon": "css",
                     "toolTip": "Listing of the CSS files Ping leverages for flows",
@@ -621,7 +621,7 @@
                     "resource": "davinciSnippets/ping-css.txt"
                 },
                 {
-                    "pos": "1,8",
+                    "pos": "1,7",
                     "title": "Icon CSS",
                     "icon": "css",
                     "toolTip": "Ping CSS for standard icons",
