@@ -314,14 +314,6 @@
                     "resource": "annotationComponents"
                 },
                 {
-                    "pos": "1,2",
-                    "title": "Spacer",
-                    "icon": "spacer",
-                    "toolTip": "Spacer annotation",
-                    "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/spacer.json"
-                },
-                {
                     "pos": "1,7",
                     "title": "No-Op<br/>UI",
                     "titlePosition": "MIDDLE",
@@ -439,6 +431,14 @@
                     "toolTip": "Native conector annotation",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/node-annotation-gray.json"
+                },
+                {
+                    "pos": "2,6",
+                    "title": "Spacer",
+                    "icon": "spacer",
+                    "toolTip": "Spacer annotation",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/spacer.json"
                 }
             ]
         },
