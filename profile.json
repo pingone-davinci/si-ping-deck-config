@@ -8,7 +8,7 @@
                 {
                     "pos": "2,2",
                     "title": "Packages",
-                    "icon": "davinci-packages-folder",
+                    "icon": "davinci-packages",
                     "toolTip": "PingOne Packages",
                     "action": "PROFILE",
                     "resource": "davinciPackages"
@@ -16,7 +16,7 @@
                 {
                     "pos": "2,3",
                     "title": "Solutions",
-                    "icon": "davinci-solutions-folder",
+                    "icon": "davinci-solutions",
                     "toolTip": "PingOne DaVinci Solutions",
                     "action": "PROFILE",
                     "resource": "davinciSolutions"
@@ -24,7 +24,7 @@
                 {
                     "pos": "2,4",
                     "title": "Flow Blocks",
-                    "icon": "davinci-workflows-folder",
+                    "icon": "davinci-workflows",
                     "toolTip": "PingOne DaVinci Workflows",
                     "action": "PROFILE",
                     "resource": "davinciWorkflows"
@@ -32,7 +32,7 @@
                 {
                     "pos": "2,5",
                     "title": "Components",
-                    "icon": "davinci-components-folder",
+                    "icon": "davinci-components",
                     "toolTip": "PingOne DaVinci Components",
                     "action": "PROFILE",
                     "resource": "davinciComponents"
@@ -40,7 +40,7 @@
                 {
                     "pos": "2,6",
                     "title": "Snippets",
-                    "icon": "davinci-snippets-folder",
+                    "icon": "davinci-snippets",
                     "toolTip": "PingOne DaVinci Snippets",
                     "action": "PROFILE",
                     "resource": "davinciSnippets"
@@ -48,7 +48,7 @@
                 {
                     "pos": "2,7",
                     "title": "Code",
-                    "icon": "code-snippets-folder",
+                    "icon": "code-snippets",
                     "toolTip": "Code Snippets",
                     "action": "PROFILE",
                     "resource": "codeSnippets"
@@ -56,7 +56,7 @@
                 {
                     "pos": "4,2",
                     "title": "PingOne",
-                    "icon": "pingone-folder",
+                    "icon": "pingone",
                     "toolTip": "PingOne profile",
                     "action": "PROFILE",
                     "resource": "pingone"
@@ -64,7 +64,7 @@
                 {
                     "pos": "4,5",
                     "title": "Utils",
-                    "icon": "utilities-folder",
+                    "icon": "utilities",
                     "toolTip": "",
                     "action": "PROFILE",
                     "resource": "utilities"
@@ -72,7 +72,7 @@
                 {
                     "pos": "4,6",
                     "title": "DevOps",
-                    "icon": "devops-folder",
+                    "icon": "devops",
                     "toolTip": "Ping Identity DevOps",
                     "action": "PROFILE",
                     "resource": "devops"
