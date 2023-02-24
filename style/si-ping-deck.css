@@ -85,6 +85,7 @@ button.action {
   margin-right: 5px;
   padding: 0px;
   width: 80px;
+  position: relative;
 }
 
 button.action:hover {
@@ -93,6 +94,14 @@ button.action:hover {
 
 button.action:active {
   background-color: var(--lite-gray);
+}
+
+.micro-icon {
+  height: 15px;
+  left: 23px;
+  position: absolute;
+  top: -9px;
+  width: 30px;
 }
 
 button.hidden {
