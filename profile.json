@@ -928,6 +928,13 @@
                     "toolTip": "Get started with Bootstrap",
                     "action": "REDIRECT",
                     "resource": "https://getbootstrap.com/docs"
+                },
+                {
+                    "pos": "4,3",
+                    "title": "AWK<br>Tool",
+                    "toolTip": "AWK Tool",
+                    "action": "REDIRECT",
+                    "resource": "https://awk.js.org"
                 }
             ]
         },
