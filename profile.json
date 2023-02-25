@@ -680,7 +680,7 @@
                     "pos": "2,7",
                     "title": "Error",
                     "icon": "pink-palette",
-                    "toolTip": "Redish Hex value for eror nodes",
+                    "toolTip": "Redish Hex value for error nodes",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/error-node-hex.txt"
                 }
