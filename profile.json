@@ -418,7 +418,7 @@
             "title": "Flow Annotation Examples",
             "actions": [
                 {
-                    "pos": "2,3",
+                    "pos": "2,2",
                     "title": "Title",
                     "icon": "annotation-blue",
                     "toolTip": "Title annotation",
@@ -426,7 +426,7 @@
                     "resource": "davinciComponents/flow-title-annotation.json"
                 },
                 {
-                    "pos": "2,4",
+                    "pos": "2,3",
                     "title": "Function",
                     "icon": "annotation-purple",
                     "toolTip": "Flow function annotation",
@@ -434,7 +434,7 @@
                     "resource": "davinciComponents/function-title-annotation.json"
                 },
                 {
-                    "pos": "2,5",
+                    "pos": "2,4",
                     "title": "Annotation",
                     "icon": "annotation-gray",
                     "toolTip": "DaVinci conector annotation",
@@ -442,7 +442,7 @@
                     "resource": "davinciComponents/node-annotation-gray.json"
                 },
                 {
-                    "pos": "2,6",
+                    "pos": "2,5",
                     "title": "Schema",
                     "icon": "annotation-yellow",
                     "toolTip": "DaVinci function input schema annotation",
