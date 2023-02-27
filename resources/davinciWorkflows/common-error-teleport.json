@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "m25kzlwgci",
+                "id": "k3xo0s97gl",
                 "nodeType": "CONNECTION",
                 "connectionId": "b3b6bfe4bcfc8bd1d8851a5664d824d2",
                 "connectorId": "nodeConnector",
@@ -13,7 +13,7 @@
                 "type": "trigger",
                 "properties": {
                     "inputSchema": {
-                        "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorCode\"\n\t\t},\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
+                        "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorCode\"\n\t\t},\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t},\n\t\t\"userAction\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"User Action\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"userAction\"\n\t\t}\n\t}\n}"
                     },
                     "nodeTitle": {
                         "value": "Error"
@@ -21,8 +21,8 @@
                 }
             },
             "position": {
-                "x": 300,
-                "y": 870
+                "x": 270,
+                "y": 1200
             },
             "group": "nodes",
             "removed": false,
@@ -35,13 +35,13 @@
         },
         {
             "data": {
-                "id": "cezzvo20ht",
+                "id": "yd004hb9a9",
                 "nodeType": "EVAL",
                 "label": "Evaluator"
             },
             "position": {
-                "x": 420,
-                "y": 870
+                "x": 360,
+                "y": 1200
             },
             "group": "nodes",
             "removed": false,
@@ -54,7 +54,7 @@
         },
         {
             "data": {
-                "id": "n5h11gdwsa",
+                "id": "efq9bpewkg",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -74,7 +74,7 @@
                         "value": [
                             {
                                 "name": "errorCode",
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.m25kzlwgci.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.m25kzlwgci.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.k3xo0s97gl.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.k3xo0s97gl.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                                 "key": 0.7505189133115058,
                                 "label": "errorCode (number - flowInstance)",
                                 "type": "number",
@@ -82,7 +82,7 @@
                             },
                             {
                                 "name": "errorMessage",
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.m25kzlwgci.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.m25kzlwgci.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.k3xo0s97gl.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.k3xo0s97gl.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                                 "key": 0.9809707255767062,
                                 "label": "errorMessage (string - flowInstance)",
                                 "type": "string",
@@ -93,8 +93,8 @@
                 }
             },
             "position": {
-                "x": 600,
-                "y": 870
+                "x": 510,
+                "y": 1200
             },
             "group": "nodes",
             "removed": false,
@@ -107,7 +107,7 @@
         },
         {
             "data": {
-                "id": "nr1s8g8f4r",
+                "id": "qnqk42crb9",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -122,7 +122,7 @@
                         "value": "#ffffffff"
                     },
                     "annotation": {
-                        "value": "Error Handler"
+                        "value": "Error"
                     },
                     "width": {
                         "value": 1000
@@ -143,8 +143,65 @@
                 "status": "configured"
             },
             "position": {
-                "x": 210,
-                "y": 720
+                "x": 390,
+                "y": 1020
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "zqb243lo2d",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#fffaa0ff"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Input Schema: errorCode, errorMessage, userAction"
+                    },
+                    "width": {
+                        "value": 400
+                    },
+                    "fontSize": {
+                        "value": 14
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "cornerRadius": {
+                        "value": 8
+                    },
+                    "strokeEnabled": {
+                        "value": false
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    },
+                    "strokeColor": {
+                        "value": "#181818ff"
+                    }
+                },
+                "status": "configured",
+                "idUnique": "940rm8qjb1"
+            },
+            "position": {
+                "x": 90,
+                "y": 1110
             },
             "group": "nodes",
             "removed": false,
@@ -159,9 +216,9 @@
     "clonedEdges": [
         {
             "data": {
-                "id": "wdr64p71tt",
-                "source": "m25kzlwgci",
-                "target": "cezzvo20ht"
+                "id": "eulkz8lrfo",
+                "source": "k3xo0s97gl",
+                "target": "yd004hb9a9"
             },
             "position": {
                 "x": 0,
@@ -178,9 +235,9 @@
         },
         {
             "data": {
-                "id": "9vfcc91wm9",
-                "source": "cezzvo20ht",
-                "target": "n5h11gdwsa"
+                "id": "vt4k3tz7x4",
+                "source": "yd004hb9a9",
+                "target": "efq9bpewkg"
             },
             "position": {
                 "x": 0,
