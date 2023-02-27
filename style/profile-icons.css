@@ -18,6 +18,10 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/annotation-purple.png");
 }
 
+.http-blue {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/http-default-hex.png");
+}
+
 .base {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/base64.png");
 }

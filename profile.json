@@ -691,6 +691,14 @@
                     "toolTip": "Redish Hex value for error nodes",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/error-node-hex.txt"
+                },
+                {
+                    "pos": "3,3",
+                    "title": "HTTP",
+                    "icon": "http-blue",
+                    "toolTip": "Default Hex value for HTTP nodes",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/http-default-hex.txt"
                 }
             ]
         },
