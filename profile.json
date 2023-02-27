@@ -437,12 +437,20 @@
                     "pos": "2,5",
                     "title": "Annotation",
                     "icon": "annotation-gray",
-                    "toolTip": "Native conector annotation",
+                    "toolTip": "DaVinci conector annotation",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/node-annotation-gray.json"
                 },
                 {
                     "pos": "2,6",
+                    "title": "Schema",
+                    "icon": "annotation-yellow",
+                    "toolTip": "DaVinci function input schema annotation",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/schema-annotation.json"
+                },
+                {
+                    "pos": "2,7",
                     "title": "Spacer",
                     "icon": "spacer",
                     "toolTip": "Spacer annotation",
