@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "k3xo0s97gl",
+                "id": "zj8p0uppev",
                 "nodeType": "CONNECTION",
                 "connectionId": "b3b6bfe4bcfc8bd1d8851a5664d824d2",
                 "connectorId": "nodeConnector",
@@ -21,8 +21,8 @@
                 }
             },
             "position": {
-                "x": 270,
-                "y": 1200
+                "x": 570,
+                "y": 1260
             },
             "group": "nodes",
             "removed": false,
@@ -35,13 +35,13 @@
         },
         {
             "data": {
-                "id": "yd004hb9a9",
+                "id": "p2uwxvq6k2",
                 "nodeType": "EVAL",
                 "label": "Evaluator"
             },
             "position": {
-                "x": 360,
-                "y": 1200
+                "x": 660,
+                "y": 1260
             },
             "group": "nodes",
             "removed": false,
@@ -54,7 +54,7 @@
         },
         {
             "data": {
-                "id": "efq9bpewkg",
+                "id": "rn4fwp4vd3",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -74,7 +74,7 @@
                         "value": [
                             {
                                 "name": "errorCode",
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.k3xo0s97gl.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.k3xo0s97gl.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.zj8p0uppev.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.zj8p0uppev.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                                 "key": 0.7505189133115058,
                                 "label": "errorCode (number - flowInstance)",
                                 "type": "number",
@@ -82,19 +82,27 @@
                             },
                             {
                                 "name": "errorMessage",
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.k3xo0s97gl.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.k3xo0s97gl.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.zj8p0uppev.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.zj8p0uppev.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                                 "key": 0.9809707255767062,
                                 "label": "errorMessage (string - flowInstance)",
                                 "type": "string",
                                 "nameDefault": "errorMessage"
+                            },
+                            {
+                                "name": "userAction",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"userAction\",\n        \"data\": \"{{local.zj8p0uppev.payload.output.userAction}}\",\n        \"tooltip\": \"{{local.zj8p0uppev.payload.output.userAction}}\",\n        \"children\": [\n          {\n            \"text\": \"userAction\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "key": 0.2370967796224619,
+                                "label": "userAction (string - flowInstance)",
+                                "type": "string",
+                                "nameDefault": "userAction"
                             }
                         ]
                     }
                 }
             },
             "position": {
-                "x": 510,
-                "y": 1200
+                "x": 810,
+                "y": 1260
             },
             "group": "nodes",
             "removed": false,
@@ -107,7 +115,7 @@
         },
         {
             "data": {
-                "id": "qnqk42crb9",
+                "id": "9x5s3xw4ft",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -143,8 +151,8 @@
                 "status": "configured"
             },
             "position": {
-                "x": 390,
-                "y": 1020
+                "x": 510,
+                "y": 1080
             },
             "group": "nodes",
             "removed": false,
@@ -157,7 +165,7 @@
         },
         {
             "data": {
-                "id": "zqb243lo2d",
+                "id": "pz5lzmmqw8",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -200,8 +208,8 @@
                 "idUnique": "940rm8qjb1"
             },
             "position": {
-                "x": 90,
-                "y": 1110
+                "x": 510,
+                "y": 1140
             },
             "group": "nodes",
             "removed": false,
@@ -216,9 +224,9 @@
     "clonedEdges": [
         {
             "data": {
-                "id": "eulkz8lrfo",
-                "source": "k3xo0s97gl",
-                "target": "yd004hb9a9"
+                "id": "n5xcg00bf2",
+                "source": "zj8p0uppev",
+                "target": "p2uwxvq6k2"
             },
             "position": {
                 "x": 0,
@@ -235,9 +243,9 @@
         },
         {
             "data": {
-                "id": "vt4k3tz7x4",
-                "source": "yd004hb9a9",
-                "target": "efq9bpewkg"
+                "id": "z7uimn7xpi",
+                "source": "p2uwxvq6k2",
+                "target": "rn4fwp4vd3"
             },
             "position": {
                 "x": 0,
