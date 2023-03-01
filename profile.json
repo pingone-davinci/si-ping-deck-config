@@ -314,7 +314,7 @@
                     "resource": "annotationComponents"
                 },
                 {
-                    "pos": "1,7",
+                    "pos": "1,6",
                     "title": "No-Op<br/>UI",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
@@ -323,13 +323,22 @@
                     "resource": "davinciComponents/no-op-ui.json"
                 },
                 {
-                    "pos": "1,8",
+                    "pos": "1,7",
                     "title": "Instance<br/>Vars",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/initial-instance-variables.json"
+                },
+                {
+                    "pos": "1,8",
+                    "title": "Demo<br/>Msg",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "HTTP node that can provide an overview of the demo including link to documentation",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/flow-demo-msg.json"
                 },
                 {
                     "pos": "2,1",
