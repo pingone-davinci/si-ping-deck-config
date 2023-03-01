@@ -265,7 +265,7 @@
                     "icon": "davinci-download",
                     "toolTip": "Starter flow that includes Ping CSS, instance variables, error handler",
                     "action": "URL_DOWNLOAD",
-                    "resource": "flows/ping-starter-flow.json"
+                    "resource": "https://pingone-davinci.github.io/si-ping-deck-config/flows/ping-starter-flow.json"
                 },
                 {
                     "pos": "1,3",
