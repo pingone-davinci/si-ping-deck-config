@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "wt5rk493qq",
+                "id": "wq9cjoa18u",
                 "nodeType": "CONNECTION",
                 "connectionId": "06922a684039827499bdbdd97f49827b",
                 "connectorId": "variablesConnector",
@@ -55,6 +55,13 @@
                                 "key": 0.33706413004714153,
                                 "label": "relyingPartyId (string - flowInstance)",
                                 "type": "string"
+                            },
+                            {
+                                "name": "flowDocsURL",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "key": 0.8153538352277487,
+                                "label": "flowDocsURL (string - flowInstance)",
+                                "type": "string"
                             }
                         ]
                     },
@@ -65,11 +72,11 @@
                         "value": "Initialize common values used in the flow so that they're easier to update in one place"
                     }
                 },
-                "idUnique": "xffn1pfvaz"
+                "idUnique": "a99irgrtx7"
             },
             "position": {
-                "x": 397,
-                "y": 243
+                "x": 200,
+                "y": 200
             },
             "group": "nodes",
             "removed": false,
