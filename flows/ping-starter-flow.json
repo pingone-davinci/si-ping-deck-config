@@ -3,14 +3,14 @@
   "authTokenExpireIds": [],
   "connectorIds": [
     "annotationConnector",
-    "variablesConnector",
     "httpConnector",
-    "nodeConnector"
+    "nodeConnector",
+    "variablesConnector"
   ],
-  "createdDate": 1677613076598,
-  "currentVersion": 3,
+  "createdDate": 1677688563883,
+  "currentVersion": 4,
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
-  "description": "Imported on Tue Feb 28 2023 19:36:46 GMT+0000 (Coordinated Universal Time)",
+  "description": "Imported on Wed Mar 01 2023 16:32:25 GMT+0000 (Coordinated Universal Time)",
   "enabledGraphData": {
     "elements": {
       "nodes": [
@@ -210,161 +210,6 @@
         },
         {
           "data": {
-            "id": "m25kzlwgci",
-            "nodeType": "CONNECTION",
-            "connectionId": "b3b6bfe4bcfc8bd1d8851a5664d824d2",
-            "connectorId": "nodeConnector",
-            "name": "Node",
-            "label": "Node",
-            "status": "configured",
-            "capabilityName": "startNode",
-            "type": "trigger",
-            "properties": {
-              "inputSchema": {
-                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorCode\"\n\t\t},\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t}\n\t}\n}"
-              },
-              "nodeTitle": {
-                "value": "Error"
-              }
-            }
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "cezzvo20ht",
-            "nodeType": "EVAL",
-            "label": "Evaluator"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "n5h11gdwsa",
-            "nodeType": "CONNECTION",
-            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
-            "connectorId": "httpConnector",
-            "name": "Http",
-            "label": "Http",
-            "status": "configured",
-            "capabilityName": "createErrorResponse",
-            "type": "action",
-            "properties": {
-              "nodeTitle": {
-                "value": "Error JSON"
-              },
-              "backgroundColor": {
-                "value": "#ffc8c1ff"
-              },
-              "claimsNameValuePairs": {
-                "value": [
-                  {
-                    "name": "errorCode",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.m25kzlwgci.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.m25kzlwgci.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.7505189133115058,
-                    "label": "errorCode (number - flowInstance)",
-                    "type": "number",
-                    "nameDefault": "errorCode"
-                  },
-                  {
-                    "name": "errorMessage",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.m25kzlwgci.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.m25kzlwgci.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.9809707255767062,
-                    "label": "errorMessage (string - flowInstance)",
-                    "type": "string",
-                    "nameDefault": "errorMessage"
-                  }
-                ]
-              }
-            }
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "nr1s8g8f4r",
-            "nodeType": "ANNOTATION",
-            "name": "Annotation",
-            "connectionId": "921bfae85c38ed45045e07be703d86b8",
-            "connectorId": "annotationConnector",
-            "capabilityName": "updateAnnotationProperties",
-            "type": "action",
-            "properties": {
-              "backgroundColor": {
-                "value": "#5D00D6ff"
-              },
-              "annotationTextColor": {
-                "value": "#ffffffff"
-              },
-              "annotation": {
-                "value": "Error Handler "
-              },
-              "width": {
-                "value": 1000
-              },
-              "fontStyle": {
-                "value": "bold"
-              },
-              "fontSize": {
-                "value": 14
-              },
-              "fontFamily": {
-                "value": "sans-serif"
-              },
-              "cornerRadius": {
-                "value": 8
-              }
-            },
-            "status": "configured"
-          },
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
             "id": "qgh0ikalf3",
             "nodeType": "ANNOTATION",
             "name": "Annotation",
@@ -418,28 +263,221 @@
           "grabbable": true,
           "pannable": false,
           "classes": ""
-        }
-      ],
-      "edges": [
+        },
         {
           "data": {
-            "id": "o8sgd38p64",
-            "source": "t5lim69t2u",
-            "target": "u5khyxw07p"
+            "id": "u3hg89pxtd",
+            "nodeType": "CONNECTION",
+            "connectionId": "b3b6bfe4bcfc8bd1d8851a5664d824d2",
+            "connectorId": "nodeConnector",
+            "name": "Node",
+            "label": "Node",
+            "status": "configured",
+            "capabilityName": "startNode",
+            "type": "trigger",
+            "properties": {
+              "inputSchema": {
+                "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"errorCode\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Error Code\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorCode\"\n\t\t},\n\t\t\"errorMessage\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"Error Message\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"errorMessage\"\n\t\t},\n\t\t\"userAction\": {\n\t\t\t\"type\": \"String\",\n\t\t\t\"displayName\": \"User Action\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"userAction\"\n\t\t}\n\t}\n}"
+              },
+              "nodeTitle": {
+                "value": "Error"
+              }
+            }
           },
           "position": {
             "x": 0,
             "y": 0
           },
-          "group": "edges",
+          "group": "nodes",
           "removed": false,
           "selected": false,
           "selectable": true,
           "locked": false,
           "grabbable": true,
-          "pannable": true,
+          "pannable": false,
           "classes": ""
         },
+        {
+          "data": {
+            "id": "sl186mcyxm",
+            "nodeType": "EVAL",
+            "label": "Evaluator"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "v2mla44sjx",
+            "nodeType": "CONNECTION",
+            "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+            "connectorId": "httpConnector",
+            "name": "Http",
+            "label": "Http",
+            "status": "configured",
+            "capabilityName": "createErrorResponse",
+            "type": "action",
+            "properties": {
+              "nodeTitle": {
+                "value": "Error JSON"
+              },
+              "backgroundColor": {
+                "value": "#ffc8c1ff"
+              },
+              "claimsNameValuePairs": {
+                "value": [
+                  {
+                    "name": "errorCode",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.u3hg89pxtd.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.u3hg89pxtd.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.7505189133115058,
+                    "label": "errorCode (number - flowInstance)",
+                    "type": "number",
+                    "nameDefault": "errorCode"
+                  },
+                  {
+                    "name": "errorMessage",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.u3hg89pxtd.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.u3hg89pxtd.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.9809707255767062,
+                    "label": "errorMessage (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "errorMessage"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "bffo9fuq0r",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#5D00D6ff"
+              },
+              "annotationTextColor": {
+                "value": "#ffffffff"
+              },
+              "annotation": {
+                "value": "Error"
+              },
+              "width": {
+                "value": 1000
+              },
+              "fontStyle": {
+                "value": "bold"
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "cornerRadius": {
+                "value": 8
+              }
+            },
+            "status": "configured"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "eeqq8t95bc",
+            "nodeType": "ANNOTATION",
+            "name": "Annotation",
+            "connectionId": "921bfae85c38ed45045e07be703d86b8",
+            "connectorId": "annotationConnector",
+            "capabilityName": "updateAnnotationProperties",
+            "type": "action",
+            "properties": {
+              "backgroundColor": {
+                "value": "#fffaa0ff"
+              },
+              "annotationTextColor": {
+                "value": "#000000"
+              },
+              "annotation": {
+                "value": "Input Schema: errorCode, errorMessage, userAction"
+              },
+              "width": {
+                "value": 400
+              },
+              "fontSize": {
+                "value": 14
+              },
+              "fontFamily": {
+                "value": "sans-serif"
+              },
+              "cornerRadius": {
+                "value": 8
+              },
+              "strokeEnabled": {
+                "value": false
+              },
+              "strokeWidth": {
+                "value": 1
+              },
+              "strokeColor": {
+                "value": "#181818ff"
+              }
+            },
+            "status": "configured",
+            "idUnique": "940rm8qjb1"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        }
+      ],
+      "edges": [
         {
           "data": {
             "id": "ip6mun6bpl",
@@ -461,9 +499,9 @@
         },
         {
           "data": {
-            "id": "wdr64p71tt",
-            "source": "m25kzlwgci",
-            "target": "cezzvo20ht"
+            "id": "o8sgd38p64",
+            "source": "t5lim69t2u",
+            "target": "u5khyxw07p"
           },
           "position": {
             "x": 0,
@@ -480,9 +518,28 @@
         },
         {
           "data": {
-            "id": "9vfcc91wm9",
-            "source": "cezzvo20ht",
-            "target": "n5h11gdwsa"
+            "id": "45yd0xsvc2",
+            "source": "u3hg89pxtd",
+            "target": "sl186mcyxm"
+          },
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "group": "edges",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": true,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "1o7x427ffp",
+            "source": "sl186mcyxm",
+            "target": "v2mla44sjx"
           },
           "position": {
             "x": 0,
@@ -518,7 +575,7 @@
   },
   "flowStatus": "enabled",
   "name": "Starter Flow",
-  "orx": "{\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"6af3e130d43bca231c08e4652f77b09a\",\"flowVersionId\":1,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"end_0\",\"start_1\",\"end_1\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"6af3e130d43bca231c08e4652f77b09a\",\"flowVersionId\":1,\"id\":\"ctyv1xvx7e\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"populationId\",\"value\":\"\",\"key\":0.9673372774789002,\"type\":\"string\",\"label\":\"populationId (string - flowInstance)\"},{\"name\":\"companyName\",\"value\":\"Ping Identity\",\"key\":0.8558926100565449,\"label\":\"companyName (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"origin\",\"value\":\"auth.pingone.com\",\"key\":0.38383064124643007,\"label\":\"origin (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"originURL\",\"value\":\"https://auth.pingone.com\",\"key\":0.3895964400152929,\"label\":\"originURL (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"relyingParty\",\"value\":\"PingOne\",\"key\":0.8294031869442895,\"label\":\"relyingParty (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"relyingPartyId\",\"value\":\"auth.pingone.com\",\"key\":0.33706413004714153,\"label\":\"relyingPartyId (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Set flow instance variables\"},\"nodeDescription\":{\"value\":\"Initialize common values used in the flow so that they're easier to update in one place\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":0,\"signalId\":0}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"end_0\",\"conditions\":{\"$and\":[{\"id\":\"ctyv1xvx7e\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"6af3e130d43bca231c08e4652f77b09a\",\"flowVersionId\":1,\"id\":\"u5khyxw07p\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<div class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n    <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n            <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                <img class=\\\"companyLogo align-self-center mb-5\\\" alt=\\\"{{global.variables.companyName}}\\\"/>\\n                <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n                <p class=\\\"text-muted text-center\\\">__SUCCESS_MSG_1__</p>\\n                <p class=\\\"text-muted text-center\\\">__SUCCESS_MSG_2__</p>\\n                <div class=\\\"d-flex flex-column\\\">\\n                    <button data-id=\\\"button\\\" type=\\\"submit\\\" class=\\\"btn btn-primary mb-3\\\" data-skcomponent=\\\"skbutton\\\"\\n                            data-skbuttontype=\\\"next-event\\\">Exit</button>\\n                </div>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]},\"nodeTitle\":{\"value\":\"Success Message\"},\"nodeDescription\":{\"value\":\"Display success message\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":1,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"t5lim69t2u\",\"transitionId\":1},{\"from\":[\"start_1\"],\"to\":\"end_1\",\"conditions\":{\"$and\":[{\"id\":\"m25kzlwgci\",\"connectionId\":\"b3b6bfe4bcfc8bd1d8851a5664d824d2\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\"}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"6af3e130d43bca231c08e4652f77b09a\",\"flowVersionId\":1,\"id\":\"n5h11gdwsa\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createErrorResponse\",\"properties\":{\"nodeTitle\":{\"value\":\"Error JSON\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"},\"claimsNameValuePairs\":{\"value\":[{\"name\":\"errorCode\",\"value\":\"{{local.m25kzlwgci.payload.output.errorCode}}\",\"key\":0.7505189133115058,\"label\":\"errorCode (number - flowInstance)\",\"type\":\"number\",\"nameDefault\":\"errorCode\"},{\"name\":\"errorMessage\",\"value\":\"{{local.m25kzlwgci.payload.output.errorMessage}}\",\"key\":0.9809707255767062,\"label\":\"errorMessage (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"errorMessage\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"cezzvo20ht\",\"transitionId\":2}],\"history\":[],\"outputs\":{\"variablesConnector_saveValue\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"global.variables.companyName\",\"local.m25kzlwgci.payload.output.errorCode\",\"local.m25kzlwgci.payload.output.errorMessage\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"u5khyxw07p\":\"initialize\",\"u5khyxw07p_customHTMLTemplate\":\"initialize\",\"n5h11gdwsa\":\"initialize\",\"n5h11gdwsa_createErrorResponse\":\"initialize\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"global.variables.companyName\":\"\",\"local.m25kzlwgci.payload.output.errorCode\":\"\",\"local.m25kzlwgci.payload.output.errorMessage\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"u5khyxw07p\":\"initialize\",\"n5h11gdwsa\":\"initialize\"},\"nodeStates\":{\"ctyv1xvx7e\":\"start_0\",\"m25kzlwgci\":\"start_1\",\"u5khyxw07p\":\"end_0\",\"n5h11gdwsa\":\"end_1\"}}",
+  "orx": "{\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"0b6a1d065c7764a293cee7e95393952c\",\"flowVersionId\":1,\"version\":\"4.0.0\",\"states\":[\"initialize\",\"start_0\",\"end_0\",\"start_1\",\"end_1\"],\"currentState\":[\"initialize\"],\"transitions\":[{\"from\":[\"initialize\"],\"to\":\"start_0\",\"conditions\":{\"$and\":[{\"initializeFlow\":true}]},\"signals\":[{\"name\":\"Variables\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"0b6a1d065c7764a293cee7e95393952c\",\"flowVersionId\":1,\"id\":\"ctyv1xvx7e\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"properties\":{\"saveVariables\":{\"value\":[{\"name\":\"populationId\",\"value\":\"\",\"key\":0.9673372774789002,\"type\":\"string\",\"label\":\"populationId (string - flowInstance)\"},{\"name\":\"companyName\",\"value\":\"Ping Identity\",\"key\":0.8558926100565449,\"label\":\"companyName (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"origin\",\"value\":\"auth.pingone.com\",\"key\":0.38383064124643007,\"label\":\"origin (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"originURL\",\"value\":\"https://auth.pingone.com\",\"key\":0.3895964400152929,\"label\":\"originURL (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"relyingParty\",\"value\":\"PingOne\",\"key\":0.8294031869442895,\"label\":\"relyingParty (string - flowInstance)\",\"type\":\"string\"},{\"name\":\"relyingPartyId\",\"value\":\"auth.pingone.com\",\"key\":0.33706413004714153,\"label\":\"relyingPartyId (string - flowInstance)\",\"type\":\"string\"}]},\"nodeTitle\":{\"value\":\"Set flow instance variables\"},\"nodeDescription\":{\"value\":\"Initialize common values used in the flow so that they're easier to update in one place\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"transitionId\":0,\"signalId\":0}],\"transitionId\":0},{\"from\":[\"start_0\"],\"to\":\"end_0\",\"conditions\":{\"$and\":[{\"id\":\"ctyv1xvx7e\",\"connectionId\":\"06922a684039827499bdbdd97f49827b\",\"connectorId\":\"variablesConnector\",\"capabilityName\":\"saveValue\",\"success\":true}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"0b6a1d065c7764a293cee7e95393952c\",\"flowVersionId\":1,\"id\":\"u5khyxw07p\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"customHTMLTemplate\",\"properties\":{\"customHTML\":{\"value\":\"<div class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n    <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n            <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                <img class=\\\"companyLogo align-self-center mb-5\\\" alt=\\\"{{global.variables.companyName}}\\\"/>\\n                <h1 class=\\\"text-center mb-4\\\">Success</h1>\\n                <p class=\\\"text-muted text-center\\\">__SUCCESS_MSG_1__</p>\\n                <p class=\\\"text-muted text-center\\\">__SUCCESS_MSG_2__</p>\\n                <div class=\\\"d-flex flex-column\\\">\\n                    <button data-id=\\\"button\\\" type=\\\"submit\\\" class=\\\"btn btn-primary mb-3\\\" data-skcomponent=\\\"skbutton\\\"\\n                            data-skbuttontype=\\\"next-event\\\">Exit</button>\\n                </div>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"},\"formFieldsList\":{\"value\":[{\"preferredControlType\":\"textField\",\"preferredDataType\":\"string\",\"propertyName\":\"buttonValue\"}]},\"nodeTitle\":{\"value\":\"Success Message\"},\"nodeDescription\":{\"value\":\"Display success message\"}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[],\"respondToUser\":true,\"transitionId\":1,\"signalId\":0,\"largePayload\":[\"customHTML\"]}],\"evalNodeId\":\"t5lim69t2u\",\"transitionId\":1},{\"from\":[\"start_1\"],\"to\":\"end_1\",\"conditions\":{\"$and\":[{\"id\":\"u3hg89pxtd\",\"connectionId\":\"b3b6bfe4bcfc8bd1d8851a5664d824d2\",\"connectorId\":\"nodeConnector\",\"capabilityName\":\"startNode\"}]},\"signals\":[{\"name\":\"Http\",\"companyId\":\"ee43f700-c751-494d-9dbf-70946a85b328\",\"flowId\":\"0b6a1d065c7764a293cee7e95393952c\",\"flowVersionId\":1,\"id\":\"v2mla44sjx\",\"connectionId\":\"867ed4363b2bc21c860085ad2baa817d\",\"connectorId\":\"httpConnector\",\"capabilityName\":\"createErrorResponse\",\"properties\":{\"nodeTitle\":{\"value\":\"Error JSON\"},\"backgroundColor\":{\"value\":\"#ffc8c1ff\"},\"claimsNameValuePairs\":{\"value\":[{\"name\":\"errorCode\",\"value\":\"{{local.u3hg89pxtd.payload.output.errorCode}}\",\"key\":0.7505189133115058,\"label\":\"errorCode (number - flowInstance)\",\"type\":\"number\",\"nameDefault\":\"errorCode\"},{\"name\":\"errorMessage\",\"value\":\"{{local.u3hg89pxtd.payload.output.errorMessage}}\",\"key\":0.9809707255767062,\"label\":\"errorMessage (string - flowInstance)\",\"type\":\"string\",\"nameDefault\":\"errorMessage\"}]}},\"debugMode\":false,\"logLevel\":3,\"isDisabled\":false,\"inputs\":[\"*\"],\"respondToUser\":true,\"transitionId\":2,\"signalId\":0}],\"evalNodeId\":\"sl186mcyxm\",\"transitionId\":2}],\"history\":[],\"outputs\":{\"variablesConnector_saveValue\":{\"localOutputs\":[\"output\"]}},\"outputParameters\":[\"global.variables.companyName\",\"local.u3hg89pxtd.payload.output.errorCode\",\"local.u3hg89pxtd.payload.output.errorMessage\"],\"global\":{},\"local\":{},\"idMapping\":{},\"nodeMappingForTids\":{\"u5khyxw07p\":\"initialize\",\"u5khyxw07p_customHTMLTemplate\":\"initialize\",\"v2mla44sjx\":\"initialize\",\"v2mla44sjx_createErrorResponse\":\"initialize\"},\"tids\":{},\"delayedConditionalStateChangeMappings\":{},\"delayedConditionalStateChangeMappingsReverse\":{},\"delayedConditionalStatesList\":[],\"lbsTransitionIdsToIgnore\":[],\"lbsTransitionIdsMapping\":{},\"outputParametersDefault\":{\"global.variables.companyName\":\"\",\"local.u3hg89pxtd.payload.output.errorCode\":\"\",\"local.u3hg89pxtd.payload.output.errorMessage\":\"\"},\"outputParametersDefaultBlacklist\":[],\"historyThreshold\":70,\"errorRewindBlackListIds\":[],\"nodeMappingForTidsNew\":{\"u5khyxw07p\":\"initialize\",\"v2mla44sjx\":\"initialize\"},\"nodeStates\":{\"ctyv1xvx7e\":\"start_0\",\"u3hg89pxtd\":\"start_1\",\"u5khyxw07p\":\"end_0\",\"v2mla44sjx\":\"end_1\"}}",
   "publishedVersion": 1,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
@@ -533,9 +590,9 @@
     ],
     "scrubSensitiveInfo": false
   },
-  "updatedDate": 1677613076608,
-  "flowId": "6af3e130d43bca231c08e4652f77b09a",
-  "versionId": 3,
+  "updatedDate": 1677688563890,
+  "flowId": "0b6a1d065c7764a293cee7e95393952c",
+  "versionId": 4,
   "graphData": {
     "elements": {
       "nodes": [
@@ -577,88 +634,8 @@
             "status": "configured"
           },
           "position": {
-            "x": 210,
-            "y": 210
-          },
-          "group": "nodes",
-          "removed": false,
-          "selected": false,
-          "selectable": true,
-          "locked": false,
-          "grabbable": true,
-          "pannable": false,
-          "classes": ""
-        },
-        {
-          "data": {
-            "id": "ctyv1xvx7e",
-            "nodeType": "CONNECTION",
-            "connectionId": "06922a684039827499bdbdd97f49827b",
-            "connectorId": "variablesConnector",
-            "name": "Variables",
-            "label": "Variables",
-            "status": "configured",
-            "capabilityName": "saveValue",
-            "type": "trigger",
-            "properties": {
-              "saveVariables": {
-                "value": [
-                  {
-                    "name": "populationId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
-                    "key": 0.9673372774789002,
-                    "type": "string",
-                    "label": "populationId (string - flowInstance)"
-                  },
-                  {
-                    "name": "companyName",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ping Identity\"\n      }\n    ]\n  }\n]",
-                    "key": 0.8558926100565449,
-                    "label": "companyName (string - flowInstance)",
-                    "type": "string"
-                  },
-                  {
-                    "name": "origin",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
-                    "key": 0.38383064124643007,
-                    "label": "origin (string - flowInstance)",
-                    "type": "string"
-                  },
-                  {
-                    "name": "originURL",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://auth.pingone.com\"\n      }\n    ]\n  }\n]",
-                    "key": 0.3895964400152929,
-                    "label": "originURL (string - flowInstance)",
-                    "type": "string"
-                  },
-                  {
-                    "name": "relyingParty",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne\"\n      }\n    ]\n  }\n]",
-                    "key": 0.8294031869442895,
-                    "label": "relyingParty (string - flowInstance)",
-                    "type": "string"
-                  },
-                  {
-                    "name": "relyingPartyId",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
-                    "key": 0.33706413004714153,
-                    "label": "relyingPartyId (string - flowInstance)",
-                    "type": "string"
-                  }
-                ]
-              },
-              "nodeTitle": {
-                "value": "Set flow instance variables"
-              },
-              "nodeDescription": {
-                "value": "Initialize common values used in the flow so that they're easier to update in one place"
-              }
-            },
-            "idUnique": "xffn1pfvaz"
-          },
-          "position": {
-            "x": 300,
-            "y": 390
+            "x": 214,
+            "y": 214
           },
           "group": "nodes",
           "removed": false,
@@ -791,7 +768,7 @@
         },
         {
           "data": {
-            "id": "u3hg89pxtd",
+            "id": "4zjizi23c6",
             "nodeType": "CONNECTION",
             "connectionId": "b3b6bfe4bcfc8bd1d8851a5664d824d2",
             "connectorId": "nodeConnector",
@@ -810,8 +787,8 @@
             }
           },
           "position": {
-            "x": 300,
-            "y": 930
+            "x": 304,
+            "y": 994
           },
           "group": "nodes",
           "removed": false,
@@ -824,13 +801,13 @@
         },
         {
           "data": {
-            "id": "sl186mcyxm",
+            "id": "z4g8c5z5pw",
             "nodeType": "EVAL",
             "label": "Evaluator"
           },
           "position": {
-            "x": 420,
-            "y": 930
+            "x": 424,
+            "y": 994
           },
           "group": "nodes",
           "removed": false,
@@ -843,7 +820,7 @@
         },
         {
           "data": {
-            "id": "v2mla44sjx",
+            "id": "13xqy80afe",
             "nodeType": "CONNECTION",
             "connectionId": "867ed4363b2bc21c860085ad2baa817d",
             "connectorId": "httpConnector",
@@ -863,7 +840,7 @@
                 "value": [
                   {
                     "name": "errorCode",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.u3hg89pxtd.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.u3hg89pxtd.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorCode\",\n        \"data\": \"{{local.4zjizi23c6.payload.output.errorCode}}\",\n        \"tooltip\": \"{{local.4zjizi23c6.payload.output.errorCode}}\",\n        \"children\": [\n          {\n            \"text\": \"errorCode\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.7505189133115058,
                     "label": "errorCode (number - flowInstance)",
                     "type": "number",
@@ -871,19 +848,27 @@
                   },
                   {
                     "name": "errorMessage",
-                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.u3hg89pxtd.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.u3hg89pxtd.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"errorMessage\",\n        \"data\": \"{{local.4zjizi23c6.payload.output.errorMessage}}\",\n        \"tooltip\": \"{{local.4zjizi23c6.payload.output.errorMessage}}\",\n        \"children\": [\n          {\n            \"text\": \"errorMessage\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                     "key": 0.9809707255767062,
                     "label": "errorMessage (string - flowInstance)",
                     "type": "string",
                     "nameDefault": "errorMessage"
+                  },
+                  {
+                    "name": "userAction",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"teleport.svg\",\n        \"url\": \"userAction\",\n        \"data\": \"{{local.4zjizi23c6.payload.output.userAction}}\",\n        \"tooltip\": \"{{local.4zjizi23c6.payload.output.userAction}}\",\n        \"children\": [\n          {\n            \"text\": \"userAction\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.2370967796224619,
+                    "label": "userAction (string - flowInstance)",
+                    "type": "string",
+                    "nameDefault": "userAction"
                   }
                 ]
               }
             }
           },
           "position": {
-            "x": 600,
-            "y": 930
+            "x": 604,
+            "y": 994
           },
           "group": "nodes",
           "removed": false,
@@ -896,7 +881,7 @@
         },
         {
           "data": {
-            "id": "bffo9fuq0r",
+            "id": "p2jrc9z72i",
             "nodeType": "ANNOTATION",
             "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -932,8 +917,8 @@
             "status": "configured"
           },
           "position": {
-            "x": 210,
-            "y": 750
+            "x": 214,
+            "y": 814
           },
           "group": "nodes",
           "removed": false,
@@ -946,7 +931,7 @@
         },
         {
           "data": {
-            "id": "eeqq8t95bc",
+            "id": "zzz7tqvo0h",
             "nodeType": "ANNOTATION",
             "name": "Annotation",
             "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -989,8 +974,95 @@
             "idUnique": "940rm8qjb1"
           },
           "position": {
-            "x": 240,
-            "y": 810
+            "x": 214,
+            "y": 874
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbable": true,
+          "pannable": false,
+          "classes": ""
+        },
+        {
+          "data": {
+            "id": "pdk9atuwtv",
+            "nodeType": "CONNECTION",
+            "connectionId": "06922a684039827499bdbdd97f49827b",
+            "connectorId": "variablesConnector",
+            "name": "Variables",
+            "label": "Variables",
+            "status": "configured",
+            "capabilityName": "saveValue",
+            "type": "trigger",
+            "properties": {
+              "saveVariables": {
+                "value": [
+                  {
+                    "name": "populationId",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.9673372774789002,
+                    "type": "string",
+                    "label": "populationId (string - flowInstance)"
+                  },
+                  {
+                    "name": "companyName",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Ping Identity\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8558926100565449,
+                    "label": "companyName (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "origin",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                    "key": 0.38383064124643007,
+                    "label": "origin (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "originURL",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"https://auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                    "key": 0.3895964400152929,
+                    "label": "originURL (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "relyingParty",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8294031869442895,
+                    "label": "relyingParty (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "relyingPartyId",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"auth.pingone.com\"\n      }\n    ]\n  }\n]",
+                    "key": 0.33706413004714153,
+                    "label": "relyingPartyId (string - flowInstance)",
+                    "type": "string"
+                  },
+                  {
+                    "name": "flowDocsURL",
+                    "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                    "key": 0.8153538352277487,
+                    "label": "flowDocsURL (string - flowInstance)",
+                    "type": "string"
+                  }
+                ]
+              },
+              "nodeTitle": {
+                "value": "Set flow instance variables"
+              },
+              "nodeDescription": {
+                "value": "Initialize common values used in the flow so that they're easier to update in one place"
+              }
+            },
+            "idUnique": "a99irgrtx7"
+          },
+          "position": {
+            "x": 300,
+            "y": 390
           },
           "group": "nodes",
           "removed": false,
@@ -1005,9 +1077,9 @@
       "edges": [
         {
           "data": {
-            "id": "ip6mun6bpl",
-            "source": "ctyv1xvx7e",
-            "target": "t5lim69t2u"
+            "id": "j67d1ioyye",
+            "source": "z4g8c5z5pw",
+            "target": "13xqy80afe"
           },
           "position": {
             "x": 0,
@@ -1043,9 +1115,9 @@
         },
         {
           "data": {
-            "id": "45yd0xsvc2",
-            "source": "u3hg89pxtd",
-            "target": "sl186mcyxm"
+            "id": "psqcjsf0wp",
+            "source": "4zjizi23c6",
+            "target": "z4g8c5z5pw"
           },
           "position": {
             "x": 0,
@@ -1062,9 +1134,9 @@
         },
         {
           "data": {
-            "id": "1o7x427ffp",
-            "source": "sl186mcyxm",
-            "target": "v2mla44sjx"
+            "id": "fb0464z6lq",
+            "source": "pdk9atuwtv",
+            "target": "t5lim69t2u"
           },
           "position": {
             "x": 0,
@@ -1099,7 +1171,7 @@
     }
   },
   "flowColor": "#ff661c",
-  "savedDate": 1677613076572,
+  "savedDate": 1677688563851,
   "variables": [
     {
       "context": "flowInstance",
@@ -1175,6 +1247,22 @@
       "type": "property",
       "visibility": "private",
       "name": "relyingParty##SK##flowInstance",
+      "companyId": "ee43f700-c751-494d-9dbf-70946a85b328"
+    },
+    {
+      "context": "flowInstance",
+      "createdDate": 1677687615743,
+      "customerId": "f3e47d945ae971a4b4142ec75012d155",
+      "fields": {
+        "type": "string",
+        "displayName": "",
+        "mutable": true,
+        "min": 0,
+        "max": 2000
+      },
+      "type": "property",
+      "visibility": "private",
+      "name": "flowDocsURL##SK##flowInstance",
       "companyId": "ee43f700-c751-494d-9dbf-70946a85b328"
     }
   ],
