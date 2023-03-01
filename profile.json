@@ -483,12 +483,12 @@
                 },
                 {
                     "pos": "2,1",
-                    "title": "Sign In<br/>HTML",
+                    "title": "Sign On<br/>HTML",
                     "titlePosition": "MIDDLE",
                     "icon": "box-green",
-                    "toolTip": "HTML for standard username/password sign in form",
+                    "toolTip": "HTML for standard username/password sign on form",
                     "action": "GIT_CLIPBOARD",
-                    "resource": "davinciSnippets/signin-form.html"
+                    "resource": "davinciSnippets/signon-form.html"
                 },
                 {
                     "pos": "2,2",
