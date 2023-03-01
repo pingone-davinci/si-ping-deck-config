@@ -369,6 +369,15 @@
                     "resource": "davinciComponents/success-message.json"
                 },
                 {
+                    "pos": "2,4",
+                    "title": "Magic<br/>Polling",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "Magic link polling screen",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/magic-link-polling.json"
+                },
+                {
                     "pos": "2,6",
                     "title": "Flow<br/>Success",
                     "titlePosition": "MIDDLE",
