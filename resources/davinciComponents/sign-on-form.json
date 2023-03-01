@@ -2,12 +2,12 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "tq0wif31it",
+                "id": "6fqkvyki5m",
                 "nodeType": "EVAL"
             },
             "position": {
-                "x": 840,
-                "y": 660
+                "x": 780,
+                "y": 390
             },
             "group": "nodes",
             "removed": false,
@@ -20,7 +20,7 @@
         },
         {
             "data": {
-                "id": "7z5y38wnk8",
+                "id": "nxvb72yn5h",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -31,7 +31,7 @@
                 "type": "trigger",
                 "properties": {
                     "customHTML": {
-                        "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n                <h1 class=\"text-center mb-4\">Sign In</h1>\n                <p class=\"text-muted text-center\">Welcome to Ping Identity</p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                <form id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                            autocomplete=\"off\" value=\"\" data-id=\"username-input\" />\n                        <label class=\"form-label\" for=\"username\">Username</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                            autocomplete=\"off\" value=\"\" data-id=\"password-input\" />\n                        <label class=\"form-label\" for=\"password\">Password</label>\n                    </div>\n                    <div class=\"d-flex flex-column\">\n                        <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                            data-skbuttonvalue=\"SIGNIN\">\n                            Sign On\n                        </button>\n                        <div class=\"d-flex flex-column\">\n                            <button data-id=\"button\" type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnTrouble\"\n                                data-skbuttonvalue=\"TROUBLE\">\n                                Having trouble signing on?\n                            </button>\n                            <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"next-event\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                data-skbuttonvalue=\"REGISTER\">\n                                No account? Register now!\n                            </button>\n                        </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>"
+                        "value": "<div\n    class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n                <h1 class=\"text-center mb-4\">Sign On</h1>\n                <p class=\"text-muted text-center\">Welcome to Ping Identity</p>\n                <p class=\"text-danger mdi mdi-alert-circle\" data-id=\"feedback\" data-skcomponent=\"skerror\"></p>\n                <form id=\"usernamePasswordForm\" data-id=\"usernamePasswordForm\">\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"text\" id=\"username\" name=\"username\" placeholder=\"username\"\n                            autocomplete=\"off\" value=\"\" data-id=\"username-input\" />\n                        <label class=\"form-label\" for=\"username\">Username</label>\n                    </div>\n                    <div class=\"mb-4 form-floating\">\n                        <input class=\"form-control\" type=\"password\" id=\"password\" name=\"password\" placeholder=\"Password\"\n                            autocomplete=\"off\" value=\"\" data-id=\"password-input\" />\n                        <label class=\"form-label\" for=\"password\">Password</label>\n                    </div>\n                    <div class=\"d-flex flex-column\">\n                        <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnSignIn\"\n                            data-skbuttonvalue=\"SIGNON\">\n                            Sign On\n                        </button>\n                        <div class=\"d-flex flex-column\">\n                            <button data-id=\"button\" type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"form-submit\" data-skform=\"usernamePasswordForm\" id=\"btnTrouble\"\n                                data-skbuttonvalue=\"TROUBLE\">\n                                Having trouble signing on?\n                            </button>\n                            <button type=\"submit\" class=\"btn btn-link\" data-skcomponent=\"skbutton\"\n                                data-skbuttontype=\"next-event\" data-skform=\"usernamePasswordForm\" id=\"btnRegister\"\n                                data-skbuttonvalue=\"REGISTER\">\n                                No account? Register now!\n                            </button>\n                        </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</div>"
                     },
                     "formFieldsList": {
                         "value": [
@@ -69,13 +69,13 @@
                         "value": "#afd5ffff"
                     },
                     "customScript": {
-                        "value": "const usernameInput = document.getElementById(\"username\")\n\nif (usernameInput) {\n    usernameInput.focus()\n}"
+                        "value": "const focusOnFirstInputElement = () => {\n    document.getElementById(\"username\").focus();\n};\n\n/**\n * If page isn't loaded yet, wait for the page to load, then focus on first\n * input element.\n */\nif (document.readyState === \"loading\") {\n    // Loading hasn't finished yet\n    document.addEventListener(\"DOMContentLoaded\", focusOnFirstInputElement);\n} else {\n    // `DOMContentLoaded` has already fired\n    focusOnFirstInputElement();\n}"
                     }
                 }
             },
             "position": {
-                "x": 720,
-                "y": 660
+                "x": 660,
+                "y": 390
             },
             "group": "nodes",
             "removed": false,
@@ -88,7 +88,7 @@
         },
         {
             "data": {
-                "id": "skfm6caamj",
+                "id": "8a05ck4mjn",
                 "nodeType": "CONNECTION",
                 "connectionId": "de650ca45593b82c49064ead10b9fe17",
                 "connectorId": "functionsConnector",
@@ -99,7 +99,7 @@
                 "type": "trigger",
                 "properties": {
                     "leftValueA": {
-                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.7z5y38wnk8.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.7z5y38wnk8.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.nxvb72yn5h.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.nxvb72yn5h.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
                     },
                     "rightValueB": {
                         "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"submit\"\n      }\n    ]\n  }\n]"
@@ -110,7 +110,7 @@
                     "rightValueMultiple": {
                         "value": [
                             {
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SIGNIN\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SIGNON\"\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]",
                                 "id": "vgii63uk2p"
                             },
                             {
@@ -127,8 +127,8 @@
                 "isDisabled": false
             },
             "position": {
-                "x": 1080,
-                "y": 660
+                "x": 960,
+                "y": 390
             },
             "group": "nodes",
             "removed": false,
@@ -143,9 +143,9 @@
     "clonedEdges": [
         {
             "data": {
-                "id": "1s4a1rhbye",
-                "source": "7z5y38wnk8",
-                "target": "tq0wif31it"
+                "id": "x44qfzfs6k",
+                "source": "6fqkvyki5m",
+                "target": "8a05ck4mjn"
             },
             "position": {
                 "x": 0,
@@ -162,9 +162,9 @@
         },
         {
             "data": {
-                "id": "p8r0h438t2",
-                "source": "tq0wif31it",
-                "target": "skfm6caamj"
+                "id": "jfhkokq7er",
+                "source": "nxvb72yn5h",
+                "target": "6fqkvyki5m"
             },
             "position": {
                 "x": 0,

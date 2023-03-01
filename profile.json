@@ -343,12 +343,12 @@
                 },
                 {
                     "pos": "2,1",
-                    "title": "Sign In<br/>Form",
+                    "title": "Sign On<br/>Form",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
-                    "toolTip": "Sign In form components with username/password fields and button pressed function",
+                    "toolTip": "Sign On form components with username/password fields and button pressed function",
                     "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/sign-in-with-password.json"
+                    "resource": "davinciComponents/sign-on-form.json"
                 },
                 {
                     "pos": "2,2",
