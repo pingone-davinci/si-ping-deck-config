@@ -219,6 +219,16 @@ button.hidden {
   width: 100%;
 }
 
+/* TODO collapse into generic class */
+.buttonTextTop {
+  font-size: 8pt;
+  font-weight: bold;
+  left: 2px;
+  position: absolute;
+  top: 22%;
+  width: 100%;
+}
+
 div.button-row {
   margin-bottom: 14px;
 }
