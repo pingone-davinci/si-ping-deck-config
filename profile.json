@@ -293,7 +293,7 @@
                     "icon": "box-yellow",
                     "toolTip": "Function that looks through device list for FIDO capable device",
                     "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/fido-device-check.json"
+                    "resource": "davinciWorkflows/fido-device-check-function.json"
                 },
                 {
                     "pos": "2,1",
