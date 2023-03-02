@@ -1023,7 +1023,7 @@
                     "resource": "{{invalid_ref}}/myaccount/"
                 },
                 {
-                    "pos": "4,2",
+                    "pos": "1,8",
                     "title": "FIDO<br/>Function",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
