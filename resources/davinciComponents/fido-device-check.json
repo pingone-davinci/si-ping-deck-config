@@ -154,7 +154,7 @@
                             {
                                 "name": "devices",
                                 "preferredDataType": "string",
-                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"[{\\\"type\\\": \\\"MOBILE\\\"}, \"\n      },\n      {\n        \"text\": \"{\\\"type\\\": \\\"SE2CURITY_KEY\\\"}\"\n      },\n      {\n        \"text\": \"]\"\n      }\n    ]\n  }\n]"
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"[{\\\"type\\\": \\\"MOBILE\\\"}, \"\n      },\n      {\n        \"text\": \"{\\\"type\\\": \\\"SECURITY_KEY\\\"}\"\n      },\n      {\n        \"text\": \"]\"\n      }\n    ]\n  }\n]"
                             }
                         ]
                     },
