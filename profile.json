@@ -1023,6 +1023,15 @@
                     "resource": "{{invalid_ref}}/myaccount/"
                 },
                 {
+                    "pos": "4,2",
+                    "title": "FIDO<br/>Function",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "Function that looks through device list for FIDO capable device",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/fido-device-check.json"
+                },
+                {
                     "pos": "2,1",
                     "title": "DaVinci<br/>Login",
                     "icon": "davinci",

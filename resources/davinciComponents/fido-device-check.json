@@ -1,0 +1,355 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "u5khyxw07p",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHtmlMessage",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\"/>\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Success Message"
+                    },
+                    "nodeDescription": {
+                        "value": "Display success message"
+                    },
+                    "messageTitle": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"FIDO Found\"\n      }\n    ]\n  }\n]"
+                    },
+                    "message": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"FIDO Device Found\"\n      }\n    ]\n  }\n]"
+                    }
+                },
+                "idUnique": "a0yf1wqul8"
+            },
+            "position": {
+                "x": 1020,
+                "y": 540
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "qgh0ikalf3",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#50e3c280"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Don't forget to pass in your array of devices to the Check FIDO function. "
+                    },
+                    "width": {
+                        "value": 240
+                    },
+                    "height": {
+                        "value": 80
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "strokeColor": {
+                        "value": "#4a4a4aff"
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    }
+                },
+                "status": "configured"
+            },
+            "position": {
+                "x": 540,
+                "y": 360
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "1m5kax6y2f",
+                "nodeType": "EVAL",
+                "properties": {
+                    "ouueneugvc": {
+                        "value": "anyTriggersFalse"
+                    },
+                    "epcpe6jhvm": {
+                        "value": "anyTriggersFalse"
+                    }
+                }
+            },
+            "position": {
+                "x": 840,
+                "y": 540
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "uywz57c04z",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "customFunction",
+                "type": "trigger",
+                "properties": {
+                    "nodeTitle": {
+                        "value": "Check for FIDO Device"
+                    },
+                    "variableInputList": {
+                        "value": [
+                            {
+                                "name": "devices",
+                                "preferredDataType": "string",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"[{\\\"type\\\": \\\"MOBILE\\\"}, \"\n      },\n      {\n        \"text\": \"{\\\"type\\\": \\\"SE2CURITY_KEY\\\"}\"\n      },\n      {\n        \"text\": \"]\"\n      }\n    ]\n  }\n]"
+                            }
+                        ]
+                    },
+                    "code": {
+                        "value": "// parse for FIDO Devices\nmodule.exports = a = async ({params}) => {\n\tconst devices = params.devices\n\tconst hasRequiredDevice = JSON.parse(devices).some(device => device.type === 'PLATFORM' || device.type === 'SECURITY_KEY');\n\n\tif (! hasRequiredDevice) {\n\t\treturn false \n\t}\n\n\treturn\n}\n\n\n"
+                    },
+                    "outputSchema": {
+                        "value": "\n\n{\n\t\"output\": {\n\t\t\"type\": \"object\",\n\t\t\"properties\": {\n\t\t\t\"testVariable\": {\n\t\t\t\t\"type\": \"string\"\n\t\t\t}\n\t\t}\n\t}\n}"
+                    }
+                },
+                "idUnique": "o7mk8oj7vm"
+            },
+            "position": {
+                "x": 660,
+                "y": 540
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "cq9ctyx8cr",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#50e3c280"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "This function will branch ALL TRIGGERS TRUE if a FIDO device is found and ANY TRIGGER FALSE if no suitable device is located."
+                    },
+                    "width": {
+                        "value": 240
+                    },
+                    "height": {
+                        "value": 80
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "strokeColor": {
+                        "value": "#4a4a4aff"
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    }
+                },
+                "status": "configured",
+                "idUnique": "dkafo6ohm5"
+            },
+            "position": {
+                "x": 900,
+                "y": 360
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "epcpe6jhvm",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHtmlMessage",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\"/>\n                <h1 class=\"text-center mb-4\">Success</h1>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_1__</p>\n                <p class=\"text-muted text-center\">__SUCCESS_MSG_2__</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Exit</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "No Fido Devices"
+                    },
+                    "nodeDescription": {
+                        "value": "Display error message"
+                    },
+                    "messageTitle": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Error\"\n      }\n    ]\n  }\n]"
+                    },
+                    "message": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"No available FIDO device found\"\n      }\n    ]\n  }\n]"
+                    },
+                    "backgroundColor": {
+                        "value": "#ffc8c1ff"
+                    }
+                },
+                "idUnique": "6e13nuc3r8"
+            },
+            "position": {
+                "x": 1020,
+                "y": 750
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": [
+        {
+            "data": {
+                "id": "c6hpu0598f",
+                "source": "1m5kax6y2f",
+                "target": "u5khyxw07p"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "de5shrtdyr",
+                "source": "uywz57c04z",
+                "target": "1m5kax6y2f"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "axmto5co3i",
+                "source": "1m5kax6y2f",
+                "target": "epcpe6jhvm"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        }
+    ]
+}
