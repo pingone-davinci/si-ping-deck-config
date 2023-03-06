@@ -1,0 +1,319 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "y6zs2vo7bd",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "customFunction",
+                "type": "trigger",
+                "properties": {
+                    "leftValueA": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"populationId\",\n        \"data\": \"{{global.variables.populationId}}\",\n        \"tooltip\": \"{{global.variables.populationId}}\",\n        \"children\": [\n          {\n            \"text\": \"populationId\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    },
+                    "checkNullORUndefined": {
+                        "value": true
+                    },
+                    "nodeTitle": {
+                        "value": "Flow Configuration Check"
+                    },
+                    "variableInputList": {
+                        "value": [
+                            {
+                                "name": "requiredVariable",
+                                "preferredDataType": "string",
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                            }
+                        ]
+                    },
+                    "code": {
+                        "value": "module.exports = a = async ({params}) => {\n\tlet requiredVariable = params.requiredVariable;\n\n\tif (! requiredVariable) {\n\t\treturn false;\n\t}\n\n\treturn \n}"
+                    }
+                }
+            },
+            "position": {
+                "x": 630,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "ahqkz9gaa2",
+                "nodeType": "EVAL",
+                "properties": {
+                    "m3xkqr1x3f": {
+                        "value": "allTriggersTrue"
+                    },
+                    "lpu82cct01": {
+                        "value": "anyTriggersFalse"
+                    }
+                }
+            },
+            "position": {
+                "x": 750,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "lpu82cct01",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "missingVarDisplayName": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Curtis Muir\"\n      }\n    ]\n  }\n]"
+                    },
+                    "missingVarPropertyName": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"cmuir\"\n      }\n    ]\n  }\n]"
+                    },
+                    "customHTML": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n   <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n            <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                <img class=\\\"companyLogo align-self-center mb-5\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" />\\n                <h1 class=\\\"text-center mb-4\\\">Flow Configuration Error</h1>\\n                <p class=\\\"text-muted text-center\\\">Please set the \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"missingVarDisplayName\",\n        \"data\": \"{{missingVarDisplayName}}\",\n        \"tooltip\": \"{{missingVarDisplayName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{missingVarDisplayName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" <strong>(\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"missingVarPropertyName\",\n        \"data\": \"{{missingVarPropertyName}}\",\n        \"tooltip\": \"{{missingVarPropertyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{missingVarPropertyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \")</strong> instance variable prior to running this demo flow.</p>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"\n      }\n    ]\n  }\n]"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Error Message"
+                    },
+                    "nodeDescription": {
+                        "value": "Population Id not set error"
+                    },
+                    "backgroundColor": {
+                        "value": "#ffc8c1ff"
+                    },
+                    "sktemplate": {
+                        "uiId": "4283c0de636208a4273efe1c9fda225f",
+                        "createdDate": 1678116166705,
+                        "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                        "description": "",
+                        "inputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"missingVarDisplayName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Display Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarDisplayName\"\n\t\t},\n\t\t\"missingVarPropertyName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Property Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarPropertyName\"\n\t\t}\n\t}\n}",
+                        "name": "Error Template",
+                        "outputSchema": null,
+                        "script": "",
+                        "style": "",
+                        "template": "",
+                        "updatedDate": 1678116321755,
+                        "validationRules": [],
+                        "version": "1.0",
+                        "visibility": "private",
+                        "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+                        "value": "4283c0de636208a4273efe1c9fda225f"
+                    },
+                    "inputSchema": {
+                        "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"missingVarDisplayName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Display Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarDisplayName\"\n\t\t},\n\t\t\"missingVarPropertyName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Property Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarPropertyName\"\n\t\t}\n\t}\n}"
+                    },
+                    "outputSchema": {
+                        "value": {}
+                    },
+                    "customCSS": {
+                        "value": ""
+                    },
+                    "customScript": {
+                        "value": ""
+                    },
+                    "validationRules": {
+                        "value": []
+                    }
+                },
+                "idUnique": "3nm07rhtek"
+            },
+            "position": {
+                "x": 930,
+                "y": 630
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "t5hqijb6b3",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#f2f3f4ff"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Update Error Message Variables"
+                    },
+                    "width": {
+                        "value": 340
+                    },
+                    "fontSize": {
+                        "value": 14
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "cornerRadius": {
+                        "value": 8
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    },
+                    "strokeColor": {
+                        "value": "#181818ff"
+                    }
+                },
+                "status": "configured",
+                "idUnique": "ha6oyzgope"
+            },
+            "position": {
+                "x": 780,
+                "y": 510
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "echnhbb8fa",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#f2f3f4ff"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Map to the Variable you want to Check"
+                    },
+                    "width": {
+                        "value": 340
+                    },
+                    "fontSize": {
+                        "value": 14
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "cornerRadius": {
+                        "value": 8
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    },
+                    "strokeColor": {
+                        "value": "#181818ff"
+                    }
+                },
+                "status": "configured"
+            },
+            "position": {
+                "x": 450,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": [
+        {
+            "data": {
+                "id": "dnzf5pmstg",
+                "source": "y6zs2vo7bd",
+                "target": "ahqkz9gaa2"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "qiai430d6j",
+                "source": "ahqkz9gaa2",
+                "target": "lpu82cct01"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        }
+    ]
+}

@@ -287,6 +287,15 @@
                     "resource": "davinciWorkflows/reset-password.json"
                 },
                 {
+                    "pos": "1,7",
+                    "title": "Flow<br/>Config<br/>Check",
+                    "titlePosition": "TOP",
+                    "icon": "box-yellow",
+                    "toolTip": "Function checks to see if flow configuration variable is set. Displays branded error message",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciWorkflows/flow-configuration-check.json"
+                },
+                {
                     "pos": "1,8",
                     "title": "FIDO<br/>Device<br/>Check",
                     "titlePosition": "TOP",
