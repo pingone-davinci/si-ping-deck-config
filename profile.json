@@ -968,7 +968,7 @@
                 },
                 {
                     "pos": "4,2",
-                    "title": "Bootstap",
+                    "title": "Bootstrap",
                     "toolTip": "Get started with Bootstrap",
                     "action": "REDIRECT",
                     "resource": "https://getbootstrap.com/docs"
