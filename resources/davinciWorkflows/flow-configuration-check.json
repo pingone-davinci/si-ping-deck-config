@@ -102,7 +102,7 @@
                         "value": "Error Message"
                     },
                     "nodeDescription": {
-                        "value": "Population Id not set error"
+                        "value": "Configuration value not set error"
                     },
                     "backgroundColor": {
                         "value": "#ffc8c1ff"
