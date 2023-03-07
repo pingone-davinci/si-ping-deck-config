@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "y6zs2vo7bd",
+                "id": "nrc3flromx",
                 "nodeType": "CONNECTION",
                 "connectionId": "de650ca45593b82c49064ead10b9fe17",
                 "connectorId": "functionsConnector",
@@ -36,8 +36,8 @@
                 }
             },
             "position": {
-                "x": 630,
-                "y": 390
+                "x": 1440,
+                "y": 570
             },
             "group": "nodes",
             "removed": false,
@@ -50,20 +50,20 @@
         },
         {
             "data": {
-                "id": "ahqkz9gaa2",
+                "id": "hq6i1wgs6u",
                 "nodeType": "EVAL",
                 "properties": {
-                    "m3xkqr1x3f": {
+                    "undefined": {
                         "value": "allTriggersTrue"
                     },
-                    "lpu82cct01": {
+                    "l01vsnm9zl": {
                         "value": "anyTriggersFalse"
                     }
                 }
             },
             "position": {
-                "x": 750,
-                "y": 390
+                "x": 1560,
+                "y": 570
             },
             "group": "nodes",
             "removed": false,
@@ -76,7 +76,7 @@
         },
         {
             "data": {
-                "id": "lpu82cct01",
+                "id": "l01vsnm9zl",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -86,12 +86,6 @@
                 "capabilityName": "customHTMLTemplate",
                 "type": "trigger",
                 "properties": {
-                    "missingVarDisplayName": {
-                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Curtis Muir\"\n      }\n    ]\n  }\n]"
-                    },
-                    "missingVarPropertyName": {
-                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"cmuir\"\n      }\n    ]\n  }\n]"
-                    },
                     "customHTML": {
                         "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"<div class=\\\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\\\">\\n   <div style=\\\"max-width: 400px; min-width: 400px; width: 100%\\\">\\n        <div class=\\\"card shadow mb-5\\\">\\n            <div class=\\\"card-body p-5 d-flex flex-column\\\">\\n                <img class=\\\"companyLogo align-self-center mb-5\\\" alt=\\\"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"variable.svg\",\n        \"url\": \"companyName\",\n        \"data\": \"{{global.variables.companyName}}\",\n        \"tooltip\": \"{{global.variables.companyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{global.variables.companyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\\\" />\\n                <h1 class=\\\"text-center mb-4\\\">Flow Configuration Error</h1>\\n                <p class=\\\"text-muted text-center\\\">Please set the \"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"missingVarDisplayName\",\n        \"data\": \"{{missingVarDisplayName}}\",\n        \"tooltip\": \"{{missingVarDisplayName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{missingVarDisplayName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \" <strong>(\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"url:undefined\",\n        \"url\": \"missingVarPropertyName\",\n        \"data\": \"{{missingVarPropertyName}}\",\n        \"tooltip\": \"{{missingVarPropertyName}}\",\n        \"children\": [\n          {\n            \"text\": \"{{missingVarPropertyName}}\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \")</strong> instance variable prior to running this demo flow.</p>\\n            </div>\\n        </div>\\n    </div>\\n</div>\"\n      }\n    ]\n  }\n]"
                     },
@@ -120,7 +114,7 @@
                         "description": "",
                         "inputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"missingVarDisplayName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Display Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarDisplayName\"\n\t\t},\n\t\t\"missingVarPropertyName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Missing Variable Property Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"missingVarPropertyName\"\n\t\t}\n\t}\n}",
                         "name": "Error Template",
-                        "outputSchema": null,
+                        "outputSchema": {},
                         "script": "",
                         "style": "",
                         "template": "",
@@ -150,8 +144,8 @@
                 "idUnique": "3nm07rhtek"
             },
             "position": {
-                "x": 930,
-                "y": 630
+                "x": 1740,
+                "y": 810
             },
             "group": "nodes",
             "removed": false,
@@ -164,7 +158,7 @@
         },
         {
             "data": {
-                "id": "t5hqijb6b3",
+                "id": "nwk9d002l9",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -207,8 +201,8 @@
                 "idUnique": "ha6oyzgope"
             },
             "position": {
-                "x": 780,
-                "y": 510
+                "x": 1590,
+                "y": 690
             },
             "group": "nodes",
             "removed": false,
@@ -221,7 +215,7 @@
         },
         {
             "data": {
-                "id": "echnhbb8fa",
+                "id": "xzdgstuwan",
                 "nodeType": "ANNOTATION",
                 "name": "Annotation",
                 "connectionId": "921bfae85c38ed45045e07be703d86b8",
@@ -263,8 +257,8 @@
                 "status": "configured"
             },
             "position": {
-                "x": 450,
-                "y": 270
+                "x": 1260,
+                "y": 450
             },
             "group": "nodes",
             "removed": false,
@@ -279,9 +273,9 @@
     "clonedEdges": [
         {
             "data": {
-                "id": "dnzf5pmstg",
-                "source": "y6zs2vo7bd",
-                "target": "ahqkz9gaa2"
+                "id": "en9ydfc5ap",
+                "source": "nrc3flromx",
+                "target": "hq6i1wgs6u"
             },
             "position": {
                 "x": 0,
@@ -298,9 +292,9 @@
         },
         {
             "data": {
-                "id": "qiai430d6j",
-                "source": "ahqkz9gaa2",
-                "target": "lpu82cct01"
+                "id": "2ieduglzvm",
+                "source": "hq6i1wgs6u",
+                "target": "l01vsnm9zl"
             },
             "position": {
                 "x": 0,
