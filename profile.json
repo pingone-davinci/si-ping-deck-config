@@ -603,7 +603,7 @@
                     "title": "Logo<br/>Image",
                     "titlePosition": "MIDDLE",
                     "icon": "box-green",
-                    "toolTip": "Img component",
+                    "toolTip": "Logo image HTML",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/logo.html"
                 },
