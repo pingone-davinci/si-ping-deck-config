@@ -753,8 +753,8 @@
                     "resource": "codeSnippets/field-focus.js"
                 },
                 {
-                    "pos": "1,1",
-                    "title": "Password<br/>Toggle<br/>Script",
+                    "pos": "1,2",
+                    "title": "Pwd<br/>Field<br/>Toggle",
                     "titlePosition": "TOP",
                     "icon": "box-blue",
                     "toolTip": "Javascript code to toggle password visibility",
