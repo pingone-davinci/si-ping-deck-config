@@ -600,8 +600,8 @@
                 },
                 {
                     "pos": "3,3",
-                    "title": "Logo<br/>Image",
-                    "titlePosition": "MIDDLE",
+                    "title": "Logo<br/>Image<br/>HTML",
+                    "titlePosition": "TOP",
                     "icon": "box-green",
                     "toolTip": "Logo image HTML",
                     "action": "GIT_CLIPBOARD",
