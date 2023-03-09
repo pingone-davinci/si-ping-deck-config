@@ -423,6 +423,15 @@
                     "resource": "davinciComponents/http-json-error.json"
                 },
                 {
+                    "pos": "3,1",
+                    "title": "Forgot<br/>Pwd<br/>Recovery",
+                    "titlePosition": "TOP",
+                    "icon": "box-red",
+                    "toolTip": "Forgot password recovery code, set new password form",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/forgot-password-recovery-code-form.json"
+                },
+                {
                     "pos": "4,1",
                     "title": "Pwd<br/>Status",
                     "titlePosition": "MIDDLE",
