@@ -80,6 +80,7 @@
                 {
                     "pos": "4,6",
                     "title": "What's<br/>New",
+                    "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "View the new additions to PingDec",
                     "action": "REDIRECT",
