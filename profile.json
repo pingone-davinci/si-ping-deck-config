@@ -379,7 +379,7 @@
                 },
                 {
                     "pos": "2,2",
-                    "title": "Reg<br/>Form",
+                    "title": "Register<br/>Form",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "Basic registration form",
