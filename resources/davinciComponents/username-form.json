@@ -1,0 +1,173 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "luapwzcnfn",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div\n  class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n  <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n    <div class=\"card shadow mb-5\">\n      <div class=\"card-body p-5 d-flex flex-column\">\n        <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\" />\n        <h1 id=\"header\" class=\"text-center mb-4\">Sign On</h1>\n        <p class=\"text-muted text-center\">__MESSAGE__</p>\n        <p id=\"feedback\" data-id=\"feedback\" class=\"text-danger mdi mdi-alert-circle\" data-skcomponent=\"skerror\"></p>\n        <form id=\"usernameForm\" data-id=\"usernameForm\">\n          <div class=\"mb-4 form-floating\">\n            <input id=\"username\" data-id=\"username\" class=\"form-control\" type=\"text\" name=\"username\"\n              placeholder=\"Username\" autocomplete=\"off\" value=\"\" />\n            <label class=\"form-label\" for=\"email\">Username</label>\n          </div>\n          <div class=\"d-flex flex-column\">\n            <button id=\"submitBtn\" data-id=\"submitBtn\" class=\"btn btn-primary mb-3\" type=\"submit\"\n              data-skcomponent=\"skbutton\" data-skbuttontype=\"form-submit\" data-skform=\"usernameForm\" data-skbuttonvalue=\"SUBMIT\">\n              Submit\n            </button>\n            <button id=\"cancelBtn\" data-id=\"cancelBtn\" class=\"btn btn-link\" type=\"submit\" data-skcomponent=\"skbutton\"\n              data-skbuttontype=\"next-event\" data-skform=\"usernameForm\" data-skbuttonvalue=\"CANCEL\">\n              Cancel\n            </button>\n          </div>\n        </form>\n      </div>\n    </div>\n  </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "username",
+                                "displayName": "Username",
+                                "hashedVisibility": false
+                            },
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Username form"
+                    },
+                    "customCSS": {},
+                    "customScript": {
+                        "value": "const focusOnFirstInputElement = () => {\r\n  document.getElementById(\"username\").focus();\r\n};\r\n\r\n/**\r\n * If page isn't loaded yet, wait for the page to load, then focus on first\r\n * input element.\r\n */\r\nif (document.readyState === \"loading\") {\r\n  // Loading hasn't finished yet\r\n  document.onreadystatechange = () => {\r\n    if (document.readyState === \"complete\") {\r\n      focusOnFirstInputElement();\r\n    }\r\n  };\r\n} else {\r\n  // `DOMContentLoaded` has already fired\r\n  focusOnFirstInputElement();\r\n}\r\n"
+                    },
+                    "validationRules": {},
+                    "nodeDescription": {
+                        "value": "Username entry form"
+                    }
+                },
+                "idUnique": "pl05yk6egm"
+            },
+            "position": {
+                "x": 600,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "gvlkxbvkwd",
+                "nodeType": "CONNECTION",
+                "connectionId": "de650ca45593b82c49064ead10b9fe17",
+                "connectorId": "functionsConnector",
+                "name": "Functions",
+                "label": "Functions",
+                "status": "configured",
+                "capabilityName": "AEqualsMultipleB",
+                "type": "trigger",
+                "properties": {
+                    "leftValueA": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"\"\n      },\n      {\n        \"text\": \"\"\n      },\n      {\n        \"type\": \"link\",\n        \"src\": \"http.svg\",\n        \"url\": \"buttonValue\",\n        \"data\": \"{{local.luapwzcnfn.payload.output.buttonValue}}\",\n        \"tooltip\": \"{{local.luapwzcnfn.payload.output.buttonValue}}\",\n        \"children\": [\n          {\n            \"text\": \"buttonValue\"\n          }\n        ]\n      },\n      {\n        \"text\": \"\"\n      }\n    ]\n  }\n]"
+                    },
+                    "rightValueB": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"submit\"\n      }\n    ]\n  }\n]"
+                    },
+                    "nodeTitle": {
+                        "value": "Which button was selected?"
+                    },
+                    "rightValueMultiple": {
+                        "value": [
+                            {
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"SUBMIT\"\n      }\n    ]\n  }\n]",
+                                "id": "vgii63uk2p"
+                            },
+                            {
+                                "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"CANCEL\"\n      }\n    ]\n  }\n]",
+                                "id": "3a7tpbhtep"
+                            }
+                        ]
+                    },
+                    "nodeDescription": {
+                        "value": "Branch based on the button selected on the forgot password form"
+                    }
+                },
+                "isDisabled": false,
+                "idUnique": "id5b34xvvb"
+            },
+            "position": {
+                "x": 900,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "fcrfpjsodc",
+                "nodeType": "EVAL"
+            },
+            "position": {
+                "x": 720,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": [
+        {
+            "data": {
+                "id": "r2iqxquk39",
+                "source": "luapwzcnfn",
+                "target": "fcrfpjsodc"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "5dnwe4upw1",
+                "source": "fcrfpjsodc",
+                "target": "gvlkxbvkwd"
+            },
+            "position": {
+                "x": 0,
+                "y": 0
+            },
+            "group": "edges",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": true,
+            "classes": ""
+        }
+    ]
+}
