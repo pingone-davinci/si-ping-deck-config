@@ -1,8 +1,7 @@
 /*
 * To make the password toggle between clear text and protected characters:
-*   1. Add the following css import statement in the CSS text box
-*       - @import url("https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css")
-*   2. Replace __DIV_ID__ placeholder (line 33) with the id of the div containing the password field
+*   
+*   1. Replace __DIV_ID__ placeholder (line 32) with the id of the div containing the password field
 */
 function makePasswordToggle(id) {
     var container = document.getElementById(id);
