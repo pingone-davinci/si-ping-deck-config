@@ -62,7 +62,7 @@
                     "resource": "pingone"
                 },
                 {
-                    "pos": "4,5",
+                    "pos": "4,4",
                     "title": "Utils",
                     "icon": "utilities",
                     "toolTip": "",
@@ -70,12 +70,20 @@
                     "resource": "utilities"
                 },
                 {
-                    "pos": "4,6",
+                    "pos": "4,5",
                     "title": "DevOps",
                     "icon": "devops",
                     "toolTip": "Ping Identity DevOps",
                     "action": "PROFILE",
                     "resource": "devops"
+                },
+                {
+                    "pos": "4,6",
+                    "title": "What's<br/>New",
+                    "icon": "box-red",
+                    "toolTip": "View the new additions to PingDec",
+                    "action": "REDIRECT",
+                    "resource": "https://pingone-davinci.github.io/si-ping-deck-docs/changelog/"
                 },
                 {
                     "pos": "4,7",
