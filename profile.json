@@ -79,10 +79,10 @@
                 },
                 {
                     "pos": "4,6",
-                    "title": "What's<br/>New",
-                    "titlePosition": "MIDDLE",
-                    "icon": "box-red",
-                    "toolTip": "View the new additions to PingDec",
+                    "title": "Updates",
+                    "titlePosition": "BOTTOM",
+                    "icon": "announcement",
+                    "toolTip": "View updates and new additions to PingDeck",
                     "action": "REDIRECT",
                     "resource": "https://pingone-davinci.github.io/si-ping-deck-docs/changelog/"
                 },
