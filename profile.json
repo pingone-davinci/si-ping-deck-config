@@ -424,6 +424,15 @@
                 },
                 {
                     "pos": "3,1",
+                    "title": "Username<br/>Form",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "Username form with submit and cancel buttons",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/username.json"
+                },
+                {
+                    "pos": "3,2",
                     "title": "Forgot<br/>Pwd<br/>Recovery",
                     "titlePosition": "TOP",
                     "icon": "box-red",
