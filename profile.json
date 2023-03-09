@@ -429,7 +429,7 @@
                     "icon": "box-red",
                     "toolTip": "Username form with submit and cancel buttons",
                     "action": "GIT_DV_CLIPBOARD",
-                    "resource": "davinciComponents/username.json"
+                    "resource": "davinciComponents/username-form.json"
                 },
                 {
                     "pos": "3,2",
