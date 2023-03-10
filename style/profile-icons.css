@@ -34,6 +34,11 @@
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-blue.png");
 }
 
+.yellow-palette {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/standards-yellow.png");
+}
+
+
 .box-blue {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/56x56/rectangle-blue.png");
 }

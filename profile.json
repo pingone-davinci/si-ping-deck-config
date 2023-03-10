@@ -677,7 +677,7 @@
             "title": "Ping Flow Standards Snippets",
             "actions": [
                 {
-                    "pos": "1,5",
+                    "pos": "1,6",
                     "title": "Logo CSS",
                     "icon": "css",
                     "toolTip": "CSS class for form logo",
@@ -685,7 +685,7 @@
                     "resource": "davinciSnippets/company-logo.css"
                 },
                 {
-                    "pos": "1,6",
+                    "pos": "1,7",
                     "title": "Ping CSS",
                     "icon": "css",
                     "toolTip": "Listing of the CSS files Ping leverages for flows",
@@ -693,7 +693,7 @@
                     "resource": "davinciSnippets/ping-css.txt"
                 },
                 {
-                    "pos": "1,7",
+                    "pos": "1,8",
                     "title": "Icon CSS",
                     "icon": "css",
                     "toolTip": "Ping CSS for standard icons",
@@ -742,6 +742,14 @@
                 },
                 {
                     "pos": "2,6",
+                    "title": "Schema",
+                    "icon": "yellow-palette",
+                    "toolTip": "Yellow Hex value for input schema annotations",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/annotation-hex-yellow.txt"
+                },
+                {
+                    "pos": "2,7",
                     "title": "Success",
                     "icon": "green-palette",
                     "toolTip": "Green Hex value for success nodes",
@@ -749,7 +757,7 @@
                     "resource": "davinciSnippets/success-node-hex.txt"
                 },
                 {
-                    "pos": "2,7",
+                    "pos": "2,8",
                     "title": "Error",
                     "icon": "pink-palette",
                     "toolTip": "Redish Hex value for error nodes",
