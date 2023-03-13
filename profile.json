@@ -344,6 +344,7 @@
                 {
                     "pos": "1,2",
                     "title": "Agrmt<br/>Form",
+                    "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "Render PingOne agreement with function to detmine acceptance",
                     "action": "GIT_DV_CLIPBOARD",
