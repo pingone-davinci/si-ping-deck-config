@@ -342,6 +342,14 @@
                     "resource": "annotationComponents"
                 },
                 {
+                    "pos": "1,2",
+                    "title": "Agrmt<br/>Form",
+                    "icon": "box-red",
+                    "toolTip": "Render PingOne agreement with function to detmine acceptance",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/agreement-form.json"
+                },
+                {
                     "pos": "1,6",
                     "title": "No-Op<br/>UI",
                     "titlePosition": "MIDDLE",
