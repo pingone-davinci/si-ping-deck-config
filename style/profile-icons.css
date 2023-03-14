@@ -347,3 +347,7 @@
 .micro-functions {
     background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/functions.png");
 }
+
+.micro-favorite {
+    background-image: url("https://pingone-davinci.github.io/si-ping-deck-config/icons/30x15/star.png");
+}
