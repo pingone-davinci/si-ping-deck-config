@@ -371,7 +371,7 @@
                 {
                     "pos": "1,7",
                     "title": "Not<br/>Implement<br/>Msg",
-                    "titlePosition": "MIDDLE",
+                    "titlePosition": "TOP",
                     "icon": "box-red",
                     "toolTip": "Not implemented placeholder message",
                     "action": "GIT_DV_CLIPBOARD",
