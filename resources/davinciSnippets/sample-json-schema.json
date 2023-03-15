@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "testVariable": {
+            "type": "string",
+            "displayName": "Test Variable",
+            "preferredControlType": "textField",
+            "enableParameters": true,
+            "propertyName": "testVariable"
+        }
+    }
+}

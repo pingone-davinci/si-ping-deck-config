@@ -554,6 +554,15 @@
                     "resource": "flowStandards"
                 },
                 {
+                    "pos": "1,8",
+                    "title": "Samplen<br/>Input<br/>Schema",
+                    "titlePosition": "TOP",
+                    "icon": "box-green",
+                    "toolTip": "Reference JSON input schema ",
+                    "action": "GIT_CLIPBOARD",
+                    "resource": "davinciSnippets/sample-json-schema.json"
+                },
+                {
                     "pos": "2,1",
                     "title": "Sign On<br/>HTML",
                     "titlePosition": "MIDDLE",
