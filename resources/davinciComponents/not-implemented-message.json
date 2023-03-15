@@ -1,0 +1,140 @@
+{
+    "clonedNodes": [
+        {
+            "data": {
+                "id": "u5khyxw07p",
+                "nodeType": "CONNECTION",
+                "connectionId": "867ed4363b2bc21c860085ad2baa817d",
+                "connectorId": "httpConnector",
+                "name": "Http",
+                "label": "Http",
+                "status": "configured",
+                "capabilityName": "customHTMLTemplate",
+                "type": "trigger",
+                "properties": {
+                    "customHTML": {
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\"/>\n                <h1 class=\"text-center mb-4\">Not Implemented</h1>\n                <p class=\"fw-bolder text-center\">{{featureName}}</p>\n                <p class=\"text-muted text-center\">This feature has not been implemented yet</p>\n            </div>\n        </div>\n    </div>\n</div>"
+                    },
+                    "formFieldsList": {
+                        "value": [
+                            {
+                                "preferredControlType": "textField",
+                                "preferredDataType": "string",
+                                "propertyName": "buttonValue"
+                            }
+                        ]
+                    },
+                    "nodeTitle": {
+                        "value": "Not Implemented Message"
+                    },
+                    "nodeDescription": {
+                        "value": "Display not implemented message"
+                    },
+                    "sktemplate": {
+                        "uiId": "b7e39a4633e1ab8ef0258db96857d2b8",
+                        "createdDate": 1678881838676,
+                        "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                        "description": "",
+                        "inputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"featureName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Feature Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"featureName\"\n\t\t}\n\t}\n}",
+                        "name": "Feature template",
+                        "outputSchema": null,
+                        "script": "",
+                        "style": "",
+                        "template": "",
+                        "updatedDate": 1678881878036,
+                        "validationRules": [],
+                        "version": "1.0",
+                        "visibility": "private",
+                        "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+                        "value": "b7e39a4633e1ab8ef0258db96857d2b8"
+                    },
+                    "inputSchema": {
+                        "value": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"featureName\": {\n\t\t\t\"type\": \"string\",\n\t\t\t\"displayName\": \"Feature Name\",\n\t\t\t\"preferredControlType\": \"textField\",\n\t\t\t\"enableParameters\": true,\n\t\t\t\"propertyName\": \"featureName\"\n\t\t}\n\t}\n}"
+                    },
+                    "outputSchema": {
+                        "value": null
+                    },
+                    "customCSS": {
+                        "value": ""
+                    },
+                    "customScript": {
+                        "value": ""
+                    },
+                    "validationRules": {
+                        "value": []
+                    }
+                },
+                "idUnique": "a0yf1wqul8"
+            },
+            "position": {
+                "x": 600,
+                "y": 390
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        },
+        {
+            "data": {
+                "id": "ukko1s55e2",
+                "nodeType": "ANNOTATION",
+                "name": "Annotation",
+                "connectionId": "921bfae85c38ed45045e07be703d86b8",
+                "connectorId": "annotationConnector",
+                "capabilityName": "updateAnnotationProperties",
+                "type": "action",
+                "properties": {
+                    "backgroundColor": {
+                        "value": "#50e3c280"
+                    },
+                    "annotationTextColor": {
+                        "value": "#000000"
+                    },
+                    "annotation": {
+                        "value": "Optional: Pass name of feature not implement"
+                    },
+                    "width": {
+                        "value": 240
+                    },
+                    "height": {
+                        "value": 60
+                    },
+                    "fontSize": {
+                        "value": 12
+                    },
+                    "fontFamily": {
+                        "value": "sans-serif"
+                    },
+                    "strokeColor": {
+                        "value": "#4a4a4aff"
+                    },
+                    "strokeEnabled": {
+                        "value": true
+                    },
+                    "strokeWidth": {
+                        "value": 1
+                    }
+                },
+                "status": "configured"
+            },
+            "position": {
+                "x": 480,
+                "y": 270
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "pannable": false,
+            "classes": ""
+        }
+    ],
+    "clonedEdges": []
+}

@@ -351,7 +351,7 @@
                     "resource": "davinciComponents/agreement-form.json"
                 },
                 {
-                    "pos": "1,6",
+                    "pos": "1,5",
                     "title": "No-Op<br/>UI",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
@@ -360,13 +360,22 @@
                     "resource": "davinciComponents/no-op-ui.json"
                 },
                 {
-                    "pos": "1,7",
+                    "pos": "1,6",
                     "title": "Instance<br/>Vars",
                     "titlePosition": "MIDDLE",
                     "icon": "box-red",
                     "toolTip": "Flow instance variables with basic fields for company name, population Id, relyingParty etc.",
                     "action": "GIT_DV_CLIPBOARD",
                     "resource": "davinciComponents/initial-instance-variables.json"
+                },
+                {
+                    "pos": "1,7",
+                    "title": "Not<br/>Implement<br/>Msg",
+                    "titlePosition": "MIDDLE",
+                    "icon": "box-red",
+                    "toolTip": "Not implemented placeholder message",
+                    "action": "GIT_DV_CLIPBOARD",
+                    "resource": "davinciComponents/not-implemented-message.json"
                 },
                 {
                     "pos": "1,8",
