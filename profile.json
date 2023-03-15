@@ -555,10 +555,10 @@
                 },
                 {
                     "pos": "1,8",
-                    "title": "Samplen<br/>Input<br/>Schema",
+                    "title": "Sample<br/>Input<br/>Schema",
                     "titlePosition": "TOP",
                     "icon": "box-green",
-                    "toolTip": "Reference JSON input schema ",
+                    "toolTip": "Reference JSON input schema",
                     "action": "GIT_CLIPBOARD",
                     "resource": "davinciSnippets/sample-json-schema.json"
                 },
