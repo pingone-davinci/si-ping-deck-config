@@ -2,7 +2,7 @@
 /**
  * refreshPingOneEnviromentsSelect
  */
-function refreshPingOneEnviromentsSelect(settingsGroup, settingId, optionsStorage) {
+function refreshPingOneEnvironmentsSelect(settingsGroup, settingId, optionsStorage) {
   const select = document.getElementById(settingId);
   const value = getSetting(settingsGroup, settingId)
 
