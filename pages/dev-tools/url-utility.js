@@ -7,5 +7,5 @@ function urlEncodeHandler(encode = true) {
   } else {
     output.innerHTML = decodeURI(input.innerHTML);
   }
-  copyCode('urlencode-input-output');
+  copyCode('urlencode-output');
 }
