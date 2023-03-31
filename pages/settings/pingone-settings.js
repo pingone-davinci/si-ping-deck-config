@@ -1,3 +1,4 @@
+pingone_init();
 
 function pingone_init() {
   // Whatever

@@ -1,3 +1,4 @@
+home_init();
 
 function home_init() {
   console.log("pagescript - home_init()")
