@@ -99,4 +99,3 @@ function pingone_init() {
   getSettingsFromLocalStorage(fieldset.name);
 }
 
-pingone_init();

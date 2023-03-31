@@ -9,4 +9,3 @@ const home_init = function () {
   getSettingsFromLocalStorage(fieldset.name);
 }
 
-home_init();
