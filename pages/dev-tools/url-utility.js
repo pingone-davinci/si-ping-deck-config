@@ -1,7 +1,7 @@
 
 function urlEncodeHandler(encode = true) {
-  const input = document.getElementById("urlencode-input-input")
-  const output = document.getElementById("urlencode-input-output")
+  const input = document.getElementById("urlencode-input")
+  const output = document.getElementById("urlencode-output")
   if (encode) {
     output.innerHTML = encodeURI(input.innerHTML);
   } else {
