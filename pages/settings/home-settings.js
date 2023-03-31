@@ -1,5 +1,5 @@
 
-function home_init() {
+const home_init = function () {
   console.log("pagescript - home_init()")
 
   const fieldset = document.getElementById("settings");
