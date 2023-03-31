@@ -1,6 +1,6 @@
 let settingGroup;
 
-function setting_init() {
+function settings_init() {
   console.log("pagescript - settings_init()")
 
   const fieldset = document.getElementById("settings");
