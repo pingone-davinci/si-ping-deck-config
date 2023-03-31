@@ -1,22 +1,4 @@
 
-function pingone_init() {
-  // Whatever
-  console.log("pagescript - pingone_init()")
-
-  const fieldset = document.getElementById("settings");
-
-  fieldset.onchange = saveSettingsToLocalStorage;
-
-  const button = document.getElementById("dvlogin");
-  button.onclick = dvlogin;
-
-  refreshPingOneEnvironmentsSelect(fieldset.name, "companyId", "davinci_companies");
-  getSettingsFromLocalStorage(fieldset.name);
-
-  fieldset.style = "display: block;";
-}
-
-
 /**
  * refreshPingOneEnviromentsSelect
  */
@@ -100,6 +82,23 @@ const dvlogin = async function () {
   }
 
   refreshPingOneEnvironmentsSelect("pingone", "companyId", "davinci_companies");
+}
+
+function pingone_init() {
+  // Whatever
+  console.log("pagescript - pingone_init()")
+
+  const fieldset = document.getElementById("settings");
+
+  fieldset.onchange = saveSettingsToLocalStorage;
+
+  const button = document.getElementById("dvlogin");
+  button.onclick = dvlogin;
+
+  refreshPingOneEnvironmentsSelect(fieldset.name, "companyId", "davinci_companies");
+  getSettingsFromLocalStorage(fieldset.name);
+
+  fieldset.style = "display: block;";
 }
 
 pingone_init();
