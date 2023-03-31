@@ -13,5 +13,18 @@
 </div>
 
 <div id="scriptDiv">
-  <script>home_init();</script>
+  <script>
+    const home_init = function () {
+      console.log("pagescript - home_init()")
+
+      const fieldset = document.getElementById("settings");
+
+      fieldset.onchange = saveSettingsToLocalStorage;
+
+      getSettingsFromLocalStorage(fieldset.name);
+    }
+
+    home_init();
+  </script>
 </div>
+
