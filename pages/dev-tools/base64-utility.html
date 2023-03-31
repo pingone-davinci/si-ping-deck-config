@@ -1,1 +1,30 @@
-<h2>Base64 Utilities</h2>
+<div class="item-data-div left">
+  <div>
+      <h3>Description</h3>
+      <p>Base64 Encode or Decode data.</p>
+  </div>
+  <div style="width: 600px;">
+      <h3 class="inline-block">Input</h3>
+      <i class="fa fa-times fa-small fa-blue copyCode"
+          title="Clear clipboard" onclick="clearCode('base64-input');"></i>
+
+      <pre><code class="snippet hljs language-undefined  code-wrap" id="base64-input" style="min-height: 100px;
+      max-height: 250px;" contenteditable="true">Hello World</code></pre>
+
+      <div class="mt mb centered center">
+          <button class="action-button blue mr" onclick="base64Handler(true)">
+              <i class="fa fa-arrow-down"></i> Encode</button>
+          <button class="action-button blue mr" onclick="base64Handler(false)">
+              <i class="fa fa-arrow-down"></i> Decode</button>
+      </div>
+
+      <h3 class="inline-block">Output</h3>
+          <i class="fa fa-clipboard fa-small fa-blue copyCode"
+              title="Copy source to clipboard" onclick="copyCode('base64-output');"></i>
+
+      <pre><code class="snippet hljs language-undefined code-wrap" id="base64-output" style="min-height: 100px;
+      max-height: 250px;"></code></pre>
+
+  </div>
+  <div></div>
+</div>
