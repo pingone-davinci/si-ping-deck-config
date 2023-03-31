@@ -17,5 +17,19 @@
         onclick="copyCode('base64-output');"></i>
 
     <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64-output"></code></pre>
+</div>
 
+<div id="scriptDiv">
+    <script>
+        function base64Handler(encode = true) {
+            const input = document.getElementById("base64-input")
+            const output = document.getElementById("base64-output")
+            if (encode) {
+                output.innerHTML = btoa(input.innerHTML);
+            } else {
+                output.innerHTML = atob(input.innerHTML);
+            }
+            copyCode('base64-output');
+        }
+    </script>
 </div>
