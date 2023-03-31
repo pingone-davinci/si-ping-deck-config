@@ -1,4 +1,3 @@
-pingone_init();
 
 function pingone_init() {
   // Whatever
@@ -102,3 +101,5 @@ const dvlogin = async function () {
 
   refreshPingOneEnvironmentsSelect("pingone", "companyId", "davinci_companies");
 }
+
+pingone_init();
