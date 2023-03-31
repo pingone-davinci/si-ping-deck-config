@@ -21,7 +21,7 @@
 
 <div id="scriptDiv">
     <script>
-        function base64Handler(encode = true) {
+        const base64Handler = function (encode = true) {
             const input = document.getElementById("base64-input")
             const output = document.getElementById("base64-output")
             if (encode) {
