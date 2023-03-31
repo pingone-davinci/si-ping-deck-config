@@ -1,13 +1,4 @@
-let settingGroup;
 
-function settings_init() {
-  console.log("pagescript - settings_init()")
-
-  const fieldset = document.getElementById("settings");
-  settingGroup = fieldset.name;
-
-  return fieldset;
-}
 
 /*
  * saveSettingsToLocalStorage
@@ -22,9 +13,9 @@ const saveSettingsToLocalStorage = function (event) {
  * getSettingsFromLocalStorage
  * Load the settings from local storage.
  */
-function getSettingsFromLocalStorage() {
+function getSettingsFromLocalStorage(settingGroup) {
   // console.log(`Getting Settings for group ${settingGroup}`)
-  const fieldset = documentg.getElementById("settings");
+  const fieldset = document.getElementById("settings");
   const inputs = fieldset.getElementsByTagName("input");
   const selects = fieldset.getElementsByTagName("select");
   for (let field of [...inputs, ...selects]) {

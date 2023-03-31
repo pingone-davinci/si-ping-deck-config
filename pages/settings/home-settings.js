@@ -3,9 +3,9 @@ home_init();
 function home_init() {
   console.log("pagescript - home_init()")
 
-  const fieldset = settings_init();
+  const fieldset = document.getElementById("settings");
 
-  getSettingsFromLocalStorage();
+  getSettingsFromLocalStorage(fieldset.name);
 
   fieldset.style = "display: block;";
 }

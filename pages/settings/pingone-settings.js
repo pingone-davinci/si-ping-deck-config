@@ -4,7 +4,7 @@ function pingone_init() {
   // Whatever
   console.log("pagescript - pingone_init()")
 
-  const fieldset = settings_init();
+  const fieldset = document.getElementById("settings");
 
   fieldset.onchange = saveSettingsToLocalStorage;
 
@@ -12,7 +12,7 @@ function pingone_init() {
   button.onclick = dvlogin;
 
   refreshPingOneEnvironmentsSelect(fieldset.name, "companyId", "davinci_companies");
-  getSettingsFromLocalStorage();
+  getSettingsFromLocalStorage(fieldset.name);
 
   fieldset.style = "display: block;";
 }
