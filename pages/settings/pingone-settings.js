@@ -97,8 +97,6 @@ function pingone_init() {
 
   refreshPingOneEnvironmentsSelect(fieldset.name, "companyId", "davinci_companies");
   getSettingsFromLocalStorage(fieldset.name);
-
-  fieldset.style = "display: block;";
 }
 
 pingone_init();

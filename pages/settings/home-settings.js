@@ -7,8 +7,6 @@ function home_init() {
   fieldset.onchange = saveSettingsToLocalStorage;
 
   getSettingsFromLocalStorage(fieldset.name);
-
-  fieldset.style = "display: block;";
 }
 
 home_init();
