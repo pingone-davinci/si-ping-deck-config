@@ -24,22 +24,25 @@
 
         function createHandlers() {
             const encodeBtn = document.getElementById("encodeBtn");
-            encodeBtn.onclick = base64Handler(true);
-
-            const dencodeBtn = document.getElementById("decodeBtn");
-            encodeBtn.onclick = base64Handler(false);
-        }
-
-        const base64Handler = function (encode = true) {
-            const input = document.getElementById("base64-input");
-            const output = document.getElementById("base64-output");
-            if (encode) {
+            encodeBtn.onclick = function () {
+                const input = document.getElementById("base64-input");
                 output.innerHTML = btoa(input.innerHTML);
-            } else {
-                output.innerHTML = atob(input.innerHTML);
-            }
-            copyCode('base64-output');
+                copyCode('base64-output');
+            };
+            // const dencodeBtn = document.getElementById("decodeBtn");
+            // encodeBtn.onclick = base64Handler(false);
         }
+
+        // const base64Handler = function (encode = true) {
+        //     const input = document.getElementById("base64-input");
+        //     const output = document.getElementById("base64-output");
+        //     if (encode) {
+        //         output.innerHTML = btoa(input.innerHTML);
+        //     } else {
+        //         output.innerHTML = atob(input.innerHTML);
+        //     }
+        //     copyCode('base64-output');
+        // }
 
         createHandlers();
     </script>
