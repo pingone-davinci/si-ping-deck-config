@@ -21,31 +21,22 @@
 
 <div id="scriptDiv">
     <script>
+        const base64Input = document.getElementById("base64-input");
+        const base64Output = document.getElementById("base64-output");
 
         function createHandlers() {
             const encodeBtn = document.getElementById("encodeBtn");
-            console.log("Adding click handler");
             encodeBtn.onclick = function () {
-                const input = document.getElementById("base64-input");
-                const output = document.getElementById("base64-output");
-                output.innerHTML = btoa(input.innerHTML);
+                base64Output.innerHTML = btoa(base64Input.innerHTML);
                 copyCode('base64-output');
             };
-            // const dencodeBtn = document.getElementById("decodeBtn");
-            // encodeBtn.onclick = base64Handler(false);
+
+            const dencodeBtn = document.getElementById("decodeBtn");
+            dencodeBtn.onclick = function () {
+                base64Output.innerHTML = atob(base64Input.innerHTML);
+                copyCode('base64-output');
+            };
         }
-
-        // const base64Handler = function (encode = true) {
-        //     const input = document.getElementById("base64-input");
-        //     const output = document.getElementById("base64-output");
-        //     if (encode) {
-        //         output.innerHTML = btoa(input.innerHTML);
-        //     } else {
-        //         output.innerHTML = atob(input.innerHTML);
-        //     }
-        //     copyCode('base64-output');
-        // }
-
         createHandlers();
     </script>
 </div>
