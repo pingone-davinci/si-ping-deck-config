@@ -25,11 +25,12 @@
         function createHandlers() {
             const encodeBtn = document.getElementById("encodeBtn");
             console.log("Adding click handler");
-            encodeBtn.addEventListener("click", function () {
+            encodeBtn.onclick = function () {
                 const input = document.getElementById("base64-input");
+                const output = document.getElementById("base64-output");
                 output.innerHTML = btoa(input.innerHTML);
                 copyCode('base64-output');
-            });
+            };
             // const dencodeBtn = document.getElementById("decodeBtn");
             // encodeBtn.onclick = base64Handler(false);
         }
