@@ -6,9 +6,9 @@
         contenteditable="true">Hello World</code></pre>
 
     <div class="mt mb centered center">
-        <button class="action-button blue mr" onclick="base64Handler(true)">
+        <button id="encodeBtn" class="action-button blue mr">
             <i class="fa fa-arrow-right"></i> Encode</button>
-        <button class="action-button blue mr" onclick="base64Handler(false)">
+        <button id="decodeBtn" class="action-button blue">
             <i class="fa fa-arrow-left"></i> Decode</button>
     </div>
 
@@ -19,8 +19,17 @@
     <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64-output"></code></pre>
 </div>
 
-<!-- <div id="scriptDiv">
+<div id="scriptDiv">
     <script>
+
+        function createHandlers() {
+            const encodeBtn = document.getElementById("encodeBtn");
+            encodeBtn.onclick = base64Handler(true);
+
+            const dencodeBtn = document.getElementById("decodeBtn");
+            encodeBtn.onclick = base64Handler(false);
+        }
+
         const base64Handler = function (encode = true) {
             const input = document.getElementById("base64-input");
             const output = document.getElementById("base64-output");
@@ -31,5 +40,7 @@
             }
             copyCode('base64-output');
         }
+
+        createHandlers();
     </script>
-</div> -->
+</div>
