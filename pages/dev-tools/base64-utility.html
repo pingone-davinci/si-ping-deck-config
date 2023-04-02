@@ -1,8 +1,8 @@
 <div>
     <h3 class="inline-block">Input</h3>
-    <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard" onclick="clearCode('base64-input');"></i>
+    <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard" onclick="clearCode('base64Input');"></i>
 
-    <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64-input" 
+    <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64Input" 
         contenteditable="true">Hello World</code></pre>
 
     <div class="mt mb centered center">
@@ -14,27 +14,27 @@
 
     <h3 class="inline-block">Output</h3>
     <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
-        onclick="copyCode('base64-output');"></i>
+        onclick="copyCode('base64Output');"></i>
 
-    <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64-output"></code></pre>
+    <pre><code class="snippet hljs language-undefined code-wrap utility" id="base64Output"></code></pre>
 </div>
 
 <div id="scriptDiv">
     <script>
-        const base64Input = document.getElementById("base64-input");
-        const base64Output = document.getElementById("base64-output");
+        const base64Input = document.getElementById("base64Input");
+        const base64Output = document.getElementById("base64Output");
 
         function createHandlers() {
             const encodeBtn = document.getElementById("encodeBtn");
             encodeBtn.onclick = function () {
                 base64Output.innerHTML = btoa(base64Input.innerHTML);
-                copyCode('base64-output');
+                copyCode('base64Output');
             };
 
             const dencodeBtn = document.getElementById("decodeBtn");
             dencodeBtn.onclick = function () {
                 base64Output.innerHTML = atob(base64Input.innerHTML);
-                copyCode('base64-output');
+                copyCode('base64Output');
             };
         }
         createHandlers();

@@ -1,24 +1,41 @@
-<div class="item-data-div left">
+<div>
+  <h3 class="inline-block">Input</h3>
+  <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard" onclick="clearCode('urlEncodeInput');"></i>
 
-  <div style="width: 600px;">
-    <h3 class="inline-block">Input</h3>
-    <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard"
-      onclick="clearCode('urlencode-input');"></i>
+  <pre><code class="snippet hljs language-undefined code-wrap utility" id="urlEncodeInput" contenteditable="true">Hello World</code></pre>
 
-    <pre><code class="snippet hljs language-undefined code-wrap utility" id="urlencode-input" contenteditable="true">Hello World</code></pre>
-
-    <div class="mt mb centered center">
-      <button class="action-button blue mr" onclick="urlEncodeHandler(true)">
-        <i class="fa fa-arrow-right"></i> Encode</button>
-      <button class="action-button blue" onclick="urlEncodeHandler(false)">
-        <i class="fa fa-arrow-left"></i> Decode</button>
-    </div>
-
-    <h3 class="inline-block">Output</h3>
-    <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
-      onclick="copyCode('urlencode-output');"></i>
-
-    <pre><code class="snippet hljs language-undefined code-wrap utility" id="urlencode-output" ></code></pre>
-
+  <div class="mt mb centered center">
+    <button class="action-button blue mr">
+      <i class="fa fa-arrow-right"></i> Encode</button>
+    <button class="action-button blue">
+      <i class="fa fa-arrow-left"></i> Decode</button>
   </div>
+
+  <h3 class="inline-block">Output</h3>
+  <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
+    onclick="copyCode('urlEncodeOutput');"></i>
+
+  <pre><code class="snippet hljs language-undefined code-wrap utility" id="urlEncodeOutput" ></code></pre>
+
 </div>
+
+
+<script>
+  const urlEncodeInput = document.getElementById("urlEncodeInput")
+  const urlEncodeOutput = document.getElementById("urlEncodeOutput")
+
+  function createHandlers() {
+    const encodeBtn = document.getElementById("encodeBtn");
+    encodeBtn.onclick = function () {
+      urlEncodeOutput.innerHTML = encodeURI(urlEncodeInput.innerHTML);
+      copyCode('urlEncodeOutput');
+    };
+
+    const dencodeBtn = document.getElementById("decodeBtn");
+    dencodeBtn.onclick = function () {
+      urlEncodeOutput.innerHTML = decodeURI(urlEncodeInput.innerHTML);
+      copyCode('urlEncodeOutput');
+    };
+  }
+  createHandlers();
+</script>
