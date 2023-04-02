@@ -19,23 +19,24 @@
 
 </div>
 
+<div id="scriptDiv">
+  <script>
+    const urlEncodeInput = document.getElementById("urlEncodeInput")
+    const urlEncodeOutput = document.getElementById("urlEncodeOutput")
 
-<script>
-  const urlEncodeInput = document.getElementById("urlEncodeInput")
-  const urlEncodeOutput = document.getElementById("urlEncodeOutput")
+    function createHandlers() {
+      const encodeBtn = document.getElementById("encodeBtn");
+      encodeBtn.onclick = function () {
+        urlEncodeOutput.innerHTML = encodeURI(urlEncodeInput.innerHTML);
+        copyCode('urlEncodeOutput');
+      };
 
-  function createHandlers() {
-    const encodeBtn = document.getElementById("encodeBtn");
-    encodeBtn.onclick = function () {
-      urlEncodeOutput.innerHTML = encodeURI(urlEncodeInput.innerHTML);
-      copyCode('urlEncodeOutput');
-    };
-
-    const dencodeBtn = document.getElementById("decodeBtn");
-    dencodeBtn.onclick = function () {
-      urlEncodeOutput.innerHTML = decodeURI(urlEncodeInput.innerHTML);
-      copyCode('urlEncodeOutput');
-    };
-  }
-  createHandlers();
-</script>
+      const dencodeBtn = document.getElementById("decodeBtn");
+      dencodeBtn.onclick = function () {
+        urlEncodeOutput.innerHTML = decodeURI(urlEncodeInput.innerHTML);
+        copyCode('urlEncodeOutput');
+      };
+    }
+    createHandlers();
+  </script>
+</div>
