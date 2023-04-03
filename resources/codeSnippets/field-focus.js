@@ -1,15 +1,17 @@
+// Focus on the first input element on the page
 const focusOnFirstInputElement = () => {
-    document.getElementById("__ELEMENT_ID__").focus();
+    const element = document.querySelector("input");
+
+    // Set focus on the first input element, if it exists
+    if (element) {
+        element.focus();
+    }
 };
 
-/**
- * If page isn't loaded yet, wait for the page to load, then focus on first
- * input element.
- */
+// If the page is still loading, wait for it to finish before calling the function
 if (document.readyState === "loading") {
-    // Loading hasn't finished yet
     document.addEventListener("DOMContentLoaded", focusOnFirstInputElement);
 } else {
-    // `DOMContentLoaded` has already fired
+    // If the page has already finished loading, call the function immediately
     focusOnFirstInputElement();
 }
