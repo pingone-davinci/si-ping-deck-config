@@ -1,0 +1,47 @@
+<div>
+  <h3 class="inline-block">JWT</h3>
+  <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard" onclick="clearCode('encodedJWT');"></i>
+
+  <pre><code class="snippet hljs language-undefined code-wrap utility" id="encodedJWT" contenteditable="true"></code></pre>
+
+  <div class="mt mb centered center">
+
+    <button id="decodeBtn" class="action-button blue">
+      <i class="fa fa-arrow-left"></i> Decode JWT</button>
+  </div>
+
+  <h3 class="inline-block">Header</h3>
+
+
+  <pre><code class="snippet hljs language-undefined code-wrap utility" id="decodedHeader" ></code></pre>
+
+  <h3 class="inline-block">Payload</h3>
+
+
+  <pre><code class="snippet hljs language-undefined code-wrap utility" id="decodedPayload" ></code></pre>
+
+</div>
+
+<div id="scriptDiv">
+  <script>
+    const encodedJWTInput = document.getElementById("encodedJWT");
+    const decodedHeader = document.getElementById("decodedHeader");
+    const decodedPayload = document.getElementById("decodedPayload");
+
+    function createHandler() {
+
+      const dencodeBtn = document.getElementById("decodeBtn");
+      dencodeBtn.onclick = function () {
+
+        const [headerB64, payloadB64, signatureB64] = token.split('.');
+
+        const header = JSON.parse(atob(headerB64));
+        const payload = JSON.parse(atob(payloadB64));
+
+        decodedHeader.textContent = header;
+        decodedPayload.textContent = payload;
+      };
+    }
+    createHandler();
+  </script>
+</div>
