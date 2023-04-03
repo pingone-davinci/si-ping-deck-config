@@ -1,5 +1,12 @@
-const __myDevices__ = [{ type: "sms", value: '555-1212' }, { type: "device", value: 'mobile' }, { type: "email", value: 'test@test.com' }];
+// Example array of objects
+const devices = [
+  { type: "sms", value: "555-1212" },
+  { type: "device", value: "mobile" },
+  { type: "email", value: "test@test.com" }
+];
 
-// Note find only returns the first match, if you need all, use the filter function
-const __myDevice__ = __myDevices__.find(device => device.type === 'sms');
-console.log(__myDevice__);
+// Find the first device with type "sms"
+const smsDevice = devices.find((device) => device.type === "sms");
+
+// Log the found device to the console
+console.log(smsDevice?.value);
