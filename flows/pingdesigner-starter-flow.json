@@ -11,7 +11,7 @@
   "currentVersion": 1,
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
   "deployedDate": 1680520498362,
-  "description": "Imported on Mon Apr 03 2023 11:14:58 GMT+0000 (Coordinated Universal Time)",
+  "description": "DaVinci starter flow that comes preconfigured to leverage Ping's CSS resources. The flow includes common instance variables, a generic error handler and a success message UI.",
   "flowStatus": "enabled",
   "name": "Starter Flow - PingDesigner",
   "publishedVersion": 1,

@@ -12,7 +12,7 @@
   "customerId": "f3e47d945ae971a4b4142ec75012d155",
   "description": "Imported on Thu Mar 09 2023 13:25:53 GMT+0000 (Coordinated Universal Time)",
   "flowStatus": "enabled",
-  "name": "Starter Flow - PingDeck Thu, Mar 09, 2023, 01:25 PM",
+  "name": "Starter Flow - PingDeck",
   "publishedVersion": 2,
   "settings": {
     "csp": "worker-src 'self' blob:; script-src 'self' https://cdn.jsdelivr.net https://code.jquery.com https://devsdk.singularkey.com http://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';",
