@@ -33,6 +33,7 @@
       const dencodeBtn = document.getElementById("decodeBtn");
       dencodeBtn.onclick = function () {
 
+        const token = encodedJWTInput.value;
         const [headerB64, payloadB64, signatureB64] = token.split('.');
 
         const header = JSON.parse(atob(headerB64));
