@@ -33,14 +33,16 @@
       const dencodeBtn = document.getElementById("decodeBtn");
       dencodeBtn.onclick = function () {
 
-        const token = encodedJWTInput.value;
-        const [headerB64, payloadB64, signatureB64] = token.split('.');
+        const token = encodedJWTInput.textValue;
+        if (token) {
+          const [headerB64, payloadB64, signatureB64] = token.split('.');
 
-        const header = JSON.parse(atob(headerB64));
-        const payload = JSON.parse(atob(payloadB64));
+          const header = JSON.parse(atob(headerB64));
+          const payload = JSON.parse(atob(payloadB64));
 
-        decodedHeader.textContent = header;
-        decodedPayload.textContent = payload;
+          decodedHeader.textContent = header;
+          decodedPayload.textContent = payload;
+        }
       };
     }
     createHandler();
