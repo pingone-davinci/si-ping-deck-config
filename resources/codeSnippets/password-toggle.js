@@ -1,29 +1,20 @@
-/*
-* To make the password toggle between clear text and protected characters:
-*   
-*   1. Replace __DIV_ID__ placeholder (line 32) with the id of the div containing the password field
-*/
-function makePasswordToggle(id) {
-    var container = document.getElementById(id);
-    var password = container.getElementsByTagName("input")[0];
-    var toggler = document.createElement("button");
-    toggler.setAttribute("type", "button");
+// Toggle password input field
+function makePasswordToggle(containerId) {
+    const container = document.getElementById(containerId);
+    const passwordInput = container.querySelector("input[type='password']");
+    const toggler = document.createElement("button");
+    toggler.type = "button";
     toggler.setAttribute("aria-label", "Show/Hide Password");
     toggler.className = "btn mdi mdi-eye-off-outline position-absolute end-0 top-50 translate-middle-y";
     container.appendChild(toggler);
 
     function showHidePassword() {
-        if (password.type == "password") {
-            password.setAttribute("type", "text");
-            toggler.classList.add("mdi-eye-outline");
-            toggler.classList.remove("mdi-eye-off-outline");
-        } else {
-            toggler.classList.add("mdi-eye-off-outline");
-            toggler.classList.remove("mdi-eye-outline");
-            password.setAttribute("type", "password");
-        }
-        password.focus();
-    };
+        const passwordType = passwordInput.type === "password" ? "text" : "password";
+        passwordInput.type = passwordType;
+        toggler.classList.toggle("mdi-eye-outline");
+        toggler.classList.toggle("mdi-eye-off-outline");
+        passwordInput.focus();
+    }
 
     toggler.addEventListener("click", showHidePassword);
 }
