@@ -2,7 +2,7 @@
     "clonedNodes": [
         {
             "data": {
-                "id": "q4xtr5kpwl",
+                "id": "i2oeqdm41n",
                 "nodeType": "CONNECTION",
                 "connectionId": "867ed4363b2bc21c860085ad2baa817d",
                 "connectorId": "httpConnector",
@@ -12,8 +12,20 @@
                 "capabilityName": "customHTMLTemplate",
                 "type": "trigger",
                 "properties": {
+                    "title": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"PingOne DaVinci\"\n      }\n    ]\n  }\n]"
+                    },
+                    "headerText": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Flow Analytics Demo\"\n      }\n    ]\n  }\n]"
+                    },
+                    "description": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"In this demo we'll showcase how you can log custom analtyics\"\n      }\n    ]\n  }\n]"
+                    },
+                    "buttonText": {
+                        "value": "[\n  {\n    \"children\": [\n      {\n        \"text\": \"Launch Demo!\"\n      }\n    ]\n  }\n]"
+                    },
                     "customHTML": {
-                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\"/>\n                <h1 class=\"text-center mb-4\">PingOne DaVinci Demo</h1>\n                <h2 class=\"text-center mb-4\">__DEMO_NAME__</h2>\n                <p class=\"text-muted text-center\">__DEMO_OVERVIEW__</p>\n                <p class=\"text-muted text-center\">Documentation and prerequisites available <a href=\"{{global.variables.flowDocsURL}}\" alt=\"documentation\" target=\"_blank\">here</a></p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">Launch Demo</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
+                        "value": "<div class=\"bg-light d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 bottom-0 end-0 overflow-auto\">\n    <div style=\"max-width: 400px; min-width: 400px; width: 100%\">\n        <div class=\"card shadow mb-5\">\n            <div class=\"card-body p-5 d-flex flex-column\">\n                <img class=\"companyLogo align-self-center mb-5\" alt=\"{{global.variables.companyName}}\"/>\n                <h1 class=\"text-center mb-4\">{{title}}</h1>\n                <h2 class=\"text-center mb-4\">{{headerText}}</h2>\n                <p class=\"text-muted text-center\">{{description}}</p>\n                <div class=\"d-flex flex-column\">\n                    <button data-id=\"button\" type=\"submit\" class=\"btn btn-primary mb-3\" data-skcomponent=\"skbutton\"\n                            data-skbuttontype=\"next-event\">{{buttonText}}</button>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>"
                     },
                     "formFieldsList": {
                         "value": [
@@ -29,13 +41,46 @@
                     },
                     "nodeDescription": {
                         "value": "Display demo overview message. Provide docs link"
+                    },
+                    "sktemplate": {
+                        "uiId": "1c94fc0f2c406aa5cc68587d9777f5a6",
+                        "createdDate": 1680544482569,
+                        "customerId": "f3e47d945ae971a4b4142ec75012d155",
+                        "description": "",
+                        "inputSchema": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"headerText\": {\n            \"type\": \"string\",\n            \"displayName\": \"Header Text\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"headerText\"\n        },\n\t\t\"description\": {\n            \"type\": \"string\",\n            \"displayName\": \"Description\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"description\"\n        },\n\t\t\"buttonText\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Text\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonText\"\n        }\n    }\n}",
+                        "name": "Demo",
+                        "outputSchema": null,
+                        "script": "",
+                        "style": "",
+                        "template": "",
+                        "updatedDate": 1680544656786,
+                        "validationRules": [],
+                        "version": "1.0",
+                        "visibility": "private",
+                        "companyId": "ee43f700-c751-494d-9dbf-70946a85b328",
+                        "value": "1c94fc0f2c406aa5cc68587d9777f5a6"
+                    },
+                    "inputSchema": {
+                        "value": "{\n    \"type\": \"object\",\n    \"properties\": {\n        \"title\": {\n            \"type\": \"string\",\n            \"displayName\": \"Title\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"title\"\n        },\n\t\t\"headerText\": {\n            \"type\": \"string\",\n            \"displayName\": \"Header Text\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"headerText\"\n        },\n\t\t\"description\": {\n            \"type\": \"string\",\n            \"displayName\": \"Description\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"description\"\n        },\n\t\t\"buttonText\": {\n            \"type\": \"string\",\n            \"displayName\": \"Button Text\",\n            \"preferredControlType\": \"textField\",\n            \"enableParameters\": true,\n            \"propertyName\": \"buttonText\"\n        }\n    }\n}"
+                    },
+                    "outputSchema": {
+                        "value": null
+                    },
+                    "customCSS": {
+                        "value": ""
+                    },
+                    "customScript": {
+                        "value": ""
+                    },
+                    "validationRules": {
+                        "value": []
                     }
                 },
-                "idUnique": "v2v43dq54e"
+                "idUnique": "52i6y03wd9"
             },
             "position": {
-                "x": 200,
-                "y": 200
+                "x": 690,
+                "y": 390
             },
             "group": "nodes",
             "removed": false,
