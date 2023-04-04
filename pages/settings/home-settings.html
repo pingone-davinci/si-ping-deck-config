@@ -19,9 +19,9 @@
 
       const fieldset = document.getElementById("settings");
 
-      fieldset.onchange = saveSettingsToLocalStorage;
+      fieldset.onchange = saveFieldsetToLocalStorage;
 
-      getSettingsFromLocalStorage(fieldset.name);
+      populateFieldsetFromLocalStorage(fieldset.name);
     }
 
     home_init();
