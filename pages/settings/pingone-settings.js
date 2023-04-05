@@ -82,3 +82,112 @@ const dvlogin = async function () {
 
   refreshPingOneEnvironmentsSelect("pingone", "companyId", "davinci_companies");
 }
+
+
+
+const saveEnvironment = function () {
+  console.log("In saveEnvironment()...");
+  saveFieldsetToLocalStorageArray("envNickname");
+  refreshFormTable();
+}
+
+const addEnvironment = function () {
+  console.log("In addEnvironment()...");
+  showElement("settings");
+  clearFieldsetItems();
+
+  const saveButton = document.getElementById("save-environment");
+  hideElement("delete-environment")
+}
+
+const editEnvironment = function (id) {
+  console.log("In editEvironment()...");
+  populateFieldsetFromLocalStorageArray("envNickname", id);
+  const formTable = document.getElementById("form-table");
+  // console.log(formTable);
+  const rows = formTable.getElementsByTagName("tr");
+  // console.log(rows);
+
+  for (const e of rows) {
+    e.classList.remove("selected");
+  }
+
+  const row = document.getElementById(`nickname-${id}`);
+  // console.log(row);
+  row.classList.add("selected");
+  showElement("settings");
+  showElement("delete-environment")
+  // console.log(id);
+}
+
+const deleteEnvironment = function () {
+  console.log("In deleteEnvironment()...");
+  const envNickname = document.getElementById("envNickname");
+
+  const settings = getSetting("pingone");
+
+  const index = settings.findIndex(function (item) {
+    return item["envNickname"] === envNickname.value;
+  });
+
+  if (index != -1) {
+    settings.splice(index, 1);
+  }
+
+  SETTINGS.pingone = settings;
+
+  saveSettings();
+  clearFieldsetItems();
+  hideElement("settings");
+  refreshFormTable();
+}
+
+function refreshFormTable() {
+  let formTableHTML = `
+  <table id="form-table" width="95%" align="center">
+    <tr>
+      <th>Nickname</th>
+      <th>Env ID</th>
+      <th>Username</th>
+    </tr>`;
+  // console.log("In refreshFormTable()");
+
+  const envTable = document.getElementById("environment-table");
+
+  const environments = getSetting("pingone");
+
+  // If number of enviroments == 0 or missing, replace with a message to add environments
+  if (!environments || environments.length === 0) {
+    envTable.innerHTML = "Press the <strong>Add Enviroment</strong> button to add settings for a PingOne Environment"
+    return;
+  }
+
+  for (const e in environments) {
+    const environment = environments[e];
+    // console.table(environment);
+    formTableHTML += `
+      <tr id="nickname-${environment?.envNickname}"onclick="editEnvironment('${environment?.envNickname}');">
+        <td>${environment?.envNickname}</td>
+        <td>${environment?.envId}</td>
+        <td>${environment?.username}</td>
+      </tr>
+    `;
+  }
+
+  formTableHTML += `
+  </table>
+  `
+  envTable.innerHTML = formTableHTML;
+}
+
+function pingone_init() {
+  // Whatever
+  console.log("pagescript - pingone_init()")
+
+  const fieldset = document.getElementById("settings");
+
+  const addEnvButton = document.getElementById("add-environment");
+  addEnvButton.onclick = addEnvironment;
+
+  refreshFormTable();
+}

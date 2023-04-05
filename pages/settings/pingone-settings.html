@@ -1,35 +1,50 @@
 <div id="pageDiv">
   <span class="xsmall">Saved to browser local storage</span>
   <hr>
-    <fieldset name="pingone" id="settings">
-      <div class="form-row">
-        <label title="variable: {{region}}">PingOne Region:</label>
-        <select id="region">
+  <div id="environment-table">
+  </div>
+  <p>
+  <div class="centered">
+    <button id="add-environment" class="action-button blue"><i class="fa fa-plus"></i> Add Environment</button>
+
+    <fieldset name="pingone" id="settings" class="hide">
+      <div class="input-container">
+        <input id="envNickname" type="text" placeholder=" " value="">
+        <label>Environment Nickname</label>
+      </div>
+      <div class="select line-border">
+        <select id="region" class="field-gray-background">
+          <option value="" disabled>PingOne Region</option>
           <option value="com">NorthAmerica (US)</option>
           <option value="ca">NorthAmerica (Canada)</option>
           <option value="eu">Europe</option>
           <option value="asia">Asia Pacific</option>
-        </select></div>
-      <div class="form-row">
-        <label title="variable: {{envId}}">PingOne Environment ID:</label>
-        <input id="envId" type="text" value=""></div>
-      <div class="form-row">
-        <label title="variable: {{username}}">PingOne Username:</label>
-        <input id="username" type="text" value=""></div>
-      <div class="form-row">
-        <label title="variable: {{password}}">PingOne Password:</label>
-        <input id="password" type="password" value=""></div>
-      <div class="form-row">
-        <label></label><button id="dvlogin" class="action-button blue">Login/Refresh DaVinci Companies</button></div>
-      <div class="form-row">
-        <label title="variable: {{companyId}}">PingOne Environments (w/ DaVinci):</label>
-        <select id="companyId">
-        </select></div>
+        </select>
+      </div>
+      <div class="input-container">
+        <input id="envId" type="text" placeholder=" " value="">
+        <label>PingOne Environment ID</label>
+      </div>
+      <div class="input-container">
+        <input id="username" type="text" placeholder=" " value="">
+        <label>PingOne Username</label>
+      </div>
+      <div class="input-container">
+        <input id="password" type="password" placeholder=" " value="">
+        <label>PingOne Password</label>
+      </div>
+      <div class="mt mb center">
+        <button id="save-environment" onclick="saveEnvironment();" class="action-button blue">Save Enviroment</button>
+        <button id="delete-environment" onclick="deleteEnvironment();" class="action-button red ml">Delete
+          Enviroment</button>
+      </div>
     </fieldset>
+  </div>
 </div>
 
 <div id="scriptDiv">
   <script>
+
 
     pingone_init();
 
