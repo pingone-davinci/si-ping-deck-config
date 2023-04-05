@@ -3,14 +3,14 @@
     <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
         onclick="copyCode('ipv4Output');"></i>
 
-    <pre><code class="snippet hljs language-undefined code-wrap utility" id="ipv4Output"></code></pre>
+    <pre><code class="snippet hljs language-undefined" id="ipv4Output"></code></pre>
 </div>
 
 <div id="scriptDiv">
     <script>
-      const ipv4Output = document.getElementById("ipv4Output");
-      fetch("/api/myip").then(res => res.json()).then(data => ipv4Output.innerHTML = data.ip)
+        const ipv4Output = document.getElementById("ipv4Output");
+        fetch("/api/myip").then(res => res.json()).then(data => ipv4Output.innerHTML = data.ip)
 
-      copyCode('ipv4Output');
+        copyCode('ipv4Output');
     </script>
 </div>
