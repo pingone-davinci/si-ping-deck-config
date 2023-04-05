@@ -1,0 +1,16 @@
+<div>
+    <h3 class="inline-block">My IP Address (IPv4)</h3>
+    <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
+        onclick="copyCode('ipv4Output');"></i>
+
+    <pre><code class="snippet hljs language-undefined code-wrap utility" id="ipv4Output"></code></pre>
+</div>
+
+<div id="scriptDiv">
+    <script>
+      const ipv4Output = document.getElementById("ipv4Output");
+      fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => ipv4Output.innerHTML = data)
+
+      copyCode('ipv4Output');
+    </script>
+</div>
