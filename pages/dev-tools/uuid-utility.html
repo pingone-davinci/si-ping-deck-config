@@ -1,0 +1,29 @@
+<div>
+    <div class="mt mb centered center">
+        <button id="uuidBtn" class="action-button blue mr">
+            <i class="fa fa-arrow-right"></i> Generate UUID</button>
+    </div>
+
+    <h3 class="inline-block">Output</h3>
+    <i class="fa fa-clipboard fa-small fa-blue copyCode" title="Copy source to clipboard"
+        onclick="copyCode('uuidOutput');"></i>
+
+    <pre><code class="snippet hljs language-undefined code-wrap utility" id="uuidOutput"></code></pre>
+</div>
+
+<div id="scriptDiv">
+    <script>
+        const uuidOutput = document.getElementById("uuidOutput");
+        uuidOutput.innerHTML = self.crypto.randomUUID();
+        copyCode('uuidOutput');
+
+        function createHandlers() {
+            const uuidBtn = document.getElementById("uuidBtn");
+            uuidBtn.onclick = function () {
+                uuidOutput.innerHTML = self.crypto.randomUUID();
+                copyCode('uuidOutput');
+            };
+        }
+        createHandlers();
+    </script>
+</div>
