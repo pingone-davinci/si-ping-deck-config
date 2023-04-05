@@ -9,7 +9,7 @@
 <div id="scriptDiv">
     <script>
       const ipv4Output = document.getElementById("ipv4Output");
-      fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => ipv4Output.innerHTML = data)
+      fetch("/api/myip").then(res => res.json()).then(data => ipv4Output.innerHTML = data.ip)
 
       copyCode('ipv4Output');
     </script>
