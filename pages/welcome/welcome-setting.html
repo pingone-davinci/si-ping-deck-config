@@ -1,4 +1,29 @@
-
-
-  <p class="font-larger mt-xl ">Settings help in providing variables to personalize
+<p class="font-larger mt-xl ">Settings help in providing variables to personalize
   the Ping Designer experiance & content.</p>
+
+
+<div class="centered">
+  <button id="export-settings" class="action-button blue">Export Settings</button>
+  <button id="import-settings" class="action-button blue ml">Import Settings</button>
+</div>
+
+<div id="scriptDiv">
+  <script>
+    const exportSettings = function () {
+      redAlert("Not implemented yet...");
+    }
+
+    const importSettings = function () {
+      redAlert("Not implemented yet...");
+    }
+
+    const welcome_settings_init = function () {
+      console.log("pagescript - welcome_settings_init()");
+
+      document.getElementById("export-settings").onclick = exportSettings;
+      document.getElementById("import-settings").onclick = importSettings;
+    }
+
+    welcome_settings_init();
+  </script>
+</div>
