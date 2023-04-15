@@ -1,0 +1,26 @@
+<div id="pageDiv">
+  <span class="xsmall">Saved to browser local storage</span>
+  <hr>
+  <fieldset name="testing" id="settings">
+    <div class="input-container">
+      <input id="apikey" type="password" placeholder=" " value="">
+      <label>API Key</label>
+    </div>
+  </fieldset>
+</div>
+
+<div id="scriptDiv">
+  <script>
+    const testing_init = function () {
+      console.log("pagescript - testing_init()")
+
+      const fieldset = document.getElementById("settings");
+
+      fieldset.onchange = saveFieldsetToLocalStorage;
+
+      populateFieldsetFromLocalStorage();
+    }
+
+    testing_init();
+  </script>
+</div>

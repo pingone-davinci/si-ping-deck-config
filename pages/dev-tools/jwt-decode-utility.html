@@ -1,20 +1,34 @@
 <div>
-  <h3 class="inline-block">JWT</h3>
-  <i class="fa fa-times fa-small fa-blue copyCode" title="Clear clipboard" onclick="clearCode('encodedJWT');"></i>
-  <pre><code class="snippet hljs language-undefined code-wrap utility" id="encodedJWT" contenteditable="true"></code></pre>
-  <div class="mt mb centered center">
+  <div class="code-block-with-header">
+    <div class="header">
+      <div class="title">JWT</div>
+      <button class="copy-btn" onclick="clearCodeBlock(event);">Clear</button>
+    </div>
+    <pre><code id="encodedJWT" class="snippet hljs language-undefined code-wrap utility" contenteditable="true">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5MDI1NTUxMjEyIiwibmFtZSI6IlBpbmcgRGVzaWduIExpYnJhcnkiLCJpYXQiOjE1MTYyMzkwMjJ9.Jk2hfoTZ5tNxycHjV6y2R0IszMi3I93dxXy4fU2syMg</code></pre>
+  </div>
+
+  <div class="mt-l mb centered center">
     <button id="decodeBtn" class="action-button blue">
       <i class="fa fa-arrow-left"></i> Decode JWT</button>
   </div>
+
   <div>
-    <div style="width:30%; float: left;">
-      <h3 class="inline-block">Header</h3>
-      <pre><code class="snippet hljs language-undefined code-wrap utility" style="min-height: 200px !important" id="decodedHeader" ></code></pre>
+    <div class="code-block-with-header mr" style="width:30%; display: inline-block">
+      <div class="header">
+        <div class="title">Header</div>
+        <button class="copy-btn" onclick="copyCodeBlock(event, 'JWT Header');">Copy</button>
+      </div>
+      <pre><code id="decodedHeader" class="snippet hljs language-undefined code-wrap utility"></code></pre>
     </div>
-    <div style="width: 65%;float: right">
-      <h3 class="inline-block">Payload</h3>
-      <pre><code class="snippet hljs language-undefined code-wrap utility" style="min-height: 200px !important" id="decodedPayload" ></code></pre>
+
+    <div class="code-block-with-header" style="width:calc(70% - 30px); display: inline-block">
+      <div class="header">
+        <div class="title">Payload</div>
+        <button class="copy-btn" onclick="copyCodeBlock(event, 'JWT Payload');">Copy</button>
+      </div>
+      <pre><code id="decodedPayload" class="snippet hljs language-undefined code-wrap utility"></code></pre>
     </div>
+
   </div>
 </div>
 
@@ -30,10 +44,8 @@
       dencodeBtn.onclick = function () {
 
         const token = encodedJWTInput.textContent;
-        console.log(encodedJWTInput);
         if (token) {
           const [headerB64, payloadB64, signatureB64] = token.split('.');
-
           const header = JSON.parse(atob(headerB64));
           const payload = JSON.parse(atob(payloadB64));
 

@@ -1,203 +1,506 @@
 
 
-const saveMyContent = function () {
-  console.log("In saveMyContent()...");
+const contentTypes = {
+  "code": "Code Snippet",
+  "dvcomponent": "DaVinci Component",
+  "flow": "DaVinci Flow",
+  "page": "Page",
+  "redirect": "Bookmarks",
+  "welcome": "Welcome"
+}
 
-  const fieldset = getFieldset();
+const states = {
+  "private": "Private (User)",
+  "test": "Testing",
+  "submitted": "Submitted",
+  "public": "Public",
+  "community": "Community",
+  "parter": "Partner"
+}
+
+const itemListInputs = {
+  usage: {
+    listTitle: "Usage",
+    displayField: "content",
+    listType: "string",
+    fields: [
+      {
+        id: "content",
+        label: "Usage",
+        width: 100
+      }
+    ]
+  },
+  scripts: {
+    listTitle: "Scripts",
+    displayField: "script",
+    listType: "string",
+    fields: [
+      {
+        id: "script",
+        label: "Script Location",
+        width: 100
+      }
+    ]
+  },
+  tags: {
+    listTitle: "Tags",
+    displayField: "tag",
+    listType: "string",
+    fields: [
+      {
+        id: "tag",
+        label: "Tag",
+        width: 100
+      }
+    ]
+  },
+  images: {
+    listTitle: "Images",
+    displayField: "title",
+    fields: [
+      {
+        id: "title",
+        label: "Title",
+        width: 25
+      },
+      {
+        id: "url",
+        label: "URL",
+        width: 50
+      },
+      {
+        id: "description",
+        label: "Description",
+        width: 25
+      }
+    ]
+  },
+  links: {
+    listTitle: "Links",
+    displayField: "title",
+    fields: [
+      {
+        id: "title",
+        label: "Title",
+        width: 25
+      },
+      {
+        id: "url",
+        label: "URL",
+        width: 75
+      }
+    ]
+  }
+};
+
+const saveItemContent = function () {
+  console.log("In saveItemContent()...");
+
+  const fieldset = document.getElementById("item-data");
   const fieldsetValues = getFieldsetInputs(fieldset.id);
 
+  console.log("links = ", atob(fieldsetValues.links))
   let item = {
-    "id": `${fieldsetValues.id}`,
-    "title": `${fieldsetValues.title}`,
-    "metadata": {
-      "categories": [
-        `My Content`
-      ],
-      "contentType": `${fieldsetValues.contentType}`,
-      "iconClass": "",
-      "updated": `${getFormattedDate()}`,
-      "creator": `${substituteSettings("{{home.name}}")}`,
-      "creatorEmail": `${substituteSettings("{{home.email}}")}`,
-      "raw": `${fieldsetValues.raw}`,
-      "scripts": []
+    id: `${fieldsetValues.id}`,
+    title: `${fieldsetValues.title}`,
+    metadata: {
+      tags: JSON.parse(atob(fieldsetValues.tags)),
+      state: fieldsetValues.state,
+      contentType: fieldsetValues.contentType,
+      iconClass: fieldsetValues.iconClass,
+      updated: getFormattedDate(),
+      creator: `${substituteSettings("{{home.name}}")}`,
+      creatorEmail: `${substituteSettings("{{home.email}}")}`,
+      source: fieldsetValues.source | "",
+      raw: fieldsetValues.raw || "",
+      scripts: []
     },
-    "content": {
-      "description": `${fieldsetValues.description}`,
-      "images": [],
+    content: {
+      description: fieldsetValues.description,
+      images: JSON.parse(atob(fieldsetValues.images)),
+      links: JSON.parse(atob(fieldsetValues.links)),
+      usage: JSON.parse(atob(fieldsetValues.usage)),
+      codeSnippet: fieldsetValues.codeSnippet
     }
   }
 
-  if (fieldsetValues.imgURL) {
-    item.content.images.push({ url: `${fieldsetValues.imgURL}` });
+
+  document.getElementById("_itemDebug").innerHTML = JSON.stringify(item, null, 2);
+
+  if (item.id || item.metadata.state === "private") {
+    updateItem(fieldsetValues.id, item);
+  } else {
+    redAlert("Adding New Content Not Implmented")
+  }
+}
+
+function deleteItemContent(itemId) {
+  console.log("Inside of deleteItemContent()")
+
+  const item = findItem(itemId);
+
+  if (item.id) {
+    console.log(item);
+    deleteItem(item);
+  }
+}
+
+function contributeItemContent(itemId) {
+  console.log("Inside of contributeItemContent()")
+  redAlert("Contribute not implemented yet")
+}
+
+function createHidden(id, value = "") {
+  return `
+  <input type="hidden" id="${id}" name="${id}" value="${value}"/>`;
+}
+
+function createInput(id, label, value = "", editable = true) {
+  const disabled = editable ? "" : "disabled";
+  return `
+  <div class="input-container">
+    <input type="text" id="${id}" placeholder=" " value="${value}" ${disabled}/>
+    <label>${label}</label>
+  </div>`;
+}
+
+function createCheckbox(id, label, value = "", editable = true) {
+  const disabled = editable ? "" : "disabled";
+  return `
+  <div class="input-container">
+    <input type="checkbox" id="${id}" placeholder=" " value="private" ${disabled}/>
+    <label>${label}</label>
+  </div>`;
+}
+
+function createCode(id, label, value = "", editable = true) {
+  // return `
+  // <label class="bold ml">${label}</label>
+  // <pre class="normal-white-space">
+  //     <code class="snippet hljs language-undefined code-wrap utility field-border field-gray-background fa-white"
+  //     id="${id}" contenteditable="${editable}">${value}</code>
+  // </pre>`;
+
+  return `
+  <div class="code-block-with-header">
+    <div class="header">
+      <div class="title">${label}</div><button class="copy-btn">Copy</button>
+    </div>
+    <pre>
+      <code class="snippet hljs language-undefined" id="${id}" contenteditable="${editable}"></code>
+    </pre>
+  </div>`
+}
+
+function createInputArray(id, valueArray = []) {
+  console.log(`createInputArray() - `, valueArray);
+  const itemList = itemListInputs[id];
+  const fields = itemList.fields;
+  const label = itemList.listTitle;
+  const listField = itemList.displayField;
+  const listType = itemList.listType;
+
+  let html = `
+  <h3>${label}</h3>
+    <ul class="draggable-list" id="${id}-list">
+      `
+  valueArray.forEach((o) => {
+    let listVal;
+
+    if (listType === "string") {
+      listVal = o;
+    } else {
+      listVal = o[listField];
+    }
+
+    let hiddenField;
+    if (listType === "string") {
+      hiddenField = createHidden(`${id}-obj`, btoa(o));
+    } else {
+      hiddenField = createHidden(`${id}-obj`, btoa(JSON.stringify(o)));
+    }
+    html += `
+      <li class="draggable-item" draggable="true" >
+        ${hiddenField}
+        ${listVal}
+        <button onclick="removeListItem(this, '${id}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>
+      </li >
+    `
+  });
+
+  html += `
+	</ul >
+  <fieldset id="${id}-fieldset">
+    <div style="display:flex; width: 100%">`;
+
+  fields.forEach((i) => {
+    html += `
+    <div class="input-container mr" style="width:${i.width}%">
+      <input type="text" id="${i.id}" placeholder=" "/>
+      <label>${i.label}</label>
+    </div>
+    `
+  });
+
+  html += `
+    <button id="add-item" onclick="addListItem('${id}', '${listField}', '${listType}');" class="action-button add-button blue">
+      <i class="fa fa-check fa-small" aria-hidden="true"></i>
+    </button>
+  </fieldset>
+    `
+  return html;
+}
+
+function updateListObj(id, objList, listType) {
+  const hiddenElements = objList.querySelectorAll("input");
+
+  let newValArray = [];
+
+  hiddenElements.forEach((e) => {
+    if (listType === "string") {
+      newValArray.push(atob(e.value));
+    } else {
+      newValArray.push(JSON.parse(atob(e.value)));
+    }
+  });
+
+  const fieldset = document.getElementById("item-data");
+  const allElements = fieldset.querySelectorAll("input");
+
+  const hiddenField = Array.from(allElements).find((e) => e.id === id);
+
+  hiddenField.value = btoa(JSON.stringify(newValArray));
+
+  console.log("updateListObj = ", newValArray);
+}
+
+function addListItem(fieldId, listField, listType) {
+  var linkFieldset = document.getElementById(`${fieldId}-fieldset`);
+  const elements = linkFieldset.querySelectorAll("input,select")
+
+  let settings = {};
+  elements.forEach((e) => {
+    settings[e.id] = e.value;
+    e.value = "";
+  })
+
+  const val = settings[listField];
+  console.log("addListItem() - settings = ", console.table(settings))
+  var objList = document.getElementById(`${fieldId}-list`);
+
+  if (val.length > 0) {
+    var listItem = document.createElement("li");
+    listItem.classList.add("draggable-item");
+    listItem.setAttribute("draggable", "true");
+    if (listType === "string") {
+      listItem.innerHTML = createHidden(`${fieldId}-obj`, btoa(val)) + val + ` <button onclick="removeListItem(this, '${fieldId}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>`;
+    } else {
+      listItem.innerHTML = createHidden(`${fieldId}-obj`, btoa(JSON.stringify(settings))) + val + ` <button onclick="removeListItem(this, '${fieldId}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>`;
+    }
+    objList.appendChild(listItem);
   }
 
-  saveObjectToLocalStorageArray("id", "title", item);
-  refreshContentFormTable();
 
+  updateListObj(fieldId, objList, listType);
 }
 
-const addMyContent = function () {
-  console.log("In addMyContent()...");
-  showElement("settings");
-  clearFieldsetItems();
 
-  const idField = document.getElementById("id");
-  idField.value = self.crypto.randomUUID();
+function createSelect(id, label, options, value = "", editable = true) {
 
-  const saveButton = document.getElementById("save-item");
-  hideElement("delete-item")
+  console.table(options);
+  console.log(`value = ${value} `)
+  // if (!editable) {
+  //   const val = options[value] || "";
+  //   return `
+  //   <div class="input-container" >
+  //     <input type="text" id="${id}" placeholder=" " value="${val}" disabled/>
+  //     <label>${label}</label>
+  //   </div > `;
+  // }
+
+  // const disabled = editable ? "" : "disabled"
+  let selectHTML = `
+    <div class="select line-border mt-l" >
+      <select id="${id}" class="field-gray-background">
+        `
+  for (const option in options) {
+    if (editable || value === option) {
+      const selected = value === option ? "selected" : "";
+      selectHTML += `<option value="${option}" ${selected}>${options[option]}</option>`
+    }
+  }
+
+  selectHTML += `
+      </select>
+  </div > `
+
+  return selectHTML;
 }
 
-const editMyContent = function (id) {
-  console.log("In editMyContent()...");
+function removeTag(button) {
+  button.parentNode.parentNode.removeChild(button.parentNode);
+}
+
+/*
+ * populateItemFieldset
+ *
+ * Populate the fieldset items from a set of properties.
+ */
+async function populateItemFieldset(item, pkAttr) {
+  // console.log(`Getting Settings for group ${ settingGroup }`)
 
   const fieldset = getFieldset();
-  const settingValues = getSetting(fieldset.name);
-  console.log(`id = ${id}`)
-  console.log(settingValues);
-  const fieldSettings = settingValues.find((o) => o.id === id);
+  const listFieldsDiv = document.getElementById("listFieldsDiv");
 
-  console.log(fieldSettings);
-  const obj = {
-    id: fieldSettings.id,
-    title: fieldSettings.title,
-    contentType: fieldSettings.metadata.contentType,
-    description: fieldSettings.content.description,
-    imgURL: fieldSettings.content.images[0]?.url,
-    raw: fieldSettings.metadata.raw
+  let fieldsetHTML = "";
+
+  console.log("populateItemFieldset - ", item);
+  fieldsetHTML += createHidden("_id", item._id);
+  fieldsetHTML += createHidden("id", item.id);
+  fieldsetHTML += createSelect("contentType", "Content Type", contentTypes, item.metadata.contentType, (item.id ? false : true));
+  fieldsetHTML += createSelect("state", "State", states, item.metadata.state, (item.metadata.state === "private" ? false : true));
+  // fieldsetHTML += createCheckbox("private", "Private", item.metadata.private);
+  fieldsetHTML += createInput("title", "Title", item.title);
+  fieldsetHTML += createInput("iconClass", "Icon Class", item.iconClass);
+  fieldsetHTML += createInput("description", "Description", item.content.description);
+
+  let listFieldsHTML = "";
+
+  fieldsetHTML += createHidden("tags", btoa(JSON.stringify(item.metadata.tags || [])));
+  listFieldsHTML += createInputArray("tags", item.metadata.tags);
+
+  switch (item.metadata.contentType) {
+    case "code":
+    case "dvcomponent":
+      console.log("Creating CODE fieldset");
+      fieldsetHTML += createCode("codeSnippet", "Code Snippet");
+      break;
+    case "page":
+      fieldsetHTML += createInput("source", "Source", item.metadata.source);
+      fieldsetHTML += createHidden("scripts", btoa(JSON.stringify(item.metadata.scripts)));
+      listFieldsHTML += createInputArray("scripts", item.metadata.scripts);
+      break;
+    default:
+    // redAlert(`Content Type(${item.metadata.contentType}) not implemented`);
   }
 
-  populateFieldset(obj);
-  const formTable = document.getElementById("form-table");
+  fieldsetHTML += createHidden("usage", btoa(JSON.stringify(item.content.usage || [])));
+  listFieldsHTML += createInputArray("usage", item.content.usage);
+  fieldsetHTML += createHidden("images", btoa(JSON.stringify(item.content.images || [])));
+  listFieldsHTML += createInputArray("images", item.content.images);
+  fieldsetHTML += createHidden("links", btoa(JSON.stringify(item.content.links || [])));
+  listFieldsHTML += createInputArray("links", item.content.links);
 
-  const rows = formTable.getElementsByTagName("tr");
+  listFieldsHTML += `
+    <div class="centered" >
+    <button id="save-item" onclick="saveItemContent();" class="action-button blue">Save</button>`;
 
-  for (const e of rows) {
-    e.classList.remove("selected");
+  if (item.metadata.state === "private" && item.id) {
+    listFieldsHTML += `
+    <button id="contribute-item" onclick="contributeItemContent('${item.id}');" class="action-button blue ml">Contribute</button>
+    <button id="delete-item" onclick="deleteItemContent('${item.id}');" class="action-button red ml">Delete</button>
+    `
+  }
+  listFieldsHTML += `
+  </div >
+    `;
+
+  fieldset.innerHTML = fieldsetHTML;
+  listFieldsDiv.innerHTML = listFieldsHTML;
+
+  if (item.content.codeSnippet) {
+    const codeSnippetBlock = document.getElementById("codeSnippet");
+    codeSnippetBlock.innerText = item.content.codeSnippet;
   }
 
-  const row = document.getElementById(`id-${id}`);
-  // console.log(row);
-  row.classList.add("selected");
-  showElement("settings");
-  showElement("delete-item")
+  var draggedItem = null;
+
+  document.addEventListener("dragstart", function (event) {
+    draggedItem = event.target;
+    event.dataTransfer.setData("text", "");
+  });
+
+  document.addEventListener("dragover", function (event) {
+    event.preventDefault();
+  });
+
+  document.addEventListener("drop", function (event) {
+    event.preventDefault();
+    if (event.target.classList.contains("draggable-item")) {
+      var droppedItem = event.target;
+      if (draggedItem != droppedItem) {
+        var droppedIndex = Array.prototype.indexOf.call(droppedItem.parentNode.children, droppedItem);
+        var draggedIndex = Array.prototype.indexOf.call(draggedItem.parentNode.children, draggedItem);
+        if (draggedIndex < droppedIndex) {
+          droppedItem.parentNode.insertBefore(draggedItem, droppedItem.nextSibling);
+        } else {
+          droppedItem.parentNode.insertBefore(draggedItem, droppedItem);
+        }
+      }
+    }
+  });
+
+};
+
+function removeListItem(button, id, listType) {
+  console.log(`removeListItem(..., ${id})`)
+  button.parentNode.parentNode.removeChild(button.parentNode);
+
+  updateListObj(id, document.getElementById(`${id}-list`), listType);
+}
+
+const editItemContent = function (item) {
+  console.log("In editItemContent()...");
+  const fieldset = getFieldset();
+
+  hideElement("add-item")
+
+  console.log(`fieldset.name = ${fieldset.name} `)
+  console.log(item);
+
+  populateItemFieldset(item);
+
+  document.getElementById("_itemDebug").innerHTML = JSON.stringify(item, null, 2);
+
+  showElement("item-data");
+  // showElement("delete-item")
   // console.log(id);
 }
 
-const deleteMyContent = function () {
-  console.log("In deleteMyContent()...");
-  const id = document.getElementById("id");
-
-  const settings = getSetting("items");
-
-  const index = settings.findIndex(function (item) {
-    return item["id"] === id.value;
-  });
-
-  if (index != -1) {
-    settings.splice(index, 1);
-  }
-
-  SETTINGS.pingone = settings;
-
-  saveSettings();
-  clearFieldsetItems();
-  hideElement("settings");
-  refreshContentFormTable();
-}
-
-function getContentTypeName(contentType) {
-  switch (contentType) {
-    case "code":
-      return "Code Snippet"
-    case "dvcomponent":
-      return "DaVinci Component"
-    default:
-      return contentType;
-  }
-}
-
-async function refreshContentFormTable() {
-  let formTableHTML = `
-  <table id="form-table" width="95%" align="center">
-    <tr>
-      <th>Title</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>`;
-  // console.log("In refreshContentFormTable()");
-
-  const envTable = document.getElementById("item-table");
-
-  const myContents = getSetting("items");
-
-  // If number of enviroments == 0 or missing, replace with a message to add environments
-  if (!myContents || myContents.length === 0) {
-    envTable.innerHTML = "Press the <strong>Add New Content</strong> button to add settings for a PingOne Environment"
-    return;
-  }
-
-  for (const e in myContents) {
-    console.table(e);
-    const myContent = myContents[e];
-    // console.table(environment);
-    const contentTypeStr = getContentTypeName(myContent?.metadata?.contentType);
-
-    formTableHTML += `
-      <tr id="id-${myContent?.id}"onclick="editMyContent('${myContent?.id}');">
-        <td>${myContent?.title}</td>
-        <td>${contentTypeStr}</td>
-        <td>${myContent?.content?.description}</td>
-      </tr>
-    `;
-  }
-
-  formTableHTML += `
-  </table>
-  `
-  envTable.innerHTML = formTableHTML;
-
-
-  //TODO OPTIMIZE?
-
-  // Update content list to reflect changes
-  await buildCombinedItemsList(false);
-  filteredItems = combinedItemsList.filter(item => (
-    item.metadata?.categories?.includes(CATEGORY_MY_CONTENT)
-  ));
-  renderItemsList(filteredItems);
-
-  highlightItemInList("Manage My Content");
-
-}
-
-contribMyContent = function () {
-  saveMyContent();
-  console.log("In contributeMyContent()...");
-
-  if (!getSetting("home", "email") || !getSetting("home", "name")) {
-    redAlert("Name and Email are REQUIRED in Home Settings")
-    return;
-  }
-
-  const fieldset = getFieldset();
-  const items = getSetting(fieldset.name);
-  const idField = document.getElementById("id");
-
-  const item = items.find((o) => o.id === idField.value);
-
-  console.log(item);
-  submitContent(item);
-}
 
 function my_content_init() {
-  // Whatever
-  console.log("pagescript - my_content_init()")
+  if (editItem) {
+    console.log(`Editting item ${editItem.title} `)
 
-  const fieldset = document.getElementById("settings");
+    editItemContent(editItem);
+  } else {
 
-  const addButton = document.getElementById("add-item");
-  addButton.onclick = addMyContent;
+    let empty = {
+      title: "",
+      metadata: {
+        tags: [
 
-  refreshContentFormTable();
+        ],
+        contentType: "",
+        state: "private",
+        private: false,
+        iconClass: "",
+        updated: getFormattedDate(),
+        creator: `${substituteSettings("{{home.name}}")}`,
+        creatorEmail: `${substituteSettings("{{home.email}}")}`,
+        source: "",
+        scripts: []
+      },
+      content: {
+        description: "",
+        images: [],
+        links: [],
+        usage: []
+      }
+    }
+
+    editItemContent(empty)
+  }
+
 }

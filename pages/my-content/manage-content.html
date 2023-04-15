@@ -2,42 +2,18 @@
 <div class="centered mt">
   <button id="add-item" class="action-button blue"><i class="fa fa-plus"></i> Add New Content</button>
 </div>
-<fieldset name="items" id="settings" class="hide">
-  <input type="hidden" id="id" />
 
-
-  <div class="select line-border mt-l">
-    <select id="contentType" class="field-gray-background">
-      <option value="code">Code Snippet</option>
-      <option value="dvcomponent">DaVinci Component</option>
-    </select>
-  </div>
-
-  <div style="display:flex; width: 100%">
-    <div class="input-container mr" style="width:50%">
-      <input type="text" id="title" placeholder=" " />
-      <label>Title</label>
-    </div>
-    <div class="input-container" style="width:50%">
-      <input type="text" id="imgURL" placeholder=" " />
-      <label>Image URL</label>
-    </div>
-  </div>
-
-  <div class="input-container">
-    <input type="text" id="description" placeholder=" " />
-    <label>Description</label>
-  </div>
-  <label class="bold ml">Content Snippet</label>
-  <pre class="normal-white-space">
-      <code class="snippet hljs language-undefined code-wrap utility field-border field-gray-background fa-white"
-      id="raw" contenteditable="true">Snippet Code</code>
-  </pre>
-  <div class="centered">
-    <button id="save-item" onclick="saveMyContent();" class="action-button blue">Save</button>
-    <button id="contrib-item" onclick="contribMyContent();" class="action-button blue ml">Contribute</button>
-    <button id="delete-item" onclick="deleteMyContent();" class="action-button red ml">Delete</button>
+<fieldset name="items" id="item-data" class="hide">
 </fieldset>
+
+<div id="listFieldsDiv">
+</div>
+
+<label class="bold ml">Item Debug</label>
+<pre class="normal-white-space">
+      <code class="snippet hljs language-undefined code-wrap utility field-border field-gray-background fa-white"
+      id="_itemDebug" contenteditable="true"></code>
+  </pre>
 </div>
 
 <div id="scriptDiv">

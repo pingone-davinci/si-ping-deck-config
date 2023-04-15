@@ -25,8 +25,25 @@
 <div id="scriptDiv">
   <script>
     const filenameSettings = "pingdesigner-settings.json";
+
+    function cleanObj(obj) {
+      console.log(obj);
+      let pingoneSettings = obj["pingone"];
+      let newPingoneSettings = [];
+
+      console.log(pingoneSettings)
+      pingoneSettings.forEach(element => {
+        element.password = "";
+      });
+
+      console.log(pingoneSettings);
+      return obj;
+    }
+
     const exportSettings = function () {
-      downloadObj(SETTINGS, filenameSettings);
+      const settingsCopy = cleanObj(SETTINGS);
+
+      downloadObj(settingsCopy, filenameSettings);
       greenAlert(`Exported settings to ${filenameSettings}`);
     }
 
