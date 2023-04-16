@@ -1,21 +1,22 @@
 
+class content {
+  static contentTypes = {
+    "code": "Code Snippet",
+    "dvcomponent": "DaVinci Component",
+    "flow": "DaVinci Flow",
+    "page": "Page",
+    "redirect": "Bookmarks",
+    "welcome": "Welcome"
+  }
 
-const contentTypes = {
-  "code": "Code Snippet",
-  "dvcomponent": "DaVinci Component",
-  "flow": "DaVinci Flow",
-  "page": "Page",
-  "redirect": "Bookmarks",
-  "welcome": "Welcome"
-}
-
-const states = {
-  "private": "Private (User)",
-  "test": "Testing",
-  "submitted": "Submitted",
-  "public": "Public",
-  "community": "Community",
-  "parter": "Partner"
+  static states = {
+    "private": "Private (User)",
+    "test": "Testing",
+    "submitted": "Submitted",
+    "public": "Public",
+    "community": "Community",
+    "parter": "Partner"
+  }
 }
 
 const itemListInputs = {
@@ -279,14 +280,14 @@ function addListItem(fieldId, listField, listType) {
   var linkFieldset = document.getElementById(`${fieldId}-fieldset`);
   const elements = linkFieldset.querySelectorAll("input,select")
 
-  let settings = {};
+  let obj = {};
   elements.forEach((e) => {
-    settings[e.id] = e.value;
+    obj[e.id] = e.value;
     e.value = "";
   })
 
-  const val = settings[listField];
-  console.log("addListItem() - settings = ", console.table(settings))
+  const val = obj[listField];
+  console.log("addListItem() - settings = ", console.table(obj))
   var objList = document.getElementById(`${fieldId}-list`);
 
   if (val.length > 0) {
@@ -296,7 +297,7 @@ function addListItem(fieldId, listField, listType) {
     if (listType === "string") {
       listItem.innerHTML = createHidden(`${fieldId}-obj`, btoa(val)) + val + ` <button onclick="removeListItem(this, '${fieldId}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>`;
     } else {
-      listItem.innerHTML = createHidden(`${fieldId}-obj`, btoa(JSON.stringify(settings))) + val + ` <button onclick="removeListItem(this, '${fieldId}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>`;
+      listItem.innerHTML = createHidden(`${fieldId}-obj`, btoa(JSON.stringify(obj))) + val + ` <button onclick="removeListItem(this, '${fieldId}', '${listType}')" class="clear-button"><i class="fa fa-times fa-small" aria-hidden="true"></i></button>`;
     }
     objList.appendChild(listItem);
   }
@@ -358,8 +359,8 @@ async function populateItemFieldset(item, pkAttr) {
   console.log("populateItemFieldset - ", item);
   fieldsetHTML += createHidden("_id", item._id);
   fieldsetHTML += createHidden("id", item.id);
-  fieldsetHTML += createSelect("contentType", "Content Type", contentTypes, item.metadata.contentType, (item.id ? false : true));
-  fieldsetHTML += createSelect("state", "State", states, item.metadata.state, (item.metadata.state === "private" ? false : true));
+  fieldsetHTML += createSelect("contentType", "Content Type", content.contentTypes, item.metadata.contentType, (item.id ? false : true));
+  fieldsetHTML += createSelect("state", "State", content.states, item.metadata.state, (item.metadata.state === "private" ? false : true));
   // fieldsetHTML += createCheckbox("private", "Private", item.metadata.private);
   fieldsetHTML += createInput("title", "Title", item.title);
   fieldsetHTML += createInput("iconClass", "Icon Class", item.iconClass);

@@ -3,7 +3,7 @@
   */
 function refreshPingOneEnvironmentsSelect(settingsGroup, settingId, optionsStorage) {
   const select = document.getElementById(settingId);
-  const value = getSetting(settingsGroup, settingId)
+  const value = SETTINGS.getProperty(settingsGroup, settingId)
 
   select.innerHTML = "";
   let options = {};
@@ -37,9 +37,9 @@ function refreshPingOneEnvironmentsSelect(settingsGroup, settingId, optionsStora
 *
 */
 const dvlogin = async function () {
-  const env = getSetting("pingone", "envId");
-  const username = getSetting("pingone", "username");
-  const password = getSetting("pingone", "password");
+  const env = SETTINGS.getProperty("pingone.envId");
+  const username = SETTINGS.getProperty("pingone.username");
+  const password = SETTINGS.getProperty("pingone.password");
   const region = getPingOneRegion();
   let accessToken = undefined;
 
@@ -124,19 +124,18 @@ const deleteEnvironment = function () {
   console.log("In deleteEnvironment()...");
   const envNickname = document.getElementById("envNickname");
 
-  const settings = getSetting("pingone");
+  const envSettings = SETTINGS.getProperty("pingone");
 
-  const index = settings.findIndex(function (item) {
+  const index = envSettings.findIndex(function (item) {
     return item["envNickname"] === envNickname.value;
   });
 
   if (index != -1) {
-    settings.splice(index, 1);
+    envSettings.splice(index, 1);
   }
 
-  SETTINGS.pingone = settings;
+  SETTINGS.saveSetting(envSettings, "pingone");
 
-  saveSettings();
   clearFieldsetItems();
   hideElement("settings");
   refreshFormTable();
@@ -154,7 +153,7 @@ function refreshFormTable() {
 
   const envTable = document.getElementById("environment-table");
 
-  const environments = getSetting("pingone");
+  const environments = SETTINGS.getProperty("pingone");
 
   // If number of enviroments == 0 or missing, replace with a message to add environments
   if (!environments || environments.length === 0) {
