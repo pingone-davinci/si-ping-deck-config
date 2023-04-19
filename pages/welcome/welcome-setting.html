@@ -1,0 +1,57 @@
+<p class="font-larger mt-xl ">Settings help in providing variables to personalize
+  the Ping Designer experiance & content.</p>
+
+<p class="font-larger mt-xl ">You may export/download all your current settings to a
+  <strong>pingdesigner-settings.json</strong> file. This will include items such as:
+</p>
+<ul>
+  <li>My Content (custom content you have created)</li>
+  <li>Home Settings</li>
+  <li>PingOne Settings</li>
+</ul>
+
+<p class="font-larger mt-xl "><strong>IMPORTANT:</strong> Importing a settings is destructive to your current
+  settings.
+</p>
+
+<div class="centered">
+  <button id="export-settings" class="action-button blue">Export Settings</button>
+  <label for="import-settings" class="action-button red ml">
+    Import Settings
+  </label>
+  <input id="import-settings" type="file" name="static_file" accept="*.json" />
+</div>
+
+<div id="scriptDiv">
+  <script>
+    const filenameSettings = "pingdesigner-settings.json";
+    const exportSettings = function () {
+      downloadObj(SETTINGS, filenameSettings);
+      greenAlert(`Exported settings to ${filenameSettings}`);
+    }
+
+    const welcome_settings_init = function () {
+      console.log("pagescript - welcome_settings_init()");
+
+      document.getElementById("export-settings").onclick = exportSettings;
+      document.getElementById('import-settings').addEventListener('change', importSettings, false);
+    }
+
+    function importSettings(evt) {
+      var files = evt.target.files;
+      var file = files[0];
+      var str = "";
+
+      const reader = new FileReader();
+      reader.addEventListener('load', () => {
+        // console.log("reader.result = ", reader.result)
+
+        SETTINGS = JSON.parse(reader.result);
+        buildCombinedItemsList(false);
+      });
+      reader.readAsText(file);
+    }
+
+    welcome_settings_init();
+  </script>
+</div>
