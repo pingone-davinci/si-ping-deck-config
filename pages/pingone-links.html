@@ -7,42 +7,27 @@
         const envs = SETTINGS.getProperty("pingone");
 
         let html = "";
-        html += `<table id="form-table" width="95%" align="center"><tbody>`;
+        if (!envs || envs.length == 0) {
+          html += "<h3 class='mt-xl centered'>No PingOne Settings Provided<h3>"
+        } else {
+          html += `<table id="form-table" width="95%" align="center"><tbody>`;
 
-        console.log(envs);
-        envs.forEach((e) => {
-            html += `
-            <tr>
-                <td>${e.envNickname}</td>
-                <td><a href="">Console</a></td>
-                <td><a href="">MyAccount</a></td>
-                <td><a href="">Portal</a></td>
-            </tr>`;
-        });
+          console.log(envs);
+          envs.forEach((e) => {
+              html += `
+              <tr>
+                  <td>${e.envNickname}</td>
+                  <td><a href="https://console.pingone.${e.region}/?env=${e.envId}" target=${e.region}"">Console</a></td>
+                  <td><a href="https://apps.pingone.${e.region}/${e.envId}/myaccount" target=${e.region}"">MyAccount</a></td>
+                  <td><a href="https://apps.pingone.${e.region}/${e.envId}/myapps" target=${e.region}"">App Portal</a></td>
+              </tr>`;
+          });
 
-        html += `</tbody></table>`;
+          html += `</tbody></table>`;
+        }
 
         pdiv.innerHTML = html;
 
     </script>
 </div>
 
-<!-- <table id="form-table" width="95%" align="center">
-    <tbody><tr>
-      <th>Nickname</th>
-      <th>Env ID</th>
-      <th>Username</th>
-    </tr>
-      <tr id="nickname-a" onclick="editEnvironment('a');">
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-      </tr>
-    
-      <tr id="nickname-d" onclick="editEnvironment('d');">
-        <td>d</td>
-        <td>e</td>
-        <td>f</td>
-      </tr>
-    
-  </tbody></table> -->
