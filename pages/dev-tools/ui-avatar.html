@@ -1,0 +1,89 @@
+<!-- <script>
+    // Define the app's main function
+    function generateAvatar() {
+              // Get user input from the form
+              const nameInput = document.getElementById('name');
+              const sizeInput = document.getElementById('size');
+              const bgColorInput = document.getElementById('bg-color');
+              const fgColorInput = document.getElementById('fg-color');
+  
+              // Construct the API URL
+              const baseUrl = 'https://ui-avatars.com/api/';
+              const name = nameInput.value;
+              const size = sizeInput.value;
+              const bgColor = bgColorInput.value;
+              const fgColor = fgColorInput.value;
+              const url = `${baseUrl}?name=${name}&size=${size}&background=${bgColor}&color=${fgColor}`;
+  
+              // Send the API request
+              const response = await axios.get(url);
+  
+              // Display the avatar image
+              const avatarImg = document.getElementById('avatar');
+              avatarImg.src = response.data;
+          }
+      </script> -->
+  
+<div class="input-container">
+    <input type="text" id="name" placeholder=" " value="John Doe">
+    <label>Name</label>
+</div>
+<div class="input-container">
+    <input type="text" id="size" placeholder=" " min="1" max="512" value="128">
+    <label>Image Size (in pixels)</label>
+</div>
+<div class="input-container">
+    <input type="color" id="bg-color" name="bg-color" value="#f0f0f0"><br>
+    <label>Background Color</label>
+</div>
+<div class="input-container">
+    <input type="color" id="fg-color" name="fg-color" value="#333333"><br>
+    <label>Foreground Color</label>
+</div>
+
+<div class="mt mb centered center">
+    <button id="uuidBtn" class="action-button blue" 
+            onclick="generateAvatar();">
+      <i class="fa fa-arrow-right"></i> Generate Avatar
+    </button>
+</div>
+
+      <img id="uiAvatarImage" src="">
+  
+<div id="scriptDiv">
+    <script>
+    //   const ipv4Output = document.getElementById("ipv4Output");
+    //   fetch("/api/myip").then(res => res.json()).then(data =>
+    //         ipv4Output.innerHTML = data.ip)
+        
+    generateAvatar = function () {
+        // Get user input from the form
+        const name = document.getElementById('name');
+        const size = document.getElementById('size');
+        const bg = document.getElementById('bg-color');
+        const fg = document.getElementById('fg-color');
+
+        const url = `/api/ui-avatars?name=${name.value}&size=${size.value}`
+        //&background=${bg.value}&color=${fg.value}`
+        fetch(url).then(res => res.blob()).then(blob => {
+                    const img = document.getElementById('uiAvatarImage');
+                    img.src = blob});
+        // Construct the API URL
+        // const baseUrl = 'https://ui-avatars.com/api/';
+        // const name = nameInput.value;
+        // const size = sizeInput.value;
+        // const bgColor = bgColorInput.value;
+        // const fgColor = fgColorInput.value;
+        // const url = `${baseUrl}?name=${name}&size=${size}&background=${bgColor}&color=${fgColor}`;
+
+        // // Send the API request
+        // const response = await axios.get(url);
+
+        // // Display the avatar image
+        // const avatarImg = document.getElementById('avatar');
+        // avatarImg.src = response.data;
+    }
+    generateAvatar();
+    </script>
+</div>
+  

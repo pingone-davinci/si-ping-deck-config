@@ -1,0 +1,48 @@
+<div id="pingone-links">
+</div>
+
+<div id="scriptDiv">
+    <script>
+        const pdiv = document.getElementById("pingone-links");
+        const envs = SETTINGS.getProperty("pingone");
+
+        let html = "";
+        html += `<table id="form-table" width="95%" align="center"><tbody>`;
+
+        console.log(envs);
+        envs.forEach((e) => {
+            html += `
+            <tr>
+                <td>${e.envNickname}</td>
+                <td><a href="">Console</a></td>
+                <td><a href="">MyAccount</a></td>
+                <td><a href="">Portal</a></td>
+            </tr>`;
+        });
+
+        html += `</tbody></table>`;
+
+        pdiv.innerHTML = html;
+
+    </script>
+</div>
+
+<!-- <table id="form-table" width="95%" align="center">
+    <tbody><tr>
+      <th>Nickname</th>
+      <th>Env ID</th>
+      <th>Username</th>
+    </tr>
+      <tr id="nickname-a" onclick="editEnvironment('a');">
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+      </tr>
+    
+      <tr id="nickname-d" onclick="editEnvironment('d');">
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+      </tr>
+    
+  </tbody></table> -->

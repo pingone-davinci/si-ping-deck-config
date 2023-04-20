@@ -134,7 +134,8 @@ const deleteEnvironment = function () {
     envSettings.splice(index, 1);
   }
 
-  SETTINGS.saveSetting(envSettings, "pingone");
+  console.log(envSettings);
+  SETTINGS.saveProperty(envSettings, "pingone");
 
   clearFieldsetItems();
   hideElement("settings");
