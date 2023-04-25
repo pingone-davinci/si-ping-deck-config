@@ -26,7 +26,7 @@
   <script>
     const filenameSettings = "pingdesigner-settings.json";
     const exportSettings = function () {
-      downloadObj(SETTINGS.cleanSecrets(), filenameSettings);
+      downloadObj(app.SETTINGS.cleanSecrets(), filenameSettings);
       greenAlert(`Exported settings to ${filenameSettings}`);
     }
 
@@ -46,8 +46,7 @@
       reader.addEventListener('load', () => {
         // console.log("reader.result = ", reader.result)
 
-        SETTINGS = JSON.parse(reader.result);
-        buildCombinedItemsList(false);
+        app.SETTINGS.put(JSON.parse(reader.result));
       });
       reader.readAsText(file);
     }

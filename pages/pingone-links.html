@@ -2,32 +2,31 @@
 </div>
 
 <div id="scriptDiv">
-    <script>
-        const pdiv = document.getElementById("pingone-links");
-        const envs = SETTINGS.getProperty("pingone");
+  <script>
+    const pdiv = document.getElementById("pingone-links");
+    const envs = app.SETTINGS.getProperty("pingone");
 
-        let html = "";
-        if (!envs || envs.length == 0) {
-          html += "<h3 class='mt-xl centered'>No PingOne Settings Provided<h3>"
-        } else {
-          html += `<table id="form-table" width="95%" align="center"><tbody>`;
+    let html = "";
+    if (!envs || envs.length == 0) {
+      html += "<h3 class='mt-xl centered'>No PingOne Settings Provided<h3>"
+    } else {
+      html += `<table id="form-table" width="95%" align="center"><tbody>`;
 
-          console.log(envs);
-          envs.forEach((e) => {
-              html += `
+      console.log(envs);
+      envs.forEach((e) => {
+        html += `
               <tr>
                   <td>${e.envNickname}</td>
                   <td><a href="https://console.pingone.${e.region}/?env=${e.envId}" target=${e.region}"">Console</a></td>
                   <td><a href="https://apps.pingone.${e.region}/${e.envId}/myaccount" target=${e.region}"">MyAccount</a></td>
                   <td><a href="https://apps.pingone.${e.region}/${e.envId}/myapps" target=${e.region}"">App Portal</a></td>
               </tr>`;
-          });
+      });
 
-          html += `</tbody></table>`;
-        }
+      html += `</tbody></table>`;
+    }
 
-        pdiv.innerHTML = html;
+    pdiv.innerHTML = html;
 
-    </script>
+  </script>
 </div>
-
