@@ -142,6 +142,13 @@ const deleteEnvironment = function () {
   refreshFormTable();
 }
 
+String.prototype.mask = function (start = 3, end = 3, mask = "*") {
+  if (start + end > this.length) return this;
+  return this.substring(0, start)
+    + mask.repeat(this.length - start - end)
+    + this.substring(this.length - end);
+}
+
 function refreshFormTable() {
   let formTableHTML = `
   <table id="form-table" width="95%" align="center">
@@ -168,7 +175,7 @@ function refreshFormTable() {
     formTableHTML += `
       <tr id="nickname-${environment?.envNickname}"onclick="editEnvironment('${environment?.envNickname}');">
         <td>${environment?.envNickname}</td>
-        <td>${environment?.envId}</td>
+        <td>${environment?.envId.mask(4, 4, "*")}</td>
         <td>${environment?.username}</td>
       </tr>
     `;
