@@ -1,0 +1,52 @@
+<div id="pageDiv">
+  <span class="xsmall">Saved to browser local storage</span>
+  <hr>
+  <div id="tenant-table">
+  </div>
+  <p>
+  <div class="centered">
+    <button id="add-tenant" class="action-button blue"><i class="fa fa-plus"></i> Add Tenant</button>
+
+    <fieldset name="davinci" id="settings" class="hide">
+      <div class="input-container">
+        <input id="tenantNickname" type="text" placeholder=" " value="">
+        <label>Tenant Nickname</label>
+      </div>
+      <div class="select line-border">
+        <select id="pingoneEnvId" class="field-gray-background">
+          <option value="" disabled>PingOne Environment</option>
+          <option value="1">Env 1</option>
+          <option value="2">Env 2</option>
+          <option value="3">Env 3</option>
+          <option value="4">Env 4</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <input id="username" type="text" placeholder=" " value="">
+        <label>PingOne Username</label>
+      </div>
+      <div class="input-container">
+        <input id="password" type="password" placeholder=" " value="">
+        <label>PingOne Password</label>
+      </div>
+      <div class="input-container">
+        <input id="companyId" type="text" placeholder=" " value="">
+        <label>DaVinci Company ID</label>
+      </div>
+      <div class="mt mb center">
+        <button id="save-tenant" onclick="saveTenant();" class="action-button blue">Save Tenant</button>
+        <button id="delete-tenant" onclick="deleteTenant();" class="action-button red ml">Delete
+          Tenant</button>
+      </div>
+    </fieldset>
+  </div>
+</div>
+
+<div id="scriptDiv">
+  <script>
+
+
+    davinci_init();
+
+  </script>
+</div>

@@ -5,7 +5,8 @@
   </div>
   <p>
   <div class="centered">
-    <button id="add-environment" class="action-button blue"><i class="fa fa-plus"></i> Add Environment</button>
+    <button id="add-environment" class="action-button mb-l blue"><i class="fa fa-plus"></i> Add Admin
+      Environment</button>
 
     <fieldset name="pingone" id="settings" class="hide">
       <div class="input-container">
@@ -25,13 +26,14 @@
         <input id="envId" type="text" placeholder=" " value="">
         <label>PingOne Environment ID</label>
       </div>
+      <h3 class="left">Worker App</h3>
       <div class="input-container">
-        <input id="username" type="text" placeholder=" " value="">
-        <label>PingOne Username</label>
+        <input id="clientId" type="text" placeholder=" " value="">
+        <label>PingOne Client ID</label>
       </div>
       <div class="input-container">
-        <input id="password" type="password" placeholder=" " value="">
-        <label>PingOne Password</label>
+        <input id="clientSecret" type="password" placeholder=" " value="">
+        <label>PingOne Client Secret</label>
       </div>
       <div class="mt mb center">
         <button id="save-environment" onclick="saveEnvironment();" class="action-button blue">Save Enviroment</button>
@@ -39,6 +41,33 @@
           Enviroment</button>
       </div>
     </fieldset>
+    <div id="pingoneEnvSelection" class="hide">
+      <h3 class="left">PingOne Environment</h3>
+      <div class="select line-border">
+        <select id="pingoneEnvSelect" onchange="selectEnvironment(event);">
+        </select>
+      </div>
+    </div>
+    <div id="pingoneEnvResourceSelection" class="mt-l hide">
+      <h3 class="left">PingOne Resource</h3>
+      <div class="select line-border">
+        <select id="pingoneEnvResourceSelect" onchange="selectEnvironmentResource(event);">
+
+        </select>
+      </div>
+    </div>
+    <div id="pingoneEnvDetails" class="code-block-with-header left hide">
+      <div class="header">
+        <div class="title">PingOne Resource</div>
+        <div>
+          <button class="copy-btn" onclick="copyCodeBlock(event);">Copy</button>
+        </div>
+      </div>
+      <pre>
+          <code id="pingoneCodeDetails" class="hljs language-go">
+          </code>
+      </pre>
+    </div>
   </div>
 </div>
 
