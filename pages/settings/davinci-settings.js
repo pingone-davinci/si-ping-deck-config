@@ -30,59 +30,6 @@
 // }
 
 
-// /**
-// *
-// * dvlogin
-// * Login to DaVinci
-// *
-// */
-// const dvlogin = async function () {
-//   const env = app.SETTINGS.getProperty("pingone.envId");
-//   const username = app.SETTINGS.getProperty("pingone.username");
-//   const password = app.SETTINGS.getProperty("pingone.password");
-//   const region = getPingOneRegion();
-//   let accessToken = undefined;
-
-//   localStorage.removeItem("davinci_access_token");
-//   localStorage.removeItem("davinci_companies");
-
-//   if (!env || !username || !password) {
-//     redAlert("Missing DaVinci Preferences");
-//   } else {
-//     blueAlert("Logging in...")
-//     const response = await fetch("/api/dvlogin",
-//       {
-//         method: "POST",
-//         body: JSON.stringify({
-//           env,
-//           username,
-//           password
-//         }),
-//         headers: {
-//           "Content-Type": "application/json",
-//           "Accept": "application/json",
-//           "x-p1-region": region
-//         }
-//       });
-
-//     let resp = await response.json();
-
-//     accessToken = resp?.access_token;
-//     companies = resp?.companies;
-//     if (accessToken && companies) {
-//       localStorage.setItem("davinci_access_token", accessToken);
-//       localStorage.setItem("davinci_companies", JSON.stringify(companies));
-//       greenAlert("PingOne/Davinci Login Successful")
-//     } else if (resp?.message) {
-//       redAlert(resp.message);
-//     } else {
-//       redAlert("Unable to Login");
-//     }
-//   }
-
-//   refreshPingOneEnvironmentsSelect("pingone", "companyId", "davinci_companies");
-// }
-
 const fillPingoneEnvIdOptions = function () {
   const select = document.getElementById("pingoneEnvId");
 
