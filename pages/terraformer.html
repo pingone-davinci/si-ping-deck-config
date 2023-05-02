@@ -71,6 +71,8 @@
       console.table(envValues);
       const epoch = (new Date()).getTime();
       const zipFileName = "terraform-" + epoch;
+
+      loadingSpinner("Generating Terraform...");
       const response = await fetch(`/api/terraformer`,
         {
           method: "POST",
@@ -111,6 +113,7 @@ cd ${zipFileName}
 terraform init
 terraform plan`;
       showElement("terraform-instructions-div");
+      hideElement('modalBackdrop');
     }
 
     const fillAdminEnvSelectOptions = function () {
@@ -134,10 +137,10 @@ terraform plan`;
 
       const env = app.SETTINGS.getProperty("pingone").find((e) => e.envId === id);
 
-      console.table(env);
+      loadingSpinner("Logging In...");
       const dvEnv = await dvlogin(env.envId, getPingOneRegion(env.region), getElementValue("username"), getElementValue("password"));
+      hideElement('modalBackdrop');
 
-      console.table(dvEnv);
       if (dvEnv.companies) {
         showElement("identifyTargetEnvironment")
         document.getElementById("davinciRegion").value = getDaVinciRegion(env.region);
