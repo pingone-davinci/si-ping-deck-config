@@ -6,7 +6,6 @@
  *
  */
 const dvlogin = async function (envId, region, username, password) {
-  console.log(`${envId} ${region} ${username} ${password}`)
   let result = {};
 
   if (!envId || !region || !username || !password) {

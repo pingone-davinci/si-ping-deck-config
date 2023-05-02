@@ -68,7 +68,7 @@
 
     const terraformerApi = async function (envValues) {
 
-      console.table(envValues);
+      // console.table(envValues);
       const epoch = (new Date()).getTime();
       const zipFileName = "terraform-" + epoch;
 
@@ -118,7 +118,7 @@ terraform plan`;
 
     const fillAdminEnvSelectOptions = function () {
       const envs = app.SETTINGS.getProperty("pingone");
-      console.table(envs)
+      // console.table(envs)
 
       const pingoneAdminEnvSelect = document.getElementById("pingoneAdminEnvSelect");
 
@@ -167,7 +167,7 @@ terraform plan`;
       const fieldset = getFieldset();
       const fieldsetValues = getFieldsetInputs(fieldset.id);
 
-      console.table(fieldsetValues);
+      // console.table(fieldsetValues);
       blueAlert("Exporting your DaVinci into Terraform Plan...")
       terraformerApi(fieldsetValues);
     }

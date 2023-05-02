@@ -42,8 +42,6 @@ const getPingOneUrl = async function (url) {
 
 const getPingOneToken = async function () {
 
-  console.table(PINGONE_ENV);
-
   const response = await fetch(`https://auth.pingone.${PINGONE_ENV.region}/${PINGONE_ENV.envId}/as/token`,
     {
       method: "POST",
