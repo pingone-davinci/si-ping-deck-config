@@ -1,0 +1,265 @@
+<div id="pageDiv">
+  <hr>
+  <fieldset name="pingone-api" id="settings">
+    <h3 class="left">PingOne Administrative Environment</h3>
+    <p>Select a PingOne admimistrative environment.<br>
+      <br>
+      <i class="fa fa-info-circle" style="color: #7f9cf4;"></i> If you don't see your environment
+      listed, please add it to your <a
+        href="https://dev.pingdesigner.com/share/35c035d0-bd57-4675-a985-5db7721b6156">Ping Design Library Settings</a>.
+    </p>
+    <div class="select line-border">
+      <select id="pingoneAdminEnvSelect">
+      </select>
+    </div>
+
+    <div id="pingoneEnvSelection" class="hide">
+      <h3 class="left">PingOne Environment</h3>
+      <p>Select an environment to apply JSON.<br>
+        <br>
+        <i class="fa fa-info-circle" style="color: #7f9cf4;"></i>
+        If you don't see your environment
+        listed, ensure desired environment has the service used.
+      </p>
+      <div class="select line-border">
+        <select id="pingoneEnvSelect" onchange="showElement('apply-json-button');">
+        </select>
+      </div>
+      <input id="pingoneProduct" type="hidden" value="" />
+      <input id="pingoneApiResource" type="hidden" value="" />
+      <button id="apply-json-button" class="action-button mt-l blue hide">Apply JSON</button>
+    </div>
+
+    <div id="pingone-api-json-div">
+      <div class="code-block-with-header">
+        <div class="header">
+          <div id="pingoneJSONTitle" class="title">PingOne API JSON
+          </div>
+          <div>
+            <button class="copy-btn" id="expand-btn">Expand</button>
+            <button class="copy-btn ml" onclick="copyCodeBlock(event)">Copy</button>
+          </div>
+        </div>
+        <pre class="hide" id="code-block"><code class="hljs language-json" contenteditable="true" id="pingoneJSON"></code>
+          </pre>
+
+      </div>
+  </fieldset>
+</div>
+
+<div id="scriptDiv">
+  <script>
+    let PINGONE_ENV;
+
+    const toggleCodeBlock = function () {
+      toggleShowElement("code-block")
+      const expandBtn = document.getElementById("expand-btn");
+
+      expandBtn.innerText = expandBtn.innerText === "Expand" ? "Collapse" : "Expand"
+    }
+
+    const applyJSON = async function () {
+      const envId = document.getElementById("pingoneEnvSelect").value;
+      const body = JSON.parse(document.getElementById("pingoneJSON").innerText);
+
+      console.log(`Applying JSON into environment ${envId}`);
+
+      const pingoneApiResource = document.getElementById("pingoneApiResource").value;
+
+      const results = await postPingOneResource(`environments/${envId}/${pingoneApiResource}`, body);
+
+      if (results.statusCode === 201 && results.response) {
+        greenAlert(`Created ${results.response.title} - ${results.response.id}`)
+      } else {
+        let errmsg = `Unable to create resource. PingOne Message: `;
+        if (results.error.details) {
+          results.error.details.forEach((d) => {
+            errmsg += `${d.code} [${d.target}] ${d.message} `;
+          })
+        } else {
+          errmsg += `[${results.error.code}] ${results.error.message}`;
+        }
+        redAlert(errmsg)
+      }
+    }
+
+    const selectAdminEnvironment = async function (event) {
+      console.log("In selectAdminEnvironment()...");
+      const id = event.target.value;
+
+      PINGONE_ENV = app.SETTINGS.getProperty("pingone").find((d) => d.envNickname === id);
+
+      loadingSpinner("Getting AccessToken...");
+      PINGONE_ENV.accessToken = await getPingOneToken();
+      let text = "";
+
+      if (PINGONE_ENV.accessToken) {
+
+        const pingoneEnvSelect = document.getElementById("pingoneEnvSelect");
+        const environments = await getPingOneResource("environments");
+        // console.log(environments);
+        PINGONE_ENV.environments = environments?._embedded.environments;
+        PINGONE_ENV.environments.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1)
+
+        const pingoneProduct = document.getElementById("pingoneProduct").value;
+
+        let options = `<option value="" disabled selected>Please select environment</option>`;
+        for (const e of PINGONE_ENV.environments) {
+          // PINGONE_ENV.environments.forEach(async (e) => {
+          const billOfMaterials = await getPingOneResource(`environments/${e.id}/billOfMaterials`);
+          const product = billOfMaterials.products.find((p) => {
+            return p.type === pingoneProduct;
+          });
+
+
+          if (product) {
+            options += `<option value="${e.id}">${e.name}</option>`;
+          }
+        };
+        pingoneEnvSelect.innerHTML = options;
+      } else {
+        redAlert(`Invalid Credentials for '${PINGONE_ENV.envNickname}' environment.`);
+      }
+
+      hideElement('modalBackdrop');
+
+      showElement("pingoneEnvSelection");
+    }
+
+
+    const getPingOneResource = async function (resource) {
+      return await getPingOneUrl(`https://api.pingone.${PINGONE_ENV.region}/v1/${resource}`);
+    }
+
+    const postPingOneResource = async function (resource, body) {
+      return await postPingOneUrl(`https://api.pingone.${PINGONE_ENV.region}/v1/${resource}`, body);
+    }
+
+    const getPingOneUrl = async function (url) {
+      let results = {};
+
+      try {
+        const response = await fetch(url,
+          {
+            method: "GET",
+            headers: {
+              "Authorization": `Bearer ${PINGONE_ENV.accessToken}`
+            }
+          });
+
+        if (response.status === 200) {
+          results = await response.json();
+        }
+      } catch (err) {
+      }
+      return results;
+    }
+
+    const postPingOneUrl = async function (url, body) {
+      let results = {};
+
+      try {
+        const response = await fetch(url,
+          {
+            body: JSON.stringify(body),
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${PINGONE_ENV.accessToken}`
+            }
+          });
+
+        const p1Response = await response.json();
+        results.statusCode = response.status;
+
+        if (response.status === 201) {
+          results.response = p1Response;
+        } else {
+          results.error = p1Response;
+        }
+      } catch (err) {
+        console.log("Error Posting...")
+        console.log(err);
+      }
+      return results;
+    }
+
+    const getPingOneToken = async function () {
+
+      const response = await fetch(`https://auth.pingone.${PINGONE_ENV.region}/${PINGONE_ENV.envId}/as/token`,
+        {
+          method: "POST",
+          body: new URLSearchParams({
+            'grant_type': 'client_credentials'
+          }),
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Basic " + btoa(`${PINGONE_ENV.clientId}:${PINGONE_ENV.clientSecret}`)
+          }
+        });
+
+      let access_token;
+
+      if (response.status === 200) {
+        const tokenJson = await response.json();
+        access_token = tokenJson.access_token;
+      }
+
+      return access_token;
+    }
+
+    const fillAdminEnvSelectOptions = function () {
+      const envs = app.SETTINGS.getProperty("pingone");
+      // console.table(envs)
+
+      const pingoneAdminEnvSelect = document.getElementById("pingoneAdminEnvSelect");
+
+      let options = `<option value="" disabled selected>Select admin environment</option>`;
+      envs.forEach((e) => {
+        options +=
+          `<option value="${e.envNickname}">${e.envNickname}</option >`;
+      });
+      pingoneAdminEnvSelect.innerHTML = options;
+
+      pingoneAdminEnvSelect.onchange = selectAdminEnvironment;
+    }
+
+
+    const pingone_api_init = function () {
+      console.log("pagescript - pingone_api_init()")
+
+      // Get the item and fill out the codeSnippet
+      const id = document.getElementById("_item_id").value;
+      const item = items.getItemById(id);
+
+      try {
+        const codeSnippet = JSON.parse(item.content.codeSnippet);
+        const pingoneJSON = codeSnippet.pingoneJSON;
+        const pingoneJSONTitle = codeSnippet.pingoneJSONTitle;
+        const pingoneProduct = codeSnippet.pingoneProduct;
+        const pingoneApiResource = codeSnippet.pingoneApiResource;
+
+        if (!pingoneJSON) throw {}
+        if (!pingoneJSONTitle) throw {}
+        if (!pingoneProduct) throw {}
+        if (!pingoneApiResource) throw {}
+
+        document.getElementById("pingoneJSONTitle").innerText = pingoneJSONTitle;
+        document.getElementById("pingoneJSON").innerText = JSON.stringify(pingoneJSON, null, 2);
+        document.getElementById("pingoneProduct").value = pingoneProduct;
+        document.getElementById("pingoneApiResource").value = pingoneApiResource;
+
+        fillAdminEnvSelectOptions()
+
+        document.getElementById("apply-json-button").onclick = applyJSON;
+        document.getElementById("expand-btn").onclick = toggleCodeBlock;
+      } catch (err) {
+        redAlert("Unable to parse JSON");
+      }
+
+
+    }
+
+    pingone_api_init();
+  </script>
+</div>
