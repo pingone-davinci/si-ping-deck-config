@@ -215,7 +215,7 @@
       const pingoneAdminEnvSelect = document.getElementById("pingoneAdminEnvSelect");
 
       let options = `<option value="" disabled selected>Select admin environment</option>`;
-      envs.forEach((e) => {
+      envs?.forEach((e) => {
         options +=
           `<option value="${e.envNickname}">${e.envNickname}</option >`;
       });
