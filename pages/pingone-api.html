@@ -36,13 +36,13 @@
           <div id="pingoneJSONTitle" class="title">PingOne API JSON
           </div>
           <div>
-            <button class="copy-btn" id="expand-btn">Expand</button>
+            <button class="copy-btn" id="expand-btn" onclick="toggleCodeBlock(event)">Expand</button>
             <button class="copy-btn ml" onclick="copyCodeBlock(event)">Copy</button>
           </div>
         </div>
-        <pre class="hide" id="code-block"><code class="hljs language-json" style="word-break: break-all;" contenteditable="true" id="pingoneJSON"></code>
-          </pre>
-
+        <pre class="hide">
+          <code class="hljs language-json hide" style="word-break: break-all;" contenteditable="true" id="pingoneJSON"></code>
+        </pre>
       </div>
   </fieldset>
 </div>
@@ -50,13 +50,6 @@
 <div id="scriptDiv">
   <script>
     let PINGONE_ENV;
-
-    const toggleCodeBlock = function () {
-      toggleShowElement("code-block")
-      const expandBtn = document.getElementById("expand-btn");
-
-      expandBtn.innerText = expandBtn.innerText === "Expand" ? "Collapse" : "Expand"
-    }
 
     const applyJSON = async function () {
       const envId = document.getElementById("pingoneEnvSelect").value;
@@ -252,7 +245,6 @@
         fillAdminEnvSelectOptions()
 
         document.getElementById("apply-json-button").onclick = applyJSON;
-        document.getElementById("expand-btn").onclick = toggleCodeBlock;
       } catch (err) {
         redAlert("Unable to parse JSON");
       }
