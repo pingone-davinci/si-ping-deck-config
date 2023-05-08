@@ -1,68 +1,6 @@
 
-const getPingOneResource = async function (resource) {
 
-  const response = await fetch(`https://api.pingone.${PINGONE_ENV.region}/v1/${resource}`,
-    {
-      method: "GET",
-      headers: {
-        "Authorization": `Bearer ${PINGONE_ENV.accessToken}`
-      }
-    });
-
-  let results = {};
-  if (response.status === 200) {
-    results = await response.json();
-  }
-
-  return results;
-}
-
-const getPingOneUrl = async function (url) {
-  let results = {};
-  let response;
-
-  try {
-    response = await fetch(url,
-      {
-        method: "GET",
-        headers: {
-          "Authorization": `Bearer ${PINGONE_ENV.accessToken}`
-        }
-      });
-
-    if (response.status === 200) {
-      results = await response.json();
-    }
-  } catch (err) {
-    //
-  }
-
-  return results;
-}
-
-const getPingOneToken = async function () {
-
-  const response = await fetch(`https://auth.pingone.${PINGONE_ENV.region}/${PINGONE_ENV.envId}/as/token`,
-    {
-      method: "POST",
-      body: new URLSearchParams({
-        'grant_type': 'client_credentials'
-      }),
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Authorization": "Basic " + btoa(`${PINGONE_ENV.clientId}:${PINGONE_ENV.clientSecret}`)
-      }
-    });
-
-  let access_token;
-
-  if (response.status === 200) {
-    const tokenJson = await response.json();
-    access_token = tokenJson.access_token;
-  }
-
-  return access_token;
-}
+let pingOne;
 
 const hideAllDivs = async function () {
   clearElementText("pingoneCodeDetails")
@@ -70,16 +8,18 @@ const hideAllDivs = async function () {
   clearElementHTML("pingoneEnvResourceSelect");
   hideElement("settings");
   hideElement("pingoneEnvSelection");
-  hideElement("pingoneEnvDetails");
+  hideElement("pingoneResourceDetails");
   hideElement("pingoneCodeDetails");
   hideElement("pingoneEnvSelection");
   hideElement("pingoneEnvResourceSelection");
+  hideElement("pingoneDetails");
 }
 
 const saveEnvironment = async function () {
   console.log("In saveEnvironment()...");
   fieldsetValues = saveFieldsetToLocalStorageArray("envNickname");
   refreshFormTable();
+  showEnvironment(fieldsetValues.envNickname);
 }
 
 const addEnvironment = function () {
@@ -110,7 +50,7 @@ const updateCheckbox = function (element, mode = "CHECK") {
 
 }
 
-const clearAndSetRows = function (id) {
+const clearAndSetRows = function (id, enableCheck) {
   const formTable = document.getElementById("form-table");
   const rows = formTable.getElementsByTagName("tr");
 
@@ -121,74 +61,72 @@ const clearAndSetRows = function (id) {
     iconElement && updateCheckbox(iconElement, "UNCHECK")
   }
 
-  const row = document.getElementById(`nickname-${id}`);
-  row.classList.add("selected");
+  if (id) {
+    const row = document.getElementById(`nickname-${id}`);
+    row.classList.add("selected");
 
-  const selectedIconElement = row.querySelector('i');
-  selectedIconElement && updateCheckbox(selectedIconElement, "CHECK")
+    if (enableCheck) {
+      const selectedIconElement = row.querySelector('i');
+      selectedIconElement && updateCheckbox(selectedIconElement, "CHECK")
+    }
+  }
 }
 
-let PINGONE_ENV;
-
-const showEnvironment = async function (id) {
-  console.log("In showEvironment()...");
+const showEnvironment = async function (nickname) {
+  const environment = app.SETTINGS.getProperty("pingone").find((d) => d.envNickname === nickname);
   hideAllDivs();
-  clearAndSetRows(id);
+  clearAlert();
 
-  PINGONE_ENV = app.SETTINGS.getProperty("pingone").find((d) => d.envNickname === id);
+  try {
+    loadingSpinner("Refreshing Environment...");
+    clearAndSetRows(nickname, false);
 
-  loadingSpinner("Getting AccessToken...");
-  PINGONE_ENV.accessToken = await getPingOneToken();
-  let text = "";
+    pingOne = await PingOne.createAsync(environment);
+    const environments = pingOne.getEnvironments();
 
-  if (PINGONE_ENV.accessToken) {
-
-    const pingoneEnvSelect = document.getElementById("pingoneEnvSelect");
-    const environments = await getPingOneResource("environments");
-    // console.log(environments);
-    PINGONE_ENV.environments = environments?._embedded.environments;
-    PINGONE_ENV.environments.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1)
-
-
-    let options = `<option value="" disabled selected>Please select environment</option>`;
-    PINGONE_ENV.environments.forEach((e) => {
-      options +=
-        `<option value="${e.id}">${e.name}</option>`;
-    });
-    pingoneEnvSelect.innerHTML = options;
-  } else {
-    redAlert(`Invalid Credentials for '${PINGONE_ENV.envNickname}' environment.`);
+    refreshPingOneDetails();
+    refreshFormTable();
+    clearAndSetRows(nickname, true);
+  } catch (err) {
+    console.log("Error during showEnvironment ", err);
+    redAlert(`Unable to authenticate with provided crendentials.`)
+    editEnvironment(environment.envNickname);
+  } finally {
+    hideElement('modalBackdrop');
   }
-
-  hideElement('modalBackdrop');
-
-  // showElement("pingoneEnvSelect");
-  showElement("pingoneEnvSelection");
-  // showElement("pingoneEnvDetails");
 }
 
 const selectEnvironmentResource = async function (event) {
-  const resource = event.target.value;
+  const selectedOption = event.target.options[event.target.selectedIndex]
 
   loadingSpinner("Getting Resource(s)...");
 
-  const res = await getPingOneUrl(resource);
+  const res = await pingOne.getPingOneUrl(selectedOption.value);
 
-  const code = document.getElementById("pingoneCodeDetails")
-
-  code.innerText = JSON.stringify(res, null, 2);
+  setElementText("pingoneCodeDetails", JSON.stringify(res, null, 2));
+  setElementText("pingoneResourceDetailsTitle", `PingOne Resource - ${selectedOption.textContent}`);
 
   hideElement('modalBackdrop');
 
-  showElement("pingoneEnvDetails");
+  showElement("pingoneResourceDetails");
 }
 
 const selectEnvironment = function (event) {
   const id = event.target.value;
 
-  const environment = PINGONE_ENV.environments.find((e) => e.id === id);
+
+  const environment = pingOne.getEnvironment(id);
+  pingOne.activeEnv = environment;
+  console.log("After set...")
+  console.dir(pingOne);
+  refreshFormTable();
+  clearAndSetRows(pingOne?.envNickname, true);
+  refreshPingOneDetails();
+  return;
+
   let html = '<option value="" disabled selected>Please select a resource</option>';
 
+  console.dir(environment);
   const links = environment._links;
   const keys = Object.keys(links);
   keys.sort();
@@ -197,8 +135,7 @@ const selectEnvironment = function (event) {
     html += `<option value="${href}">${res}</option>`;
   });
 
-  const select = document.getElementById("pingoneEnvResourceSelect");
-  select.innerHTML = html;
+  setElementHTML("pingoneEnvResourceSelect", html);
 
   showElement("pingoneEnvResourceSelection");
   showElement("pingoneEnvResourceSelect");
@@ -206,9 +143,10 @@ const selectEnvironment = function (event) {
 
 const editEnvironment = function (id) {
   console.log("In editEvironment()...");
+  PingOne.clear();
   hideAllDivs();
   populateFieldsetFromLocalStorageArray("envNickname", id);
-  clearAndSetRows(id);
+  clearAndSetRows(id, false);
   showElement("settings");
   showElement("delete-environment")
   // console.log(id);
@@ -216,12 +154,11 @@ const editEnvironment = function (id) {
 
 const deleteEnvironment = function () {
   console.log("In deleteEnvironment()...");
-  const envNickname = document.getElementById("envNickname");
 
   const envSettings = app.SETTINGS.getProperty("pingone");
 
   const index = envSettings.findIndex(function (item) {
-    return item["envNickname"] === envNickname.value;
+    return item["envNickname"] === getElementValue("envNickname");
   });
 
   if (index != -1) {
@@ -243,54 +180,132 @@ String.prototype.mask = function (start = 3, end = 3, mask = "*") {
     + this.substring(this.length - end);
 }
 
-function refreshFormTable() {
-  let formTableHTML = `
-        <table id = "form-table" width = "95%" align = "center" >
-          <tr>
-            <th>Admin</th>
-          </tr>`;
-
-  const envTable = document.getElementById("environment-table");
-
-  const environments = app.SETTINGS.getProperty("pingone");
-
-  // If number of enviroments == 0 or missing, replace with a message to add environments
-  if (!environments || environments.length === 0) {
-    envTable.innerHTML = "Press the <strong>Add Admin Enviroment</strong> button to add settings for a PingOne Environment"
+function refreshPingOneDetails() {
+  if (!pingOne?.getAccessToken()) {
+    console.log(pingOne);
     return;
   }
 
-  for (const e in environments) {
-    const environment = environments[e];
+  let html = `
+  <hr>
+  <h3>${pingOne.envNickname}</h3>
+  `;
+  html += TextField.create("orgName", `Organization - ${pingOne.api.organization.id}`, pingOne.orgName, false).render();
+
+  let activeEnvName = pingOne.activeEnv?.name;
+  console.log("ActiveEnvName = ", activeEnvName)
+  console.log("refreshPingOneDetails - ", pingOne.activeEnv);
+
+  if (!activeEnvName) {
+    const environments = pingOne.getEnvironments();
+
+    if (environments?.length === 1) {
+      pingOne.activeEnv = environments[0];
+      activeEnvName = pingOne.activeEnv.name
+    } else {
+      pingOne.activeEnv = undefined;
+      let options = `<option value="" disabled selected>Please select environment</option>`;
+      environments.forEach((e) => {
+        options +=
+          `<option value="${e.id}">${e.name}</option>`;
+      });
+
+      setElementHTML("pingoneEnvSelect", options);
+      showElement("pingoneEnvSelection");
+    }
+  }
+
+  if (activeEnvName) {
+    html += TextField.create("envName", `Environment - ${pingOne.activeEnv.id}`, activeEnvName, false).render();
+    hideElement("pingoneEnvSelection");
+  }
+
+  setElementHTML("pingoneDetails", html);
+
+  if (activeEnvName) {
+    hideElement("pingoneDetails");
+  } else {
+    showElement("pingoneDetails");
+  }
+}
+
+function refreshFormTable() {
+  let formTableHTML = `
+        <table id="form-table" style="table-layout: auto;" width="95%" align="center" >
+          <tr>
+            <th width="1%"></th>
+            <th width="1%"></th>
+            <th></th>
+          </tr>`;
+
+  const admEnvs = app.SETTINGS.getProperty("pingone");
+
+  // If number of enviroments == 0 or missing, replace with a message to add environments
+  if (!admEnvs || admEnvs.length === 0) {
+    setElementHTML("environment-table", "Press the <strong>Add Admin Enviroment</strong> button to add settings for a PingOne Environment");
+    return;
+  }
+
+  console.log(pingOne?.toString());
+  const currentEnvNickname = pingOne?.envNickname;
+
+
+  for (const e in admEnvs) {
+    const admEnv = admEnvs[e];
     // console.table(environment);
     formTableHTML += `
-            <tr id = "nickname-${environment?.envNickname}" >
-        <td>
-          <span class="fa-stack" onclick="showEnvironment('${environment?.envNickname}');">
+      <tr id = "nickname-${admEnv?.envNickname}" >
+        <td style="border: 0px;" >
+          <span class="fa-stack" onclick="showEnvironment('${admEnv?.envNickname}');">
             <i class="fa fa-square-o fa-stack-2x fa-inverse" style="color: #f5f5f5;"></i>
             <!-- <i class="fa fa-check fa-stack-1x fa-inverse" style="color: #white;"></i> -->
           </span>
-          <span class="fa-stack" onclick="editEnvironment('${environment?.envNickname}');">
+        </td>
+        <td style="border: 0px;" >
+          <span class="fa-stack" onclick="editEnvironment('${admEnv?.envNickname}');">
             <i class="fa fa-square fa-stack-2x fa-inverse" style="color: #4287f5;"></i>
             <i class="fa fa-pencil fa-stack-1x fa-inverse" style="color: white;"></i>
           </span>
-          ${environment?.envNickname}</td>
+        </td>
+    `;
+
+    if (admEnv.envNickname === currentEnvNickname) {
+      console.log("inside of refreshFormTalble", pingOne);
+      console.log("activeEnv", pingOne.activeEnv);
+      console.log("envName = ", pingOne.activeEnv?.name)
+      formTableHTML += `
+        <td>
+          ${admEnv.envNickname}<br><br>
+          Org - ${pingOne.api.organization.name}<br>
+          Env - ${pingOne.activeEnv?.name || "<span class='red'> None selected...See options below. </span>"}</td>
       </tr >
-  `;
+    `;
+    } else {
+      formTableHTML += `
+        <td>
+          ${admEnv.envNickname}
+      </tr >
+    `;
+    }
   }
 
   formTableHTML += `
   </table >
   `
-  envTable.innerHTML = formTableHTML;
+  setElementHTML("environment-table", formTableHTML)
 }
 
-function pingone_init() {
+async function pingone_init() {
   // Whatever
   console.log("pagescript - pingone_init()")
 
   const addEnvButton = document.getElementById("add-environment");
   addEnvButton.onclick = addEnvironment;
 
+  loadingSpinner("Refreshing Environment...");
+  pingOne = await PingOne.getAsync();
+  refreshPingOneDetails();
   refreshFormTable();
+  clearAndSetRows(pingOne?.envNickname, true);
+  hideElement('modalBackdrop');
 }

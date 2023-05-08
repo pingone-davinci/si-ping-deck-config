@@ -1,12 +1,11 @@
 <div id="pageDiv">
   <span class="xsmall">Saved to browser local storage</span>
-  <hr>
+  <button class="action-button blue float-right" id="add-environment" class="action-button mb-l blue"><i
+      class="fa fa-plus"></i> Add Admin Environment</button>
   <div id="environment-table">
   </div>
   <p>
   <div class="centered">
-    <button id="add-environment" class="action-button mb-l blue"><i class="fa fa-plus"></i> Add Admin
-      Environment</button>
 
     <fieldset name="pingone" id="settings" class="hide">
       <div class="input-container">
@@ -41,6 +40,11 @@
           Enviroment</button>
       </div>
     </fieldset>
+
+    <div id="pingoneDetails" class="hide">
+    </div>
+
+
     <div id="pingoneEnvSelection" class="hide">
       <h3 class="left">PingOne Environment</h3>
       <div class="select line-border">
@@ -56,9 +60,9 @@
         </select>
       </div>
     </div>
-    <div id="pingoneEnvDetails" class="code-block-with-header left hide">
+    <div id="pingoneResourceDetails" class="code-block-with-header left hide">
       <div class="header">
-        <div class="title">PingOne Resource</div>
+        <div id="pingoneResourceDetailsTitle" class="title">PingOne Resource</div>
         <div>
           <button class="copy-btn" onclick="copyCodeBlock(event);">Copy</button>
         </div>
@@ -73,9 +77,6 @@
 
 <div id="scriptDiv">
   <script>
-
-
     pingone_init();
-
   </script>
 </div>
