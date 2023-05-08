@@ -52,22 +52,24 @@ const updateCheckbox = function (element, mode = "CHECK") {
 
 const clearAndSetRows = function (id, enableCheck) {
   const formTable = document.getElementById("form-table");
-  const rows = formTable.getElementsByTagName("tr");
+  if (formTable) {
+    const rows = formTable.getElementsByTagName("tr");
 
-  for (const e of rows) {
-    e.classList.remove("selected");
+    for (const e of rows) {
+      e.classList.remove("selected");
 
-    const iconElement = e.querySelector('i');
-    iconElement && updateCheckbox(iconElement, "UNCHECK")
-  }
+      const iconElement = e.querySelector('i');
+      iconElement && updateCheckbox(iconElement, "UNCHECK")
+    }
 
-  if (id) {
-    const row = document.getElementById(`nickname-${id}`);
-    row.classList.add("selected");
+    if (id) {
+      const row = document.getElementById(`nickname-${id}`);
+      row.classList.add("selected");
 
-    if (enableCheck) {
-      const selectedIconElement = row.querySelector('i');
-      selectedIconElement && updateCheckbox(selectedIconElement, "CHECK")
+      if (enableCheck) {
+        const selectedIconElement = row.querySelector('i');
+        selectedIconElement && updateCheckbox(selectedIconElement, "CHECK")
+      }
     }
   }
 }
